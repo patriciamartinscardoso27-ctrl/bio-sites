@@ -1,0 +1,319 @@
+/* Lote 5: native content grids, scoped to the five new presets. */
+.biosite.moda-premium-gold[data-library-batch="7"]{max-width:500px;font-family:Arial,sans-serif;--section-gap:7px;--model-link-ink:var(--gold)}
+.biosite.moda-premium-gold[data-library-batch="7"][data-ready-model] .gold-body{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));padding:0 7px 10px;column-gap:6px}
+.biosite.moda-premium-gold[data-library-batch="7"][data-ready-model] .gold-section{grid-column:1/-1;min-width:0;padding:9px 2px;background:transparent;color:var(--ink)}
+.biosite.moda-premium-gold[data-library-batch="7"][data-ready-model] .gold-section h2{font-family:Georgia,serif;font-weight:400;font-size:clamp(20px,5.6cqw,28px);line-height:1.1}
+.biosite.moda-premium-gold[data-library-batch="7"][data-ready-model] .gold-section-heading{margin-bottom:10px;gap:6px}
+.biosite.moda-premium-gold[data-library-batch="7"][data-ready-model] .gold-section-heading>a,.biosite.moda-premium-gold[data-library-batch="7"][data-ready-model] .gold-section-heading>span{font-size:10px;color:var(--model-link-ink);gap:4px;flex-shrink:0}
+.biosite.moda-premium-gold[data-library-batch="7"][data-ready-model] .gold-section-heading>h2{min-width:0}
+.biosite.moda-premium-gold[data-library-batch="7"][data-ready-model] .gold-hero{min-height:0;padding:15px 20px 20px;aspect-ratio:auto;background:#070908;color:#fff;overflow:hidden}
+.biosite.moda-premium-gold[data-library-batch="7"][data-ready-model] .gold-hero-photo{object-position:var(--local-image-position,70% 35%)}
+.biosite.moda-premium-gold[data-library-batch="7"][data-ready-model] .gold-hero-shade{background:linear-gradient(90deg,#000d 0%,#0008 40%,#0000 85%),linear-gradient(0deg,#0009,transparent 25%)}
+.biosite.moda-premium-gold[data-library-batch="7"][data-ready-model] .gold-hero-content{width:100%;max-width:none;padding-top:2px}
+.biosite.moda-premium-gold[data-library-batch="7"][data-ready-model] .gold-hero-content>.gold-logo{width:142px;height:105px;margin:0 0 4px 20px;background:transparent;border-radius:0}
+.biosite.moda-premium-gold[data-library-batch="7"][data-ready-model] .gold-logo{border:0;box-shadow:none}
+.biosite.moda-premium-gold[data-library-batch="7"][data-ready-model] .gold-logo img{width:100%;height:100%;object-fit:contain}
+.biosite.moda-premium-gold[data-library-batch="7"][data-ready-model] .gold-hero-content>h1,.biosite.moda-premium-gold[data-library-batch="7"][data-ready-model] .gold-tagline{display:none}
+.biosite.moda-premium-gold[data-library-batch="7"][data-ready-model] .gold-hero-headline{font-size:clamp(30px,9.5cqw,46px)!important;line-height:1.02!important;width:70%;margin:22px 0 15px;letter-spacing:-.8px}
+.biosite.moda-premium-gold[data-library-batch="7"][data-ready-model] .gold-headline-line{display:block}
+.biosite.moda-premium-gold[data-library-batch="7"][data-ready-model] .gold-hero-content>p{width:62%;font-size:13px!important;line-height:1.4!important;white-space:pre-line}
+.biosite.moda-premium-gold[data-library-batch="7"][data-ready-model] .gold-hero-button{display:flex;width:max-content;max-width:100%;justify-content:center;gap:10px;border-radius:99px;padding:12px 19px;margin-top:17px;font-size:12px;font-weight:700;background:var(--gold);color:#080808;white-space:nowrap}
+.biosite.moda-premium-gold[data-library-batch="7"][data-ready-model] .gold-hero-button svg:last-child{margin-left:4px}
+.biosite.moda-premium-gold[data-library-batch="7"][data-ready-model] .gold-hero-tools{position:absolute;inset:14px 17px auto;display:flex;justify-content:space-between;align-items:center;color:var(--gold);font-size:24px;z-index:2}
+.biosite.moda-premium-gold[data-library-batch="7"][data-ready-model] .gold-hero-tools>a{display:grid;place-items:center}
+.biosite.moda-premium-gold[data-library-batch="7"][data-ready-model] .gold-actions.premium-actions{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:5px;background:transparent;padding:5px 0}
+.biosite.moda-premium-gold[data-library-batch="7"][data-ready-model] .gold-actions:not([data-gold-footer])>[data-action-id]{padding:7px 2px 9px;gap:7px;border-radius:12px;background:linear-gradient(135deg,#30242b,#0b090c);border:1px solid color-mix(in srgb,var(--gold) 25%,transparent)}
+.biosite.moda-premium-gold[data-library-batch="7"][data-ready-model] .gold-actions .action-icon-slot{width:38px;max-width:100%}
+.biosite.moda-premium-gold[data-library-batch="7"][data-ready-model] .gold-actions .action-icon-tile{background:transparent!important;border:0!important;box-shadow:none!important}
+.biosite.moda-premium-gold[data-library-batch="7"][data-ready-model] .gold-actions .action-tile-label{gap:4px;text-align:center;color:var(--ink)!important}
+.biosite.moda-premium-gold[data-library-batch="7"][data-ready-model] .gold-actions strong{font-size:10px!important;white-space:nowrap!important;line-height:1.15;font-weight:600}
+.biosite.moda-premium-gold[data-library-batch="7"][data-ready-model] .gold-actions small{font-size:9px;line-height:1.3}
+.biosite.moda-premium-gold[data-library-batch="7"][data-ready-model] .gold-promotion{padding:8px 0}
+.biosite.moda-premium-gold[data-library-batch="7"][data-ready-model] .gold-banner{min-height:0;aspect-ratio:auto;border-radius:14px;background:var(--local-panel);color:var(--local-text)}
+.biosite.moda-premium-gold[data-library-batch="7"][data-ready-model] .gold-banner>img{width:65%;left:auto;right:0;object-position:center}
+.biosite.moda-premium-gold[data-library-batch="7"][data-ready-model] .gold-banner-shade{background:linear-gradient(90deg,var(--local-panel) 0%,var(--local-panel) 32%,transparent 70%)}
+.biosite.moda-premium-gold[data-library-batch="7"][data-ready-model] .gold-banner-copy{position:relative;width:var(--content-width,57%);padding:18px 13px;min-height:180px}
+.biosite.moda-premium-gold[data-library-batch="7"][data-ready-model] .gold-banner-copy h2{font-size:clamp(21px,6.5cqw,31px)!important;line-height:1.05!important;letter-spacing:-.5px}
+.biosite.moda-premium-gold[data-library-batch="7"][data-ready-model] .gold-banner-copy p{font-size:12px;line-height:1.35;margin-top:10px;white-space:pre-line}
+.biosite.moda-premium-gold[data-library-batch="7"][data-ready-model] .gold-banner-button{display:inline-flex;align-items:center;justify-content:center;max-width:100%;font-size:10px;font-weight:600;line-height:1.3;padding:9px 12px;margin-top:12px;border-radius:99px;background:var(--gold-dark);color:#fff;text-align:center}
+.biosite.moda-premium-gold[data-library-batch="7"][data-ready-model] [data-media-placement="right"] .gold-banner-copy{margin-left:auto}
+.biosite.moda-premium-gold[data-library-batch="7"][data-ready-model] [data-media-placement="right"] .gold-banner>img{left:0;right:auto}
+.biosite.moda-premium-gold[data-library-batch="7"][data-ready-model] [data-media-placement="right"] .gold-banner-shade{background:linear-gradient(270deg,var(--local-panel) 0%,var(--local-panel) 32%,transparent 70%)}
+.biosite.moda-premium-gold[data-library-batch="7"][data-ready-model] .gold-benefit-grid{display:grid;grid-template-columns:repeat(var(--benefit-columns,4),minmax(0,1fr));padding:7px 0;gap:6px;background:transparent;border:0;color:var(--ink)}
+.biosite.moda-premium-gold[data-library-batch="7"][data-ready-model] .gold-benefit-grid h3{font-size:10px;line-height:1.4;font-weight:400}
+.biosite.moda-premium-gold[data-library-batch="7"][data-ready-model] .gold-benefit-grid svg{width:26px;height:26px;margin:0 auto 6px;color:var(--gold)}
+.biosite.moda-premium-gold[data-library-batch="7"][data-ready-model] .gold-banner-benefits .gold-benefit-grid{display:flex!important;grid-template-columns:none!important;flex-direction:column;gap:8px;text-align:left;color:var(--local-text)}
+.biosite.moda-premium-gold[data-library-batch="7"][data-ready-model] .gold-banner-benefits [data-benefit-index]>span{width:16px;flex-shrink:0}
+.biosite.moda-premium-gold[data-library-batch="7"][data-ready-model] .gold-banner-benefits [data-benefit-index]>span>span{width:16px!important;height:16px!important}
+.biosite.moda-premium-gold[data-library-batch="7"][data-ready-model] .gold-banner-benefits .gold-benefit-grid>div{display:flex;align-items:center;gap:6px}
+.biosite.moda-premium-gold[data-library-batch="7"][data-ready-model] .gold-banner-benefits svg{width:16px;height:16px;margin:0;display:block;flex-shrink:0}
+.biosite.moda-premium-gold[data-library-batch="7"][data-ready-model] .gold-banner-benefits h3{font-size:11px;line-height:1.25}
+.biosite.moda-premium-gold[data-library-batch="7"][data-ready-model] .gold-product-list{display:grid;grid-template-columns:repeat(var(--product-columns,3),minmax(0,1fr));gap:6px}
+.biosite.moda-premium-gold[data-library-batch="7"][data-ready-model] .gold-product{display:flex;flex-direction:column;align-items:stretch;min-height:0;min-width:0;padding:0;border:0;border-radius:12px;overflow:hidden;gap:0;background:var(--local-panel,var(--card));color:var(--local-text,var(--ink));text-align:left}
+.biosite.moda-premium-gold[data-library-batch="7"][data-ready-model] .gold-product>img{width:100%;height:auto;aspect-ratio:var(--media-aspect,1.5);border-radius:0}
+.biosite.moda-premium-gold[data-library-batch="7"][data-ready-model] .gold-product>div{padding:8px 7px;flex:1;width:100%;min-width:0}
+.biosite.moda-premium-gold[data-library-batch="7"][data-ready-model] .gold-product h3{font-size:11px!important;font-weight:700;line-height:1.25;margin:0 0 6px;overflow-wrap:normal}
+.biosite.moda-premium-gold[data-library-batch="7"][data-ready-model] .gold-product p{font-size:9px;line-height:1.5;white-space:pre-line;overflow-wrap:break-word}
+.biosite.moda-premium-gold[data-library-batch="7"][data-ready-model] .gold-product strong{font-size:13px;margin-top:7px;white-space:nowrap;text-align:center}
+.biosite.moda-premium-gold[data-library-batch="7"][data-ready-model] .gold-products>.gold-section-heading h2,.biosite.moda-premium-gold[data-library-batch="7"][data-ready-model] .gold-testimonials>h2{color:var(--ink)}
+.biosite.moda-premium-gold[data-library-batch="7"][data-ready-model] .gold-product-contact{display:flex;align-items:center;justify-content:center;gap:4px;margin:0 6px 7px;padding:6px 3px;min-height:27px;height:auto;width:auto;align-self:stretch;background:var(--gold-dark);color:#fff;border-radius:7px;font-size:9px;line-height:1.1}
+.biosite.moda-premium-gold[data-library-batch="7"][data-ready-model] .gold-product-contact svg{width:12px;height:12px;flex-shrink:0}
+.biosite.moda-premium-gold[data-library-batch="7"][data-ready-model] .gold-services .gold-product{position:relative;isolation:isolate;width:100%;min-height:115px;aspect-ratio:.98;color:#fff;background:#090909}
+.biosite.moda-premium-gold[data-library-batch="7"][data-ready-model] .gold-services .gold-product>img{position:absolute;inset:0;height:100%;z-index:-2;object-fit:cover}
+.biosite.moda-premium-gold[data-library-batch="7"][data-ready-model] .gold-services .gold-product::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(transparent 20%,#000 99%)}
+.biosite.moda-premium-gold[data-library-batch="7"][data-ready-model] .gold-services .gold-product>div{flex:0;margin-top:auto;padding:8px 27px 9px 8px}
+.biosite.moda-premium-gold[data-library-batch="7"][data-ready-model] .gold-services .gold-product h3{font-size:11px!important;margin-bottom:4px}
+.biosite.moda-premium-gold[data-library-batch="7"][data-ready-model] .gold-services .gold-product p{font-size:9px;line-height:1.3}
+.biosite.moda-premium-gold[data-library-batch="7"][data-ready-model] .gold-services .gold-product-contact{position:absolute;right:6px;bottom:10px;border-radius:50%;width:22px;height:22px;min-height:0;margin:0;padding:0;background:var(--gold);color:#111}
+.biosite.moda-premium-gold[data-library-batch="7"][data-ready-model] .gold-services .gold-product-contact>span{display:none}
+.biosite.moda-premium-gold[data-library-batch="7"][data-ready-model] .gold-package-badge{text-align:center;height:0;position:relative;z-index:1;top:-7px;font-size:8px;color:#111}
+.biosite.moda-premium-gold[data-library-batch="7"][data-ready-model] .gold-package-badge>span{background:var(--gold);border-radius:99px;padding:5px 7px;display:inline-block}
+.biosite.moda-premium-gold[data-library-batch="7"][data-ready-model] .gold-gallery-grid{display:grid;grid-template-columns:repeat(var(--section-columns,3),minmax(0,1fr));gap:6px}
+.biosite.moda-premium-gold[data-library-batch="7"][data-ready-model] .gold-gallery-cell{position:relative;min-width:0;overflow:hidden;border-radius:11px;isolation:isolate}
+.biosite.moda-premium-gold[data-library-batch="7"][data-ready-model] .gold-gallery-grid img{width:100%;height:auto;aspect-ratio:var(--media-aspect,.75);border-radius:11px}
+.biosite.moda-premium-gold[data-library-batch="7"][data-ready-model] .gold-gallery-caption{position:absolute;bottom:0;left:0;right:0;display:flex;justify-content:space-between;align-items:center;padding:25px 6px 8px;color:#fff;background:linear-gradient(transparent,#000b);font-size:10px;line-height:1.2;min-height:42px}
+.biosite.moda-premium-gold[data-library-batch="7"][data-ready-model] .gold-gallery-caption>a{width:22px;height:22px;border-radius:50%;background:#fff;color:var(--gold-dark);display:grid;place-items:center;flex-shrink:0;margin-left:3px}
+.biosite.moda-premium-gold[data-library-batch="7"][data-ready-model] .gold-reviews{display:flex;gap:8px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;margin-top:10px}
+.biosite.moda-premium-gold[data-library-batch="7"][data-ready-model] .gold-reviews::-webkit-scrollbar{display:none}
+.biosite.moda-premium-gold[data-library-batch="7"][data-ready-model] .gold-reviews blockquote{flex:0 0 100%;min-width:0;scroll-snap-align:start;margin:0;display:grid;grid-template-columns:68px minmax(0,1fr);column-gap:12px;align-content:center;padding:13px 25px;border-radius:13px;background:var(--local-panel,#fff2eb);color:var(--local-text,#211713)}
+.biosite.moda-premium-gold[data-library-batch="7"][data-ready-model] .gold-review-avatar{grid-row:1/4;align-self:center;width:68px;height:68px;border-radius:50%;overflow:hidden}
+.biosite.moda-premium-gold[data-library-batch="7"][data-ready-model] .gold-review-avatar img{width:100%;height:100%;object-fit:cover}
+.biosite.moda-premium-gold[data-library-batch="7"][data-ready-model] .gold-reviews strong{font-size:10px;font-weight:500;line-height:1.4}
+.biosite.moda-premium-gold[data-library-batch="7"][data-ready-model] .gold-reviews blockquote>span{display:flex;gap:1px;color:#ffad00;margin:4px 0}
+.biosite.moda-premium-gold[data-library-batch="7"][data-ready-model] .gold-reviews p{font-size:10px;line-height:1.4;margin:0}
+.biosite.moda-premium-gold[data-library-batch="7"][data-ready-model] .gold-testimonials{position:relative}
+.biosite.moda-premium-gold[data-library-batch="7"][data-ready-model] .gold-review-controls{position:absolute;inset:calc(50% + 9px) 8px auto;display:flex;justify-content:space-between;z-index:2;pointer-events:none}
+.biosite.moda-premium-gold[data-library-batch="7"][data-ready-model] .gold-review-controls button{width:24px;height:24px;padding:3px;display:grid;place-items:center;border:0;border-radius:50%;background:#fff;color:var(--gold-dark);pointer-events:auto;cursor:pointer}
+.biosite.moda-premium-gold[data-library-batch="7"][data-ready-model] .gold-hours,.biosite.moda-premium-gold[data-library-batch="7"][data-ready-model] .gold-location{grid-column:span 1;align-self:stretch;padding:7px 0}
+.biosite.moda-premium-gold[data-library-batch="7"][data-ready-model] .gold-hours-card,.biosite.moda-premium-gold[data-library-batch="7"][data-ready-model] .gold-location{border-radius:12px;background:var(--local-panel,var(--card));color:var(--local-text,var(--ink));min-width:0}
+.biosite.moda-premium-gold[data-library-batch="7"][data-ready-model] .gold-hours-card{padding:11px 8px;height:100%}
+.biosite.moda-premium-gold[data-library-batch="7"][data-ready-model] .gold-hours-card h2,.biosite.moda-premium-gold[data-library-batch="7"][data-ready-model] .gold-map-button{font-size:13px;gap:6px;margin-bottom:7px;line-height:1.2}
+.biosite.moda-premium-gold[data-library-batch="7"][data-ready-model] .gold-hours-card h2 svg{width:16px;height:16px;color:var(--gold);flex-shrink:0}
+.biosite.moda-premium-gold[data-library-batch="7"][data-ready-model] .gold-hours-card>div{font-size:9px;line-height:1.4;padding:8px 0;gap:3px;border-color:#aaa2}
+.biosite.moda-premium-gold[data-library-batch="7"][data-ready-model] .gold-hours-card>div>span:last-child{white-space:nowrap}
+.biosite.moda-premium-gold[data-library-batch="7"][data-ready-model] .gold-location{margin:7px 0;padding:10px 7px 6px}
+.biosite.moda-premium-gold[data-library-batch="7"][data-ready-model] .gold-map-button{padding:0;background:transparent;color:inherit;border-radius:0;justify-content:flex-start;font-family:Georgia,serif;font-weight:400}
+.biosite.moda-premium-gold[data-library-batch="7"][data-ready-model] .gold-map-button>svg{width:16px;height:16px;color:var(--gold);flex-shrink:0}
+.biosite.moda-premium-gold[data-library-batch="7"][data-ready-model] .gold-address{padding:0;justify-content:flex-start;text-align:left;font-size:8px;gap:4px;line-height:1.35}
+.biosite.moda-premium-gold[data-library-batch="7"][data-ready-model] .gold-address>svg{width:13px;height:13px;color:var(--gold)}
+.biosite.moda-premium-gold[data-library-batch="7"][data-ready-model] .gold-location-media{position:relative;margin-top:6px}
+.biosite.moda-premium-gold[data-library-batch="7"][data-ready-model] .gold-location-image{width:100%;aspect-ratio:2.1;margin:0;border-radius:8px}
+.biosite.moda-premium-gold[data-library-batch="7"][data-ready-model] .gold-map-marker{position:absolute;left:50%;top:22%;transform:translateX(-50%);color:#ee4280;fill:#fff}
+.biosite.moda-premium-gold[data-library-batch="7"][data-ready-model] .gold-location-cta{position:absolute;bottom:4px;right:4px;display:flex;align-items:center;gap:3px;background:#fff;color:#6f2432;border-radius:7px;padding:5px 6px;font-size:9px;font-weight:600}
+.biosite.moda-premium-gold[data-library-batch="7"][data-ready-model] .gold-whatsapp-card{padding:11px 12px;gap:9px;grid-template-columns:36px minmax(0,1fr) 29px;background:linear-gradient(115deg,#00b944,#006a2d);border-radius:12px;color:white}
+.biosite.moda-premium-gold[data-library-batch="7"][data-ready-model] .gold-whatsapp-card>span:first-child,.biosite.moda-premium-gold[data-library-batch="7"][data-ready-model] .gold-whatsapp-card>svg{color:#fff}
+.biosite.moda-premium-gold[data-library-batch="7"][data-ready-model] .gold-whatsapp-card h2{font-size:15px;line-height:1.15}
+.biosite.moda-premium-gold[data-library-batch="7"][data-ready-model] .gold-whatsapp-card p{font-size:10px;line-height:1.25;margin-top:4px}
+.biosite.moda-premium-gold[data-library-batch="7"][data-ready-model] .gold-whatsapp-card>span:last-child{width:29px;height:29px;background:white;color:#00993f}
+.biosite.moda-premium-gold[data-library-batch="7"][data-ready-model] .gold-whatsapp-card>span:last-child svg{width:19px;height:19px}
+.biosite.moda-premium-gold[data-library-batch="7"][data-ready-model] .gold-section[data-gold-footer]{background:transparent!important;color:var(--ink)!important}
+.biosite.moda-premium-gold[data-library-batch="7"][data-ready-model] .gold-identity{padding:0;text-align:left}
+.biosite.moda-premium-gold[data-library-batch="7"][data-ready-model] .gold-identity>.gold-logo{width:125px;height:80px;margin:0;background:transparent}
+.biosite.moda-premium-gold[data-library-batch="7"][data-ready-model] .gold-identity>strong,.biosite.moda-premium-gold[data-library-batch="7"][data-ready-model] .gold-identity>p{display:none}
+.biosite.moda-premium-gold[data-library-batch="7"][data-ready-model] .gold-about[data-gold-footer]:has(.gold-identity),.biosite.moda-premium-gold[data-library-batch="7"][data-ready-model] .gold-actions[data-gold-footer]:not(:has(.gold-footer-navigation)){grid-column:span 1;padding:3px 0;align-self:center}
+.biosite.moda-premium-gold[data-library-batch="7"][data-ready-model] .gold-social{display:flex;gap:10px;justify-content:center;padding:0}
+.biosite.moda-premium-gold[data-library-batch="7"][data-ready-model] .gold-social>a{width:27px;height:27px;background:var(--gold);color:#171113;border-radius:50%}
+.biosite.moda-premium-gold[data-library-batch="7"][data-ready-model] .gold-social>a svg{width:17px;height:17px}
+.biosite.moda-premium-gold[data-library-batch="7"][data-ready-model] .gold-footer-navigation{display:flex;flex-wrap:wrap;gap:5px;justify-content:center}
+.biosite.moda-premium-gold[data-library-batch="7"][data-ready-model] .gold-footer-navigation>a{width:auto;height:auto;border-radius:0;font-size:8px;background:none;color:var(--ink);border-right:1px solid var(--gold);padding-right:5px;line-height:1.2}
+.biosite.moda-premium-gold[data-library-batch="7"][data-ready-model] .gold-footer-navigation>a:last-child{border:0}
+.biosite.moda-premium-gold[data-library-batch="7"][data-ready-model] .gold-footer-navigation>a{flex:0 0 auto!important;white-space:nowrap!important}
+.biosite.moda-premium-gold[data-library-batch="7"][data-ready-model] .gold-footer-navigation>a *{white-space:nowrap!important;word-break:normal!important;overflow-wrap:normal!important}
+.biosite.moda-premium-gold[data-library-batch="7"][data-ready-model] .gold-benefit-grid h3{font-size:10px!important;word-break:normal!important;overflow-wrap:normal!important;hyphens:none}
+.biosite.moda-premium-gold[data-library-batch="7"][data-ready-model] .gold-actions strong{white-space:normal!important;min-height:24px;display:flex;align-items:center;justify-content:center}
+.biosite.moda-premium-gold[data-library-batch="7"][data-ready-model] .gold-hero-benefits .gold-benefit-grid h3{font-size:9px!important}
+.biosite.moda-premium-gold[data-library-batch="7"][data-ready-model] .gold-text-block{font-size:8px;text-align:center;padding:0 0 7px}
+
+.biosite.moda-premium-gold[data-library-batch="7"][data-ready-model] .gold-hero-button{background:#00a63c;color:#fff!important}
+.biosite.moda-premium-gold[data-library-batch="7"][data-ready-model] .gold-actions:not([data-gold-footer])>[data-action-id]{background:var(--button-fill,var(--card))!important;border:0!important;box-shadow:none!important;padding:8px 2px!important}
+.biosite.moda-premium-gold[data-library-batch="7"][data-ready-model] .gold-banner-copy h2{white-space:pre-line}
+.biosite.moda-premium-gold[data-library-batch="7"][data-ready-model] .gold-banner-button{background:var(--gold);color:#fff;font-size:9px;padding:9px 11px}
+.biosite.moda-premium-gold[data-library-batch="7"][data-ready-model] .gold-product{border:1px solid color-mix(in srgb,var(--gold) 40%,transparent)}
+.biosite.moda-premium-gold[data-library-batch="7"][data-ready-model] .gold-product strong{text-align:left;font-size:clamp(12px,3.8cqw,16px)}
+.biosite.moda-premium-gold[data-library-batch="7"][data-ready-model] .gold-product-contact{width:23px;height:23px;min-height:23px;border-radius:50%;align-self:flex-end;background:var(--gold);padding:4px;color:#fff}
+.biosite.moda-premium-gold[data-library-batch="7"] .gold-product-contact>span{display:none}
+.biosite.moda-premium-gold[data-library-batch="7"] .gold-product h3{overflow-wrap:anywhere!important}
+.biosite.moda-premium-gold[data-library-batch="7"] .gold-collections{display:grid;grid-template-columns:repeat(var(--section-columns,3),minmax(0,1fr));gap:7px}
+.biosite.moda-premium-gold[data-library-batch="7"] .gold-collections>a{display:flex;flex-direction:column;min-width:0;border-radius:10px;overflow:hidden;background:#0d0b0a;color:#fff;border:1px solid #594633}
+.biosite.moda-premium-gold[data-library-batch="7"] .gold-collections img{display:block;width:100%;height:auto;aspect-ratio:1.25;object-fit:cover}
+.biosite.moda-premium-gold[data-library-batch="7"] .gold-collections>a>div{position:relative;padding:22px 4px 9px;flex:1;min-height:48px;display:flex;align-items:center;justify-content:center;text-align:center}
+.biosite.moda-premium-gold[data-library-batch="7"] .gold-collections strong{font:600 11px/1.3 Arial,sans-serif;overflow-wrap:anywhere}
+.biosite.moda-premium-gold[data-library-batch="7"] .gold-collections small:empty{display:none}
+.biosite.moda-premium-gold[data-library-batch="7"] .gold-category-icon{position:absolute;top:-16px;left:50%;transform:translateX(-50%);width:32px;height:32px;border-radius:50%;display:grid;place-items:center;background:#fff;color:var(--gold)}
+.biosite.moda-premium-gold[data-library-batch="7"] .gold-banner-badge{position:absolute;z-index:3;right:7%;bottom:18%;width:66px;height:66px;display:grid;place-items:center;border-radius:50%;background:#ec1025;color:white;text-align:center;font:bold 11px/1.3 Arial;white-space:pre-line;transform:rotate(-8deg)}
+.biosite.moda-premium-gold[data-library-batch="7"] .gold-banner-badge span{max-width:100%;overflow-wrap:anywhere}
+
+/* Each composition has its own grid and rhythm; these rules never select older presets. */
+.biosite.moda-premium-gold[data-library-batch="7"] .gold-banner-line{display:block}
+.biosite.moda-premium-gold[data-library-batch="7"][data-ready-model] .gold-hero-content>.gold-logo{width:235px;height:112px;margin:5px auto 12px}
+.biosite.moda-premium-gold[data-library-batch="7"][data-ready-model] .gold-tagline{display:block;color:#fff;font-size:8px;letter-spacing:.7px;line-height:1.6;margin-bottom:15px;max-width:100%}
+.biosite.moda-premium-gold[data-library-batch="7"][data-ready-model] .gold-hero-button{background:var(--gold);color:#10140d!important;font-size:11px;padding:13px 16px}
+.biosite.moda-premium-gold[data-library-batch="7"][data-ready-model] .gold-hero-button>span[data-editor-field]{white-space:normal}
+.biosite.moda-premium-gold[data-library-batch="7"] .gold-hero-headline:not([data-custom-text-color]) .gold-headline-line:last-child{color:var(--gold)}
+.biosite.moda-premium-gold[data-library-batch="7"][data-ready-model] .gold-actions:not([data-gold-footer])>[data-action-id]{background:linear-gradient(145deg,#282b29,#060806)!important;color:white;box-shadow:0 3px 9px #0002!important}
+.biosite.moda-premium-gold[data-library-batch="7"][data-ready-model] .gold-actions .action-tile-label{color:#fff!important}
+.biosite.moda-premium-gold[data-library-batch="7"][data-ready-model] .gold-actions [data-editable-text]:not([data-custom-text-color]){color:inherit!important}
+.biosite.moda-premium-gold[data-library-batch="7"][data-ready-model] .gold-actions .action-icon-tile{background:transparent!important}
+.biosite.moda-premium-gold[data-library-batch="7"][data-ready-model] .gold-actions .action-icon-slot{filter:drop-shadow(0 0 5px #ffffff30)}
+.biosite.moda-premium-gold[data-library-batch="7"] .gold-section-heading h2{flex:1;min-width:0}
+.biosite.moda-premium-gold[data-library-batch="7"] .gold-section-heading h2:after{content:"";display:inline-block;width:28px;height:2px;background:var(--gold);margin-left:10px;vertical-align:middle}
+.biosite.moda-premium-gold[data-library-batch="7"][data-ready-model] .gold-banner-button{background:var(--gold);color:#12140b;font-size:10px;padding:11px 14px}
+.biosite.moda-premium-gold[data-library-batch="7"] .gold-banner-copy h2:not([data-custom-text-color]) .gold-banner-line:last-child{color:var(--gold)}
+.biosite.moda-premium-gold[data-library-batch="7"] .gold-banner-brands{position:relative;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:7px;padding:15px 9px;background:#fff;color:#10120d;z-index:2;text-align:center}
+.biosite.moda-premium-gold[data-library-batch="7"] .gold-banner-brands strong{font:bold clamp(9px,3.5cqw,17px)/1.1 Arial;display:block;overflow-wrap:anywhere}
+.biosite.moda-premium-gold[data-library-batch="7"] .gold-filter-bar{display:flex;gap:5px;flex-wrap:wrap;margin:5px 0 12px}
+.biosite.moda-premium-gold[data-library-batch="7"] .gold-filter-bar [data-action-id]{border:1px solid #aaaaaa40;background:transparent;color:inherit;border-radius:24px;padding:7px 10px;cursor:pointer;font:9px Arial;max-width:100%}
+.biosite.moda-premium-gold[data-library-batch="7"] .gold-filter-bar [data-action-id][aria-pressed=true]{background:var(--gold);color:#12140d}
+.biosite.moda-premium-gold[data-library-batch="7"] .gold-footer-navigation{display:flex!important;flex-wrap:wrap;justify-content:center;gap:6px}
+.biosite.moda-premium-gold[data-library-batch="7"] .gold-footer-navigation>a,.biosite.moda-premium-gold[data-library-batch="7"] .gold-footer-navigation [data-editable-text]:not([data-custom-text-color]){width:auto!important;flex:0 0 auto!important;background:transparent!important;color:var(--ink)!important;font:9px Arial;letter-spacing:0}
+.biosite.moda-premium-gold[data-library-batch="7"] .gold-social:not(.gold-footer-navigation)>a{background:transparent;border:1px solid var(--gold);color:var(--ink);width:29px;height:29px}
+.biosite.moda-premium-gold[data-library-batch="7"] .gold-service-icon{display:grid;place-items:center;color:var(--gold);width:32px;height:32px;border:1px solid var(--gold);border-radius:50%;background:#080a0a;margin:-20px 0 6px;position:relative}
+.biosite.moda-premium-gold[data-library-batch="7"][data-ready-model="prime-car"],.biosite.moda-premium-gold[data-library-batch="7"][data-ready-model="prime-car-reenvio"]{--model-link-ink:#856200}
+.biosite.moda-premium-gold[data-library-batch="7"][data-ready-model="prime-car"] .gold-hero-headline,.biosite.moda-premium-gold[data-library-batch="7"][data-ready-model="prime-car-reenvio"] .gold-hero-headline{font-family:Impact,"Arial Narrow",Arial,sans-serif;font-style:italic;font-weight:900;line-height:1.03!important;font-size:clamp(30px,9cqw,43px)!important;width:75%}
+.biosite.moda-premium-gold[data-library-batch="7"][data-ready-model="prime-car"] .gold-banner-copy h2,.biosite.moda-premium-gold[data-library-batch="7"][data-ready-model="prime-car-reenvio"] .gold-banner-copy h2{font:bold italic clamp(21px,6.2cqw,29px)/1.05 Impact,"Arial Narrow",Arial,sans-serif!important}
+.biosite.moda-premium-gold[data-library-batch="7"][data-ready-model="prime-car"] .gold-product-contact,.biosite.moda-premium-gold[data-library-batch="7"][data-ready-model="prime-car-reenvio"] .gold-product-contact{background:#fff;color:#111}
+.biosite.moda-premium-gold[data-library-batch="7"][data-ready-model="prime-car"] .gold-collections>a,.biosite.moda-premium-gold[data-library-batch="7"][data-ready-model="prime-car-reenvio"] .gold-collections>a{background:white;color:#111;border-color:#e4e0d9;box-shadow:0 3px 9px #0001}
+.biosite.moda-premium-gold[data-library-batch="7"][data-ready-model="prime-car"] .gold-category-icon,.biosite.moda-premium-gold[data-library-batch="7"][data-ready-model="prime-car-reenvio"] .gold-category-icon{background:#050705;color:white;border:1px solid white}
+.biosite.moda-premium-gold[data-library-batch="7"] [data-section-id$="-promise"]{text-align:center;font-size:8px;letter-spacing:.5px}
+.biosite.moda-premium-gold[data-library-batch="7"] [data-section-id$="-promise"] .gold-text-block{font-size:8px;line-height:1.5}
+.biosite.moda-premium-gold[data-library-batch="7"] .gold-about[data-section-id$="-identity"],.biosite.moda-premium-gold[data-library-batch="7"] .gold-actions[data-section-id$="-social"],.biosite.moda-premium-gold[data-library-batch="7"] [data-section-id$="-promise"],.biosite.moda-premium-gold[data-library-batch="7"] [data-section-id$="-navigation"]{background:#0b0e0d!important;color:white!important}
+.biosite.moda-premium-gold[data-library-batch="7"] [data-section-id$="-identity"] .gold-logo{width:155px;height:95px}
+.biosite.moda-premium-gold[data-library-batch="7"] [data-section-id$="-identity"]{grid-column:span 1}
+.biosite.moda-premium-gold[data-library-batch="7"] [data-section-id$="-promise"]{grid-column:span 1!important;align-self:center}
+.biosite.moda-premium-gold[data-library-batch="7"] .gold-actions[data-section-id$="-social"]{grid-column:2;grid-row:auto;padding:8px!important;--ink:#fff}
+.biosite.moda-premium-gold[data-library-batch="7"] [data-section-id$="-navigation"]{--ink:#fff;padding:12px!important;border-radius:0 0 12px 12px}
+.biosite.moda-premium-gold[data-library-batch="7"][data-ready-model="racing-auto-service"]{max-width:1050px;background:radial-gradient(at 0% 50%,#655100,#0a0d0c 38%)}
+.biosite.moda-premium-gold[data-library-batch="7"][data-ready-model="racing-auto-service"] .gold-hero-content>.gold-logo{margin-left:0;width:240px}
+.biosite.moda-premium-gold[data-library-batch="7"][data-ready-model="racing-auto-service"] .gold-tagline{display:none}
+.biosite.moda-premium-gold[data-library-batch="7"][data-ready-model="racing-auto-service"] .gold-hero-headline{font:900 italic clamp(28px,8.5cqw,43px)/1.05 Impact,"Arial Narrow",Arial,sans-serif!important;width:90%}
+.biosite.moda-premium-gold[data-library-batch="7"][data-ready-model="racing-auto-service"] .gold-hero-benefits .gold-benefit-grid{color:#fff;gap:10px;margin:12px 0}
+.biosite.moda-premium-gold[data-library-batch="7"][data-ready-model="racing-auto-service"] .gold-hero-proof{color:white;font-size:8px;font-weight:bold;padding:8px 12px;border-left:5px solid var(--gold);margin-top:12px;width:max-content;background:#111c}
+.biosite.moda-premium-gold[data-library-batch="7"][data-ready-model="racing-auto-service"] .gold-hero-proof [data-editable-text]{white-space:pre-line}
+.biosite.moda-premium-gold[data-library-batch="7"][data-ready-model="racing-auto-service"] .gold-section-heading h2,.biosite.moda-premium-gold[data-library-batch="7"][data-ready-model="racing-auto-service"] .gold-banner-copy h2{font:bold italic clamp(21px,6cqw,30px)/1.05 Impact,"Arial Narrow",Arial,sans-serif!important}
+.biosite.moda-premium-gold[data-library-batch="7"][data-ready-model="racing-auto-service"] .gold-product{position:relative;aspect-ratio:auto;isolation:auto}
+.biosite.moda-premium-gold[data-library-batch="7"][data-ready-model="racing-auto-service"] .gold-product>img{position:static;height:auto;aspect-ratio:1.2;z-index:auto}
+.biosite.moda-premium-gold[data-library-batch="7"][data-ready-model="racing-auto-service"] .gold-product::before{display:none}
+.biosite.moda-premium-gold[data-library-batch="7"][data-ready-model="racing-auto-service"] .gold-product>div{margin:0;padding:8px 8px 10px}
+.biosite.moda-premium-gold[data-library-batch="7"][data-ready-model="racing-auto-service"] .gold-product-contact{display:none}
+.biosite.moda-premium-gold[data-library-batch="7"][data-ready-model="racing-auto-service"] [data-section-id$="-benefits"] .gold-benefit-grid>div,.biosite.moda-premium-gold[data-library-batch="7"][data-ready-model="arqdesign"] [data-section-id$="-benefits"] .gold-benefit-grid>div{border:1px solid #5a574b;border-radius:11px;background:linear-gradient(135deg,#272923,#0a0d0c);padding:15px 5px;color:white}
+.biosite.moda-premium-gold[data-library-batch="7"][data-ready-model="arqdesign"] .gold-hero-headline{font-family:Georgia,serif;width:84%;font-size:clamp(32px,10cqw,48px)!important;font-weight:400;line-height:1.05!important}
+.biosite.moda-premium-gold[data-library-batch="7"][data-ready-model="arqdesign"] .gold-tagline{font-style:italic;font-size:10px;letter-spacing:4px}
+.biosite.moda-premium-gold[data-library-batch="7"][data-ready-model="arqdesign"] .gold-products{background:#f3eee6!important;color:#101310!important;border-radius:12px;padding:15px 9px!important}
+.biosite.moda-premium-gold[data-library-batch="7"][data-ready-model="arqdesign"] .gold-products .gold-section-heading>a{background:var(--gold);color:#111;padding:8px 11px;border-radius:22px}
+.biosite.moda-premium-gold[data-library-batch="7"][data-ready-model="arqdesign"] .gold-product{position:relative;isolation:isolate;aspect-ratio:1.1;background:#161511;color:white;border:0;display:flex;justify-content:flex-end}
+.biosite.moda-premium-gold[data-library-batch="7"][data-ready-model="arqdesign"] .gold-product>img{position:absolute;inset:0;height:100%;z-index:-2}
+.biosite.moda-premium-gold[data-library-batch="7"][data-ready-model="arqdesign"] .gold-product::before{content:"";position:absolute;inset:0;background:linear-gradient(transparent 30%,#000e);z-index:-1}
+.biosite.moda-premium-gold[data-library-batch="7"][data-ready-model="arqdesign"] .gold-product>div{flex:0;padding:8px 32px 12px 8px;margin-top:auto}
+.biosite.moda-premium-gold[data-library-batch="7"][data-ready-model="arqdesign"] .gold-product-contact{position:absolute;right:7px;bottom:10px;background:var(--gold);color:#111;margin:0}
+.biosite.moda-premium-gold[data-library-batch="7"][data-ready-model="arqdesign"] [data-section-id$="-about"]{padding:15px 12px!important;border-radius:12px;background:#f3eee6!important;color:#101310!important}
+.biosite.moda-premium-gold[data-library-batch="7"][data-ready-model="arqdesign"] .gold-about-grid{display:grid;grid-template-columns:minmax(0,1fr) 35%;column-gap:13px;row-gap:4px}
+.biosite.moda-premium-gold[data-library-batch="7"][data-ready-model="arqdesign"] .gold-about-grid>img{grid-column:2;grid-row:1/3;aspect-ratio:.75;object-fit:cover}
+.biosite.moda-premium-gold[data-library-batch="7"][data-ready-model="arqdesign"] .gold-about-grid p{font-size:11px;line-height:1.5}
+.biosite.moda-premium-gold[data-library-batch="7"][data-ready-model="arqdesign"] .gold-about-grid .gold-banner-button{grid-column:1;justify-self:start;font-size:8px;margin-top:4px;padding:8px 10px}
+.biosite.moda-premium-gold[data-library-batch="7"] .gold-process{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin:18px 0}
+.biosite.moda-premium-gold[data-library-batch="7"] .gold-process>a{text-align:center;position:relative;min-width:0}
+.biosite.moda-premium-gold[data-library-batch="7"] .gold-process strong{display:grid;place-items:center;border-radius:50%;width:45px;height:45px;margin:0 auto 10px;background:linear-gradient(110deg,#f2d8a4,#c99b56);color:#12140e;font:23px Georgia}
+.biosite.moda-premium-gold[data-library-batch="7"] .gold-process small{font:9px/1.4 Arial;white-space:pre-line;display:block}
+.biosite.moda-premium-gold[data-library-batch="7"] .gold-process small>span{display:block}
+.biosite.moda-premium-gold[data-library-batch="7"] .gold-process small>span:first-child{font-weight:bold;font-size:10px;margin-bottom:5px}
+.biosite.moda-premium-gold[data-library-batch="7"] .gold-process>a:not(:last-child):after{content:"→";position:absolute;top:15px;right:-11px;color:var(--gold)}
+.biosite.moda-premium-gold[data-library-batch="7"][data-ready-model="sorriso-odontologia"]{max-width:800px;font-family:Arial,sans-serif;--model-link-ink:#076786}
+.biosite.moda-premium-gold[data-library-batch="7"][data-ready-model="sorriso-odontologia"] .gold-body{padding:0 10px 12px;column-gap:10px}
+.biosite.moda-premium-gold[data-library-batch="7"][data-ready-model="sorriso-odontologia"] .gold-hero{border-radius:0 0 18px 18px;background:#062b3b;padding:18px 18px 15px}
+.biosite.moda-premium-gold[data-library-batch="7"][data-ready-model="sorriso-odontologia"] .gold-hero-shade{background:linear-gradient(90deg,#002937f5,#00354488 60%,transparent)}
+.biosite.moda-premium-gold[data-library-batch="7"][data-ready-model="sorriso-odontologia"] .gold-hero-content>.gold-logo{margin-left:0;width:185px;height:100px}
+.biosite.moda-premium-gold[data-library-batch="7"][data-ready-model="sorriso-odontologia"] .gold-hero-tools{display:none}
+.biosite.moda-premium-gold[data-library-batch="7"][data-ready-model="sorriso-odontologia"] .gold-hero-headline{font:bold clamp(25px,7cqw,43px)/1.08 Arial!important;letter-spacing:-.7px;width:83%;margin-top:12px}
+.biosite.moda-premium-gold[data-library-batch="7"][data-ready-model="sorriso-odontologia"] .gold-hero-button{width:100%;background:linear-gradient(120deg,#b7f7fc,#83effb);font-size:14px;min-height:44px}
+.biosite.moda-premium-gold[data-library-batch="7"][data-ready-model="sorriso-odontologia"] .gold-tagline{font-size:8px;letter-spacing:2px}
+.biosite.moda-premium-gold[data-library-batch="7"][data-ready-model="sorriso-odontologia"] .gold-hero-benefits .gold-benefit-grid{color:white;gap:12px;padding:12px 0}
+.biosite.moda-premium-gold[data-library-batch="7"][data-ready-model="sorriso-odontologia"] .gold-hero-benefits svg{color:#bcf5ff}
+.biosite.moda-premium-gold[data-library-batch="7"][data-ready-model="sorriso-odontologia"] .gold-hero-benefits h3{font-size:9px!important}
+.biosite.moda-premium-gold[data-library-batch="7"][data-ready-model="sorriso-odontologia"] .gold-actions.premium-actions{grid-template-columns:repeat(4,minmax(0,1fr));gap:9px;padding:5px 0}
+.biosite.moda-premium-gold[data-library-batch="7"][data-ready-model="sorriso-odontologia"] .gold-actions:not([data-gold-footer])>[data-action-id]{background:white!important;border-radius:15px;color:#062336}
+.biosite.moda-premium-gold[data-library-batch="7"][data-ready-model="sorriso-odontologia"] .gold-actions .action-tile-label{color:#062336!important}
+.biosite.moda-premium-gold[data-library-batch="7"][data-ready-model="sorriso-odontologia"] .gold-section h2{font-family:Arial,sans-serif;font-weight:700;font-size:clamp(19px,5.6cqw,30px)}
+.biosite.moda-premium-gold[data-library-batch="7"][data-ready-model="sorriso-odontologia"] .gold-services .gold-product-list{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.biosite.moda-premium-gold[data-library-batch="7"][data-ready-model="sorriso-odontologia"] .gold-product{aspect-ratio:auto;isolation:auto;background:white;color:#062336}
+.biosite.moda-premium-gold[data-library-batch="7"][data-ready-model="sorriso-odontologia"] .gold-product>img{position:static;z-index:auto;height:auto;aspect-ratio:1.5;object-fit:cover}
+.biosite.moda-premium-gold[data-library-batch="7"][data-ready-model="sorriso-odontologia"] .gold-product::before{display:none}
+.biosite.moda-premium-gold[data-library-batch="7"][data-ready-model="sorriso-odontologia"] .gold-product>div{padding:10px;flex:1;margin:0}
+.biosite.moda-premium-gold[data-library-batch="7"][data-ready-model="sorriso-odontologia"] .gold-service-icon{background:#fff;border:none;color:#086584}
+.biosite.moda-premium-gold[data-library-batch="7"][data-ready-model="sorriso-odontologia"] .gold-product h3{font-family:Arial;font-size:14px!important;margin-bottom:5px}
+.biosite.moda-premium-gold[data-library-batch="7"][data-ready-model="sorriso-odontologia"] .gold-product p{font-size:12px;line-height:1.4}
+.biosite.moda-premium-gold[data-library-batch="7"][data-ready-model="sorriso-odontologia"] .gold-product-contact{display:none}
+.biosite.moda-premium-gold[data-library-batch="7"][data-ready-model="sorriso-odontologia"] [data-section-id$="-results"]{background:#032d3e!important;color:white!important;border-radius:15px;padding:14px 10px!important}
+.biosite.moda-premium-gold[data-library-batch="7"][data-ready-model="sorriso-odontologia"] [data-section-id$="-results"]>[data-editable-text=auxiliary]{font-size:8px;opacity:.9;line-height:1.4;margin-bottom:10px}
+.biosite.moda-premium-gold[data-library-batch="7"][data-ready-model="sorriso-odontologia"] [data-section-id$="-results"]>[data-editable-text=text]{font-size:12px;color:#a8f3ff;margin-bottom:12px}
+.biosite.moda-premium-gold[data-library-batch="7"][data-ready-model="sorriso-odontologia"] .gold-gallery-grid{grid-template-columns:repeat(6,minmax(0,1fr));gap:2px}
+.biosite.moda-premium-gold[data-library-batch="7"][data-ready-model="sorriso-odontologia"] .gold-gallery-cell{border-radius:10px 0 0 10px}
+.biosite.moda-premium-gold[data-library-batch="7"][data-ready-model="sorriso-odontologia"] .gold-gallery-cell:nth-child(2n){border-radius:0 10px 10px 0;margin-right:5px}
+.biosite.moda-premium-gold[data-library-batch="7"][data-ready-model="sorriso-odontologia"] .gold-gallery-cell>div[data-photo-index]{overflow:hidden;aspect-ratio:.5}
+.biosite.moda-premium-gold[data-library-batch="7"][data-ready-model="sorriso-odontologia"] .gold-gallery-grid img{height:100%;width:100%;object-fit:cover;object-position:50% 45%;border-radius:0}
+.biosite.moda-premium-gold[data-library-batch="7"][data-ready-model="sorriso-odontologia"] .gold-gallery-caption{padding:5px 2px;min-height:24px;justify-content:center;font:9px Arial;background:#0009}
+.biosite.moda-premium-gold[data-library-batch="7"][data-ready-model="sorriso-odontologia"] .gold-gallery-cell:nth-child(2n) .gold-gallery-caption{background:#83effb;color:#062336}
+.biosite.moda-premium-gold[data-library-batch="7"][data-ready-model="sorriso-odontologia"] [data-section-id$="-about"] .gold-banner{background:transparent;min-height:0;aspect-ratio:auto;overflow:visible}
+.biosite.moda-premium-gold[data-library-batch="7"][data-ready-model="sorriso-odontologia"] [data-section-id$="-about"] .gold-banner>img{left:0;right:auto;position:absolute;width:42%;height:100%;border-radius:15px;z-index:0;object-position:50% 45%}
+.biosite.moda-premium-gold[data-library-batch="7"][data-ready-model="sorriso-odontologia"] [data-section-id$="-about"] .gold-banner-shade{display:none}
+.biosite.moda-premium-gold[data-library-batch="7"][data-ready-model="sorriso-odontologia"] [data-section-id$="-about"] .gold-banner-copy{width:55%;padding:10px 0 10px 3px}
+.biosite.moda-premium-gold[data-library-batch="7"][data-ready-model="sorriso-odontologia"] [data-section-id$="-about"] .gold-banner-copy h2{font:bold clamp(18px,5cqw,28px)/1.15 Arial!important;color:#062336}
+.biosite.moda-premium-gold[data-library-batch="7"][data-ready-model="sorriso-odontologia"] .gold-banner-copy h2:not([data-custom-text-color]) .gold-banner-line:last-child{color:inherit}
+.biosite.moda-premium-gold[data-library-batch="7"][data-ready-model="sorriso-odontologia"] .gold-banner-copy p{font-size:11px;line-height:1.45}
+.biosite.moda-premium-gold[data-library-batch="7"][data-ready-model="sorriso-odontologia"] .gold-banner-subtitle{color:#086584;letter-spacing:2px;font-size:8px;font-weight:bold;margin-top:10px}
+.biosite.moda-premium-gold[data-library-batch="7"][data-ready-model="sorriso-odontologia"] .gold-banner-subtitle>svg{display:none}
+.biosite.moda-premium-gold[data-library-batch="7"][data-ready-model="sorriso-odontologia"] .gold-banner-benefits .gold-benefit-grid{gap:8px;color:#062336}
+.biosite.moda-premium-gold[data-library-batch="7"][data-ready-model="sorriso-odontologia"] .gold-banner-benefits h3{font-size:9px!important}
+.biosite.moda-premium-gold[data-library-batch="7"][data-ready-model="sorriso-odontologia"] .gold-banner-benefits svg{color:#086584}
+.biosite.moda-premium-gold[data-library-batch="7"][data-ready-model="sorriso-odontologia"] .gold-whatsapp-card{border-radius:50px}
+@container(min-width:650px){.biosite.moda-premium-gold[data-ready-model="racing-auto-service"] .gold-hero-content{max-width:600px;width:60%}.biosite.moda-premium-gold[data-ready-model="racing-auto-service"] .gold-hero-headline{font-size:43px!important}.biosite.moda-premium-gold[data-ready-model="racing-auto-service"] .gold-hero-content>.gold-logo{width:280px}.biosite.moda-premium-gold[data-ready-model="racing-auto-service"] .gold-hero-proof{position:absolute;right:18px;top:10px;margin:0}.biosite.moda-premium-gold[data-ready-model="racing-auto-service"] .gold-product-list{grid-template-columns:repeat(6,minmax(0,1fr))}.biosite.moda-premium-gold[data-ready-model="racing-auto-service"] .gold-body{grid-template-columns:repeat(3,minmax(0,1fr));padding:0 15px 15px;gap:10px}.biosite.moda-premium-gold[data-ready-model="racing-auto-service"] .gold-section{grid-column:1/-1}.biosite.moda-premium-gold[data-ready-model="racing-auto-service"] [data-section-id$="-professionals"],.biosite.moda-premium-gold[data-ready-model="racing-auto-service"] [data-section-id$="-benefits"],.biosite.moda-premium-gold[data-ready-model="racing-auto-service"] [data-section-id$="-reviews"],.biosite.moda-premium-gold[data-ready-model="racing-auto-service"] .gold-hours,.biosite.moda-premium-gold[data-ready-model="racing-auto-service"] .gold-location,.biosite.moda-premium-gold[data-ready-model="racing-auto-service"] [data-section-id$="-prevention"]{grid-column:span 1}.biosite.moda-premium-gold[data-ready-model="racing-auto-service"] [data-section-id$="-benefits"] .gold-benefit-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.biosite.moda-premium-gold[data-ready-model="racing-auto-service"] .gold-banner-copy{width:70%}.biosite.moda-premium-gold[data-ready-model="racing-auto-service"] .gold-gallery-grid{grid-template-columns:repeat(6,minmax(0,1fr))}.biosite.moda-premium-gold[data-ready-model="racing-auto-service"] [data-section-id$="-reviews"] h2{font-size:16px!important}.biosite.moda-premium-gold[data-ready-model="racing-auto-service"] .gold-reviews blockquote{padding:12px 20px;grid-template-columns:60px minmax(0,1fr)}.biosite.moda-premium-gold[data-ready-model="racing-auto-service"] .gold-reviews p{font-size:11px}.biosite.moda-premium-gold[data-ready-model="sorriso-odontologia"] .gold-services .gold-product-list{grid-template-columns:repeat(4,minmax(0,1fr))}.biosite.moda-premium-gold[data-ready-model="sorriso-odontologia"] .gold-hero-headline{width:65%;font-size:43px!important}.biosite.moda-premium-gold[data-ready-model="sorriso-odontologia"] .gold-hero-content>.gold-logo{width:250px;height:150px}.biosite.moda-premium-gold[data-ready-model="sorriso-odontologia"] .gold-hero-benefits .gold-benefit-grid>div{display:flex;text-align:left;align-items:center;gap:10px}.biosite.moda-premium-gold[data-ready-model="sorriso-odontologia"] .gold-hero-benefits h3{font-size:13px!important}.biosite.moda-premium-gold[data-ready-model="sorriso-odontologia"] .gold-banner-benefits .gold-benefit-grid{flex-direction:row!important}.biosite.moda-premium-gold[data-ready-model="sorriso-odontologia"] .gold-banner-copy p{font-size:15px}}
+@media(max-width:340px){.biosite.moda-premium-gold[data-library-batch="7"] .gold-hero-button{font-size:9px!important;padding-inline:10px!important;gap:5px}.biosite.moda-premium-gold[data-library-batch="7"] .gold-banner-copy{padding:15px 10px}.biosite.moda-premium-gold[data-library-batch="7"] .gold-hours-card>div{font-size:8px}.biosite.moda-premium-gold[data-library-batch="7"] .gold-footer-navigation>a{font-size:8px}.biosite.moda-premium-gold[data-library-batch="7"] .gold-process strong{width:40px;height:40px}.biosite.moda-premium-gold[data-library-batch="7"] .gold-process small{font-size:8px}}
+
+.biosite.moda-premium-gold[data-library-batch="7"][data-ready-model] .gold-section-heading h2:not([data-custom-text-color]){color:inherit!important}
+.biosite.moda-premium-gold[data-library-batch="7"][data-ready-model] .gold-collections>a>div{background:transparent!important;color:inherit!important}
+.biosite.moda-premium-gold[data-library-batch="7"][data-ready-model] .gold-collections strong:not([data-custom-text-color]){color:inherit!important}
+.biosite.moda-premium-gold[data-library-batch="7"][data-ready-model] .gold-section[data-gold-footer]{background:#0b0e0d!important;color:white!important;--ink:#fff}
+.biosite.moda-premium-gold[data-library-batch="7"][data-ready-model] .gold-social:not(.gold-footer-navigation)>a{background:transparent!important;color:white!important}
+.biosite.moda-premium-gold[data-library-batch="7"][data-ready-model] .gold-social:not(.gold-footer-navigation)>a svg{color:white}
+.biosite.moda-premium-gold[data-library-batch="7"][data-ready-model] .gold-actions [data-action-kind="whatsapp"] .action-icon-tile{background:#00c54e!important;border-radius:50%}
+.biosite.moda-premium-gold[data-library-batch="7"][data-ready-model] .gold-actions [data-action-kind="instagram"] .action-icon-tile{background:linear-gradient(135deg,#8134af,#e7238a,#ffae22)!important;border-radius:8px}
+.biosite.moda-premium-gold[data-library-batch="7"][data-ready-model="prime-car"] [data-section-id$="-benefits"] svg,.biosite.moda-premium-gold[data-library-batch="7"][data-ready-model="prime-car-reenvio"] [data-section-id$="-benefits"] svg{color:#181c15}
+
+.biosite.moda-premium-gold[data-library-batch="7"] .gold-body:has([data-section-id$="-promise"]){background:linear-gradient(transparent calc(100% - 190px),#0b0e0d 0)}
+
+.biosite.moda-premium-gold[data-library-batch="7"][data-ready-model] .gold-reviews blockquote{color:#121410}
+.biosite.moda-premium-gold[data-library-batch="7"][data-ready-model="arqdesign"] .gold-products>[data-editable-text=subtitle]{font-size:9px;font-style:italic;letter-spacing:2px;color:#a77b3a;margin:0 0 6px}
+.biosite.moda-premium-gold[data-library-batch="7"][data-ready-model] .gold-actions [data-action-kind=reviews] .action-icon-slot svg{width:28px!important;height:28px!important;max-width:none!important}
+
+.biosite.moda-premium-gold[data-library-batch="7"][data-ready-model] .gold-actions [data-action-kind="whatsapp"] .action-icon-tile{background:#075e54!important;border-color:#25d366!important;border-radius:50%}
+.biosite.moda-premium-gold[data-library-batch="7"][data-ready-model] .gold-actions [data-action-kind="instagram"] .action-icon-tile{background:linear-gradient(45deg,#ffb136,#ed2869,#8548db)!important;border-radius:9px}
+.biosite.moda-premium-gold[data-library-batch="7"][data-ready-model="sorriso-odontologia"] .gold-services .gold-product-list{grid-template-columns:repeat(2,minmax(0,1fr))!important}
+.biosite.moda-premium-gold[data-library-batch="7"][data-ready-model="sorriso-odontologia"] .gold-services .gold-product{aspect-ratio:auto;isolation:auto;background:#fff;color:#062336}
+.biosite.moda-premium-gold[data-library-batch="7"][data-ready-model="sorriso-odontologia"] .gold-services .gold-product>img{position:static;z-index:auto;height:auto;aspect-ratio:1.5;object-fit:cover}
+.biosite.moda-premium-gold[data-library-batch="7"][data-ready-model="sorriso-odontologia"] .gold-services .gold-product::before{display:none}
+.biosite.moda-premium-gold[data-library-batch="7"][data-ready-model="sorriso-odontologia"] .gold-services .gold-product>div{padding:10px;flex:1;margin:0}
+.biosite.moda-premium-gold[data-library-batch="7"][data-ready-model="sorriso-odontologia"] .gold-services .gold-product h3{font-size:14px!important;color:#062336}
+.biosite.moda-premium-gold[data-library-batch="7"][data-ready-model="sorriso-odontologia"] .gold-services .gold-product p{font-size:12px;color:#062336}
+.biosite.moda-premium-gold[data-library-batch="7"][data-ready-model="sorriso-odontologia"] .gold-services .gold-product-contact{display:none}
+.biosite.moda-premium-gold[data-library-batch="7"][data-ready-model="sorriso-odontologia"] [data-section-id$="-results"] .gold-section-heading>span{color:#a8f3ff}
+.biosite.moda-premium-gold[data-library-batch="7"][data-ready-model="sorriso-odontologia"] .gold-hours svg,.biosite.moda-premium-gold[data-library-batch="7"][data-ready-model="sorriso-odontologia"] .gold-location>svg{color:#087a91}
+@container(min-width:650px){.biosite.moda-premium-gold[data-library-batch="7"][data-ready-model="sorriso-odontologia"] .gold-services .gold-product-list{grid-template-columns:repeat(4,minmax(0,1fr))!important}}
+
+.biosite.moda-premium-gold[data-library-batch="7"][data-ready-model^="prime-car"] .gold-services .gold-section-heading h2:not([data-custom-text-color]){color:#161510!important}
+.biosite.moda-premium-gold[data-library-batch="7"][data-ready-model] .gold-actions [data-action-kind="reviews"] .action-icon-tile svg{width:28px!important;height:28px!important}
+
+.biosite.moda-premium-gold[data-library-batch="7"][data-ready-model="racing-auto-service"] [data-section-id="racing-auto-service-benefits"] .gold-benefit-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important}
+.biosite.moda-premium-gold[data-library-batch="7"][data-ready-model="racing-auto-service"] .gold-services .gold-product{aspect-ratio:auto;isolation:auto}
+.biosite.moda-premium-gold[data-library-batch="7"][data-ready-model="racing-auto-service"] .gold-services .gold-product>img{position:static;height:auto;aspect-ratio:1.2;z-index:auto}
+.biosite.moda-premium-gold[data-library-batch="7"][data-ready-model="racing-auto-service"] .gold-services .gold-product::before{display:none}
+.biosite.moda-premium-gold[data-library-batch="7"][data-ready-model="racing-auto-service"] .gold-services .gold-product>div{margin:0;padding:8px 8px 10px}
+.biosite.moda-premium-gold[data-library-batch="7"][data-ready-model="racing-auto-service"] .gold-services .gold-product-contact{display:none}
+@container(min-width:650px){
+.biosite.moda-premium-gold[data-library-batch="7"][data-ready-model="racing-auto-service"] .gold-hero{min-height:calc(clamp(360px,42cqw,480px) * var(--reference-height,100) / 100)!important}
+.biosite.moda-premium-gold[data-library-batch="7"][data-ready-model="racing-auto-service"] .gold-hero-content{width:60%;max-width:600px}
+.biosite.moda-premium-gold[data-library-batch="7"][data-ready-model="racing-auto-service"] .gold-body{grid-template-columns:repeat(3,minmax(0,1fr));padding:0 15px 15px;gap:10px}
+.biosite.moda-premium-gold[data-library-batch="7"][data-ready-model="racing-auto-service"] .gold-services .gold-product-list{grid-template-columns:repeat(6,minmax(0,1fr))!important}
+.biosite.moda-premium-gold[data-library-batch="7"][data-ready-model="racing-auto-service"] [data-section-id="racing-auto-service-professionals"],.biosite.moda-premium-gold[data-library-batch="7"][data-ready-model="racing-auto-service"] [data-section-id="racing-auto-service-benefits"],.biosite.moda-premium-gold[data-library-batch="7"][data-ready-model="racing-auto-service"] [data-section-id="racing-auto-service-reviews"],.biosite.moda-premium-gold[data-library-batch="7"][data-ready-model="racing-auto-service"] .gold-hours,.biosite.moda-premium-gold[data-library-batch="7"][data-ready-model="racing-auto-service"] .gold-location,.biosite.moda-premium-gold[data-library-batch="7"][data-ready-model="racing-auto-service"] [data-section-id="racing-auto-service-prevention"]{grid-column:span 1!important}
+.biosite.moda-premium-gold[data-library-batch="7"][data-ready-model="racing-auto-service"] .gold-gallery-grid{grid-template-columns:repeat(6,minmax(0,1fr))!important}
+.biosite.moda-premium-gold[data-library-batch="7"][data-ready-model="racing-auto-service"] [data-section-id="racing-auto-service-reviews"] h2{font-size:16px!important}
+.biosite.moda-premium-gold[data-library-batch="7"][data-ready-model="racing-auto-service"] .gold-reviews blockquote{grid-template-columns:60px minmax(0,1fr);padding:12px 20px}
+}

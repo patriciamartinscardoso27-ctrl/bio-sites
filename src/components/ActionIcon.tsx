@@ -1,0 +1,23 @@
+import {isBrandIcon} from '../lib/iconSelection'
+import {lazy,Suspense,type SVGProps} from 'react'
+import {iconDefaultColor} from '../lib/iconCatalog'
+const BrandIcon=lazy(()=>import('./BrandIcon'))
+import { Menu,MapPin,CalendarDays, FileText, Globe, Heart, Link, Mail, MapPinHouse, MessageCircle, Phone, ShoppingBag, Sparkles, Star, UtensilsCrossed,Camera,Scissors,Info,ShoppingCart,Map,Route,Navigation,Store,Gift,Coffee,Cake,Pizza,Truck,Wrench,Briefcase,Clock,CalendarCheck,CreditCard,Wallet,Banknote,Images,Users,Check,House,Smartphone,Headphones,Tag,QrCode,Sandwich,LayoutGrid,Car,Construction,Paintbrush,Share2,Download,ExternalLink,Search,User,ShieldCheck,Leaf,Sofa,Ruler,Building2,Diamond,Scale,Gavel,HandCoins,Dumbbell,ChartNoAxesColumnIncreasing,Apple,Zap,GraduationCap,Medal,PawPrint,Glasses,Flower2,Circle,Crown,Lock,Settings,ThumbsUp,Flame,PersonStanding,Target,Play } from 'lucide-react'
+import type { Action } from '../types/biosite'
+import { actionKind } from '../lib/actionLinks'
+
+function Tooth({size=19,...props}:SVGProps<SVGSVGElement>&{size?:number}){return <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" {...props}><path d="M12 4c-3-2-7-2-8 1-2 4 1 8 2 12 1 5 3 5 4 0 1-4 3-4 4 0 1 5 3 5 4 0 1-4 4-8 2-12-1-3-5-3-8-1Z"/></svg>}
+const generic = { link: Link, sparkles: Sparkles, heart: Heart, document: FileText, star: Star, bag: ShoppingBag, calendar: CalendarDays,camera:Camera,scissors:Scissors,info:Info,cart:ShoppingCart,food:UtensilsCrossed,map:Map,route:Route,navigation:Navigation,store:Store,gift:Gift,coffee:Coffee,cake:Cake,pizza:Pizza,delivery:Truck,wrench:Wrench,briefcase:Briefcase,clock:Clock,'calendar-check':CalendarCheck,'credit-card':CreditCard,wallet:Wallet,banknote:Banknote,gallery:Images,users:Users,check:Check,home:House,phone:Phone,email:Mail,message:MessageCircle,globe:Globe,location:MapPinHouse,smartphone:Smartphone,chat:MessageCircle,support:Headphones,tag:Tag,'qr-code':QrCode,burger:Sandwich,catalog:LayoutGrid,car:Car,construction:Construction,beauty:Paintbrush,share:Share2,download:Download,external:ExternalLink,search:Search,user:User,reviews:Star,tooth:Tooth,'shield-check':ShieldCheck,leaf:Leaf,sofa:Sofa,ruler:Ruler,building:Building2,diamond:Diamond,scale:Scale,gavel:Gavel,'hand-coins':HandCoins,dumbbell:Dumbbell,chart:ChartNoAxesColumnIncreasing,apple:Apple,zap:Zap,graduation:GraduationCap,medal:Medal,paw:PawPrint,glasses:Glasses,flower:Flower2,ring:Circle,crown:Crown,lock:Lock,settings:Settings,'thumbs-up':ThumbsUp,flame:Flame,running:PersonStanding,target:Target,play:Play,pin:MapPin,menu:Menu }
+function IconGlyph({ action, size = 19, color:override }: { action: Action; size?: number; color?:string }) {
+  const kind = actionKind(action)
+  const selected=action.icon||(kind==='reviews'?'google-reviews':kind),color=override|| (action.iconColorMode==='original'?iconDefaultColor(selected):action.iconColorMode==='custom'?action.visual?.iconColor:undefined)
+  if(isBrandIcon(selected))return <span style={{color,display:'inline-flex',width:size,height:size}}><Suspense fallback={<MessageCircle size={size}/>}><BrandIcon id={selected} size={size} original={action.iconColorMode==='original'}/></Suspense></span>
+  if(action.icon==='stars')return <span style={{display:'flex',alignItems:'center',color}} aria-label="5 estrelas">{Array.from({length:5},(_,i)=><Star key={i} size={size/5} strokeWidth={1.75} aria-hidden="true"/>)}</span>
+  if(action.icon){const Override=generic[action.icon as keyof typeof generic]||Link;return <Override size={size} strokeWidth={1.75} style={{color}} aria-hidden="true" data-action-icon={kind} data-generic-icon={action.icon}/>}
+  const known = { reviews: Star, location: MapPinHouse, phone: Phone, email: Mail, website: Globe, menu: UtensilsCrossed, booking: CalendarDays, quote: FileText, order: ShoppingBag }
+  const Icon = kind === 'custom' ? generic[(action.icon || 'link') as keyof typeof generic] || Link : kind in known ? known[kind as keyof typeof known] : MessageCircle
+  return <Icon size={size} strokeWidth={1.75} aria-hidden="true" data-action-icon={kind} data-generic-icon={kind === 'custom' ? action.icon || 'link' : undefined}/>
+}
+
+export function ActionIcon({action,size=19,color:override}:{action:Action;size?:number;color?:string}){const color=override|| (action.iconColorMode==='original'?iconDefaultColor(action.icon||actionKind(action)):action.iconColorMode==='custom'?action.visual?.iconColor:undefined);return <span style={{display:'inline-flex',alignItems:'center',justifyContent:'center',boxSizing:'border-box',lineHeight:0,width:size,height:size,color,flexShrink:0}}><IconGlyph action={action} size={size} color={override}/></span>}
+

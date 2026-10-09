@@ -1,0 +1,3 @@
+Brand icons use Font Awesome Free Brands (@fortawesome/free-brands-svg-icons), licensed CC BY 4.0. Attribution: Font Awesome — https://fontawesome.com/license/free. Logos remain trademarks of their respective owners. Generic icons use the existing Lucide library (ISC license).
+
+Google G is the unmodified GoogleG_FullColor_RGB.png supplied by Google at https://partnermarketinghub.withgoogle.com/brands/google/branding-guidelines/how-to-show-googles-brand/. Used to link to business reviews, under https://about.google/brand-resource-center/guidance/user-reviews/. Do not recolor, distort, combine it with stars or imply Google endorsement. The downloaded original is stored in src/assets/google-g.png; no signed download URLs are retained.

@@ -1,0 +1,393 @@
+/* Lote 6: native content grids, scoped to the five new presets. */
+.biosite.moda-premium-gold[data-library-batch="8"]{max-width:500px;font-family:Arial,sans-serif;--section-gap:7px;--model-link-ink:var(--gold)}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model] .gold-body{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));padding:0 7px 10px;column-gap:6px}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model] .gold-section{grid-column:1/-1;min-width:0;padding:9px 2px;background:transparent;color:var(--ink)}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model] .gold-section h2{font-family:Georgia,serif;font-weight:400;font-size:clamp(20px,5.6cqw,28px);line-height:1.1}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model] .gold-section-heading{margin-bottom:10px;gap:6px}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model] .gold-section-heading>a,.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model] .gold-section-heading>span{font-size:10px;color:var(--model-link-ink);gap:4px;flex-shrink:0}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model] .gold-section-heading>h2{min-width:0}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model] .gold-hero{min-height:0;padding:15px 20px 20px;aspect-ratio:auto;background:#070908;color:#fff;overflow:hidden}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model] .gold-hero-photo{object-position:var(--local-image-position,70% 35%)}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model] .gold-hero-shade{background:linear-gradient(90deg,#000d 0%,#0008 40%,#0000 85%),linear-gradient(0deg,#0009,transparent 25%)}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model] .gold-hero-content{width:100%;max-width:none;padding-top:2px}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model] .gold-hero-content>.gold-logo{width:142px;height:105px;margin:0 0 4px 20px;background:transparent;border-radius:0}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model] .gold-logo{border:0;box-shadow:none}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model] .gold-logo img{width:100%;height:100%;object-fit:contain}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model] .gold-hero-content>h1,.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model] .gold-tagline{display:none}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model] .gold-hero-headline{font-size:clamp(30px,9.5cqw,46px)!important;line-height:1.02!important;width:70%;margin:22px 0 15px;letter-spacing:-.8px}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model] .gold-headline-line{display:block}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model] .gold-hero-content>p{width:62%;font-size:13px!important;line-height:1.4!important;white-space:pre-line}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model] .gold-hero-button{display:flex;width:max-content;max-width:100%;justify-content:center;gap:10px;border-radius:99px;padding:12px 19px;margin-top:17px;font-size:12px;font-weight:700;background:var(--gold);color:#080808;white-space:nowrap}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model] .gold-hero-button svg:last-child{margin-left:4px}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model] .gold-hero-tools{position:absolute;inset:14px 17px auto;display:flex;justify-content:space-between;align-items:center;color:var(--gold);font-size:24px;z-index:2}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model] .gold-hero-tools>a{display:grid;place-items:center}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model] .gold-actions.premium-actions{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:5px;background:transparent;padding:5px 0}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model] .gold-actions:not([data-gold-footer])>[data-action-id]{padding:7px 2px 9px;gap:7px;border-radius:12px;background:linear-gradient(135deg,#30242b,#0b090c);border:1px solid color-mix(in srgb,var(--gold) 25%,transparent)}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model] .gold-actions .action-icon-slot{width:38px;max-width:100%}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model] .gold-actions .action-icon-tile{background:transparent!important;border:0!important;box-shadow:none!important}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model] .gold-actions .action-tile-label{gap:4px;text-align:center;color:var(--ink)!important}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model] .gold-actions strong{font-size:10px!important;white-space:nowrap!important;line-height:1.15;font-weight:600}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model] .gold-actions small{font-size:9px;line-height:1.3}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model] .gold-promotion{padding:8px 0}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model] .gold-banner{min-height:0;aspect-ratio:auto;border-radius:14px;background:var(--local-panel);color:var(--local-text)}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model] .gold-banner>img{width:65%;left:auto;right:0;object-position:center}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model] .gold-banner-shade{background:linear-gradient(90deg,var(--local-panel) 0%,var(--local-panel) 32%,transparent 70%)}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model] .gold-banner-copy{position:relative;width:var(--content-width,57%);padding:18px 13px;min-height:180px}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model] .gold-banner-copy h2{font-size:clamp(21px,6.5cqw,31px)!important;line-height:1.05!important;letter-spacing:-.5px}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model] .gold-banner-copy p{font-size:12px;line-height:1.35;margin-top:10px;white-space:pre-line}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model] .gold-banner-button{display:inline-flex;align-items:center;justify-content:center;max-width:100%;font-size:10px;font-weight:600;line-height:1.3;padding:9px 12px;margin-top:12px;border-radius:99px;background:var(--gold-dark);color:#fff;text-align:center}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model] .gold-benefit-grid{display:grid;grid-template-columns:repeat(var(--benefit-columns,4),minmax(0,1fr));padding:7px 0;gap:6px;background:transparent;border:0;color:var(--ink)}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model] .gold-benefit-grid h3{font-size:10px;line-height:1.4;font-weight:400}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model] .gold-benefit-grid svg{width:26px;height:26px;margin:0 auto 6px;color:var(--gold)}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model] .gold-banner-benefits .gold-benefit-grid{display:flex!important;grid-template-columns:none!important;flex-direction:column;gap:8px;text-align:left;color:var(--local-text)}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model] .gold-banner-benefits [data-benefit-index]>span{width:16px;flex-shrink:0}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model] .gold-banner-benefits [data-benefit-index]>span>span{width:16px!important;height:16px!important}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model] .gold-banner-benefits .gold-benefit-grid>div{display:flex;align-items:center;gap:6px}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model] .gold-banner-benefits svg{width:16px;height:16px;margin:0;display:block;flex-shrink:0}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model] .gold-banner-benefits h3{font-size:11px;line-height:1.25}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model] .gold-product-list{display:grid;grid-template-columns:repeat(var(--product-columns,3),minmax(0,1fr));gap:6px}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model] .gold-product{display:flex;flex-direction:column;align-items:stretch;min-height:0;min-width:0;padding:0;border:0;border-radius:12px;overflow:hidden;gap:0;background:var(--local-panel,var(--card));color:var(--local-text,var(--ink));text-align:left}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model] .gold-product>img{width:100%;height:auto;aspect-ratio:var(--media-aspect,1.5);border-radius:0}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model] .gold-product>div{padding:8px 7px;flex:1;width:100%;min-width:0}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model] .gold-product h3{font-size:11px!important;font-weight:700;line-height:1.25;margin:0 0 6px;overflow-wrap:normal}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model] .gold-product p{font-size:9px;line-height:1.5;white-space:pre-line;overflow-wrap:break-word}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model] .gold-product strong{font-size:13px;margin-top:7px;white-space:nowrap;text-align:center}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model] .gold-products>.gold-section-heading h2,.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model] .gold-testimonials>h2{color:var(--ink)}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model] .gold-product-contact{display:flex;align-items:center;justify-content:center;gap:4px;margin:0 6px 7px;padding:6px 3px;min-height:27px;height:auto;width:auto;align-self:stretch;background:var(--gold-dark);color:#fff;border-radius:7px;font-size:9px;line-height:1.1}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model] .gold-product-contact svg{width:12px;height:12px;flex-shrink:0}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model] .gold-services .gold-product{position:relative;isolation:isolate;width:100%;min-height:115px;aspect-ratio:.98;color:#fff;background:#090909}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model] .gold-services .gold-product>img{position:absolute;inset:0;height:100%;z-index:-2;object-fit:cover}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model] .gold-services .gold-product::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(transparent 20%,#000 99%)}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model] .gold-services .gold-product>div{flex:0;margin-top:auto;padding:8px 27px 9px 8px}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model] .gold-services .gold-product h3{font-size:11px!important;margin-bottom:4px}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model] .gold-services .gold-product p{font-size:9px;line-height:1.3}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model] .gold-services .gold-product-contact{position:absolute;right:6px;bottom:10px;border-radius:50%;width:22px;height:22px;min-height:0;margin:0;padding:0;background:var(--gold);color:#111}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model] .gold-services .gold-product-contact>span{display:none}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model] .gold-package-badge{text-align:center;height:0;position:relative;z-index:1;top:-7px;font-size:8px;color:#111}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model] .gold-package-badge>span{background:var(--gold);border-radius:99px;padding:5px 7px;display:inline-block}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model] .gold-gallery-grid{display:grid;grid-template-columns:repeat(var(--section-columns,3),minmax(0,1fr));gap:6px}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model] .gold-gallery-cell{position:relative;min-width:0;overflow:hidden;border-radius:11px;isolation:isolate}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model] .gold-gallery-grid img{width:100%;height:auto;aspect-ratio:var(--media-aspect,.75);border-radius:11px}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model] .gold-gallery-caption{position:absolute;bottom:0;left:0;right:0;display:flex;justify-content:space-between;align-items:center;padding:25px 6px 8px;color:#fff;background:linear-gradient(transparent,#000b);font-size:10px;line-height:1.2;min-height:42px}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model] .gold-gallery-caption>a{width:22px;height:22px;border-radius:50%;background:#fff;color:var(--gold-dark);display:grid;place-items:center;flex-shrink:0;margin-left:3px}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model] .gold-reviews{display:flex;gap:8px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;margin-top:10px}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model] .gold-reviews::-webkit-scrollbar{display:none}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model] .gold-reviews blockquote{flex:0 0 100%;min-width:0;scroll-snap-align:start;margin:0;display:grid;grid-template-columns:68px minmax(0,1fr);column-gap:12px;align-content:center;padding:13px 25px;border-radius:13px;background:var(--local-panel,#fff2eb);color:var(--local-text,#211713)}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model] .gold-review-avatar{grid-row:1/4;align-self:center;width:68px;height:68px;border-radius:50%;overflow:hidden}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model] .gold-review-avatar img{width:100%;height:100%;object-fit:cover}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model] .gold-reviews strong{font-size:10px;font-weight:500;line-height:1.4}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model] .gold-reviews blockquote>span{display:flex;gap:1px;color:#ffad00;margin:4px 0}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model] .gold-reviews p{font-size:10px;line-height:1.4;margin:0}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model] .gold-testimonials{position:relative}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model] .gold-review-controls{position:absolute;inset:calc(50% + 9px) 8px auto;display:flex;justify-content:space-between;z-index:2;pointer-events:none}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model] .gold-review-controls button{width:24px;height:24px;padding:3px;display:grid;place-items:center;border:0;border-radius:50%;background:#fff;color:var(--gold-dark);pointer-events:auto;cursor:pointer}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model] .gold-hours,.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model] .gold-location{grid-column:span 1;align-self:stretch;padding:7px 0}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model] .gold-hours-card,.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model] .gold-location{border-radius:12px;background:var(--local-panel,var(--card));color:var(--local-text,var(--ink));min-width:0}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model] .gold-hours-card{padding:11px 8px;height:100%}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model] .gold-hours-card h2,.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model] .gold-map-button{font-size:13px;gap:6px;margin-bottom:7px;line-height:1.2}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model] .gold-hours-card h2 svg{width:16px;height:16px;color:var(--gold);flex-shrink:0}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model] .gold-hours-card>div{font-size:9px;line-height:1.4;padding:8px 0;gap:3px;border-color:#aaa2}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model] .gold-hours-card>div>span:last-child{white-space:nowrap}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model] .gold-location{margin:7px 0;padding:10px 7px 6px}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model] .gold-map-button{padding:0;background:transparent;color:inherit;border-radius:0;justify-content:flex-start;font-family:Georgia,serif;font-weight:400}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model] .gold-map-button>svg{width:16px;height:16px;color:var(--gold);flex-shrink:0}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model] .gold-address{padding:0;justify-content:flex-start;text-align:left;font-size:8px;gap:4px;line-height:1.35}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model] .gold-address>svg{width:13px;height:13px;color:var(--gold)}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model] .gold-location-media{position:relative;margin-top:6px}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model] .gold-location-image{width:100%;aspect-ratio:2.1;margin:0;border-radius:8px}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model] .gold-map-marker{position:absolute;left:50%;top:22%;transform:translateX(-50%);color:#ee4280;fill:#fff}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model] .gold-location-cta{position:absolute;bottom:4px;right:4px;display:flex;align-items:center;gap:3px;background:#fff;color:#6f2432;border-radius:7px;padding:5px 6px;font-size:9px;font-weight:600}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model] .gold-whatsapp-card{padding:11px 12px;gap:9px;grid-template-columns:36px minmax(0,1fr) 29px;background:linear-gradient(115deg,#00b944,#006a2d);border-radius:12px;color:white}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model] .gold-whatsapp-card>span:first-child,.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model] .gold-whatsapp-card>svg{color:#fff}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model] .gold-whatsapp-card h2{font-size:15px;line-height:1.15}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model] .gold-whatsapp-card p{font-size:10px;line-height:1.25;margin-top:4px}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model] .gold-whatsapp-card>span:last-child{width:29px;height:29px;background:white;color:#00993f}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model] .gold-whatsapp-card>span:last-child svg{width:19px;height:19px}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model] .gold-section[data-gold-footer]{background:transparent!important;color:var(--ink)!important}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model] .gold-identity{padding:0;text-align:left}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model] .gold-identity>.gold-logo{width:125px;height:80px;margin:0;background:transparent}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model] .gold-identity>strong,.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model] .gold-identity>p{display:none}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model] .gold-social{display:flex;gap:10px;justify-content:center;padding:0}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model] .gold-footer-navigation{display:flex;flex-wrap:wrap;gap:5px;justify-content:center}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model] .gold-footer-navigation>a{width:auto;height:auto;border-radius:0;font-size:8px;background:none;color:var(--ink);border-right:1px solid var(--gold);padding-right:5px;line-height:1.2}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model] .gold-footer-navigation>a:last-child{border:0}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model] .gold-footer-navigation>a{flex:0 0 auto!important;white-space:nowrap!important}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model] .gold-footer-navigation>a *{white-space:nowrap!important;word-break:normal!important;overflow-wrap:normal!important}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model] .gold-benefit-grid h3{font-size:10px!important;word-break:normal!important;overflow-wrap:normal!important;hyphens:none}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model] .gold-actions strong{white-space:normal!important;min-height:24px;display:flex;align-items:center;justify-content:center}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model] .gold-hero-benefits .gold-benefit-grid h3{font-size:9px!important}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model] .gold-text-block{font-size:8px;text-align:center;padding:0 0 7px}
+
+/* Common editing geometry, then the original dental, legal and fitness compositions. */
+.biosite.moda-premium-gold[data-library-batch="8"]{max-width:520px;background:#080d0f;font-family:Arial,sans-serif;border-radius:15px;--model-link-ink:#efba69}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model] .gold-hero{padding:15px 13px 13px;min-height:0!important;background:#070a0d}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model] .gold-hero-photo{left:auto;right:0;width:67%;object-position:center top;object-fit:cover}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model] .gold-hero-shade{background:linear-gradient(90deg,#060b0fff,#060b0ff5 20%,#060b0f66 52%,transparent 75%),linear-gradient(0deg,#030a0e 0%,transparent 45%)}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model] .gold-hero-content>.gold-logo{width:235px;height:135px;margin:0 0 0 -2px}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model] .gold-hero-headline{font:normal clamp(29px,8.5cqw,44px)/1.03 Georgia,serif!important;letter-spacing:-.5px;margin:12px 0;width:70%}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model] .gold-hero-headline .gold-headline-line:last-child{color:inherit}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model] .gold-hero-content>p{font-size:13px!important;max-width:65%;margin-bottom:8px}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model] .gold-hero-benefits .gold-benefit-grid{display:grid;grid-template-columns:repeat(var(--benefit-columns),minmax(0,1fr));margin:15px 0 5px;padding:9px 0;color:#fff;gap:8px}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model] .gold-hero-benefits .gold-benefit-grid>div{display:flex;gap:6px;align-items:center;text-align:left;min-width:0}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model] .gold-hero-benefits h3{font:normal 9px/1.3 Arial!important;white-space:pre-line}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model] .gold-hero-benefits svg{color:var(--gold);flex-shrink:0;width:25px;height:25px}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model] .gold-hero-button{display:flex;width:100%;border:1px solid #ffe8aa;background:linear-gradient(115deg,#ffe3a8,#d4a263 55%,#ffe2a1);color:#111;min-height:54px;padding:9px 14px;white-space:normal;font-size:16px;gap:12px;margin-top:8px;border-radius:30px}
+.biosite.moda-premium-gold[data-library-batch="8"] .gold-hero-action-copy{display:flex;flex-direction:column;flex:1;gap:2px;text-align:left;min-width:0}
+.biosite.moda-premium-gold[data-library-batch="8"] .gold-hero-action-copy small{font:normal 11px/1.3 Arial}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model] .gold-hero-button>svg:last-child{margin-left:auto;flex-shrink:0}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model] .gold-body{padding:0 8px 8px;gap:7px}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model] .gold-section{padding:6px 0;color:#fff}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model] .gold-section h2{font:normal clamp(20px,5.9cqw,29px)/1.1 Georgia,serif}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model] .gold-section-heading h2:not([data-custom-text-color]){color:inherit!important}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model] .gold-section>p{font:11px/1.4 Arial;margin:0 0 8px;white-space:pre-line}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model] .gold-section-heading{margin-bottom:5px}
+.biosite.moda-premium-gold[data-library-batch="8"] .gold-hero-tools{inset:18px 12px auto!important;color:#fff!important}
+.biosite.moda-premium-gold[data-library-batch="8"] .gold-hero-tools>a[data-bio-field=instagram]{display:none}
+.biosite.moda-premium-gold[data-library-batch="8"] .gold-hero-tools>a:first-child{margin-right:auto}
+.biosite.moda-premium-gold[data-library-batch="8"] .gold-hero-tools{justify-content:flex-end!important;gap:9px}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model] .gold-actions.premium-actions{grid-template-columns:repeat(4,minmax(0,1fr));gap:6px}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model] .gold-actions:not([data-gold-footer])>[data-action-id]{background:linear-gradient(135deg,#202728,#080e10);border:1px solid #5b5142;padding:9px 2px 10px;gap:6px;border-radius:10px}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model] .gold-actions .action-tile-label{color:#fff!important}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model] .gold-actions [data-action-kind=whatsapp] .action-icon-tile{background:#00b765!important;border-radius:50%}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model] .gold-actions [data-action-kind=instagram] .action-icon-tile{background:linear-gradient(45deg,#ffc946,#f42175,#7e46db)!important;border-radius:8px}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model] .gold-actions [data-action-kind=reviews] .action-icon-tile img{transform:scale(2.5)}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model] .gold-services .gold-product-list{grid-template-columns:repeat(var(--product-columns),minmax(0,1fr));gap:6px}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model] .gold-services .gold-product{position:relative;isolation:auto;aspect-ratio:auto;min-height:0;display:flex;flex-direction:column;background:linear-gradient(135deg,#1e2526,#090f10);color:white;border:1px solid #5c503c;border-radius:9px;overflow:hidden}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model] .gold-services .gold-product>img{position:static;height:auto;aspect-ratio:1.5;z-index:auto;border-radius:0;width:100%;object-fit:cover}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model] .gold-services .gold-product::before{display:none}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model] .gold-services .gold-product>div{padding:7px 7px 10px;margin:0;flex:1;min-width:0}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model] .gold-services .gold-product h3{font:normal 12px/1.2 Arial!important;margin:0 0 4px;color:inherit}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model] .gold-services .gold-product p{font:10px/1.35 Arial;color:inherit}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model] .gold-services .gold-product strong{color:inherit;font:700 11px/1.3 Arial;margin-top:4px}
+.biosite.moda-premium-gold[data-library-batch="8"] .gold-service-icon{color:var(--gold);display:inline-flex;float:left;margin-right:5px;margin-top:0;line-height:1}
+.biosite.moda-premium-gold[data-library-batch="8"] .gold-service-icon svg{width:17px;height:17px}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model] .gold-services .gold-product-contact{position:absolute;bottom:auto;top:55%;right:5px;width:16px;height:20px;min-height:0;padding:0;margin:0;background:transparent;color:var(--gold);border-radius:0}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model] .gold-services .gold-product-contact>span{display:none}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model] .gold-benefit-grid{gap:6px;padding:4px 0}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model] .gold-benefit-grid>div{min-width:0}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model] .gold-benefit-grid h3{font:11px/1.3 Arial!important;white-space:pre-line}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model] .gold-benefit-grid p{font:9px/1.35 Arial;white-space:pre-line}
+.biosite.moda-premium-gold[data-library-batch="8"] .gold-banner-line{display:block}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model] .gold-banner{border:1px solid #59442b;border-radius:12px;min-height:160px;aspect-ratio:auto;background:#111;
+}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model] .gold-banner>img{position:absolute;width:65%;height:100%;inset:0 0 0 auto;object-fit:cover;z-index:0;border-radius:0}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model] .gold-banner-shade{background:linear-gradient(90deg,#080c0fff 0%,#080c0fee 25%,#080c0f33 75%,transparent);z-index:1}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model] .gold-banner-copy{width:62%;position:relative;padding:12px 10px;margin:0;z-index:2}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model] .gold-banner-copy h2{font:normal clamp(20px,6cqw,28px)/1.06 Georgia,serif!important;color:inherit;margin:0 0 7px}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model] .gold-banner-copy p{font:11px/1.35 Arial;white-space:pre-line;color:inherit;margin:0 0 8px}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model] .gold-banner-copy h2 .gold-banner-line:last-child{color:inherit}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model] .gold-banner-button{background:linear-gradient(115deg,#ffe3a8,#d9a05a);color:#121212;border-radius:25px;font:700 10px/1.2 Arial;padding:9px 13px;min-height:0;width:max-content;max-width:100%;text-align:center}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model] .gold-gallery-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:6px}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model] .gold-gallery-grid img{width:100%;height:100%;object-fit:cover;border-radius:8px}
+.biosite.moda-premium-gold[data-library-batch="8"] .gold-gallery-controls{display:flex;gap:8px;position:absolute;right:0;top:4px}
+.biosite.moda-premium-gold[data-library-batch="8"] .gold-gallery-controls>a{display:grid;place-items:center;width:25px;height:25px;background:linear-gradient(135deg,#363d40,#101519);border:1px solid #72716e;border-radius:50%;color:white}
+.biosite.moda-premium-gold[data-library-batch="8"] .gold-gallery-controls>a:last-child{background:linear-gradient(135deg,#ffe3a8,#d9a05a);color:#111}
+.biosite.moda-premium-gold[data-library-batch="8"] .gold-gallery-controls>a:first-child svg{transform:rotate(180deg)}
+.biosite.moda-premium-gold[data-library-batch="8"] [data-section-id$="-results"]{position:relative;padding:10px 8px!important;border:1px solid #534a38;border-radius:12px;background:linear-gradient(135deg,#182023,#080d0f)!important}
+.biosite.moda-premium-gold[data-library-batch="8"] [data-section-id$="-results"] .gold-section-heading{padding-right:60px}
+.biosite.moda-premium-gold[data-library-batch="8"] [data-section-id$="-results"] .gold-section-heading>span{display:none}
+.biosite.moda-premium-gold[data-library-batch="8"] [data-section-id$="-results"]>[data-editable-text=auxiliary]{font:8px/1.3 Arial;opacity:.8;display:block;margin-bottom:8px}
+.biosite.moda-premium-gold[data-library-batch="8"] [data-section-id$="-results"] .gold-gallery-grid{grid-template-columns:repeat(6,minmax(0,1fr));gap:0;overflow-x:auto}
+.biosite.moda-premium-gold[data-library-batch="8"] .gold-gallery-cell{overflow:hidden;border-radius:7px 0 0 7px}
+.biosite.moda-premium-gold[data-library-batch="8"] .gold-gallery-cell:nth-child(2n){border-radius:0 7px 7px 0;margin-right:7px}
+.biosite.moda-premium-gold[data-library-batch="8"] .gold-gallery-cell>div[data-photo-index]{aspect-ratio:.85;overflow:hidden}
+.biosite.moda-premium-gold[data-library-batch="8"] [data-section-id$="-results"] .gold-gallery-grid img{border-radius:0}
+.biosite.moda-premium-gold[data-library-batch="8"] .gold-gallery-caption{padding:5px 1px;justify-content:center;font:9px/1.2 Arial;background:#15191b}
+.biosite.moda-premium-gold[data-library-batch="8"] .gold-gallery-cell:nth-child(2n) .gold-gallery-caption{background:linear-gradient(115deg,#ffe3a8,#d9a05a);color:#111}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model] .gold-testimonials{position:relative}
+.biosite.moda-premium-gold[data-library-batch="8"] .gold-review-controls{top:4px;right:0;gap:8px}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model] .gold-reviews blockquote{display:grid;grid-template-columns:65px minmax(0,1fr);column-gap:10px;padding:10px;color:#171d25;position:relative;border-radius:12px;background:#fffaf5;box-shadow:none}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model] .gold-review-avatar{grid-column:1;grid-row:1/4;align-self:center;width:65px;height:70px;border-radius:50%;overflow:hidden}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model] .gold-review-avatar img{width:100%;height:100%;object-fit:cover}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model] .gold-reviews strong,.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model] .gold-reviews p,.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model] .gold-reviews blockquote>span{grid-column:2}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model] .gold-reviews strong{font:700 11px/1.3 Arial}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model] .gold-reviews p{font:11px/1.35 Arial;margin:2px 0 0}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model] .gold-reviews span[aria-label]{color:#ffb500;margin:3px 0}
+.biosite.moda-premium-gold[data-library-batch="8"] .gold-testimonials .gold-section-heading{padding-right:57px}
+.biosite.moda-premium-gold[data-library-batch="8"] .gold-hours-card,.biosite.moda-premium-gold[data-library-batch="8"] .gold-location{border-radius:12px;padding:11px 9px!important}
+.biosite.moda-premium-gold[data-library-batch="8"] .gold-hours-card h2{font:700 14px Arial!important}
+.biosite.moda-premium-gold[data-library-batch="8"] .gold-hours-card h2>svg{color:#ac7124}
+.biosite.moda-premium-gold[data-library-batch="8"] .gold-hours-card>div{font:10px/1.5 Arial;border-bottom:1px solid #b7ac9c66;padding:6px 0;gap:5px}
+.biosite.moda-premium-gold[data-library-batch="8"] .gold-map-button{font:700 14px/1.1 Arial!important}
+.biosite.moda-premium-gold[data-library-batch="8"] .gold-map-button>svg,.biosite.moda-premium-gold[data-library-batch="8"] .gold-address>svg{color:#9a682b}
+.biosite.moda-premium-gold[data-library-batch="8"] .gold-address{font:10px/1.3 Arial!important}
+.biosite.moda-premium-gold[data-library-batch="8"] .gold-whatsapp-card{border-radius:30px;background:linear-gradient(110deg,#00e76c,#008c45)!important;color:#fff;padding:12px!important;gap:10px;grid-template-columns:35px minmax(0,1fr) 30px;border:1px solid #a0f0a5}
+.biosite.moda-premium-gold[data-library-batch="8"] .gold-whatsapp-card h2{font:700 19px/1.1 Georgia,serif!important;color:#fff!important}
+.biosite.moda-premium-gold[data-library-batch="8"] .gold-whatsapp-card p{font:11px/1.35 Arial!important;color:#fff;margin:3px 0 0}
+.biosite.moda-premium-gold[data-library-batch="8"] .gold-whatsapp-card>span{background:white;border-radius:50%;color:#00ad52;width:30px;height:30px;display:grid;place-items:center}
+/* OralPrime has white treatment bodies, a clinical gallery and rounded panels. */
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model=oralprime]{background:linear-gradient(#0b171e,#050b0e 55%,#827053);max-width:580px;padding:9px;border-radius:18px}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model=oralprime] .gold-hero{border-radius:14px 14px 0 0;padding:15px 5px 12px;background:transparent}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model=oralprime] .gold-hero-tools{display:none}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model=oralprime] .gold-hero-content>.gold-logo{width:195px;height:130px;margin:0}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model=oralprime] .gold-tagline{display:block;font:9px/1.35 Arial;letter-spacing:3px;width:60%;text-align:center;white-space:pre-line}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model=oralprime] .gold-hero-headline{font:italic 33px/1.06 "Segoe Script","Brush Script MT",cursive!important;width:65%;margin-top:13px;transform:rotate(-7deg)}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model=oralprime] .gold-services .gold-product-list{grid-template-columns:repeat(2,minmax(0,1fr))!important}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model=oralprime] .gold-services .gold-product{background:#fffaf5;color:#131b24;border-radius:12px}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model=oralprime] .gold-services .gold-product>div{padding:9px;position:relative}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model=oralprime] .gold-services .gold-product h3{font-size:14px!important;font-weight:700}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model=oralprime] .gold-services .gold-product p{font-size:12px}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model=oralprime] .gold-service-icon{display:flex;float:none;background:#fffaf5;color:#121924;border-radius:50%;width:27px;height:27px;margin-top:-23px;margin-bottom:4px;position:relative;align-items:center;justify-content:center}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model=oralprime] .gold-service-icon svg{width:22px;height:22px}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model=oralprime] .gold-product-contact{display:none}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model=oralprime] [data-section-id$="-clinic"]{display:grid;grid-template-columns:42% minmax(0,1fr);gap:6px;align-items:start}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model=oralprime] [data-section-id$="-clinic"] .gold-section-heading{grid-column:1;grid-row:1;margin:0}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model=oralprime] [data-section-id$="-clinic"] .gold-section-heading>span{display:none}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model=oralprime] [data-section-id$="-clinic"]>p{grid-column:1;grid-row:2;font-size:10px;margin:0}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model=oralprime] .gold-gallery-intro{grid-column:1;grid-row:3;width:100%;height:70px;object-fit:cover;border-radius:8px}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model=oralprime] [data-section-id$="-clinic"] .gold-gallery-grid{grid-column:2;grid-row:1/4;align-self:stretch;gap:4px}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model=oralprime] [data-section-id$="-clinic"] .gold-gallery-grid>div{height:100%;aspect-ratio:auto}
+/* Compact Almeida has six icon tiles and a light two-column commitment. */
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model=almeida-costa]{padding:9px;background:linear-gradient(90deg,#654222,#03090b 8%,#03090b 94%,#654222);border-radius:17px}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model=almeida-costa] .gold-hero-tools{display:none}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model=almeida-costa] .gold-tagline{display:block;white-space:pre-line;font:9px/1.5 Arial;letter-spacing:3px;text-align:center;width:65%}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model=almeida-costa] .gold-hero-headline{width:65%;font-size:clamp(30px,9.8cqw,44px)!important;margin:14px 0}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model=almeida-costa] .gold-headline-line:nth-child(2){color:var(--gold)}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model=almeida-costa] .gold-hero-proof{position:absolute;right:4px;top:50%;max-width:42%;border:1px solid var(--gold);border-radius:15px;background:#000b;padding:5px}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model=almeida-costa] .gold-hero-proof h3{font:11px/1.2 Arial!important;white-space:pre-line}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model=almeida-costa] .gold-hero-proof .gold-benefit-grid>div{display:flex;align-items:center;gap:5px;text-align:left}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model=almeida-costa] .gold-hero-proof svg{color:var(--gold)}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model=almeida-costa] .gold-services .gold-product img[data-placeholder]{display:none}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model=almeida-costa] .gold-services .gold-product>div{display:flex;align-items:center;justify-content:center;flex-direction:column;text-align:center;padding:12px 6px;min-height:90px}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model=almeida-costa] .gold-service-icon{float:none;margin:0 0 8px}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model=almeida-costa] .gold-service-icon svg{width:29px;height:29px}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model=almeida-costa] .gold-product-contact{display:none}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model=almeida-costa] [data-section-id$="-commitment"] .gold-banner{background:#fffaf5;color:#141414;display:flex;align-items:stretch;border-color:#d2a572}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model=almeida-costa] [data-section-id$="-commitment"] .gold-banner>img{width:46%;left:0;right:auto;object-fit:cover}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model=almeida-costa] [data-section-id$="-commitment"] .gold-banner-shade{display:none}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model=almeida-costa] [data-section-id$="-commitment"] .gold-banner-copy{width:54%;margin-left:auto;padding:11px 10px}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model=almeida-costa] [data-section-id$="-commitment"] .gold-banner-copy h2{font-weight:700!important}
+.biosite.moda-premium-gold[data-library-batch="8"] .gold-banner-subtitle{font:8px/1.3 Arial;letter-spacing:2px;margin-bottom:5px;color:#79421d}
+/* Full legal references are each a single continuous page. */
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model^="almeida-costa-completo"] .gold-hero-headline .gold-headline-line:last-child{color:var(--gold)}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model^="almeida-costa-completo"] [data-section-id$="-choice"]{position:relative;overflow:hidden;padding:10px 5px!important}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model^="almeida-costa-completo"] [data-section-id$="-choice"]>h2{width:80%;position:relative;z-index:1}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model^="almeida-costa-completo"] [data-section-id$="-choice"]>p{width:70%;position:relative;z-index:1}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model^="almeida-costa-completo"] .gold-benefit-photo{position:absolute;right:0;top:0;width:29%;height:95px;object-fit:cover;mask-image:linear-gradient(90deg,transparent,#000 35%)}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model^="almeida-costa-completo"] [data-section-id$="-choice"] .gold-benefit-grid>div,.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model^="almeida-costa-completo"] [data-section-id$="-benefits"] .gold-benefit-grid>div{border:1px solid #5c503c;border-radius:8px;padding:11px 4px;background:linear-gradient(140deg,#232321,#080d0f)}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model^="almeida-costa-completo"] [data-section-id$="-appointment"] .gold-banner-benefits{position:absolute;right:-60%;top:7px;width:60%;height:100%;background:#070b0ddd;border:1px solid #4c3923;border-radius:8px;padding:8px 5px}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model^="almeida-costa-completo"] [data-section-id$="-appointment"] .gold-banner-copy{width:62%}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model^="almeida-costa-completo"] [data-section-id$="-appointment"] .gold-banner-benefits .gold-benefit-grid{display:flex;flex-direction:column!important;gap:14px}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model^="almeida-costa-completo"] [data-section-id$="-appointment"] .gold-banner-benefits .gold-benefit-grid>div{display:flex;align-items:center;gap:5px;min-width:0;text-align:left}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model^="almeida-costa-completo"] [data-section-id$="-appointment"] .gold-banner-benefits svg{width:17px;height:17px;color:var(--gold)}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model^="almeida-costa-completo"] [data-section-id$="-appointment"] .gold-banner-benefits h3{font-size:8px!important}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model^="almeida-costa-completo"] [data-section-id$="-appointment"] .gold-banner-benefits p{font-size:7px!important;margin:0}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model^="almeida-costa-completo"] [data-section-id$="-office"] .gold-gallery-grid{grid-template-columns:2.2fr 1fr;grid-template-rows:85px 85px;gap:5px}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model^="almeida-costa-completo"] [data-section-id$="-office"] .gold-gallery-grid>div:first-child{grid-row:1/3}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model^="almeida-costa-completo"] [data-section-id$="-office"] .gold-gallery-grid>div{aspect-ratio:auto}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model^="almeida-costa-completo"] .gold-reviews blockquote{background:#151716;color:#fff;border:1px solid #4c493d;border-radius:9px}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model^="almeida-costa-completo"] .gold-review-avatar{height:100%;width:65px;border-radius:3px}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model^="almeida-costa-completo"] .gold-hours,.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model=rafael-ferreira-personal] .gold-hours{grid-column:1/-1!important;padding:0!important}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model^="almeida-costa-completo"] .gold-hours-card,.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model=rafael-ferreira-personal] .gold-hours-card{position:relative;padding-right:34%!important;background:#121412;color:#fff;overflow:hidden}
+.biosite.moda-premium-gold[data-library-batch="8"] .gold-hours-image{position:absolute;right:0;top:0;width:30%;height:100%;object-fit:cover;border-radius:9px}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model^="almeida-costa-completo"] .gold-hours-card h2{font:22px Georgia!important}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model^="almeida-costa-completo"] .gold-location,.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model=rafael-ferreira-personal] .gold-location{display:grid;grid-template-columns:55% minmax(0,1fr);grid-column:1/-1!important;border-radius:9px;gap:4px;background:#141713!important;color:white!important}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model^="almeida-costa-completo"] .gold-location-media,.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model=rafael-ferreira-personal] .gold-location-media{grid-column:2;grid-row:1/3;margin:0;min-width:0}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model^="almeida-costa-completo"] .gold-location-image,.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model=rafael-ferreira-personal] .gold-location-image{height:100%;aspect-ratio:1.4}
+.biosite.moda-premium-gold[data-library-batch="8"] [data-section-id$="-closing"]{margin-bottom:-7px!important}
+.biosite.moda-premium-gold[data-library-batch="8"] [data-section-id$="-closing"] .gold-banner-copy{width:85%}
+.biosite.moda-premium-gold[data-library-batch="8"] [data-section-id$="-closing"] .gold-banner{border-radius:10px 10px 0 0;border:0;min-height:130px}
+.biosite.moda-premium-gold[data-library-batch="8"] [data-section-id$="-closing"] .gold-banner-shade{background:linear-gradient(90deg,#03243b,#0a2337aa,transparent)}
+.biosite.moda-premium-gold[data-library-batch="8"] [data-section-id$="-identity"],.biosite.moda-premium-gold[data-library-batch="8"] [data-section-id$="-social"],.biosite.moda-premium-gold[data-library-batch="8"] [data-section-id$="-promise"]{grid-column:1/-1;background:#070d0f!important;padding:6px!important;color:#fff!important;--ink:#fff}
+.biosite.moda-premium-gold[data-library-batch="8"] .gold-identity .gold-logo{width:145px;height:80px}
+.biosite.moda-premium-gold[data-library-batch="8"] .gold-identity>strong,.biosite.moda-premium-gold[data-library-batch="8"] .gold-identity>p{display:none}
+.biosite.moda-premium-gold[data-library-batch="8"] .gold-social{display:flex;gap:13px;justify-content:center}
+.biosite.moda-premium-gold[data-library-batch="8"] .gold-social>a{background:transparent;border:0;color:white;padding:0;min-width:0}
+.biosite.moda-premium-gold[data-library-batch="8"] .gold-text-block>p{text-align:center;white-space:pre-line;font:9px/1.3 Arial}
+/* Rafael: sports typography, four hero benefits and a different service/space rhythm. */
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model=rafael-ferreira-personal]{font-family:Arial,sans-serif;--model-link-ink:#ffe133}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model=rafael-ferreira-personal] .gold-hero-content>.gold-logo{width:200px;height:105px;margin-left:25px}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model=rafael-ferreira-personal] .gold-hero-headline{font:900 clamp(27px,8.7cqw,42px)/1 Arial,sans-serif!important;width:68%;letter-spacing:-.7px}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model=rafael-ferreira-personal] .gold-headline-line:nth-child(n+3){color:#ffe133}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model=rafael-ferreira-personal] .gold-hero-benefits .gold-benefit-grid>div{flex-direction:column;text-align:center;border-left:1px solid #ffffff44;gap:5px}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model=rafael-ferreira-personal] .gold-hero-benefits .gold-benefit-grid>div:first-child{border-left:0}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model=rafael-ferreira-personal] .gold-hero-button{background:linear-gradient(110deg,#00f071,#008943);color:#fff;border-color:#00d565;border-radius:12px}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model=rafael-ferreira-personal] .gold-section h2,.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model=rafael-ferreira-personal] .gold-banner-copy h2{font:900 clamp(18px,5.7cqw,28px)/1.04 Arial,sans-serif!important;letter-spacing:-.4px}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model=rafael-ferreira-personal] .gold-services .gold-product h3{font-size:10px!important;font-weight:700}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model=rafael-ferreira-personal] .gold-services .gold-product p{font-size:9px;text-align:center}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model=rafael-ferreira-personal] .gold-services .gold-product-contact{display:none}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model=rafael-ferreira-personal] [data-section-id$="-plans"] .gold-banner>img{left:0;right:auto;width:42%}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model=rafael-ferreira-personal] [data-section-id$="-plans"] .gold-banner-copy{margin-left:auto;width:60%;padding:10px}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model=rafael-ferreira-personal] [data-section-id$="-plans"] .gold-banner-shade{background:linear-gradient(90deg,transparent,#10130f 42%)}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model=rafael-ferreira-personal] [data-section-id$="-discipline"] .gold-banner-copy{margin-left:auto;width:44%;padding:10px 6px}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model=rafael-ferreira-personal] [data-section-id$="-discipline"] .gold-banner>img{left:26%;right:auto;width:37%}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model=rafael-ferreira-personal] [data-section-id$="-discipline"] .gold-banner-shade{background:linear-gradient(90deg,#060b0f 0%,transparent 30%,transparent 48%,#060b0f 64%)}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model=rafael-ferreira-personal] [data-section-id$="-discipline"] .gold-banner-benefits{position:absolute;right:158%;top:0;width:65%;height:100%;color:white}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model=rafael-ferreira-personal] [data-section-id$="-discipline"] .gold-banner-benefits .gold-benefit-grid{display:flex;flex-direction:column!important;gap:14px}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model=rafael-ferreira-personal] [data-section-id$="-discipline"] .gold-banner-benefits .gold-benefit-grid>div{display:flex;align-items:center;gap:4px;text-align:left}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model=rafael-ferreira-personal] [data-section-id$="-discipline"] .gold-banner-benefits svg{width:17px;height:17px;color:var(--gold)}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model=rafael-ferreira-personal] [data-section-id$="-discipline"] .gold-banner-benefits h3{font-size:8px!important}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model=rafael-ferreira-personal] [data-section-id$="-discipline"] .gold-banner-copy h2 .gold-banner-line:last-child{color:var(--gold);font-style:italic}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model=rafael-ferreira-personal] [data-section-id$="-about"] .gold-banner-copy{width:68%;padding-right:5px}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model=rafael-ferreira-personal] [data-section-id$="-about"] .gold-banner>img{width:37%;object-position:60% 20%}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model=rafael-ferreira-personal] [data-section-id$="-credentials"] .gold-benefit-grid>div{padding:10px 3px;background:linear-gradient(135deg,#1a2326,#080d0f);border:1px solid #454b48;border-radius:9px}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model=rafael-ferreira-personal] [data-section-id$="-credentials"] h3{font-size:10px!important}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model=rafael-ferreira-personal] .gold-reviews{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:7px;overflow:visible}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model=rafael-ferreira-personal] .gold-reviews blockquote{background:#111916;color:white;border:1px solid #41483f;border-radius:9px;min-width:0}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model=rafael-ferreira-personal] .gold-reviews blockquote:first-child{grid-column:1/-1;grid-template-columns:80px minmax(0,1fr)}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model=rafael-ferreira-personal] .gold-reviews blockquote:first-child .gold-review-avatar{width:80px;height:90px;border-radius:3px}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model=rafael-ferreira-personal] .gold-reviews blockquote:not(:first-child){display:flex;flex-direction:column;padding:8px 6px;gap:2px}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model=rafael-ferreira-personal] .gold-reviews blockquote:not(:first-child) .gold-review-avatar{width:25px;height:25px;align-self:flex-start}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model=rafael-ferreira-personal] .gold-reviews blockquote:not(:first-child) strong{font-size:9px}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model=rafael-ferreira-personal] .gold-reviews blockquote:not(:first-child) p{font-size:9px}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model=rafael-ferreira-personal] .gold-whatsapp-card{border-radius:12px}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model=rafael-ferreira-personal] .gold-whatsapp-card h2{font:700 18px Arial!important}
+@container(min-width:500px){.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model=oralprime] .gold-services .gold-product-list{grid-template-columns:repeat(4,minmax(0,1fr))!important}}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model] .gold-title-accent{color:var(--gold)}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model] .gold-hero-photo{height:80%;object-position:75% 10%;mask-image:linear-gradient(#000 80%,transparent)}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model] .gold-hero-headline{width:75%}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model] .gold-hero-benefits h3{white-space:pre-line}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model] .gold-hero-action-copy small{display:block!important}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model] .gold-hero-button{color:#111!important}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model] .gold-tagline{display:none}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model=oralprime] .gold-tagline,.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model=almeida-costa] .gold-tagline{display:block}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model=oralprime] .gold-hero-headline{font-size:29px!important;width:70%;line-height:1.2!important;transform:rotate(-5deg)}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model=oralprime] .gold-hero-photo{height:85%;width:67%;object-position:75% 10%}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model=oralprime] .gold-services .gold-product h3{font-weight:700!important}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model=oralprime] .gold-whatsapp-card{border-radius:40px}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model] .gold-review-controls{position:absolute;inset:4px 0 auto auto;width:57px;display:flex;gap:7px;transform:none!important}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model] .gold-review-controls button{background:linear-gradient(135deg,#363c3f,#121617);color:#fff;border:1px solid #5c594e}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model] .gold-review-controls button:last-child{background:linear-gradient(115deg,#ffe3a8,#d9a05a);color:#111}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model] [data-section-id$="-results"]>[data-editable-text=auxiliary]{display:block;position:static;font:8px/1.3 Arial;opacity:.8;margin-bottom:8px}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model] .gold-body{grid-template-columns:repeat(6,minmax(0,1fr))}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model] .gold-hours,.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model] .gold-location{grid-column:span 3!important}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model] .gold-hours-card h2>svg,.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model] .gold-map-button>svg{color:#8c5c1b}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model] .gold-map-marker{color:#f1262e;fill:none}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model] .gold-whatsapp-card svg[data-generic-icon=whatsapp]{fill:currentColor;stroke:none}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model] [data-section-id$="-identity"],.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model] [data-section-id$="-social"],.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model] [data-section-id$="-promise"]{grid-column:span 2!important;align-self:center;padding:5px 0!important}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model] .gold-identity .gold-logo{width:100%;height:65px}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model] .gold-social{gap:9px;flex-wrap:wrap}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model] .gold-social>a{width:auto;height:auto;background:none;border-radius:0;color:#fff}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model] .gold-social>a svg{width:16px;height:16px}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model] .gold-section.gold-promotion .gold-banner>img{inset:0 0 0 auto;width:65%}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model] .gold-section.gold-promotion .gold-banner-copy{margin-left:0;width:var(--content-width,62%);min-height:0}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model] .gold-section.gold-promotion .gold-banner-shade{background:linear-gradient(90deg,#080c0fff 0%,#080c0fee 25%,#080c0f33 75%,transparent)}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model=almeida-costa] .gold-section.gold-promotion .gold-banner>img{left:0;right:auto;width:46%}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model=almeida-costa] .gold-section.gold-promotion .gold-banner-copy{margin-left:auto;width:54%}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model=almeida-costa] .gold-section.gold-promotion .gold-banner-shade{display:none}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model=almeida-costa] .gold-section.gold-promotion .gold-banner-copy .gold-title-accent{color:#141414}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model^="almeida-costa-completo"] .gold-hours,.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model^="almeida-costa-completo"] .gold-location{grid-column:1/-1!important}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model^="almeida-costa-completo"] [data-section-id$="-closing"] .gold-banner-copy{width:85%!important}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model^="almeida-costa-completo"] [data-section-id$="-closing"] .gold-banner-shade{background:linear-gradient(90deg,#03243b,#0a2337aa,transparent)!important}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model=rafael-ferreira-personal] .gold-hero-button{color:#fff!important}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model=rafael-ferreira-personal] .gold-hours,.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model=rafael-ferreira-personal] .gold-location{grid-column:1/-1!important}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model=rafael-ferreira-personal] [data-section-id$="-plans"] .gold-banner-copy{margin-left:auto!important;width:60%!important}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model=rafael-ferreira-personal] [data-section-id$="-plans"] .gold-banner>img{inset:0 auto 0 0!important;width:42%!important}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model=rafael-ferreira-personal] [data-section-id$="-plans"] .gold-banner-shade{background:linear-gradient(90deg,transparent,#10130f 42%)!important}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model=rafael-ferreira-personal] [data-section-id$="-discipline"] .gold-banner-copy{margin-left:auto!important;width:44%!important}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model=rafael-ferreira-personal] [data-section-id$="-discipline"] .gold-banner>img{inset:0 auto 0 26%!important;width:37%!important}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model=rafael-ferreira-personal] [data-section-id$="-discipline"] .gold-banner-shade{background:linear-gradient(90deg,#060b0f 0%,transparent 30%,transparent 48%,#060b0f 64%)!important}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model=rafael-ferreira-personal] [data-section-id$="-about"] .gold-banner-copy{width:68%!important}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model=rafael-ferreira-personal] [data-section-id$="-about"] .gold-banner>img{width:37%!important}
+
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model] .gold-actions:not([data-gold-footer])>[data-action-id]{background:linear-gradient(135deg,#202728,#080e10)!important;border:1px solid #5b5142!important;padding:9px 2px 10px!important;box-shadow:0 2px 6px #0005!important}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model] .gold-whatsapp-card>span:first-child{background:transparent!important;color:#fff}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model] .gold-whatsapp-card .gold-title-accent{color:inherit}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model^="almeida-costa"] .gold-hero-photo{object-position:0% 10%}
+
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model=rafael-ferreira-personal] .gold-hero-headline .gold-headline-line:nth-child(n+3){color:var(--gold)}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model=rafael-ferreira-personal] [data-section-id$="-plans"] .gold-banner-copy h2{font-size:clamp(14px,4.4cqw,20px)!important}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model=rafael-ferreira-personal] .gold-section.gold-gallery .gold-section-heading h2{font:900 clamp(18px,5.7cqw,28px)/1.04 Arial,sans-serif!important;text-transform:uppercase}
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model] .gold-services .gold-product h3{overflow-wrap:anywhere}
+
+.biosite.moda-premium-gold[data-library-batch="8"][data-ready-model=rafael-ferreira-personal] [data-section-id$="-discipline"] .gold-banner-copy h2{font-size:clamp(13px,3.9cqw,18px)!important}

@@ -1,0 +1,9 @@
+.git
+.env*
+.vercel
+artifacts
+review
+tests
+scripts
+migrations
+node_modules

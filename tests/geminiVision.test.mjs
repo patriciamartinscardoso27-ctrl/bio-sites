@@ -1,0 +1,39 @@
+import test from 'node:test'
+import assert from 'node:assert/strict'
+import sharp from 'sharp'
+import {createServer} from 'node:http'
+import {createGeminiVisionProvider,createVisionService,prepareReferenceImage,MAX_REFERENCE_BYTES} from '../server/vision-reference.mjs'
+import {createApi} from '../server/api.mjs'
+const {defaultReferenceSpec,normalizeReferenceSpec,composeReference}=await import('../src/lib/referenceDesign.ts'),{validateBio}=await import('../server/validation.mjs')
+const png=await sharp({create:{width:2000,height:1000,channels:3,background:'#315e62'}}).png().toBuffer(),input={mime:'image/png',data:png.toString('base64')}
+test('reference image validates MIME/bytes, bounds pixels and strips metadata without storing a file',async()=>{
+ const image=await prepareReferenceImage(input),metadata=await sharp(Buffer.from(image.data,'base64')).metadata();assert.equal(image.mime,'image/jpeg');assert.equal(metadata.width,1600);assert.equal(metadata.height,800);assert(!metadata.exif);assert(!metadata.icc)
+ for(const value of [{mime:'image/svg+xml',data:input.data},{mime:'image/jpeg',data:input.data},{mime:'image/png',data:'not-base64'}, {...input,path:'unsafe'}, {mime:'image/png',data:'A'.repeat(Math.ceil(MAX_REFERENCE_BYTES/3)*4+4)}])await assert.rejects(prepareReferenceImage(value),e=>[400,413,415].includes(e.status))
+})
+test('Gemini REST sends only normalized image and strict schema with key in server header; result is sanitized and normal editable Bio',async()=>{
+ const key='fake-test-key',image=await prepareReferenceImage(input);let calls=0;const provider=createGeminiVisionProvider({key,fetchImpl:async(url,options)=>{calls++;assert(!url.includes(key));assert(url.startsWith('https://generativelanguage.googleapis.com/'));assert.equal(options.headers['x-goog-api-key'],key);const body=JSON.parse(options.body);assert.equal(body.contents[0].parts[0].inlineData.data,image.data);assert(!JSON.stringify(body).includes(key));assert.equal(body.generationConfig.responseMimeType,'application/json');assert.equal(body.generationConfig.responseJsonSchema.additionalProperties,false);assert(!body.tools);return Response.json({candidates:[{finishReason:'STOP',content:{parts:[{text:JSON.stringify({...defaultReferenceSpec,notes:['malicious'],id:'overwrite',sql:'DROP',palette:{primary:'javascript:bad',accent:'#ABCDEF'}})}]}}]})}})
+ const spec=await provider.analyzeReferenceImage(image);assert.equal(calls,1);assert.deepEqual(spec.notes,[]);assert(!spec.id);assert(!spec.sql);assert.equal(spec.palette.primary,defaultReferenceSpec.palette.primary);assert.equal(spec.palette.accent,'#abcdef');const bio=composeReference({name:'Teste seguro',categoryId:'barber',goal:'bookings',style:'modern',theme:'any',density:'balanced'},'vision:0',spec);validateBio(bio);assert(!JSON.stringify(bio).includes(image.data));assert.equal(bio.name,'Teste seguro')
+})
+test('provider errors, network failure, malformed/oversized/blocked output never disclose upstream details',async()=>{
+ const image=await prepareReferenceImage(input),secret='fake-private-upstream';for(const status of [400,401,403,429,500])await assert.rejects(createGeminiVisionProvider({key:secret,fetchImpl:async()=>new Response(secret,{status})}).analyzeReferenceImage(image),e=>e.status===(status===429?429:503)&&!e.message.includes(secret))
+ for(const payload of [{candidates:[{finishReason:'SAFETY'}]},{candidates:[{finishReason:'STOP',content:{parts:[{text:'not json'}]}}]}])await assert.rejects(createGeminiVisionProvider({key:secret,fetchImpl:async()=>Response.json(payload)}).analyzeReferenceImage(image),e=>e.status===502)
+ await assert.rejects(createGeminiVisionProvider({key:secret,fetchImpl:async()=>new Response('x'.repeat(65000))}).analyzeReferenceImage(image),e=>e.status===502);await assert.rejects(createGeminiVisionProvider({key:secret,fetchImpl:async()=>{throw Error(secret)}}).analyzeReferenceImage(image),e=>e.status===503&&!e.message.includes(secret));await assert.rejects(createGeminiVisionProvider().analyzeReferenceImage(image),e=>e.status===503)
+})
+test('analysis enforces concurrency and per-admin throttling; cached/local variations need no provider',async()=>{
+ let now=0,calls=0;const vision=createVisionService({clock:()=>now,getProvider:async()=>({configured:true,model:'test',analyzeReferenceImage:async()=>{calls++;return defaultReferenceSpec}})});for(let i=0;i<3;i++)await vision.analyze(input,'admin');await assert.rejects(vision.analyze(input,'admin'),e=>e.status===429);now=60001;await vision.analyze(input,'admin');assert.equal(calls,4);const spec=normalizeReferenceSpec(defaultReferenceSpec);for(let i=0;i<3;i++)composeReference({name:'Cache',categoryId:'food',goal:'orders',style:'modern',theme:'any',density:'balanced'},'cached:'+i,spec);assert.equal(calls,4)
+})
+test('reference API requires real server session and same origin, never touches Neon during analysis',async()=>{
+ let analyzes=0;const api=createApi({getAuth:async()=>({session:async req=>req.headers.cookie==='test-session'?{id:'single-admin'}:null}),getRepository:async()=>{throw Error('Neon must not be accessed')},vision:{status:async()=>({configured:true}),analyze:async()=>{analyzes++;return {spec:defaultReferenceSpec}}}}),server=createServer(api);await new Promise(r=>server.listen(0,'127.0.0.1',r));const origin='http://127.0.0.1:'+server.address().port
+ try{for(const path of ['status','analyze']){const response=await fetch(origin+'/api/reference/'+path,{method:path==='status'?'GET':'POST',headers:{Origin:origin,'Content-Type':'application/json'},...(path==='analyze'?{body:JSON.stringify(input)}:{})});assert.equal(response.status,401)}assert.equal(analyzes,0);const foreign=await fetch(origin+'/api/reference/analyze',{method:'POST',headers:{Origin:'https://evil.invalid',Cookie:'test-session','Content-Type':'application/json'},body:JSON.stringify(input)});assert.equal(foreign.status,403);const success=await fetch(origin+'/api/reference/analyze',{method:'POST',headers:{Origin:origin,Cookie:'test-session','Content-Type':'application/json'},body:JSON.stringify(input)});assert.equal(success.status,200);assert((await success.json()).spec);assert.equal(analyzes,1)}finally{await new Promise(r=>server.close(r))}
+})
+
+test('cropped JPEG and multiple references keep MIME/base64 and prompt through the service',async()=>{
+ const cropped=await sharp(png).extract({left:100,top:50,width:700,height:600}).jpeg({quality:95}).toBuffer(),ref={mime:'image/jpeg',data:cropped.toString('base64')};let received;
+ const vision=createVisionService({getProvider:async()=>({configured:true,analyzeReferenceImage:async(...args)=>{received=args;return defaultReferenceSpec}})});
+ await vision.analyze({images:[ref,ref],categoryId:'fashion',description:'Use as referências com quatro ações grandes.'},'crop-test');assert.equal(received[0].length,2);assert.equal(received[1],'fashion');assert.equal(received[2],'Use as referências com quatro ações grandes.');for(const image of received[0]){assert.equal(image.mime,'image/jpeg');assert.equal((await sharp(Buffer.from(image.data,'base64')).metadata()).width,700)}
+});
+test('timeouts are distinct from connection, provider and invalid JSON errors',async()=>{
+ for(const [name,code] of [['TimeoutError','AI_TIMEOUT'],['TypeError','AI_CONNECTION']])await assert.rejects(createGeminiVisionProvider({key:'fake',fetchImpl:async()=>{throw Object.assign(Error('private'),{name})}}).analyzeReferenceImage(null,'barber','Demo'),e=>e.code===code&&!e.message.includes('private'));
+ await assert.rejects(createGeminiVisionProvider({key:'fake',fetchImpl:async()=>Response.json({error:{message:'private'}},{status:400})}).analyzeReferenceImage(null),e=>e.code==='AI_PROVIDER');
+ await assert.rejects(createGeminiVisionProvider({key:'fake',fetchImpl:async()=>Response.json({candidates:[{finishReason:'STOP',content:{parts:[{text:'invalid'}]}}]})}).analyzeReferenceImage(null),e=>e.code==='AI_INVALID_RESPONSE');
+});

@@ -1,0 +1,14 @@
+import { useEffect, useRef, useState } from 'react'
+import { ArrowLeft, ArrowRight, Eye, X } from 'lucide-react'
+import { categories, templates } from '../data/templates'
+import { BioSite } from './BioSite'
+
+export function TemplateGallery() {
+  const [selected,setSelected]=useState<number|null>(null)
+  const dialog=useRef<HTMLDialogElement>(null)
+  const scroll=useRef<HTMLDivElement>(null)
+  const model=selected===null?null:templates[selected]
+  useEffect(()=>{if(selected!==null){if(!dialog.current?.open)dialog.current?.showModal();scroll.current?.scrollTo({top:0})}},[selected])
+  const close=()=>{dialog.current?.close();setSelected(null)}
+  return <div className="review-gallery"><div className="review-gallery-intro"><strong>7 categorias · 3 modelos por categoria · 21 modelos</strong><p>Biblioteca em revisão. Abra a página completa e navegue pelos modelos antes de aprovar.</p><nav aria-label="Categorias da galeria">{categories.map(c=><a key={c.id} href={`#review-${c.id}`}>{c.label}</a>)}</nav></div>{categories.map(c=><section key={c.id} className="review-category" id={`review-${c.id}`}><div className="picker-title category-title"><h2>{c.label}</h2><span className="badge">3 modelos</span></div><div className="template-grid">{templates.filter(t=>t.categoryId===c.id).map(t=><div className="template-card" key={t.id}><div className="template-thumbnail"><div className="template-preview" aria-hidden="true" inert><div className="template-preview-page"><BioSite bio={t.bio} embedded/></div></div><button className="thumbnail-open" aria-label={`Visualizar modelo ${t.label}`} onClick={()=>setSelected(templates.indexOf(t))}><span><Eye size={15}/> Visualizar</span></button></div><div className="template-info"><h3>{t.label}</h3><button className="model-preview-button" aria-label={`Abrir prévia completa ${t.label}`} onClick={()=>setSelected(templates.indexOf(t))}><Eye size={15}/> Visualizar</button></div></div>)}</div></section>)}{model&&selected!==null&&<dialog ref={dialog} className="model-dialog gallery-dialog" aria-label={`Prévia ${model.label}`} onCancel={()=>setSelected(null)}><div className="model-dialog-header"><div><span>{categories.find(c=>c.id===model.categoryId)?.label} · {selected+1} de 21</span><h2>{model.label}</h2></div><button className="model-close" aria-label="Fechar visualização" onClick={close}><X size={22}/></button></div><div className="gallery-navigation"><button disabled={selected===0} onClick={()=>setSelected(selected-1)}><ArrowLeft size={16}/> Modelo anterior</button><button disabled={selected===templates.length-1} onClick={()=>setSelected(selected+1)}>Próximo modelo <ArrowRight size={16}/></button></div><div className="model-review-scroll" ref={scroll} tabIndex={0} role="region" aria-label="Página completa do modelo"><div className="model-review-page"><BioSite key={model.id} bio={model.bio} embedded/></div></div></dialog>}</div>
+}

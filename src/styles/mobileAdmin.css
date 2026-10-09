@@ -1,0 +1,24 @@
+/* Editing is a single-column mobile task; the dedicated preview tab opens the phone. */
+@media(max-width:760px){
+ .admin-shell .sidebar{height:auto;min-height:66px;position:static;display:flex;flex-wrap:wrap;padding:10px 12px;gap:8px}
+ .admin-shell .brand{width:100%;margin:0;justify-content:center}.admin-shell .brand strong{font-size:18px}
+ .admin-shell .sidebar .nav{flex:1;display:flex;flex-direction:column;gap:5px;margin:0;padding:9px 4px;min-height:54px;border-radius:10px}
+ .admin-shell .sidebar .nav span{display:block;font-size:11px;white-space:nowrap}.admin-shell .sidebar .nav svg{width:20px;height:20px}
+ .admin-shell .topbar{height:44px;padding:0 16px}.admin-shell .demo-tag{display:none}
+ .admin-shell .admin-content{padding:18px 12px}.admin-shell .page-heading{gap:12px;margin-bottom:18px}.admin-shell .page-heading h1{font-size:25px}.admin-shell .page-heading p{font-size:12px}.admin-shell .eyebrow{display:none}
+ .admin-shell .heading-actions{gap:8px}.admin-shell .heading-actions .button{font-size:12px;min-height:46px;padding:10px 12px}
+ .admin-shell .editor-nav{position:sticky;top:0;z-index:10;background:#f7f8fb;padding:8px 0;margin-bottom:14px;box-shadow:0 3px 0 #f7f8fb}
+ .admin-shell .editor-nav .tabs{gap:0;margin:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));width:100%}.admin-shell .tabs button{font-size:11px;justify-content:center;min-height:46px;padding:8px 2px}.admin-shell .tabs button>span{display:none}.admin-shell .draft-label{margin:5px 0 0;font-size:10px}
+ .admin-shell .editor-grid:not(.preview-mode)>.preview-column{display:none}.admin-shell .editor-controls{order:0;min-width:0;width:100%}.admin-shell .preview-mode>.preview-column{order:0}.admin-shell .preview-mode>.editor-controls{order:1}
+ .admin-shell .panel{padding:17px 14px}.admin-shell .panel h2{font-size:19px}.admin-shell .panel-heading p{font-size:12px;line-height:1.5}
+ .admin-shell label{font-size:13px;line-height:1.5}.admin-shell input:not([type=checkbox]):not([type=color]),.admin-shell textarea,.admin-shell select{font-size:16px;min-height:46px;padding:11px 12px;width:100%;max-width:100%}
+ .admin-shell summary{min-height:48px;font-size:13px!important;gap:9px}.admin-shell .item-details>summary>span{font-size:11px}.admin-shell .section-details>summary>span:last-child{font-size:11px}
+ .admin-shell .small-button,.admin-shell .delete-button,.admin-shell .button{min-height:44px;font-size:12px;padding:10px 12px}.admin-shell .delete-button{width:100%;justify-content:center;border:1px solid #ead9d9;border-radius:8px;margin-top:15px}
+ .admin-shell .section-row{flex-wrap:wrap;gap:6px}.admin-shell .section-row strong{flex-basis:100%;font-size:13px;margin-bottom:3px}.admin-shell .section-row>button{min-width:44px;min-height:44px}.admin-shell .toggle{min-width:44px!important;position:relative}.admin-shell .section-row>.toggle{margin-left:auto}
+ .admin-shell .button-editor-row{flex-wrap:wrap}.admin-shell .button-editor-title{width:100%;min-height:48px}.admin-shell .button-row-controls{width:100%;justify-content:flex-end;gap:8px}.admin-shell .button-row-controls>button{min-height:44px;min-width:44px}.admin-shell .button-type-picker>div{grid-template-columns:1fr}.admin-shell .button-type-picker button{min-height:48px;font-size:13px}.admin-shell .button-destination-mode button{min-height:44px;font-size:13px}
+ .admin-shell .image-upload{flex-direction:column;align-items:flex-start;font-size:12px!important}.admin-shell .image-upload input{font-size:12px!important}.admin-shell .image-field-preview{width:100%;height:140px}.admin-shell .collection-heading{font-size:12px}.admin-shell .help{font-size:11px}
+ .admin-shell .creation-steps{margin-bottom:18px;padding-bottom:10px}.admin-shell .quick-actions{flex-direction:column}.admin-shell .quick-actions .button{font-size:13px;width:100%;justify-content:center}.admin-shell .next-step{margin-top:8px}
+ .admin-shell .phone-frame{width:100%;max-width:390px}.admin-shell .phone-speaker{left:50%;transform:translateX(-50%)}.admin-shell .preview-column{padding:12px 8px}.admin-shell .preview-heading,.admin-shell .preview-column>p{padding:0 8px}.admin-shell .phone-screen{height:650px}.admin-shell .preview-mode .phone-screen{height:650px}
+ .model-dialog{max-height:100dvh}.model-review-controls .button{min-height:46px;font-size:13px}.model-close{min-width:44px;min-height:44px}
+ .premium-hero,.premium-fashion .premium-hero{height:345px}.premium-identity{padding-bottom:10px}.premium-logo{height:92px;width:92px}.premium-fashion .premium-logo{width:74px;height:74px}
+}

@@ -1,0 +1,9 @@
+import type {Bio,TextOptions} from '../types/biosite'
+import {VisualColor} from './VisualAppearancePanel'
+export function TextField({label,value,option,onValue,onOption,field}:{field?:string;label:string;value:string;option?:TextOptions;onValue:(v:string)=>void;onOption:(v:TextOptions)=>void}){
+ return <div><label>{label}<textarea data-editor-control={field} rows={2} value={value} onChange={e=>onValue(e.target.value)}/></label><label className="studio-checkbox"><input type="checkbox" checked={!option?.hidden} onChange={e=>onOption({...option,hidden:!e.target.checked})}/>Mostrar {label.toLowerCase()}</label></div>
+}
+export function TextAppearance({bio,label,option,onChange}:{bio:Bio;label:string;option?:TextOptions;onChange:(v:TextOptions)=>void}){
+ const v=option?.visual||{},patch=(visual:typeof v)=>onChange({...option,visual:{...v,...visual}})
+ return <details><summary>{label}</summary><VisualColor label="Cor" brand={bio.color} value={v.text||bio.appearance?.text||'#ffffff'} onChange={text=>patch({text,colorBindings:{...v.colorBindings,text:undefined}})} onBind={text=>patch({colorBindings:{...v.colorBindings,text}})}/><label>Tamanho<input type="number" min={8} max={60} value={v.fontSize??''} placeholder="Padrão" onChange={e=>patch({fontSize:e.target.value?Math.max(8,Math.min(60,Number(e.target.value))):undefined})}/></label><label>Peso<select value={v.weight||''} onChange={e=>patch({weight:(e.target.value||undefined) as typeof v.weight})}><option value="">Padrão</option><option value="regular">Normal</option><option value="bold">Negrito</option></select></label><label>Alinhamento<select value={v.align||''} onChange={e=>patch({align:(e.target.value||undefined) as typeof v.align})}><option value="">Padrão</option><option value="left">Esquerda</option><option value="center">Centro</option><option value="right">Direita</option></select></label></details>
+}

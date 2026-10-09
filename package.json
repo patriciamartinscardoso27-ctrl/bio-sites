@@ -1,0 +1,44 @@
+{
+  "name": "vitrine-digital",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "engines": {"node": "24.x"},
+  "scripts": {
+    "dev": "node --watch --watch-preserve-output node_modules/vite/bin/vite.js --configLoader native",
+    "start": "node server/start.mjs",
+    "build": "tsc -b && vite build --configLoader native",
+    "lint": "oxlint",
+    "test": "node --test tests/actionLinks.test.mjs tests/templates.test.mjs tests/persistence.test.mjs tests/auth.test.mjs tests/adminExperience.test.mjs tests/visualDesign.test.mjs tests/sections.test.mjs tests/buttonColors.test.mjs tests/compositionEngine.test.mjs tests/previewReorder.test.mjs tests/previewDragDOM.test.mjs tests/contextualRemoval.test.mjs tests/sectionInsertion.test.mjs tests/geminiConfig.test.mjs tests/geminiVision.test.mjs tests/aiBuilder.test.mjs tests/aiCreationUI.test.mjs",
+    "test:neon:persistence": "node scripts/test-neon-persistence.mjs",
+    "test:essential": "node --test --test-concurrency=1 tests/adminFinalization.test.mjs tests/adminExperience.test.mjs tests/modaPremiumGold.test.mjs tests/publication.test.mjs tests/publicRenderer.test.mjs tests/auth.test.mjs tests/persistence.test.mjs tests/recoverySafety.test.mjs",
+    "neon:check": "node scripts/check-neon.mjs",
+    "preview": "vite preview",
+    "test:builder": "node --test tests/aiBuilder.test.mjs tests/aiCreationUI.test.mjs tests/geminiVision.test.mjs tests/sectionInsertion.test.mjs tests/contextualRemoval.test.mjs",
+    "test:identity": "node --test --test-concurrency=1 tests/iconLibrary.test.mjs tests/googleIcons.test.mjs tests/identityPalette.test.mjs tests/colorPicker.test.mjs"
+  },
+  "dependencies": {
+    "@fortawesome/free-brands-svg-icons": "^7.3.1",
+    "@neondatabase/auth": "0.5.0-beta",
+    "@neondatabase/serverless": "^1.2.0",
+    "@tailwindcss/vite": "^4.3.3",
+    "lucide-react": "^1.51.0",
+    "react": "^19.2.8",
+    "react-advanced-cropper": "0.20.1",
+    "react-dom": "^19.2.8",
+    "sharp": "^0.35.5",
+    "sortablejs": "^1.15.7",
+    "tailwindcss": "^4.3.3"
+  },
+  "devDependencies": {
+    "@types/node": "^24.13.3",
+    "@types/react": "^19.2.18",
+    "@types/react-dom": "^19.2.7",
+    "@types/sortablejs": "^1.15.9",
+    "@vitejs/plugin-react": "^6.1.1",
+    "jsdom": "^30.1.2",
+    "oxlint": "^1.81.0",
+    "typescript": "~6.0.2",
+    "vite": "^8.3.0"
+  }
+}

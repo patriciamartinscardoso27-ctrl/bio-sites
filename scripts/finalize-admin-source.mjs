@@ -1,0 +1,18 @@
+// Narrow source replacements for legacy single-line JSX; no database access.
+import fs from 'node:fs/promises'
+let app=await fs.readFile('src/App.tsx','utf8')
+app=app.replace("import {PublicationPanel} from './components/PublicationPanel'","import {PublicationPanel} from './components/PublicationPanel'\nimport {ClientProfile} from './components/ClientProfile'")
+const start=app.indexOf('<section className="studio-panel"><div className="studio-section-heading"><h2>Dados do cliente</h2>'),end=app.indexOf('</section><div><section className="studio-panel studio-biosite-details">',start)
+if(start<0||end<start)throw Error('Client form not found')
+app=app.slice(0,start)+'<ClientProfile bio={bio} busy={busy} dirty={dirty} status={record?clientStatus(record):\'Rascunho\'} onChange={update} onSave={()=>void persist(structuredClone(bio))}/>'+app.slice(end+'</section>'.length)
+app=app.replace("s.name.toLocaleLowerCase('pt-BR').includes(query.toLocaleLowerCase('pt-BR'))","[s.name,s.responsible,s.phone,s.telephone,s.email,s.address,s.city,s.category].some(value=>value?.toLocaleLowerCase('pt-BR').includes(query.toLocaleLowerCase('pt-BR')))")
+app=app.replace('aria-label="Pesquisar cliente por nome" placeholder="Pesquisar estabelecimento"','aria-label="Pesquisar clientes" placeholder="Nome, responsável, telefone ou e-mail"')
+app=app.replace('<div className="studio-client-contact"><span><Phone','<div className="studio-client-contact">{s.responsible&&<span>Responsável: {s.responsible}</span>}{s.email&&<span>E-mail: {s.email}</span>}<span><Phone')
+app=app.replace('As próximas etapas serão preparadas após a revisão desta experiência.','A publicação usa a revisão salva escolhida. Rascunhos e páginas retiradas do ar permanecem privados; arquivos e imagens seguem no conteúdo do BioSite.')
+await fs.writeFile('src/App.tsx',app)
+let library=await fs.readFile('src/components/AdminCreation.tsx','utf8')
+library=library.replace('return <><div className="studio-filters"','return <><div className="studio-library-tools"><label className="studio-search"><Search size={18}/><input type="search" aria-label="Buscar modelo por nome" placeholder="Busque pelo nome do modelo" value={query} onChange={e=>setQuery(e.target.value)}/></label><p role="status">{matches.length} de {templates.length} modelos</p></div><div className="studio-filters"')
+library=library.replace("templates.filter(t=>current==='all'||t.categoryId===current).map(t=>","matches.map(t=>")
+library=library.replace('>Ver prévia</button><button className="studio-primary" onClick={()=>onUse(t)}>Usar este modelo</button>','>Visualizar</button><button className="studio-primary" onClick={()=>onUse(t)}>Usar modelo</button>')
+library=library.replace('</article>)}</div></>','</article>)}</div>{!matches.length&&<div className="studio-empty"><h3>Nenhum modelo encontrado.</h3><p>Tente outro nome ou selecione outra categoria.</p><button className="studio-secondary" onClick={()=>setQuery(\'\')}>Limpar busca</button></div>}</>')
+await fs.writeFile('src/components/AdminCreation.tsx',library)

@@ -1,0 +1,562 @@
+/* Shared editorial capabilities; preset surfaces do not change editable owners. */
+.moda-premium-gold[data-ready-model]:not([data-ready-model=moda-premium-gold]) .gold-hero{padding:36px 22px 24px}
+.moda-premium-gold[data-ready-model]:not([data-ready-model=moda-premium-gold]) .gold-hero-content{width:47%}
+.moda-premium-gold[data-ready-model]:not([data-ready-model=moda-premium-gold]) .gold-hero-content>.gold-logo{width:40px;height:40px;background:transparent;border-radius:0}
+.moda-premium-gold[data-ready-model]:not([data-ready-model=moda-premium-gold]) .gold-logo>span{font-size:28px}
+.moda-premium-gold[data-ready-model]:not([data-ready-model=moda-premium-gold]) .gold-tagline{display:block;font-size:9px;letter-spacing:2px;margin:8px 0 25px}
+.moda-premium-gold .gold-hero-headline{white-space:pre-line;margin:24px 0 12px;font-family:Georgia,serif}
+.moda-premium-gold[data-ready-model]:not([data-ready-model=moda-premium-gold]) .gold-hero-content>p{font-size:13px;max-width:100%;line-height:1.4}
+.moda-premium-gold .gold-hero-button{display:inline-flex;align-items:center;gap:10px;margin-top:18px;background:var(--gold);color:#080808;border-radius:11px;padding:10px 14px;font-size:12px}
+.moda-premium-gold [data-layout=three] .gold-product-list{display:grid;grid-template-columns:repeat(var(--product-columns,3),minmax(0,1fr));gap:10px}
+.moda-premium-gold [data-layout=three] .gold-product{display:flex;flex-direction:column;gap:0;border:0;min-height:0;padding:0;background:var(--card);overflow:hidden;border-radius:12px;text-align:center}
+.moda-premium-gold [data-layout=three] .gold-product>img{width:100%;aspect-ratio:var(--media-aspect,1);border-radius:12px 12px 0 0}
+.moda-premium-gold [data-layout=three] .gold-product>div{padding:8px 5px;width:100%}
+.moda-premium-gold [data-layout=three] .gold-product h3{font-size:12px;font-weight:400;line-height:1.25}
+.moda-premium-gold [data-layout=three] .gold-product p{font-size:10px;line-height:1.3}
+.moda-premium-gold [data-layout=three] .gold-product strong{font-size:13px;margin-top:5px}
+.moda-premium-gold [data-layout=three] .gold-product-contact{display:flex;align-items:center;justify-content:center;gap:5px;align-self:stretch;width:auto;height:29px;margin:0 7px 8px;background:var(--gold);color:var(--ink);border-radius:8px;font-size:11px}
+.moda-premium-gold [data-layout=three] .gold-product-contact svg{width:15px;height:15px}
+.moda-premium-gold .gold-location-image{width:100%;aspect-ratio:var(--media-aspect,5);border-radius:10px;margin-top:8px}
+/* Bella: light magazine hero, horizontal actions, delicate three-column showcase. */
+.moda-premium-gold[data-ready-model=bella-moda-feminina]{max-width:400px;font-family:Georgia,serif}
+[data-ready-model=bella-moda-feminina] .gold-hero{color:var(--ink);background:var(--paper)}
+[data-ready-model=bella-moda-feminina] .gold-hero h1{color:var(--ink);font-size:47px}
+[data-ready-model=bella-moda-feminina] .gold-hero-shade{background:linear-gradient(90deg,#fcf6f2 0%,#fcf6f2eb 30%,#fcf6f200 63%)}
+[data-ready-model=bella-moda-feminina] .gold-hero-content>.gold-logo{display:none}
+[data-ready-model=bella-moda-feminina] .gold-section{background:var(--paper)!important;color:var(--ink)!important}
+[data-ready-model=bella-moda-feminina] .gold-actions.premium-actions{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+[data-ready-model=bella-moda-feminina] .gold-actions>[data-action-id]{flex-direction:row;justify-content:center;gap:10px;padding:14px 8px;background:var(--card);border:1px solid #e8d9d4;border-radius:8px;box-shadow:0 2px 7px #71304418}
+[data-ready-model=bella-moda-feminina] .gold-actions .action-icon-slot{width:27px;flex-shrink:0}
+[data-ready-model=bella-moda-feminina] .gold-actions .action-icon-tile{background:transparent!important;border:0!important;box-shadow:none!important}
+[data-ready-model=bella-moda-feminina] .gold-actions .action-tile-label{width:auto;color:var(--ink)!important}
+[data-ready-model=bella-moda-feminina] .gold-actions strong{font:14px Georgia,serif}
+[data-ready-model=bella-moda-feminina] .gold-actions small{display:none}
+[data-ready-model=bella-moda-feminina] [data-gold-feature]{padding:12px 0}
+[data-ready-model=bella-moda-feminina] [data-gold-feature] .gold-benefit-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;border:0;border-radius:0;background:#edd5cf;padding:14px}
+[data-ready-model=bella-moda-feminina] [data-gold-feature] .gold-benefit-grid>div{gap:6px}
+[data-ready-model=bella-moda-feminina] [data-gold-feature] .gold-benefit-grid svg{width:20px;height:20px;color:var(--ink)}
+[data-ready-model=bella-moda-feminina] [data-gold-feature] .gold-benefit-grid h3{font-size:8px}
+[data-ready-model=bella-moda-feminina] [data-gold-feature] .gold-benefit-grid p{font-size:7px}
+[data-ready-model=bella-moda-feminina] .gold-products>h2{text-align:center;text-transform:uppercase;font:14px Georgia,serif;margin:8px 0 18px}
+[data-ready-model=bella-moda-feminina] [data-layout=three] .gold-product{background:transparent;border-radius:6px}
+[data-ready-model=bella-moda-feminina] [data-layout=three] .gold-product>img{border-radius:7px}
+[data-ready-model=bella-moda-feminina] [data-layout=three] .gold-product h3{font:10px Georgia,serif}
+[data-ready-model=bella-moda-feminina] [data-layout=three] .gold-product strong{font-size:10px}
+[data-ready-model=bella-moda-feminina] [data-layout=three] .gold-product-contact{background:transparent;font-size:8px;height:18px;margin-bottom:0}
+[data-ready-model=bella-moda-feminina] .gold-promotion{padding:0}
+[data-ready-model=bella-moda-feminina] .gold-banner{border-radius:0;min-height:180px}
+[data-ready-model=bella-moda-feminina] .gold-banner-shade{background:linear-gradient(90deg,#e5bdb4,#e5bdb466 50%,#0000 75%)}
+[data-ready-model=bella-moda-feminina] .gold-banner-copy{width:55%;padding:20px 22px}
+[data-ready-model=bella-moda-feminina] .gold-banner-copy h2{font:22px/1.1 Georgia,serif}
+[data-ready-model=bella-moda-feminina] .gold-banner-copy p{font-size:10px;margin-top:8px}
+[data-ready-model=bella-moda-feminina] .gold-banner-button{background:var(--ink);border-radius:6px;text-transform:uppercase;font-size:9px}
+/* Urban: dark editorial, four categories, full purchase grid, compact final blocks. */
+.moda-premium-gold[data-ready-model=urban-black-moda-masculina]{max-width:430px}
+[data-ready-model=urban-black-moda-masculina] .gold-hero-shade{background:linear-gradient(90deg,#080808 0%,#080808d9 35%,#08080800 75%)}
+[data-ready-model=urban-black-moda-masculina] .gold-hero h1{font:36px/1.05 Georgia,serif;letter-spacing:2px}
+[data-ready-model=urban-black-moda-masculina] .gold-section{background:var(--paper)!important;color:var(--ink)!important;padding:8px 14px}
+[data-ready-model=urban-black-moda-masculina] .gold-actions>[data-action-id]{padding:10px 6px;background:linear-gradient(#232321,#10100f);border-radius:12px;gap:7px}
+[data-ready-model=urban-black-moda-masculina] .gold-actions .action-icon-slot{width:48px}
+[data-ready-model=urban-black-moda-masculina] [data-gold-feature] .gold-benefit-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));padding:12px 8px;gap:7px;background:#11110f;border:1px solid #38352e;border-radius:10px}
+[data-ready-model=urban-black-moda-masculina] [data-gold-feature] .gold-benefit-grid>div{gap:7px;border-right:1px solid #38352e}
+[data-ready-model=urban-black-moda-masculina] [data-gold-feature] .gold-benefit-grid>div:last-child{border:0}
+[data-ready-model=urban-black-moda-masculina] [data-gold-feature] .gold-benefit-grid svg{width:23px;height:23px}
+[data-ready-model=urban-black-moda-masculina] [data-gold-feature] .gold-benefit-grid h3{font-size:9px;font-weight:400}
+[data-ready-model=urban-black-moda-masculina] [data-gold-feature] .gold-benefit-grid p{font-size:8px}
+[data-ready-model=urban-black-moda-masculina] .gold-collections>a{border-color:#6e6556;border-radius:10px}
+[data-ready-model=urban-black-moda-masculina] .gold-collections strong{font-size:11px;font-weight:600}
+[data-ready-model=urban-black-moda-masculina] .gold-collections small{font-size:9px}
+[data-ready-model=urban-black-moda-masculina] .gold-products{padding-top:16px}
+[data-ready-model=urban-black-moda-masculina] .gold-products>h2{font-size:19px}
+[data-ready-model=urban-black-moda-masculina] [data-layout=three] .gold-product-contact{color:#101010}
+[data-ready-model=urban-black-moda-masculina] .gold-banner{min-height:125px;border:1px solid #38352e;border-radius:12px}
+[data-ready-model=urban-black-moda-masculina] .gold-banner-copy{padding:16px 20px;width:60%}
+[data-ready-model=urban-black-moda-masculina] .gold-banner-copy h2{font:24px/1.05 Georgia,serif}
+[data-ready-model=urban-black-moda-masculina] .gold-banner-copy p{font-size:11px;margin-top:7px}
+[data-ready-model=urban-black-moda-masculina] .gold-banner-shade{background:linear-gradient(90deg,#111111,#111111bb 40%,#0000 75%)}
+[data-ready-model=urban-black-moda-masculina] .gold-banner-button{background:var(--gold);color:#101010}
+[data-ready-model=urban-black-moda-masculina] .gold-benefit-grid{background:#171715;padding:15px 7px}
+[data-ready-model=urban-black-moda-masculina] .gold-benefit-grid svg{color:var(--gold)}
+[data-ready-model=urban-black-moda-masculina] .gold-gallery-grid>div:nth-child(3n+2)>img{aspect-ratio:.8}
+[data-ready-model=urban-black-moda-masculina] .gold-gallery-grid{align-items:start}
+[data-ready-model=urban-black-moda-masculina] .gold-about-grid{gap:8px}
+[data-ready-model=urban-black-moda-masculina] .gold-about-grid h2{font:23px Georgia,serif}
+[data-ready-model=urban-black-moda-masculina] .gold-about-grid p{font-size:12px}
+[data-ready-model=urban-black-moda-masculina] .gold-about-grid .gold-banner-button{grid-column:1;width:max-content;margin-top:0}
+[data-ready-model=urban-black-moda-masculina] .gold-hours-card{background:#111110;border:1px solid #38352e;padding:12px 16px;border-radius:12px}
+[data-ready-model=urban-black-moda-masculina] .gold-hours-card>div{border-color:#38352e;padding:6px 0;font-size:12px}
+[data-ready-model=urban-black-moda-masculina] .gold-map-button{justify-content:flex-start;background:transparent;color:white;padding:4px 8px;font-size:16px}
+[data-ready-model=urban-black-moda-masculina] .gold-map-button svg{color:var(--gold)}
+[data-ready-model=urban-black-moda-masculina] .gold-address{justify-content:flex-start;text-align:left;padding:4px 8px;font-size:11px}
+[data-ready-model=urban-black-moda-masculina] .gold-whatsapp-card{background:#00a735;padding:13px 18px;gap:12px;grid-template-columns:42px minmax(0,1fr) 34px;border-radius:12px}
+[data-ready-model=urban-black-moda-masculina] .gold-whatsapp-card h2{font-size:16px}
+[data-ready-model=urban-black-moda-masculina] .gold-whatsapp-card>span:last-child{width:34px;height:34px;background:#fff;color:#080808}
+[data-ready-model=urban-black-moda-masculina] .gold-identity{display:grid;grid-template-columns:54px minmax(0,1fr);text-align:left;align-items:center}
+[data-ready-model=urban-black-moda-masculina] .gold-identity>strong{font-size:22px;color:var(--gold)}
+[data-ready-model=urban-black-moda-masculina] .gold-identity>p{grid-column:2;font-size:11px;margin-top:5px}
+[data-ready-model=urban-black-moda-masculina] .gold-social{justify-content:flex-start;color:var(--gold);padding-bottom:8px}
+@container(max-width:350px){.moda-premium-gold [data-layout=three] .gold-product h3{font-size:10px}.moda-premium-gold[data-ready-model=urban-black-moda-masculina] .gold-hero-content{width:50%}.moda-premium-gold[data-ready-model=urban-black-moda-masculina] .gold-hero h1{font-size:29px}}
+
+.moda-premium-gold[data-ready-model]:not([data-ready-model=moda-premium-gold]) .gold-banner{width:100%;min-width:0;max-width:100%}
+@container(max-width:350px){[data-ready-model=bella-moda-feminina] .gold-hero h1{font-size:38px!important}[data-ready-model=bella-moda-feminina] .gold-hero-headline{font-size:23px!important}}
+[data-ready-model=bella-moda-feminina] .gold-hero-content>.gold-logo:has(img){display:grid;background:transparent;margin-bottom:12px;width:70px;height:70px}
+
+/* Complete Bella composition and shared editable footer/text variants. */
+.moda-premium-gold .gold-footer-navigation{justify-content:space-between;gap:8px;flex-wrap:wrap;padding:12px 0}
+.moda-premium-gold .gold-footer-navigation>a{width:auto;height:auto;font-size:10px}
+.moda-premium-gold .gold-text-block{font-size:10px;text-align:center;line-height:1.4}
+[data-ready-model=bella-moda-feminina] .gold-actions small{display:block;font:10px Arial,sans-serif}
+[data-ready-model=bella-moda-feminina] .gold-actions>[data-action-id]{padding:12px 10px;gap:12px}
+[data-ready-model=bella-moda-feminina] .gold-hero-content>p{font-family:Arial,sans-serif;font-size:13px;line-height:1.5}
+[data-ready-model=bella-moda-feminina] .gold-collections>a{border:0;border-radius:8px}
+[data-ready-model=bella-moda-feminina] .gold-collections strong{font:14px Georgia,serif}
+[data-ready-model=bella-moda-feminina] .gold-collections small{font:10px Arial,sans-serif}
+[data-ready-model=bella-moda-feminina] .gold-section-heading{margin-bottom:8px}
+[data-ready-model=bella-moda-feminina] .gold-section-heading h2{font:19px Georgia,serif}
+[data-ready-model=bella-moda-feminina] .gold-section-heading>a{color:var(--ink);font:11px Arial,sans-serif}
+[data-ready-model=bella-moda-feminina] .gold-products>h2{text-transform:none;text-align:left;font:22px Georgia,serif;margin:0 0 10px}
+[data-ready-model=bella-moda-feminina] [data-layout=three] .gold-product{background:#fffaf6;border-radius:9px;padding:0;border:1px solid #f5e5df}
+[data-ready-model=bella-moda-feminina] [data-layout=three] .gold-product>div{padding:5px 3px}
+[data-ready-model=bella-moda-feminina] [data-layout=three] .gold-product h3{font:10px Arial,sans-serif}
+[data-ready-model=bella-moda-feminina] [data-layout=three] .gold-product strong{font:600 12px Arial,sans-serif;margin-top:3px}
+[data-ready-model=bella-moda-feminina] [data-layout=three] .gold-product-contact{background:#f8cbca;color:var(--ink);height:27px;margin:0 4px 5px;font:11px Arial,sans-serif;border-radius:7px}
+[data-ready-model=bella-moda-feminina] .gold-benefit-grid{background:#fae2dc;border-radius:14px;padding:12px 6px}
+[data-ready-model=bella-moda-feminina] .gold-benefit-grid svg{color:var(--ink);width:26px;height:26px}
+[data-ready-model=bella-moda-feminina] .gold-benefit-grid h3{font:12px Arial,sans-serif}
+[data-ready-model=bella-moda-feminina] .gold-benefit-grid p{font:9px/1.25 Arial,sans-serif}
+[data-ready-model=bella-moda-feminina] .gold-gallery-grid img{border-radius:6px}
+[data-ready-model=bella-moda-feminina] .gold-banner{min-height:140px}
+[data-ready-model=bella-moda-feminina] .gold-banner-copy{padding:15px 22px;width:55%}
+[data-ready-model=bella-moda-feminina] .gold-banner-shade{background:linear-gradient(90deg,var(--local-panel,#f2b7ac),#e5bdb466 50%,#0000 75%)}
+[data-ready-model=bella-moda-feminina] .gold-banner-copy h2{color:var(--local-text,var(--ink))}
+[data-ready-model=bella-moda-feminina] .gold-section.gold-about:has(.gold-about-grid){position:relative;isolation:isolate;overflow:hidden;padding:22px 20px;min-height:300px}
+[data-ready-model=bella-moda-feminina] .gold-about-grid{display:block;width:100%;min-height:270px}
+[data-ready-model=bella-moda-feminina] .gold-about-grid>div{position:relative;width:52%;z-index:1}
+[data-ready-model=bella-moda-feminina] .gold-about-grid>img{position:absolute;inset:0;width:100%;height:100%;aspect-ratio:auto;border-radius:0;z-index:-2;object-position:75% center}
+[data-ready-model=bella-moda-feminina] .gold-section.gold-about:has(.gold-about-grid):after{content:'';position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,#fff6f1 0%,#fff6f1ed 43%,#fff6f100 70%);pointer-events:none}
+[data-ready-model=bella-moda-feminina] .gold-about-grid h2{font:23px Georgia,serif}
+[data-ready-model=bella-moda-feminina] .gold-about-grid p{font:11px/1.5 Arial,sans-serif;white-space:pre-line}
+[data-ready-model=bella-moda-feminina] .gold-hours-card{background:#fcf0e9;padding:13px 16px;border-radius:12px}
+[data-ready-model=bella-moda-feminina] .gold-hours-card h2{font:20px Georgia,serif}
+[data-ready-model=bella-moda-feminina] .gold-hours-card>div{font:11px Arial,sans-serif;padding:7px 0}
+[data-ready-model=bella-moda-feminina] .gold-map-button{justify-content:flex-start;background:transparent;color:var(--ink);padding:4px 8px;font:19px Georgia,serif}
+[data-ready-model=bella-moda-feminina] .gold-address{justify-content:flex-start;text-align:left;padding:5px 8px;font:11px Arial,sans-serif}
+[data-ready-model=bella-moda-feminina] .gold-whatsapp-card{background:#008c35;color:white;grid-template-columns:40px minmax(0,1fr) 30px;gap:12px;padding:13px 17px;border-radius:10px}
+[data-ready-model=bella-moda-feminina] .gold-whatsapp-card h2{font:18px Georgia,serif;color:#fff}
+[data-ready-model=bella-moda-feminina] .gold-whatsapp-card p{font:11px Arial,sans-serif}
+[data-ready-model=bella-moda-feminina] .gold-whatsapp-card>span:last-child{width:30px;height:30px;background:white;color:var(--ink)}
+[data-ready-model=bella-moda-feminina] .gold-identity .gold-logo{display:none}
+[data-ready-model=bella-moda-feminina] .gold-identity>strong{font:30px Georgia,serif;color:var(--ink)}
+[data-ready-model=bella-moda-feminina] .gold-identity>p{font:10px Arial,sans-serif}
+[data-ready-model=bella-moda-feminina] .gold-social{color:var(--ink);padding-bottom:5px}
+
+/* Boutique editorial variants share the same semantic owners and section renderer. */
+.moda-premium-gold:is([data-ready-model=charmme-moda-feminina],[data-ready-model=lumiere-boutique],[data-ready-model=vibe-store],[data-ready-model=urban-black-2]){max-width:430px}
+:is([data-ready-model=charmme-moda-feminina],[data-ready-model=lumiere-boutique],[data-ready-model=vibe-store],[data-ready-model=urban-black-2]) .gold-hero-content{width:100%!important}
+:is([data-ready-model=charmme-moda-feminina],[data-ready-model=lumiere-boutique],[data-ready-model=vibe-store],[data-ready-model=urban-black-2]) .gold-hero-content>h1{text-align:center;font:38px Georgia,serif;color:var(--gold);padding-right:30px}
+[data-ready-model=charmme-moda-feminina] .gold-hero-content>h1{font:italic 49px cursive;color:#fff}
+:is([data-ready-model=charmme-moda-feminina],[data-ready-model=lumiere-boutique],[data-ready-model=vibe-store],[data-ready-model=urban-black-2]) .gold-hero-content>.gold-logo{display:none}
+:is([data-ready-model=charmme-moda-feminina],[data-ready-model=lumiere-boutique],[data-ready-model=vibe-store],[data-ready-model=urban-black-2]) .gold-tagline{text-align:center;color:var(--gold);margin:5px 0 25px}
+:is([data-ready-model=charmme-moda-feminina],[data-ready-model=lumiere-boutique],[data-ready-model=vibe-store],[data-ready-model=urban-black-2]) .gold-hero{color:#fff;background:#19120f;padding-top:27px}
+:is([data-ready-model=charmme-moda-feminina],[data-ready-model=lumiere-boutique],[data-ready-model=vibe-store],[data-ready-model=urban-black-2]) .gold-hero-headline{max-width:60%;font:31px/1.05 Georgia,serif;color:#fff;margin:25px 0 15px}
+:is([data-ready-model=charmme-moda-feminina],[data-ready-model=lumiere-boutique],[data-ready-model=vibe-store],[data-ready-model=urban-black-2]) .gold-hero-content>p{max-width:53%;font:12px/1.45 Arial,sans-serif}
+:is([data-ready-model=charmme-moda-feminina],[data-ready-model=lumiere-boutique],[data-ready-model=vibe-store],[data-ready-model=urban-black-2]) .gold-hero-shade{background:linear-gradient(90deg,#19120fe8 0%,#19120fa1 35%,#0000 75%)}
+:is([data-ready-model=charmme-moda-feminina],[data-ready-model=lumiere-boutique],[data-ready-model=vibe-store],[data-ready-model=urban-black-2]) .gold-hero-button{background:var(--gold);color:#111;font-weight:600}
+[data-ready-model=charmme-moda-feminina] .gold-hero-button{color:white}
+:is([data-ready-model=charmme-moda-feminina],[data-ready-model=lumiere-boutique],[data-ready-model=vibe-store],[data-ready-model=urban-black-2]) .gold-section{background:var(--paper)!important;color:var(--ink)!important;padding:8px 13px}
+:is([data-ready-model=charmme-moda-feminina],[data-ready-model=lumiere-boutique],[data-ready-model=vibe-store],[data-ready-model=urban-black-2]) .gold-actions.premium-actions{gap:7px}
+:is([data-ready-model=charmme-moda-feminina],[data-ready-model=lumiere-boutique],[data-ready-model=vibe-store],[data-ready-model=urban-black-2]) .gold-actions>[data-action-id]{background:var(--card);padding:10px 4px;border-radius:11px;gap:6px;border:1px solid var(--custom-border,#654f39)}
+:is([data-ready-model=charmme-moda-feminina],[data-ready-model=lumiere-boutique],[data-ready-model=vibe-store],[data-ready-model=urban-black-2]) .gold-actions .action-tile-label{color:var(--ink)!important}
+:is([data-ready-model=charmme-moda-feminina],[data-ready-model=lumiere-boutique],[data-ready-model=vibe-store],[data-ready-model=urban-black-2]) .gold-actions .action-icon-slot{width:42px}
+:is([data-ready-model=charmme-moda-feminina],[data-ready-model=lumiere-boutique],[data-ready-model=vibe-store],[data-ready-model=urban-black-2]) .gold-actions strong{font-size:11px;font-weight:600}
+:is([data-ready-model=charmme-moda-feminina],[data-ready-model=lumiere-boutique],[data-ready-model=vibe-store],[data-ready-model=urban-black-2]) .gold-actions small{font-size:9px}
+:is([data-ready-model=charmme-moda-feminina],[data-ready-model=lumiere-boutique],[data-ready-model=vibe-store],[data-ready-model=urban-black-2]) [data-gold-feature] .gold-benefit-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));padding:11px 8px;gap:7px;background:var(--card);border:1px solid var(--gold);border-radius:11px}
+:is([data-ready-model=charmme-moda-feminina],[data-ready-model=lumiere-boutique],[data-ready-model=vibe-store],[data-ready-model=urban-black-2]) [data-gold-feature] .gold-benefit-grid>div{gap:6px}
+:is([data-ready-model=charmme-moda-feminina],[data-ready-model=lumiere-boutique],[data-ready-model=vibe-store],[data-ready-model=urban-black-2]) [data-gold-feature] .gold-benefit-grid h3{font-size:9px}
+:is([data-ready-model=charmme-moda-feminina],[data-ready-model=lumiere-boutique],[data-ready-model=vibe-store],[data-ready-model=urban-black-2]) [data-gold-feature] .gold-benefit-grid p{font-size:8px}
+:is([data-ready-model=charmme-moda-feminina],[data-ready-model=lumiere-boutique],[data-ready-model=vibe-store],[data-ready-model=urban-black-2]) [data-gold-feature] .gold-benefit-grid svg{width:23px;height:23px}
+:is([data-ready-model=charmme-moda-feminina],[data-ready-model=lumiere-boutique],[data-ready-model=vibe-store],[data-ready-model=urban-black-2]) .gold-collections>a{border-color:var(--gold);border-radius:9px}
+:is([data-ready-model=charmme-moda-feminina],[data-ready-model=lumiere-boutique],[data-ready-model=vibe-store],[data-ready-model=urban-black-2]) .gold-collections strong{font-size:11px}
+:is([data-ready-model=charmme-moda-feminina],[data-ready-model=lumiere-boutique],[data-ready-model=vibe-store],[data-ready-model=urban-black-2]) .gold-collections small{font-size:9px}
+:is([data-ready-model=charmme-moda-feminina],[data-ready-model=lumiere-boutique],[data-ready-model=vibe-store],[data-ready-model=urban-black-2]) .gold-banner{min-height:130px;border:1px solid var(--gold);border-radius:11px}
+:is([data-ready-model=charmme-moda-feminina],[data-ready-model=lumiere-boutique],[data-ready-model=vibe-store],[data-ready-model=urban-black-2]) .gold-banner-shade{background:linear-gradient(90deg,var(--local-panel),#0000 75%)}
+:is([data-ready-model=charmme-moda-feminina],[data-ready-model=lumiere-boutique],[data-ready-model=vibe-store],[data-ready-model=urban-black-2]) .gold-banner-copy{padding:16px 18px;width:60%}
+:is([data-ready-model=charmme-moda-feminina],[data-ready-model=lumiere-boutique],[data-ready-model=vibe-store],[data-ready-model=urban-black-2]) .gold-banner-copy h2{font:23px/1.05 Georgia,serif;color:var(--local-text)}
+:is([data-ready-model=charmme-moda-feminina],[data-ready-model=lumiere-boutique],[data-ready-model=vibe-store],[data-ready-model=urban-black-2]) .gold-banner-copy p{font-size:10px;margin-top:6px}
+:is([data-ready-model=charmme-moda-feminina],[data-ready-model=lumiere-boutique],[data-ready-model=vibe-store],[data-ready-model=urban-black-2]) .gold-banner-button{background:var(--gold);color:var(--paper);margin-top:8px;padding:8px 12px;border-radius:9px;font-size:11px}
+[data-ready-model=lumiere-boutique] .gold-banner-button{color:#111}
+:is([data-ready-model=charmme-moda-feminina],[data-ready-model=lumiere-boutique],[data-ready-model=vibe-store],[data-ready-model=urban-black-2]) .gold-products>h2{font-size:20px;margin-bottom:10px}
+:is([data-ready-model=charmme-moda-feminina],[data-ready-model=lumiere-boutique],[data-ready-model=vibe-store],[data-ready-model=urban-black-2]) [data-layout=three] .gold-product>div{padding:6px 4px}
+:is([data-ready-model=charmme-moda-feminina],[data-ready-model=lumiere-boutique],[data-ready-model=vibe-store],[data-ready-model=urban-black-2]) [data-layout=three] .gold-product h3{font-size:11px}
+:is([data-ready-model=charmme-moda-feminina],[data-ready-model=lumiere-boutique],[data-ready-model=vibe-store],[data-ready-model=urban-black-2]) [data-layout=three] .gold-product strong{font-size:12px;margin-top:3px}
+:is([data-ready-model=charmme-moda-feminina],[data-ready-model=lumiere-boutique],[data-ready-model=vibe-store],[data-ready-model=urban-black-2]) [data-layout=three] .gold-product-contact{color:white;margin:0 5px 5px}
+[data-ready-model=lumiere-boutique] [data-layout=three] .gold-product-contact{color:#111}
+:is([data-ready-model=charmme-moda-feminina],[data-ready-model=lumiere-boutique],[data-ready-model=vibe-store],[data-ready-model=urban-black-2]) .gold-benefit-grid{background:var(--card);padding:15px 5px}
+:is([data-ready-model=charmme-moda-feminina],[data-ready-model=lumiere-boutique],[data-ready-model=vibe-store],[data-ready-model=urban-black-2]) .gold-benefit-grid svg{color:var(--gold);width:27px;height:27px}
+:is([data-ready-model=charmme-moda-feminina],[data-ready-model=lumiere-boutique],[data-ready-model=vibe-store],[data-ready-model=urban-black-2]) .gold-benefit-grid h3{font-size:11px}
+:is([data-ready-model=charmme-moda-feminina],[data-ready-model=lumiere-boutique],[data-ready-model=vibe-store],[data-ready-model=urban-black-2]) .gold-benefit-grid p{font-size:9px}
+:is([data-ready-model=charmme-moda-feminina],[data-ready-model=lumiere-boutique],[data-ready-model=vibe-store],[data-ready-model=urban-black-2]) .gold-section.gold-about:has(.gold-about-grid){position:relative;isolation:isolate;overflow:hidden;padding:20px;min-height:285px}
+:is([data-ready-model=charmme-moda-feminina],[data-ready-model=lumiere-boutique],[data-ready-model=vibe-store],[data-ready-model=urban-black-2]) .gold-about-grid{display:block;width:100%;min-height:255px}
+:is([data-ready-model=charmme-moda-feminina],[data-ready-model=lumiere-boutique],[data-ready-model=vibe-store],[data-ready-model=urban-black-2]) .gold-about-grid>div{position:relative;width:53%;z-index:1}
+:is([data-ready-model=charmme-moda-feminina],[data-ready-model=lumiere-boutique],[data-ready-model=vibe-store],[data-ready-model=urban-black-2]) .gold-about-grid>img{position:absolute;inset:0;width:100%;height:100%;aspect-ratio:auto;border-radius:0;z-index:-2;object-position:75% center}
+:is([data-ready-model=charmme-moda-feminina],[data-ready-model=lumiere-boutique],[data-ready-model=vibe-store],[data-ready-model=urban-black-2]) .gold-section.gold-about:has(.gold-about-grid):after{content:'';position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,var(--paper),#0000 90%);pointer-events:none}
+:is([data-ready-model=charmme-moda-feminina],[data-ready-model=lumiere-boutique],[data-ready-model=vibe-store],[data-ready-model=urban-black-2]) .gold-about-grid h2{font-size:22px;margin-bottom:12px}
+:is([data-ready-model=charmme-moda-feminina],[data-ready-model=lumiere-boutique],[data-ready-model=vibe-store],[data-ready-model=urban-black-2]) .gold-about-grid p{font-size:11px;line-height:1.45}
+:is([data-ready-model=charmme-moda-feminina],[data-ready-model=lumiere-boutique],[data-ready-model=vibe-store],[data-ready-model=urban-black-2]) .gold-about-grid .gold-banner-button{display:inline-flex}
+:is([data-ready-model=charmme-moda-feminina],[data-ready-model=lumiere-boutique],[data-ready-model=vibe-store],[data-ready-model=urban-black-2]) .gold-hours-card{background:var(--card);padding:13px 16px;border:1px solid var(--gold)}
+:is([data-ready-model=charmme-moda-feminina],[data-ready-model=lumiere-boutique],[data-ready-model=vibe-store],[data-ready-model=urban-black-2]) .gold-hours-card>div{font-size:12px;padding:7px 0;border-color:var(--gold)}
+:is([data-ready-model=charmme-moda-feminina],[data-ready-model=lumiere-boutique],[data-ready-model=vibe-store],[data-ready-model=urban-black-2]) .gold-map-button{justify-content:flex-start;background:transparent;color:var(--ink);padding:4px 8px;font-size:18px}
+:is([data-ready-model=charmme-moda-feminina],[data-ready-model=lumiere-boutique],[data-ready-model=vibe-store],[data-ready-model=urban-black-2]) .gold-map-button svg{color:var(--gold)}
+:is([data-ready-model=charmme-moda-feminina],[data-ready-model=lumiere-boutique],[data-ready-model=vibe-store],[data-ready-model=urban-black-2]) .gold-address{justify-content:flex-start;text-align:left;padding:5px 8px;font-size:11px}
+:is([data-ready-model=charmme-moda-feminina],[data-ready-model=lumiere-boutique],[data-ready-model=vibe-store],[data-ready-model=urban-black-2]) .gold-whatsapp-card{background:#00963b;padding:14px;grid-template-columns:40px minmax(0,1fr) 32px;gap:10px}
+:is([data-ready-model=charmme-moda-feminina],[data-ready-model=lumiere-boutique],[data-ready-model=vibe-store],[data-ready-model=urban-black-2]) .gold-whatsapp-card h2{font-size:16px}
+:is([data-ready-model=charmme-moda-feminina],[data-ready-model=lumiere-boutique],[data-ready-model=vibe-store],[data-ready-model=urban-black-2]) .gold-whatsapp-card>span:last-child{width:32px;height:32px;background:white;color:#111}
+:is([data-ready-model=charmme-moda-feminina],[data-ready-model=lumiere-boutique],[data-ready-model=vibe-store],[data-ready-model=urban-black-2]) .gold-identity .gold-logo{display:none}
+:is([data-ready-model=charmme-moda-feminina],[data-ready-model=lumiere-boutique],[data-ready-model=vibe-store],[data-ready-model=urban-black-2]) .gold-identity>strong{font:26px Georgia,serif;color:var(--gold)}
+[data-ready-model=charmme-moda-feminina] .gold-identity>strong{font:italic 36px cursive}
+:is([data-ready-model=charmme-moda-feminina],[data-ready-model=lumiere-boutique],[data-ready-model=vibe-store],[data-ready-model=urban-black-2]) .gold-social{color:var(--gold);padding-bottom:5px}
+
+.moda-premium-gold .gold-location-media{position:relative}
+.moda-premium-gold .gold-map-marker{position:absolute;top:50%;left:50%;transform:translate(-50%,-30%);color:var(--gold);fill:var(--paper);pointer-events:none}
+[data-ready-model=vibe-store] .gold-hero-content>h1{font:italic 56px Impact,Arial,sans-serif;color:white;letter-spacing:1px}
+[data-ready-model=vibe-store] .gold-hero-headline{font:700 33px/1 Impact,Arial,sans-serif;text-transform:uppercase}
+[data-ready-model=vibe-store] .gold-hero-button,[data-ready-model=vibe-store] [data-layout=three] .gold-product-contact,[data-ready-model=vibe-store] .gold-banner-button{background:linear-gradient(110deg,#fb7651,#fb20a5,#c700ee);color:#fff}
+[data-ready-model=vibe-store] .gold-hero-button{border-radius:28px}
+[data-ready-model=vibe-store] .gold-banner-copy h2{font:700 24px/1 Impact,Arial,sans-serif;text-transform:uppercase}
+[data-ready-model=vibe-store] .gold-identity>strong{font:italic 40px Impact,Arial,sans-serif;color:white}
+
+[data-ready-model=urban-black-2] .gold-hero-content>h1{font:700 40px/1 Impact,Arial,sans-serif;color:#fff;letter-spacing:1px}
+[data-ready-model=urban-black-2] .gold-hero-headline{font:700 32px/1 Impact,Arial,sans-serif;text-transform:uppercase}
+[data-ready-model=urban-black-2] .gold-hero-button,[data-ready-model=urban-black-2] .gold-banner-button,[data-ready-model=urban-black-2] [data-layout=three] .gold-product-contact{background:linear-gradient(100deg,#ffd352,#ffbd21);color:#101010}
+[data-ready-model=urban-black-2] [data-layout=three] .gold-product{background:var(--local-panel,#ffffff);color:var(--local-text,#101010);border:1px solid #fff5}
+[data-ready-model=urban-black-2] .gold-banner-copy h2{font:700 23px/1 Arial,sans-serif;text-transform:uppercase}
+[data-ready-model=urban-black-2] .gold-identity>strong{font:700 30px/1 Impact,Arial,sans-serif;color:#ffffff}
+
+/* A supplied logo is always visible and selectable in every editorial variant. */
+.moda-premium-gold[data-ready-model]:not([data-ready-model=moda-premium-gold]) .gold-hero-content>.gold-logo:has(img){display:grid;width:70px;height:55px;border-radius:0;background:transparent;margin:0 0 8px}
+.moda-premium-gold[data-ready-model]:not([data-ready-model=moda-premium-gold]) .gold-identity .gold-logo:has(img){display:inline-grid;width:60px;height:60px;background:transparent}
+/* Nexo: a compact BioSite with independent editable storefront blocks. */
+:is([data-ready-model=nexo-moda-masculina],[data-ready-model=atelier-27],[data-ready-model=lumiere-moda-feminina],[data-ready-model=imperium-barbearia],[data-ready-model=barber-pro],[data-ready-model=royal-barber],[data-ready-model=bravo-barbearia],[data-ready-model=the-cut-barbearia]){max-width:430px}
+:is([data-ready-model=nexo-moda-masculina],[data-ready-model=atelier-27],[data-ready-model=lumiere-moda-feminina],[data-ready-model=imperium-barbearia],[data-ready-model=barber-pro],[data-ready-model=royal-barber],[data-ready-model=bravo-barbearia],[data-ready-model=the-cut-barbearia]) .gold-hero{padding:24px 18px;min-height:415px;background:#070d12;color:#fff}
+:is([data-ready-model=nexo-moda-masculina],[data-ready-model=atelier-27],[data-ready-model=lumiere-moda-feminina],[data-ready-model=imperium-barbearia],[data-ready-model=barber-pro],[data-ready-model=royal-barber],[data-ready-model=bravo-barbearia],[data-ready-model=the-cut-barbearia]) .gold-hero-content{width:100%!important}
+:is([data-ready-model=nexo-moda-masculina],[data-ready-model=atelier-27],[data-ready-model=lumiere-moda-feminina],[data-ready-model=imperium-barbearia],[data-ready-model=barber-pro],[data-ready-model=royal-barber],[data-ready-model=bravo-barbearia],[data-ready-model=the-cut-barbearia]) .gold-hero-content>.gold-logo:not(:has(img)){display:none}
+:is([data-ready-model=nexo-moda-masculina],[data-ready-model=atelier-27],[data-ready-model=lumiere-moda-feminina],[data-ready-model=imperium-barbearia],[data-ready-model=barber-pro],[data-ready-model=royal-barber],[data-ready-model=bravo-barbearia],[data-ready-model=the-cut-barbearia]) .gold-hero-content>h1{font:900 56px/1 Arial,sans-serif;letter-spacing:2px;text-transform:uppercase}
+:is([data-ready-model=nexo-moda-masculina],[data-ready-model=atelier-27],[data-ready-model=lumiere-moda-feminina],[data-ready-model=imperium-barbearia],[data-ready-model=barber-pro],[data-ready-model=royal-barber],[data-ready-model=bravo-barbearia],[data-ready-model=the-cut-barbearia]) .gold-tagline{letter-spacing:4px;font-size:9px}
+:is([data-ready-model=nexo-moda-masculina],[data-ready-model=atelier-27],[data-ready-model=lumiere-moda-feminina],[data-ready-model=imperium-barbearia],[data-ready-model=barber-pro],[data-ready-model=royal-barber],[data-ready-model=bravo-barbearia],[data-ready-model=the-cut-barbearia]) .gold-hero-headline{max-width:55%;font:700 34px/1 Impact,Arial,sans-serif;margin:20px 0 14px;white-space:pre-line}
+:is([data-ready-model=nexo-moda-masculina],[data-ready-model=atelier-27],[data-ready-model=lumiere-moda-feminina],[data-ready-model=imperium-barbearia],[data-ready-model=barber-pro],[data-ready-model=royal-barber],[data-ready-model=bravo-barbearia],[data-ready-model=the-cut-barbearia]) .gold-hero-content>p{max-width:48%;font:13px/1.35 Arial,sans-serif}
+:is([data-ready-model=nexo-moda-masculina],[data-ready-model=atelier-27],[data-ready-model=lumiere-moda-feminina],[data-ready-model=imperium-barbearia],[data-ready-model=barber-pro],[data-ready-model=royal-barber],[data-ready-model=bravo-barbearia],[data-ready-model=the-cut-barbearia]) .gold-hero-shade{background:linear-gradient(90deg,#05090de8,#05090d70 47%,#0000)}
+:is([data-ready-model=nexo-moda-masculina],[data-ready-model=atelier-27],[data-ready-model=lumiere-moda-feminina],[data-ready-model=imperium-barbearia],[data-ready-model=barber-pro],[data-ready-model=royal-barber],[data-ready-model=bravo-barbearia],[data-ready-model=the-cut-barbearia]) .gold-hero-button{display:inline-flex;align-items:center;gap:14px;background:#ff7800;color:#fff;padding:13px 18px;border-radius:12px;font-size:13px;font-weight:700;margin-top:15px}
+:is([data-ready-model=nexo-moda-masculina],[data-ready-model=atelier-27],[data-ready-model=lumiere-moda-feminina],[data-ready-model=imperium-barbearia],[data-ready-model=barber-pro],[data-ready-model=royal-barber],[data-ready-model=bravo-barbearia],[data-ready-model=the-cut-barbearia]) .gold-section{background:var(--paper)!important;color:var(--ink)!important;padding:8px 12px}
+:is([data-ready-model=nexo-moda-masculina],[data-ready-model=atelier-27],[data-ready-model=lumiere-moda-feminina],[data-ready-model=imperium-barbearia],[data-ready-model=barber-pro],[data-ready-model=royal-barber],[data-ready-model=bravo-barbearia],[data-ready-model=the-cut-barbearia]) .gold-section h2{font:700 19px/1.15 Arial,sans-serif;margin-bottom:10px}
+:is([data-ready-model=nexo-moda-masculina],[data-ready-model=atelier-27],[data-ready-model=lumiere-moda-feminina],[data-ready-model=imperium-barbearia],[data-ready-model=barber-pro],[data-ready-model=royal-barber],[data-ready-model=bravo-barbearia],[data-ready-model=the-cut-barbearia]) .gold-actions>[data-action-id]{background:var(--card);border:1px solid #3c434a;border-radius:10px;padding:10px 3px;gap:5px}
+:is([data-ready-model=nexo-moda-masculina],[data-ready-model=atelier-27],[data-ready-model=lumiere-moda-feminina],[data-ready-model=imperium-barbearia],[data-ready-model=barber-pro],[data-ready-model=royal-barber],[data-ready-model=bravo-barbearia],[data-ready-model=the-cut-barbearia]) .gold-actions .action-icon-tile{background:transparent!important;border:0!important;color:#fff!important;width:39px;height:39px}
+:is([data-ready-model=nexo-moda-masculina],[data-ready-model=atelier-27],[data-ready-model=lumiere-moda-feminina],[data-ready-model=imperium-barbearia],[data-ready-model=barber-pro],[data-ready-model=royal-barber],[data-ready-model=bravo-barbearia],[data-ready-model=the-cut-barbearia]) .gold-actions strong{font-size:10px;color:#fff}
+:is([data-ready-model=nexo-moda-masculina],[data-ready-model=atelier-27],[data-ready-model=lumiere-moda-feminina],[data-ready-model=imperium-barbearia],[data-ready-model=barber-pro],[data-ready-model=royal-barber],[data-ready-model=bravo-barbearia],[data-ready-model=the-cut-barbearia]) .gold-actions small{font-size:8px;color:#eee}
+:is([data-ready-model=nexo-moda-masculina],[data-ready-model=atelier-27],[data-ready-model=lumiere-moda-feminina],[data-ready-model=imperium-barbearia],[data-ready-model=barber-pro],[data-ready-model=royal-barber],[data-ready-model=bravo-barbearia],[data-ready-model=the-cut-barbearia]) .gold-benefit-grid{background:var(--card);border:1px solid #343c43;border-radius:11px;padding:12px 5px;gap:8px}
+:is([data-ready-model=nexo-moda-masculina],[data-ready-model=atelier-27],[data-ready-model=lumiere-moda-feminina],[data-ready-model=imperium-barbearia],[data-ready-model=barber-pro],[data-ready-model=royal-barber],[data-ready-model=bravo-barbearia],[data-ready-model=the-cut-barbearia]) .gold-benefit-grid svg{color:var(--gold);width:27px;height:27px}
+:is([data-ready-model=nexo-moda-masculina],[data-ready-model=atelier-27],[data-ready-model=lumiere-moda-feminina],[data-ready-model=imperium-barbearia],[data-ready-model=barber-pro],[data-ready-model=royal-barber],[data-ready-model=bravo-barbearia],[data-ready-model=the-cut-barbearia]) .gold-benefit-grid h3{font-size:10px;color:#fff}
+:is([data-ready-model=nexo-moda-masculina],[data-ready-model=atelier-27],[data-ready-model=lumiere-moda-feminina],[data-ready-model=imperium-barbearia],[data-ready-model=barber-pro],[data-ready-model=royal-barber],[data-ready-model=bravo-barbearia],[data-ready-model=the-cut-barbearia]) .gold-benefit-grid p{font-size:9px}
+:is([data-ready-model=nexo-moda-masculina],[data-ready-model=atelier-27],[data-ready-model=lumiere-moda-feminina],[data-ready-model=imperium-barbearia],[data-ready-model=barber-pro],[data-ready-model=royal-barber],[data-ready-model=bravo-barbearia],[data-ready-model=the-cut-barbearia]) [data-gold-feature] .gold-benefit-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr))}
+:is([data-ready-model=nexo-moda-masculina],[data-ready-model=atelier-27],[data-ready-model=lumiere-moda-feminina],[data-ready-model=imperium-barbearia],[data-ready-model=barber-pro],[data-ready-model=royal-barber],[data-ready-model=bravo-barbearia],[data-ready-model=the-cut-barbearia]) [data-gold-feature] .gold-benefit-grid>div{display:flex;align-items:center;gap:5px;text-align:left}
+:is([data-ready-model=nexo-moda-masculina],[data-ready-model=atelier-27],[data-ready-model=lumiere-moda-feminina],[data-ready-model=imperium-barbearia],[data-ready-model=barber-pro],[data-ready-model=royal-barber],[data-ready-model=bravo-barbearia],[data-ready-model=the-cut-barbearia]) [data-gold-feature] .gold-benefit-grid svg{flex-shrink:0}
+:is([data-ready-model=nexo-moda-masculina],[data-ready-model=atelier-27],[data-ready-model=lumiere-moda-feminina],[data-ready-model=imperium-barbearia],[data-ready-model=barber-pro],[data-ready-model=royal-barber],[data-ready-model=bravo-barbearia],[data-ready-model=the-cut-barbearia]) :is([data-section-id=nexo-categories],[data-section-id=lumieref-categories]) .gold-collections{grid-template-columns:repeat(6,minmax(0,1fr));gap:6px}
+:is([data-ready-model=nexo-moda-masculina],[data-ready-model=atelier-27],[data-ready-model=lumiere-moda-feminina],[data-ready-model=imperium-barbearia],[data-ready-model=barber-pro],[data-ready-model=royal-barber],[data-ready-model=bravo-barbearia],[data-ready-model=the-cut-barbearia]) :is([data-section-id=nexo-categories],[data-section-id=lumieref-categories]) .gold-collections>a{border:0;overflow:visible;background:transparent;aspect-ratio:auto;text-align:center}
+:is([data-ready-model=nexo-moda-masculina],[data-ready-model=atelier-27],[data-ready-model=lumiere-moda-feminina],[data-ready-model=imperium-barbearia],[data-ready-model=barber-pro],[data-ready-model=royal-barber],[data-ready-model=bravo-barbearia],[data-ready-model=the-cut-barbearia]) :is([data-section-id=nexo-categories],[data-section-id=lumieref-categories]) .gold-collections img{position:static;width:100%;aspect-ratio:1;height:auto;border-radius:50%;border:2px solid #ff8b32}
+:is([data-ready-model=nexo-moda-masculina],[data-ready-model=atelier-27],[data-ready-model=lumiere-moda-feminina],[data-ready-model=imperium-barbearia],[data-ready-model=barber-pro],[data-ready-model=royal-barber],[data-ready-model=bravo-barbearia],[data-ready-model=the-cut-barbearia]) :is([data-section-id=nexo-categories],[data-section-id=lumieref-categories]) .gold-collections>a>div{position:static;padding:6px 0;background:none}
+:is([data-ready-model=nexo-moda-masculina],[data-ready-model=atelier-27],[data-ready-model=lumiere-moda-feminina],[data-ready-model=imperium-barbearia],[data-ready-model=barber-pro],[data-ready-model=royal-barber],[data-ready-model=bravo-barbearia],[data-ready-model=the-cut-barbearia]) .gold-collections strong{font-size:9px}
+:is([data-ready-model=nexo-moda-masculina],[data-ready-model=atelier-27],[data-ready-model=lumiere-moda-feminina],[data-ready-model=imperium-barbearia],[data-ready-model=barber-pro],[data-ready-model=royal-barber],[data-ready-model=bravo-barbearia],[data-ready-model=the-cut-barbearia]) .gold-collections small{font-size:8px}
+:is([data-ready-model=nexo-moda-masculina],[data-ready-model=atelier-27],[data-ready-model=lumiere-moda-feminina],[data-ready-model=imperium-barbearia],[data-ready-model=barber-pro],[data-ready-model=royal-barber],[data-ready-model=bravo-barbearia],[data-ready-model=the-cut-barbearia]) .gold-banner{width:100%;max-width:100%;min-height:165px;aspect-ratio:var(--media-aspect,2.4);border:1px solid #454a50;border-radius:12px}
+:is([data-ready-model=nexo-moda-masculina],[data-ready-model=atelier-27],[data-ready-model=lumiere-moda-feminina],[data-ready-model=imperium-barbearia],[data-ready-model=barber-pro],[data-ready-model=royal-barber],[data-ready-model=bravo-barbearia],[data-ready-model=the-cut-barbearia]) .gold-banner-copy{width:50%;padding:14px}
+:is([data-ready-model=nexo-moda-masculina],[data-ready-model=atelier-27],[data-ready-model=lumiere-moda-feminina],[data-ready-model=imperium-barbearia],[data-ready-model=barber-pro],[data-ready-model=royal-barber],[data-ready-model=bravo-barbearia],[data-ready-model=the-cut-barbearia]) .gold-banner-copy h2{font:700 24px/1 Impact,Arial,sans-serif;white-space:pre-line}
+:is([data-ready-model=nexo-moda-masculina],[data-ready-model=atelier-27],[data-ready-model=lumiere-moda-feminina],[data-ready-model=imperium-barbearia],[data-ready-model=barber-pro],[data-ready-model=royal-barber],[data-ready-model=bravo-barbearia],[data-ready-model=the-cut-barbearia]) .gold-banner-copy p{font-size:11px}
+:is([data-ready-model=nexo-moda-masculina],[data-ready-model=atelier-27],[data-ready-model=lumiere-moda-feminina],[data-ready-model=imperium-barbearia],[data-ready-model=barber-pro],[data-ready-model=royal-barber],[data-ready-model=bravo-barbearia],[data-ready-model=the-cut-barbearia]) .gold-banner-button{background:#fff;color:#111;border-radius:9px;padding:8px 12px;font-size:10px}
+:is([data-ready-model=nexo-moda-masculina],[data-ready-model=atelier-27],[data-ready-model=lumiere-moda-feminina],[data-ready-model=imperium-barbearia],[data-ready-model=barber-pro],[data-ready-model=royal-barber],[data-ready-model=bravo-barbearia],[data-ready-model=the-cut-barbearia]) [data-section-id=nexo-sneakers] .gold-banner-button{background:#ff7800}
+:is([data-ready-model=nexo-moda-masculina],[data-ready-model=atelier-27],[data-ready-model=lumiere-moda-feminina],[data-ready-model=imperium-barbearia],[data-ready-model=barber-pro],[data-ready-model=royal-barber],[data-ready-model=bravo-barbearia],[data-ready-model=the-cut-barbearia]) .gold-product-list{display:grid;grid-template-columns:repeat(var(--product-columns,4),minmax(0,1fr));gap:6px}
+:is([data-ready-model=nexo-moda-masculina],[data-ready-model=atelier-27],[data-ready-model=lumiere-moda-feminina],[data-ready-model=imperium-barbearia],[data-ready-model=barber-pro],[data-ready-model=royal-barber],[data-ready-model=bravo-barbearia],[data-ready-model=the-cut-barbearia]) .gold-product{display:flex;flex-direction:column;gap:0;background:var(--local-panel,#fff);color:var(--local-text,#111);border-radius:9px;padding:3px;min-width:0;overflow:hidden}
+:is([data-ready-model=nexo-moda-masculina],[data-ready-model=atelier-27],[data-ready-model=lumiere-moda-feminina],[data-ready-model=imperium-barbearia],[data-ready-model=barber-pro],[data-ready-model=royal-barber],[data-ready-model=bravo-barbearia],[data-ready-model=the-cut-barbearia]) .gold-product>img{width:100%;aspect-ratio:var(--media-aspect,.73);height:auto;border-radius:7px}
+:is([data-ready-model=nexo-moda-masculina],[data-ready-model=atelier-27],[data-ready-model=lumiere-moda-feminina],[data-ready-model=imperium-barbearia],[data-ready-model=barber-pro],[data-ready-model=royal-barber],[data-ready-model=bravo-barbearia],[data-ready-model=the-cut-barbearia]) .gold-product>div{padding:5px 3px;width:100%}
+:is([data-ready-model=nexo-moda-masculina],[data-ready-model=atelier-27],[data-ready-model=lumiere-moda-feminina],[data-ready-model=imperium-barbearia],[data-ready-model=barber-pro],[data-ready-model=royal-barber],[data-ready-model=bravo-barbearia],[data-ready-model=the-cut-barbearia]) .gold-product h3{font-size:9px;font-weight:500;line-height:1.15;margin:0 0 3px;overflow-wrap:anywhere}
+:is([data-ready-model=nexo-moda-masculina],[data-ready-model=atelier-27],[data-ready-model=lumiere-moda-feminina],[data-ready-model=imperium-barbearia],[data-ready-model=barber-pro],[data-ready-model=royal-barber],[data-ready-model=bravo-barbearia],[data-ready-model=the-cut-barbearia]) .gold-product strong{font-size:11px;margin:0}
+:is([data-ready-model=nexo-moda-masculina],[data-ready-model=atelier-27],[data-ready-model=lumiere-moda-feminina],[data-ready-model=imperium-barbearia],[data-ready-model=barber-pro],[data-ready-model=royal-barber],[data-ready-model=bravo-barbearia],[data-ready-model=the-cut-barbearia]) .gold-product-contact{margin:0 3px 3px auto;align-self:flex-end;width:25px;height:25px;border-radius:6px;background:#080d10;color:#fff}
+:is([data-ready-model=nexo-moda-masculina],[data-ready-model=atelier-27],[data-ready-model=lumiere-moda-feminina],[data-ready-model=imperium-barbearia],[data-ready-model=barber-pro],[data-ready-model=royal-barber],[data-ready-model=bravo-barbearia],[data-ready-model=the-cut-barbearia]) .gold-product-contact>span{display:none}
+:is([data-ready-model=nexo-moda-masculina],[data-ready-model=atelier-27],[data-ready-model=lumiere-moda-feminina],[data-ready-model=imperium-barbearia],[data-ready-model=barber-pro],[data-ready-model=royal-barber],[data-ready-model=bravo-barbearia],[data-ready-model=the-cut-barbearia]) .gold-product-contact svg{width:16px;height:16px}
+:is([data-ready-model=nexo-moda-masculina],[data-ready-model=atelier-27],[data-ready-model=lumiere-moda-feminina],[data-ready-model=imperium-barbearia],[data-ready-model=barber-pro],[data-ready-model=royal-barber],[data-ready-model=bravo-barbearia],[data-ready-model=the-cut-barbearia]) :is([data-section-id=nexo-looks],[data-section-id=atelier-looks],[data-section-id=lumieref-looks]) .gold-collections{grid-template-columns:repeat(4,minmax(0,1fr));gap:6px}
+:is([data-ready-model=nexo-moda-masculina],[data-ready-model=atelier-27],[data-ready-model=lumiere-moda-feminina],[data-ready-model=imperium-barbearia],[data-ready-model=barber-pro],[data-ready-model=royal-barber],[data-ready-model=bravo-barbearia],[data-ready-model=the-cut-barbearia]) :is([data-section-id=nexo-looks],[data-section-id=atelier-looks],[data-section-id=lumieref-looks]) .gold-collections>a{background:#fff;color:#111;aspect-ratio:auto;border-radius:8px;border:1px solid #ddd;overflow:hidden}
+:is([data-ready-model=nexo-moda-masculina],[data-ready-model=atelier-27],[data-ready-model=lumiere-moda-feminina],[data-ready-model=imperium-barbearia],[data-ready-model=barber-pro],[data-ready-model=royal-barber],[data-ready-model=bravo-barbearia],[data-ready-model=the-cut-barbearia]) :is([data-section-id=nexo-looks],[data-section-id=atelier-looks],[data-section-id=lumieref-looks]) .gold-collections img{position:static;width:100%;height:auto;aspect-ratio:.68}
+:is([data-ready-model=nexo-moda-masculina],[data-ready-model=atelier-27],[data-ready-model=lumiere-moda-feminina],[data-ready-model=imperium-barbearia],[data-ready-model=barber-pro],[data-ready-model=royal-barber],[data-ready-model=bravo-barbearia],[data-ready-model=the-cut-barbearia]) :is([data-section-id=nexo-looks],[data-section-id=atelier-looks],[data-section-id=lumieref-looks]) .gold-collections>a>div{position:static;background:#fff;color:#111;padding:6px 2px;text-align:center}
+:is([data-ready-model=nexo-moda-masculina],[data-ready-model=atelier-27],[data-ready-model=lumiere-moda-feminina],[data-ready-model=imperium-barbearia],[data-ready-model=barber-pro],[data-ready-model=royal-barber],[data-ready-model=bravo-barbearia],[data-ready-model=the-cut-barbearia]) .gold-about-grid{position:relative;display:block;min-height:280px;isolation:isolate;padding:10px}
+:is([data-ready-model=nexo-moda-masculina],[data-ready-model=atelier-27],[data-ready-model=lumiere-moda-feminina],[data-ready-model=imperium-barbearia],[data-ready-model=barber-pro],[data-ready-model=royal-barber],[data-ready-model=bravo-barbearia],[data-ready-model=the-cut-barbearia]) .gold-about-grid>div{width:53%;position:relative;z-index:1}
+:is([data-ready-model=nexo-moda-masculina],[data-ready-model=atelier-27],[data-ready-model=lumiere-moda-feminina],[data-ready-model=imperium-barbearia],[data-ready-model=barber-pro],[data-ready-model=royal-barber],[data-ready-model=bravo-barbearia],[data-ready-model=the-cut-barbearia]) .gold-about-grid>img{position:absolute;inset:0;width:100%;height:100%;aspect-ratio:auto;z-index:-2;object-position:75% center}
+:is([data-ready-model=nexo-moda-masculina],[data-ready-model=atelier-27],[data-ready-model=lumiere-moda-feminina],[data-ready-model=imperium-barbearia],[data-ready-model=barber-pro],[data-ready-model=royal-barber],[data-ready-model=bravo-barbearia],[data-ready-model=the-cut-barbearia]) .gold-about-grid:after{content:'';position:absolute;inset:0;background:linear-gradient(90deg,#080d10,#080d1088 50%,#0000);z-index:-1;pointer-events:none}
+:is([data-ready-model=nexo-moda-masculina],[data-ready-model=atelier-27],[data-ready-model=lumiere-moda-feminina],[data-ready-model=imperium-barbearia],[data-ready-model=barber-pro],[data-ready-model=royal-barber],[data-ready-model=bravo-barbearia],[data-ready-model=the-cut-barbearia]) .gold-about-grid p{font-size:11px;line-height:1.35}
+:is([data-ready-model=nexo-moda-masculina],[data-ready-model=atelier-27],[data-ready-model=lumiere-moda-feminina],[data-ready-model=imperium-barbearia],[data-ready-model=barber-pro],[data-ready-model=royal-barber],[data-ready-model=bravo-barbearia],[data-ready-model=the-cut-barbearia]) .gold-about-grid .gold-banner-button{display:inline-flex;position:relative;z-index:1;margin-top:10px}
+.gold-reviews{display:grid;grid-template-columns:repeat(var(--section-columns,2),minmax(0,1fr));gap:8px}
+.gold-reviews blockquote{background:var(--card);border:1px solid #38414a;border-radius:12px;padding:12px}
+.gold-reviews strong{display:block;font-size:11px}.gold-reviews span{display:flex;color:#ffb500;margin:5px 0}.gold-reviews p{font-size:10px;line-height:1.4}
+:is([data-ready-model=nexo-moda-masculina],[data-ready-model=atelier-27],[data-ready-model=lumiere-moda-feminina],[data-ready-model=imperium-barbearia],[data-ready-model=barber-pro],[data-ready-model=royal-barber],[data-ready-model=bravo-barbearia],[data-ready-model=the-cut-barbearia]) .gold-whatsapp-card{background:#081820;color:white;padding:15px;gap:10px;grid-template-columns:42px minmax(0,1fr) 27px}
+:is([data-ready-model=nexo-moda-masculina],[data-ready-model=atelier-27],[data-ready-model=lumiere-moda-feminina],[data-ready-model=imperium-barbearia],[data-ready-model=barber-pro],[data-ready-model=royal-barber],[data-ready-model=bravo-barbearia],[data-ready-model=the-cut-barbearia]) .gold-whatsapp-card h2{font-size:18px;margin:0}
+:is([data-ready-model=nexo-moda-masculina],[data-ready-model=atelier-27],[data-ready-model=lumiere-moda-feminina],[data-ready-model=imperium-barbearia],[data-ready-model=barber-pro],[data-ready-model=royal-barber],[data-ready-model=bravo-barbearia],[data-ready-model=the-cut-barbearia]) .gold-whatsapp-card>span:last-child{background:#00c450;width:27px;height:27px}
+:is([data-ready-model=nexo-moda-masculina],[data-ready-model=atelier-27],[data-ready-model=lumiere-moda-feminina],[data-ready-model=imperium-barbearia],[data-ready-model=barber-pro],[data-ready-model=royal-barber],[data-ready-model=bravo-barbearia],[data-ready-model=the-cut-barbearia]) .gold-location{display:grid;grid-template-columns:53% 47%;background:var(--card)!important;border-radius:12px;margin:8px 12px;padding:0;overflow:hidden}
+:is([data-ready-model=nexo-moda-masculina],[data-ready-model=atelier-27],[data-ready-model=lumiere-moda-feminina],[data-ready-model=imperium-barbearia],[data-ready-model=barber-pro],[data-ready-model=royal-barber],[data-ready-model=bravo-barbearia],[data-ready-model=the-cut-barbearia]) .gold-map-button{background:none;color:#fff;font-size:13px;padding:12px 10px;justify-content:flex-start;grid-column:1}
+:is([data-ready-model=nexo-moda-masculina],[data-ready-model=atelier-27],[data-ready-model=lumiere-moda-feminina],[data-ready-model=imperium-barbearia],[data-ready-model=barber-pro],[data-ready-model=royal-barber],[data-ready-model=bravo-barbearia],[data-ready-model=the-cut-barbearia]) .gold-address{font-size:10px;text-align:left;padding:0 10px 12px;grid-column:1}
+:is([data-ready-model=nexo-moda-masculina],[data-ready-model=atelier-27],[data-ready-model=lumiere-moda-feminina],[data-ready-model=imperium-barbearia],[data-ready-model=barber-pro],[data-ready-model=royal-barber],[data-ready-model=bravo-barbearia],[data-ready-model=the-cut-barbearia]) .gold-location-media{grid-column:2;grid-row:1 / 3;height:100%}
+:is([data-ready-model=nexo-moda-masculina],[data-ready-model=atelier-27],[data-ready-model=lumiere-moda-feminina],[data-ready-model=imperium-barbearia],[data-ready-model=barber-pro],[data-ready-model=royal-barber],[data-ready-model=bravo-barbearia],[data-ready-model=the-cut-barbearia]) .gold-location-image{height:100%;width:100%;object-fit:cover}
+:is([data-ready-model=nexo-moda-masculina],[data-ready-model=atelier-27],[data-ready-model=lumiere-moda-feminina],[data-ready-model=imperium-barbearia],[data-ready-model=barber-pro],[data-ready-model=royal-barber],[data-ready-model=bravo-barbearia],[data-ready-model=the-cut-barbearia]) .gold-identity{padding-top:10px}
+:is([data-ready-model=nexo-moda-masculina],[data-ready-model=atelier-27],[data-ready-model=lumiere-moda-feminina],[data-ready-model=imperium-barbearia],[data-ready-model=barber-pro],[data-ready-model=royal-barber],[data-ready-model=bravo-barbearia],[data-ready-model=the-cut-barbearia]) .gold-identity>.gold-logo:not(:has(img)){display:none}
+:is([data-ready-model=nexo-moda-masculina],[data-ready-model=atelier-27],[data-ready-model=lumiere-moda-feminina],[data-ready-model=imperium-barbearia],[data-ready-model=barber-pro],[data-ready-model=royal-barber],[data-ready-model=bravo-barbearia],[data-ready-model=the-cut-barbearia]) .gold-identity>strong{font:900 42px/1 Arial,sans-serif;color:white}
+:is([data-ready-model=nexo-moda-masculina],[data-ready-model=atelier-27],[data-ready-model=lumiere-moda-feminina],[data-ready-model=imperium-barbearia],[data-ready-model=barber-pro],[data-ready-model=royal-barber],[data-ready-model=bravo-barbearia],[data-ready-model=the-cut-barbearia]) .gold-social{gap:20px;padding-bottom:8px}
+:is([data-ready-model=nexo-moda-masculina],[data-ready-model=atelier-27],[data-ready-model=lumiere-moda-feminina],[data-ready-model=imperium-barbearia],[data-ready-model=barber-pro],[data-ready-model=royal-barber],[data-ready-model=bravo-barbearia],[data-ready-model=the-cut-barbearia]) .gold-text-block{text-align:center;font-size:9px;color:#ccc}
+/* Reference-specific geometry, using the shared editable block owners. */
+[data-ready-model=atelier-27] .gold-hero-content>h1{font:29px Georgia,serif;letter-spacing:2px}
+[data-ready-model=atelier-27] .gold-hero-headline{font:29px/1 Georgia,serif;max-width:57%}
+[data-ready-model=atelier-27] .gold-hero-button{background:linear-gradient(110deg,#e7f691,#bcf858);color:#0a1006;border-radius:24px;text-transform:uppercase}
+[data-ready-model=atelier-27] [data-section-id=atelier-categories] .gold-collections{grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}
+[data-ready-model=atelier-27] [data-section-id=atelier-categories] .gold-collections>a{position:relative;overflow:hidden;aspect-ratio:.85;border-radius:10px;text-align:left;border:1px solid #a7aaa5}
+[data-ready-model=atelier-27] [data-section-id=atelier-categories] .gold-collections img{position:absolute;inset:0;width:100%;height:100%;border:0;border-radius:0;aspect-ratio:auto}
+[data-ready-model=atelier-27] [data-section-id=atelier-categories] .gold-collections>a>div{position:absolute;bottom:0;padding:12px;background:linear-gradient(#0000,#000d);width:100%}
+[data-ready-model=atelier-27] [data-section-id=atelier-categories] .gold-collections strong{font-size:12px;text-transform:uppercase}
+[data-ready-model=atelier-27] [data-section-id=atelier-products], [data-ready-model=atelier-27] [data-section-id=atelier-bestsellers], [data-ready-model=atelier-27] [data-section-id=atelier-looks]{background:#faf8f5!important;color:#111!important}
+[data-ready-model=atelier-27] [data-section-id=atelier-products] .gold-product-list{grid-template-columns:3fr 2fr;grid-template-rows:repeat(2,minmax(0,1fr));align-items:stretch}
+[data-ready-model=atelier-27] [data-section-id=atelier-products] .gold-product:first-child{grid-row:span 2}
+[data-ready-model=atelier-27] [data-section-id=atelier-products] .gold-product:first-child>img{flex:1;min-height:0;aspect-ratio:auto;object-fit:cover}
+[data-ready-model=atelier-27] .gold-product-contact{width:auto;height:24px;margin:0 3px 5px;align-self:stretch;display:flex;gap:5px;background:#d5f265;color:#111;border-radius:14px;font-size:9px;justify-content:center}
+[data-ready-model=atelier-27] .gold-product-contact>span{display:inline}
+[data-ready-model=atelier-27] [data-section-id=atelier-bestsellers] .gold-product-contact{display:none}
+[data-ready-model=atelier-27] [data-section-id=atelier-looks] .gold-collections{grid-template-columns:repeat(3,minmax(0,1fr))}
+[data-ready-model=atelier-27] .gold-banner-copy h2{font:28px/1 Georgia,serif}
+[data-ready-model=atelier-27] .gold-reviews{grid-template-columns:1fr}
+[data-ready-model=atelier-27] .gold-whatsapp-card{background:#367f29}
+[data-ready-model=atelier-27] .gold-identity>strong{font:26px Georgia,serif}
+[data-ready-model=lumiere-moda-feminina] .gold-hero{background:#916854;color:white}
+[data-ready-model=lumiere-moda-feminina] .gold-hero-content>h1{font:39px/1 Georgia,serif;text-align:center}
+[data-ready-model=lumiere-moda-feminina] .gold-hero-headline{font:33px/1.03 Georgia,serif;max-width:60%}
+[data-ready-model=lumiere-moda-feminina] .gold-hero-shade{background:linear-gradient(90deg,#735144e8,#73514470 50%,#0000)}
+[data-ready-model=lumiere-moda-feminina] .gold-hero-button,[data-ready-model=lumiere-moda-feminina] .gold-banner-button{background:#ffadb4;color:#442727}
+[data-ready-model=lumiere-moda-feminina] .gold-actions>[data-action-id]{background:#805b4b;border-color:#b08973}
+[data-ready-model=lumiere-moda-feminina] .gold-actions strong,[data-ready-model=lumiere-moda-feminina] .gold-actions small{color:#fff}
+[data-ready-model=lumiere-moda-feminina] .gold-benefit-grid h3{color:#171313}
+[data-ready-model=lumiere-moda-feminina] .gold-benefit-grid{border-color:#efdad5}
+[data-ready-model=lumiere-moda-feminina] [data-section-id=lumieref-categories] .gold-collections img{border:0}
+[data-ready-model=lumiere-moda-feminina] .gold-banner-copy h2{font:29px/1 Georgia,serif}
+[data-ready-model=lumiere-moda-feminina] .gold-banner-shade{background:linear-gradient(90deg,#b17964df,#b1796430)}
+[data-ready-model=lumiere-moda-feminina] .gold-product h3{font-size:10px}
+[data-ready-model=lumiere-moda-feminina] .gold-product-contact{width:auto;align-self:stretch;display:flex;justify-content:center;gap:5px;margin:3px;background:#ffadb4;color:#442727;font-size:8px;border-radius:8px}
+[data-ready-model=lumiere-moda-feminina] .gold-product-contact>span{display:inline}
+[data-ready-model=lumiere-moda-feminina] .gold-about-grid:after{background:linear-gradient(90deg,#8e6255,#8e625580 60%,#0000)}
+[data-ready-model=lumiere-moda-feminina] .gold-about-grid{color:#fff}
+[data-ready-model=lumiere-moda-feminina] .gold-reviews blockquote{background:#fff;border-color:#efdad5;color:#171313}
+[data-ready-model=lumiere-moda-feminina] .gold-map-button{color:#171313}
+[data-ready-model=lumiere-moda-feminina] .gold-whatsapp-card{background:#d4898b}
+[data-ready-model=lumiere-moda-feminina] .gold-identity>strong{font:27px Georgia,serif;color:#171313}
+[data-ready-model=lumiere-moda-feminina] .gold-text-block{color:#665050}
+[data-ready-model=imperium-barbearia] .gold-hero-content>h1{font:28px Georgia,serif;letter-spacing:4px;text-align:center}
+[data-ready-model=imperium-barbearia] .gold-hero-button,[data-ready-model=imperium-barbearia] .gold-product-contact{background:linear-gradient(120deg,#ffe6a6,#e6ad50);color:#171009}
+[data-ready-model=imperium-barbearia] .gold-product-contact{display:flex;align-items:center;justify-content:center;gap:5px;width:auto;align-self:stretch;margin:3px;font-size:9px}
+[data-ready-model=imperium-barbearia] .gold-product-contact>span{display:inline}
+[data-ready-model=imperium-barbearia] .gold-product p{font-size:9px;margin-top:4px;color:#333}
+[data-ready-model=imperium-barbearia] [data-section-id=imperium-categories] .gold-collections{grid-template-columns:repeat(5,minmax(0,1fr));gap:6px}
+[data-ready-model=imperium-barbearia] .gold-collections strong{font-size:8px}
+[data-ready-model=imperium-barbearia] .gold-collections>a{aspect-ratio:.65}
+[data-ready-model=imperium-barbearia] .gold-collections>a>div{padding:5px}
+[data-ready-model=imperium-barbearia] .gold-banner-copy h2{font:26px/1 Impact,Arial,sans-serif}
+[data-ready-model=imperium-barbearia] .gold-whatsapp-card{background:linear-gradient(100deg,#c78d35,#342c16)}
+[data-ready-model=imperium-barbearia] .gold-identity>strong{font:27px Georgia,serif;letter-spacing:3px}
+[data-ready-model=barber-pro] .gold-hero-content>h1{font:25px Georgia,serif;text-align:center;letter-spacing:3px}
+[data-ready-model=barber-pro] .gold-hero-button,[data-ready-model=barber-pro] .gold-banner-button{background:linear-gradient(120deg,#ffda8f,#e7ad58);color:#21150d}
+[data-ready-model=barber-pro] .gold-actions>[data-action-id]{background:#25292bbb}
+[data-ready-model=barber-pro] .gold-product-contact{background:#75421c}
+[data-ready-model=barber-pro] .gold-product p{font-size:9px;color:#333;margin-top:5px}
+[data-ready-model=barber-pro] .gold-benefit-grid h3{color:#17120e}
+[data-ready-model=barber-pro] .gold-benefit-grid{border-color:#eee6dc}
+[data-ready-model=barber-pro] [data-section-id=barberpro-styles] .gold-collections{grid-template-columns:repeat(4,minmax(0,1fr))}
+[data-ready-model=barber-pro] [data-section-id=barberpro-styles] .gold-collections>a{background:#fff;color:#17120e;aspect-ratio:auto;border-radius:9px}
+[data-ready-model=barber-pro] [data-section-id=barberpro-styles] .gold-collections img{position:static;width:100%;height:auto;aspect-ratio:1}
+[data-ready-model=barber-pro] [data-section-id=barberpro-styles] .gold-collections>a>div{position:static;padding:6px 2px;background:none}
+[data-ready-model=barber-pro] .gold-about-grid{color:#35271d}
+[data-ready-model=barber-pro] .gold-about-grid:after{background:linear-gradient(90deg,#f8f1e9,#f8f1e970 60%,#0000)}
+[data-ready-model=barber-pro] .gold-reviews blockquote{background:#fff;border-color:#eee6dc;color:#17120e}
+[data-ready-model=barber-pro] .gold-map-button{color:#17120e}
+[data-ready-model=barber-pro] .gold-whatsapp-card{background:linear-gradient(120deg,#755033,#b98639)}
+[data-ready-model=barber-pro] .gold-identity>strong{font:24px Georgia,serif;letter-spacing:3px;color:#17120e}
+[data-ready-model=barber-pro] .gold-text-block{color:#554a40}
+
+[data-ready-model=royal-barber] .gold-hero-content>h1{font:25px Georgia,serif;text-align:center;letter-spacing:3px}
+[data-ready-model=royal-barber] .gold-hero-button,[data-ready-model=royal-barber] .gold-banner-button{background:linear-gradient(120deg,#ffda8f,#e7ad58);color:#21150d}
+[data-ready-model=royal-barber] .gold-actions>[data-action-id]{background:#25292bbb}
+[data-ready-model=royal-barber] .gold-product-contact{background:#75421c}
+[data-ready-model=royal-barber] .gold-product p{font-size:9px;color:#333;margin-top:5px}
+[data-ready-model=royal-barber] .gold-benefit-grid h3{color:#17120e}
+[data-ready-model=royal-barber] .gold-benefit-grid{border-color:#eee6dc}
+[data-ready-model=royal-barber] [data-section-id=royal-styles] .gold-collections{grid-template-columns:repeat(4,minmax(0,1fr))}
+[data-ready-model=royal-barber] [data-section-id=royal-styles] .gold-collections>a{background:#fff;color:#17120e;aspect-ratio:auto;border-radius:9px}
+[data-ready-model=royal-barber] [data-section-id=royal-styles] .gold-collections img{position:static;width:100%;height:auto;aspect-ratio:1}
+[data-ready-model=royal-barber] [data-section-id=royal-styles] .gold-collections>a>div{position:static;padding:6px 2px;background:none}
+[data-ready-model=royal-barber] .gold-about-grid{color:#35271d}
+[data-ready-model=royal-barber] .gold-about-grid:after{background:linear-gradient(90deg,#f8f1e9,#f8f1e970 60%,#0000)}
+[data-ready-model=royal-barber] .gold-reviews blockquote{background:#fff;border-color:#eee6dc;color:#17120e}
+[data-ready-model=royal-barber] .gold-map-button{color:#17120e}
+[data-ready-model=royal-barber] .gold-whatsapp-card{background:linear-gradient(120deg,#755033,#b98639)}
+[data-ready-model=royal-barber] .gold-identity>strong{font:24px Georgia,serif;letter-spacing:3px;color:#17120e}
+[data-ready-model=royal-barber] .gold-text-block{color:#554a40}
+[data-ready-model=royal-barber] .gold-hero-shade{background:linear-gradient(90deg,#032248e8,#03224840 60%,#0000)}
+[data-ready-model=royal-barber] .gold-actions>[data-action-id]{background:#071a2f}
+[data-ready-model=royal-barber] [data-gold-feature] .gold-benefit-grid{background:#071a2f;color:#fff;grid-template-columns:repeat(4,minmax(0,1fr))}
+[data-ready-model=royal-barber] [data-gold-feature] .gold-benefit-grid h3{color:white}
+[data-ready-model=royal-barber] .gold-banner-shade{background:linear-gradient(90deg,#04265ce0,#04265c30)}
+[data-ready-model=royal-barber] .gold-about-grid{color:#fff}
+[data-ready-model=royal-barber] .gold-about-grid:after{background:linear-gradient(90deg,#071f3b,#071f3b70 60%,#0000)}
+[data-ready-model=royal-barber] .gold-whatsapp-card{background:linear-gradient(120deg,#00cc49,#008b47)}
+[data-ready-model=bravo-barbearia] .gold-hero-content>h1{font:28px Georgia,serif;letter-spacing:5px;text-align:center}
+[data-ready-model=bravo-barbearia] .gold-hero-button,[data-ready-model=bravo-barbearia] .gold-banner-button,[data-ready-model=bravo-barbearia] .gold-product-contact{background:linear-gradient(120deg,#ff232a,#dc0009);color:#fff}
+[data-ready-model=bravo-barbearia] .gold-banner-shade{background:linear-gradient(90deg,#260405e0,#26040530)}
+[data-ready-model=bravo-barbearia] [data-section-id=bravo-products],[data-ready-model=bravo-barbearia] [data-section-id=bravo-services]{background:#fff!important;color:#17120e!important;border-radius:12px;margin:0 8px;padding:9px}
+[data-ready-model=bravo-barbearia] [data-section-id=bravo-styles],[data-ready-model=bravo-barbearia] [data-section-id=bravo-details],[data-ready-model=bravo-barbearia] [data-section-id=bravo-testimonials],[data-ready-model=bravo-barbearia] [data-section-id=bravo-location],[data-ready-model=bravo-barbearia] [data-gold-footer],[data-ready-model=bravo-barbearia] [data-section-id=bravo-copyright]{background:#fff!important;color:#17120e!important}
+[data-ready-model=bravo-barbearia] .gold-product-contact{width:auto;align-self:stretch;display:flex;justify-content:center;gap:5px;margin:3px;font-size:9px}
+[data-ready-model=bravo-barbearia] .gold-product-contact>span{display:inline}
+[data-ready-model=bravo-barbearia] .gold-product p{font-size:9px;color:#333}
+[data-ready-model=bravo-barbearia] [data-section-id=bravo-styles] .gold-collections{grid-template-columns:repeat(4,minmax(0,1fr))}
+[data-ready-model=bravo-barbearia] [data-section-id=bravo-styles] .gold-collections>a{background:#fff;color:#17120e;aspect-ratio:auto}
+[data-ready-model=bravo-barbearia] [data-section-id=bravo-styles] .gold-collections img{position:static;width:100%;height:auto;aspect-ratio:1}
+[data-ready-model=bravo-barbearia] [data-section-id=bravo-styles] .gold-collections>a>div{position:static;background:none;padding:6px 2px}
+[data-ready-model=bravo-barbearia] .gold-reviews blockquote{background:#fff;border-color:#eee;color:#17120e}
+[data-ready-model=bravo-barbearia] .gold-about-grid:after{background:linear-gradient(90deg,#180405,#18040570 60%,#0000)}
+[data-ready-model=bravo-barbearia] .gold-whatsapp-card{background:linear-gradient(120deg,#ff070f,#970007)}
+[data-ready-model=bravo-barbearia] .gold-map-button{color:#17120e}
+[data-ready-model=bravo-barbearia] .gold-identity>strong{font:27px Georgia,serif;letter-spacing:5px;color:#17120e}
+[data-ready-model=bravo-barbearia] .gold-text-block{color:#554a40}
+.gold-whatsapp-card:has(.gold-cta-photo){position:relative;overflow:hidden;isolation:isolate;min-height:120px}
+.gold-cta-photo{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2}
+.gold-whatsapp-card:has(.gold-cta-photo):before{content:'';position:absolute;inset:0;background:linear-gradient(90deg,#06111fee,#06111f75 70%,#0000);z-index:-1;pointer-events:none}
+[data-ready-model=imperium-barbearia] [data-gold-feature] .gold-benefit-grid{grid-template-columns:repeat(4,minmax(0,1fr))}
+
+[data-ready-model=the-cut-barbearia] .gold-hero-content>h1{font:28px Georgia,serif;letter-spacing:5px;text-align:center}
+[data-ready-model=the-cut-barbearia] .gold-hero-button,[data-ready-model=the-cut-barbearia] .gold-banner-button,[data-ready-model=the-cut-barbearia] .gold-product-contact{background:linear-gradient(120deg,#ff232a,#dc0009);color:#fff}
+[data-ready-model=the-cut-barbearia] .gold-banner-shade{background:linear-gradient(90deg,#260405e0,#26040530)}
+[data-ready-model=the-cut-barbearia] [data-section-id=thecut-products],[data-ready-model=the-cut-barbearia] [data-section-id=thecut-services]{background:#fff!important;color:#17120e!important;border-radius:12px;margin:0 8px;padding:9px}
+[data-ready-model=the-cut-barbearia] [data-section-id=thecut-styles],[data-ready-model=the-cut-barbearia] [data-section-id=thecut-details],[data-ready-model=the-cut-barbearia] [data-section-id=thecut-testimonials],[data-ready-model=the-cut-barbearia] [data-section-id=thecut-location],[data-ready-model=the-cut-barbearia] [data-gold-footer],[data-ready-model=the-cut-barbearia] [data-section-id=thecut-copyright]{background:#fff!important;color:#17120e!important}
+[data-ready-model=the-cut-barbearia] .gold-product-contact{width:auto;align-self:stretch;display:flex;justify-content:center;gap:5px;margin:3px;font-size:9px}
+[data-ready-model=the-cut-barbearia] .gold-product-contact>span{display:inline}
+[data-ready-model=the-cut-barbearia] .gold-product p{font-size:9px;color:#333}
+[data-ready-model=the-cut-barbearia] [data-section-id=thecut-styles] .gold-collections{grid-template-columns:repeat(4,minmax(0,1fr))}
+[data-ready-model=the-cut-barbearia] [data-section-id=thecut-styles] .gold-collections>a{background:#fff;color:#17120e;aspect-ratio:auto}
+[data-ready-model=the-cut-barbearia] [data-section-id=thecut-styles] .gold-collections img{position:static;width:100%;height:auto;aspect-ratio:1}
+[data-ready-model=the-cut-barbearia] [data-section-id=thecut-styles] .gold-collections>a>div{position:static;background:none;padding:6px 2px}
+[data-ready-model=the-cut-barbearia] .gold-reviews blockquote{background:#fff;border-color:#eee;color:#17120e}
+[data-ready-model=the-cut-barbearia] .gold-about-grid:after{background:linear-gradient(90deg,#180405,#18040570 60%,#0000)}
+[data-ready-model=the-cut-barbearia] .gold-whatsapp-card{background:linear-gradient(120deg,#ff070f,#970007)}
+[data-ready-model=the-cut-barbearia] .gold-map-button{color:#17120e}
+[data-ready-model=the-cut-barbearia] .gold-identity>strong{font:27px Georgia,serif;letter-spacing:5px;color:#17120e}
+[data-ready-model=the-cut-barbearia] .gold-text-block{color:#554a40}
+[data-ready-model=the-cut-barbearia] .gold-hero-headline{font:700 41px/1 Impact,Arial,sans-serif}
+[data-ready-model=the-cut-barbearia] [data-section-id=thecut-details]{background:#f5eae1!important;color:#161210!important;margin:12px;border-radius:12px;padding:14px}
+[data-ready-model=the-cut-barbearia] [data-section-id=thecut-details] .gold-benefit-grid{background:transparent;border:0}
+[data-ready-model=the-cut-barbearia] [data-section-id=thecut-details] .gold-benefit-grid h3{color:#161210}
+[data-ready-model=the-cut-barbearia] .gold-about-grid{color:white}
+[data-ready-model=the-cut-barbearia] .gold-whatsapp-card{background:linear-gradient(120deg,#e43f52,#a11629)}
+
+/* Official editorial quality: surface colors stay paired with their own content.
+   Scoped away from the approved Gold; editable inline text styles still win. */
+.biosite.moda-premium-gold[data-ready-model]:not([data-ready-model=moda-premium-gold]) .gold-actions.premium-actions{background:transparent;color:var(--ink)}
+.biosite.moda-premium-gold[data-ready-model]:not([data-ready-model=moda-premium-gold]) .gold-actions.premium-actions>[data-action-id]{background:var(--card);color:var(--model-card-ink);border-radius:10px;padding:10px 5px;min-width:0}
+.biosite.moda-premium-gold[data-ready-model]:not([data-ready-model=moda-premium-gold]) .gold-actions .action-tile-label{color:var(--model-card-ink)!important}
+.biosite.moda-premium-gold[data-ready-model]:not([data-ready-model=moda-premium-gold]) .gold-actions :is(strong,small){color:inherit;white-space:normal;overflow-wrap:normal;letter-spacing:normal}
+.biosite.moda-premium-gold[data-ready-model]:not([data-ready-model=moda-premium-gold]) .gold-product{background:var(--local-panel,var(--card));color:var(--local-text,var(--model-card-ink))}
+.biosite.moda-premium-gold[data-ready-model]:not([data-ready-model=moda-premium-gold]) .gold-product>div{flex:1;min-width:0}
+.biosite.moda-premium-gold[data-ready-model]:not([data-ready-model=moda-premium-gold]) .gold-product :is(h3,p,strong){color:inherit;overflow-wrap:normal;word-break:normal;letter-spacing:normal}
+.biosite.moda-premium-gold[data-ready-model]:not([data-ready-model=moda-premium-gold]) .gold-product h3{font-size:12px;line-height:1.3;min-height:0}
+.biosite.moda-premium-gold[data-ready-model]:not([data-ready-model=moda-premium-gold]) .gold-product strong{font-size:13px;white-space:nowrap}
+.biosite.moda-premium-gold[data-ready-model]:not([data-ready-model=moda-premium-gold]) .gold-product-contact{color:var(--model-accent-ink);max-width:calc(100% - 8px);height:auto;min-height:30px;flex-shrink:0;padding:5px;line-height:1.3;letter-spacing:normal;text-align:center}
+.biosite.moda-premium-gold[data-ready-model]:not([data-ready-model=moda-premium-gold]) .gold-product-contact>span{white-space:normal;min-width:0}
+.biosite.moda-premium-gold[data-ready-model]:not([data-ready-model=moda-premium-gold]) .gold-product-contact svg{flex-shrink:0}
+.biosite.moda-premium-gold[data-ready-model]:not([data-ready-model=moda-premium-gold]) .gold-banner{aspect-ratio:auto;height:auto;min-height:calc(100cqw / var(--media-aspect,2));overflow:hidden}
+.biosite.moda-premium-gold[data-ready-model]:not([data-ready-model=moda-premium-gold]) .gold-banner-copy{position:relative;min-width:0;padding:18px;overflow-wrap:normal}
+.biosite.moda-premium-gold[data-ready-model]:not([data-ready-model=moda-premium-gold]) .gold-banner-copy p{font-size:12px;line-height:1.45;letter-spacing:normal}
+.biosite.moda-premium-gold[data-ready-model]:not([data-ready-model=moda-premium-gold]) .gold-banner-button{max-width:100%;white-space:normal;line-height:1.35;text-align:center}
+.biosite.moda-premium-gold[data-ready-model]:not([data-ready-model=moda-premium-gold]) .gold-benefit-grid{background:var(--card);color:var(--model-card-ink)}
+.biosite.moda-premium-gold[data-ready-model]:not([data-ready-model=moda-premium-gold]) .gold-benefit-grid :is(h3,p){color:inherit;letter-spacing:normal;overflow-wrap:normal}
+.biosite.moda-premium-gold[data-ready-model]:not([data-ready-model=moda-premium-gold]) [data-gold-feature] .gold-benefit-grid>div{display:flex;flex-direction:column;align-items:center;text-align:center;gap:5px;min-width:0}
+.biosite.moda-premium-gold[data-ready-model]:not([data-ready-model=moda-premium-gold]) .gold-benefit-grid h3{font-size:12px;line-height:1.3}
+.biosite.moda-premium-gold[data-ready-model]:not([data-ready-model=moda-premium-gold]) .gold-benefit-grid p{font-size:11px;line-height:1.35}
+.biosite.moda-premium-gold[data-ready-model]:not([data-ready-model=moda-premium-gold]) [data-gold-feature] .gold-benefit-grid svg{width:25px;height:25px;margin:0 auto 4px}
+.biosite.moda-premium-gold[data-ready-model]:not([data-ready-model=moda-premium-gold]) .gold-section-heading>a{color:var(--model-link-ink);font-size:12px}
+.biosite.moda-premium-gold[data-ready-model]:not([data-ready-model=moda-premium-gold]) .gold-hours-card h2 svg{color:var(--model-link-ink)}
+.biosite.moda-premium-gold[data-ready-model]:not([data-ready-model=moda-premium-gold]) .gold-about-grid p{font-size:13px;line-height:1.5;letter-spacing:normal}
+.biosite.moda-premium-gold[data-ready-model]:not([data-ready-model=moda-premium-gold]) .gold-reviews p{font-size:12px;line-height:1.45;letter-spacing:normal}
+.biosite.moda-premium-gold[data-ready-model]:not([data-ready-model=moda-premium-gold]) .gold-text-block{font-size:11px}
+.biosite.moda-premium-gold[data-ready-model]:not([data-ready-model=moda-premium-gold]) .gold-footer-navigation>a{font-size:11px}
+.biosite.moda-premium-gold[data-ready-model]:not([data-ready-model=moda-premium-gold]) .gold-whatsapp-card{color:#fff}
+.biosite.moda-premium-gold[data-ready-model]:not([data-ready-model=moda-premium-gold]) .gold-whatsapp-card>span:first-child{color:#fff}
+.biosite.moda-premium-gold[data-ready-model]:not([data-ready-model=moda-premium-gold]) .gold-whatsapp-card p{letter-spacing:normal}
+.biosite.moda-premium-gold[data-ready-model=urban-black-moda-masculina] .gold-identity{grid-template-columns:65px minmax(0,1fr);gap:12px}
+.biosite.moda-premium-gold[data-ready-model=urban-black-moda-masculina] .gold-identity .gold-logo{margin:0}
+.biosite.moda-premium-gold[data-ready-model=urban-black-moda-masculina] .gold-identity>strong{font-size:23px}
+.biosite.moda-premium-gold[data-ready-model=bella-moda-feminina] .gold-actions.premium-actions>[data-action-id]{flex-direction:row}
+.biosite.moda-premium-gold:is([data-ready-model=barber-pro],[data-ready-model=royal-barber],[data-ready-model=bravo-barbearia],[data-ready-model=the-cut-barbearia]) [data-section-id$=-styles] .gold-collections>a>div{color:#17120e;position:static;background:#fff}
+.biosite.moda-premium-gold:is([data-ready-model=imperium-barbearia],[data-ready-model=barber-pro],[data-ready-model=royal-barber],[data-ready-model=bravo-barbearia],[data-ready-model=the-cut-barbearia]) .gold-hero-content>h1{font-size:clamp(25px,8cqw,34px);letter-spacing:2px;overflow-wrap:normal}
+.biosite.moda-premium-gold:is([data-ready-model=bravo-barbearia],[data-ready-model=the-cut-barbearia]) [data-section-id$=-details] .gold-benefit-grid{background:#fff;color:#17120e}
+@container(max-width:350px){
+ .biosite.moda-premium-gold[data-ready-model]:not([data-ready-model=moda-premium-gold]) [data-layout=three] .gold-product-list{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+ .biosite.moda-premium-gold[data-ready-model]:not([data-ready-model=moda-premium-gold]) .gold-product-contact{font-size:11px}
+ .biosite.moda-premium-gold[data-ready-model]:not([data-ready-model=moda-premium-gold]) [data-gold-feature] .gold-benefit-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+ .biosite.moda-premium-gold[data-ready-model]:not([data-ready-model=moda-premium-gold]) .gold-benefit-grid:not([data-gold-feature] .gold-benefit-grid){grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+ .biosite.moda-premium-gold[data-ready-model]:not([data-ready-model=moda-premium-gold]) .gold-collections{gap:6px}
+ .biosite.moda-premium-gold[data-ready-model]:not([data-ready-model=moda-premium-gold]) .gold-collections strong{font-size:11px;line-height:1.3}
+ .biosite.moda-premium-gold[data-ready-model]:not([data-ready-model=moda-premium-gold]) .gold-collections small{font-size:10px}
+}
+.biosite.moda-premium-gold[data-ready-model]:not([data-ready-model=moda-premium-gold]) .gold-hero .gold-tagline{color:#fff;text-shadow:0 1px 4px #000}
+.biosite.moda-premium-gold[data-ready-model=bella-moda-feminina] .gold-hero .gold-tagline{color:var(--ink);text-shadow:none}
+.biosite.moda-premium-gold[data-ready-model]:not([data-ready-model=moda-premium-gold]) .gold-banner-shade{background:linear-gradient(90deg,var(--local-panel,#211c17) 0%,var(--local-panel,#211c17) 45%,transparent 90%)}
+.biosite.moda-premium-gold:is([data-ready-model=bella-moda-feminina],[data-ready-model=charmme-moda-feminina],[data-ready-model=lumiere-boutique],[data-ready-model=vibe-store],[data-ready-model=urban-black-2]) .gold-section.gold-about:has(.gold-about-grid):after{background:linear-gradient(90deg,var(--paper) 0%,var(--paper) 48%,transparent 90%)}
+.biosite.moda-premium-gold:is([data-ready-model=nexo-moda-masculina],[data-ready-model=atelier-27],[data-ready-model=imperium-barbearia],[data-ready-model=bravo-barbearia],[data-ready-model=the-cut-barbearia]) .gold-about-grid:after{background:linear-gradient(90deg,#080d10 0%,#080d10 48%,transparent 90%)}
+.biosite.moda-premium-gold[data-ready-model=lumiere-moda-feminina] .gold-about-grid:after{background:linear-gradient(90deg,#755044 0%,#755044 48%,transparent 90%)}
+.biosite.moda-premium-gold[data-ready-model=barber-pro] .gold-about-grid:after{background:linear-gradient(90deg,#f8f1e9 0%,#f8f1e9 48%,transparent 90%)}
+.biosite.moda-premium-gold[data-ready-model=royal-barber] .gold-about-grid:after{background:linear-gradient(90deg,#071f3b 0%,#071f3b 48%,transparent 90%)}
+.biosite.moda-premium-gold[data-ready-model]:not([data-ready-model=moda-premium-gold]) .gold-hours-card{color:var(--model-card-ink)}
+.biosite.moda-premium-gold[data-ready-model=urban-black-moda-masculina] .gold-gallery-grid>div:nth-child(3n+2)>img{aspect-ratio:var(--media-aspect,.95)}
+.biosite.moda-premium-gold[data-ready-model=lumiere-moda-feminina] .gold-collections strong{display:block;color:#171313}
+.biosite.moda-premium-gold[data-ready-model=lumiere-moda-feminina] [data-section-id=lumieref-categories] .gold-collections>a>div{background:transparent;color:#171313;position:static;padding:6px 0}
+
+.biosite.moda-premium-gold[data-ready-model=bella-moda-feminina]:not([data-ready-model=moda-premium-gold]) .gold-hero .gold-tagline{color:var(--ink);text-shadow:none}
+.biosite.moda-premium-gold[data-ready-model=bella-moda-feminina]:not([data-ready-model=moda-premium-gold]) .gold-product-contact{color:#850c2a}
+.biosite.moda-premium-gold[data-ready-model=charmme-moda-feminina]:not([data-ready-model=moda-premium-gold]) :is(.gold-product-contact,.gold-hero-button,.gold-banner-button){background:#b9004b;color:#fff}
+.biosite.moda-premium-gold[data-ready-model=vibe-store]:not([data-ready-model=moda-premium-gold]) :is(.gold-product-contact,.gold-hero-button,.gold-banner-button){background:linear-gradient(110deg,#ae2942,#b00076,#8000a4);color:#fff}
+.biosite.moda-premium-gold[data-ready-model=lumiere-moda-feminina]:not([data-ready-model=moda-premium-gold]) .gold-product-contact{color:#442727}
+.biosite.moda-premium-gold:is([data-ready-model=bravo-barbearia],[data-ready-model=the-cut-barbearia]):not([data-ready-model=moda-premium-gold]) :is(.gold-product-contact,.gold-hero-button,.gold-banner-button){background:linear-gradient(120deg,#d90017,#a80010);color:#fff}
+/* Keep local light/dark surfaces authoritative, including mixed-surface models. */
+.biosite.moda-premium-gold[data-ready-model]:not([data-ready-model=moda-premium-gold]) .gold-section-heading>a{color:inherit}
+.biosite.moda-premium-gold[data-ready-model=atelier-27] [data-section-id=atelier-products] .gold-product:first-child>div{flex:0}
+.biosite.moda-premium-gold[data-ready-model=atelier-27] [data-section-id=atelier-products] .gold-product:first-child>img{flex:1;height:0;min-height:240px;aspect-ratio:auto}
+.biosite.moda-premium-gold[data-ready-model]:not([data-ready-model=moda-premium-gold]) .gold-collections :is(strong,small){font-size:11px;line-height:1.3;letter-spacing:normal}
+.biosite.moda-premium-gold[data-ready-model]:not([data-ready-model=moda-premium-gold]) .gold-whatsapp-card:has(.gold-cta-photo):before{background:linear-gradient(90deg,#06111f 0%,#06111fee 75%,#06111f99 100%)}
+.biosite.moda-premium-gold[data-ready-model]:not([data-ready-model=moda-premium-gold]) .gold-whatsapp-card .action-icon{color:#fff}
+.biosite.moda-premium-gold[data-ready-model]:not([data-ready-model=moda-premium-gold]) .gold-product-contact{gap:3px;font-size:10px}
+.biosite.moda-premium-gold[data-ready-model]:not([data-ready-model=moda-premium-gold]) .gold-product-contact>span:last-child{overflow-wrap:anywhere}
+
+/* Stable mobile contract: content and composition stay identical across mobile widths. */
+.biosite.moda-premium-gold[data-ready-model][data-responsive-contract=stable][data-responsive-contract=stable]:not([data-ready-model=moda-premium-gold]) [data-layout=three] .gold-product-list{grid-template-columns:repeat(var(--product-columns,3),minmax(0,1fr));gap:clamp(6px,2cqw,8px)}
+.biosite.moda-premium-gold[data-ready-model][data-responsive-contract=stable][data-responsive-contract=stable]:not([data-ready-model=moda-premium-gold]) .gold-benefit-grid{display:grid;grid-template-columns:repeat(var(--benefit-columns,3),minmax(0,1fr));gap:clamp(5px,1.8cqw,7px);padding:12px 8px;align-items:start}
+.biosite.moda-premium-gold[data-ready-model][data-responsive-contract=stable][data-responsive-contract=stable]:not([data-ready-model=moda-premium-gold]) .gold-benefit-grid>div{min-width:0}
+.biosite.moda-premium-gold[data-ready-model][data-responsive-contract=stable][data-responsive-contract=stable]:not([data-ready-model=moda-premium-gold]) .gold-benefit-grid h3{font-size:clamp(11px,3.1cqw,12px);line-height:1.3}
+.biosite.moda-premium-gold[data-ready-model][data-responsive-contract=stable][data-responsive-contract=stable]:not([data-ready-model=moda-premium-gold]) .gold-benefit-grid p{font-size:11px;line-height:1.35}
+.biosite.moda-premium-gold[data-ready-model][data-responsive-contract=stable][data-responsive-contract=stable]:not([data-ready-model=moda-premium-gold]) .gold-benefit-grid :is(h3,p){margin:0;white-space:normal;overflow-wrap:break-word}
+.biosite.moda-premium-gold[data-ready-model][data-responsive-contract=stable][data-responsive-contract=stable]:not([data-ready-model=moda-premium-gold]) .gold-benefit-grid svg{width:24px;height:24px}
+.biosite.moda-premium-gold[data-ready-model][data-responsive-contract=stable][data-responsive-contract=stable]:not([data-ready-model=moda-premium-gold]) .gold-banner-copy{padding:clamp(12px,3.6cqw,14px)}
+.biosite.moda-premium-gold[data-ready-model][data-responsive-contract=stable][data-responsive-contract=stable]:not([data-ready-model=moda-premium-gold]) .gold-product>div{padding:7px 4px}
+.biosite.moda-premium-gold[data-ready-model][data-responsive-contract=stable][data-responsive-contract=stable]:not([data-ready-model=moda-premium-gold]) .gold-product-contact{margin-inline:4px;max-width:calc(100% - 8px);width:auto;font-size:10px;gap:3px}
+.biosite.moda-premium-gold[data-ready-model][data-responsive-contract=stable][data-responsive-contract=stable]:not([data-ready-model=moda-premium-gold]) .gold-footer-navigation{display:grid;grid-template-columns:var(--footer-template,repeat(5,minmax(0,1fr)));gap:4px;align-items:start}
+.biosite.moda-premium-gold[data-ready-model][data-responsive-contract=stable][data-responsive-contract=stable]:not([data-ready-model=moda-premium-gold]) .gold-footer-navigation>a{min-width:0;text-align:center;line-height:1.35;font-size:10.5px;white-space:normal}
+
+.biosite.moda-premium-gold[data-ready-model][data-responsive-contract=stable][data-responsive-contract=stable]:not([data-ready-model=moda-premium-gold]) .gold-footer-navigation>a{overflow-wrap:anywhere;justify-self:stretch}
+
+/* Preserve the intentionally asymmetric featured showcase; never flatten it. */
+.biosite.moda-premium-gold[data-ready-model=atelier-27][data-responsive-contract=stable][data-responsive-contract=stable] [data-section-id=atelier-products] .gold-product-list{grid-template-columns:3fr 2fr}
+/* Six circular categories use the same readable 3x2 arrangement at both widths. */
+.biosite.moda-premium-gold[data-ready-model][data-responsive-contract=stable][data-responsive-contract=stable] .gold-collections[data-collection-count="6"]{grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+
+.biosite.moda-premium-gold[data-ready-model][data-responsive-contract=stable][data-responsive-contract=stable] .gold-benefit-grid>div>div{min-width:0;width:100%}
+.biosite.moda-premium-gold[data-ready-model][data-responsive-contract=stable][data-responsive-contract=stable] .gold-benefit-grid :is(h3,p){overflow-wrap:anywhere}
+.biosite.moda-premium-gold[data-ready-model][data-responsive-contract=stable][data-responsive-contract=stable] .gold-product-contact{flex-wrap:wrap}
+.biosite.moda-premium-gold[data-ready-model][data-responsive-contract=stable][data-responsive-contract=stable] .gold-product-contact>span:last-child{overflow-wrap:normal;word-break:normal}
+
+.biosite.moda-premium-gold[data-ready-model][data-responsive-contract=stable][data-responsive-contract=stable] .gold-product h3{overflow-wrap:anywhere;hyphens:auto}
+.biosite.moda-premium-gold[data-ready-model][data-responsive-contract=stable][data-responsive-contract=stable] .gold-benefit-grid :is(h3,p){hyphens:auto}

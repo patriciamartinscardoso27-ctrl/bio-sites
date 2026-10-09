@@ -1,0 +1,135 @@
+/* Admin chrome only. Never targets BioSite renderer elements or changes editor behavior. */
+.admin-modern{background:#f5f5fb;color:#202744;min-height:100dvh}
+.admin-demo-label{position:relative;z-index:30;padding:10px 18px;background:#ede9fe;color:#5b21b6;text-align:center;font:600 12px/1.5 Arial,sans-serif}
+.admin-demo-label a{color:inherit;text-underline-offset:3px;margin-left:8px}
+.admin-modern .studio-shell{--studio-ink:#202744;--studio-muted:#737a91;--studio-green:#7437d5;--studio-line:#e7e7f1;background:#f5f5fb}
+.admin-modern .studio-sidebar{background:#141e3c;color:#fff;border:0;padding:30px 20px;top:61px;width:242px}
+.admin-preview .studio-sidebar{top:98px}
+.admin-modern .studio-main{margin-left:242px}
+.admin-modern .studio-brand>span{background:#8b5cf6;color:#fff;border-radius:12px}
+.admin-modern .studio-sidebar>small{color:#9da9ca}
+.admin-modern .studio-sidebar nav button{color:#bdc8e6;border-radius:13px;min-height:50px}
+.admin-modern .studio-sidebar nav button.active{background:#7541d8;color:#fff;box-shadow:0 5px 18px #0002}
+.admin-modern .studio-sidebar nav button:hover{background:#293355;color:#fff}
+.admin-modern .studio-sidebar nav button.active:hover{background:#7541d8}
+.admin-modern .studio-shell{font-family:Inter,Arial,sans-serif}
+.admin-modern .studio-page-header h1{overflow-wrap:anywhere}
+.admin-modern .studio-private,.admin-modern .studio-live-dot{color:#7437d5}
+.admin-modern .studio-live-dot{background:#8b5cf6}
+.admin-modern .studio-model-copy h3{color:#202744}
+.admin-modern .studio-model-copy p,.admin-modern .studio-page-header p,.admin-modern .studio-client-contact{color:#68718a}
+.admin-modern .studio-client-card .studio-card-actions{flex-wrap:wrap}
+.admin-modern .studio-client-contact{grid-template-columns:1fr;gap:8px}
+.admin-modern .studio-client-contact span{min-width:0;overflow-wrap:anywhere}
+.admin-modern .studio-client-card{padding:18px}
+.admin-modern .studio-client-grid{grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr))}
+.admin-modern .studio-library-tools{display:flex;align-items:center;gap:18px;margin-bottom:18px}
+.admin-modern .studio-library-tools .studio-search{flex:1;min-width:0}
+.admin-modern .studio-library-tools p{color:#68718a;font-size:12px;white-space:nowrap}
+.admin-modern .studio-model-grid{grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:20px}
+.admin-modern .studio-model-phone{width:min(250px,calc(100% - 24px));height:auto;aspect-ratio:390/620;border:5px solid #202744;box-shadow:0 6px 14px #17203818}
+.admin-modern .studio-model-render{transform:scale(.615)}
+.admin-modern .studio-model-copy h3{font-size:17px;line-height:1.4;overflow-wrap:anywhere}
+.admin-modern .studio-model-copy>div{flex-wrap:wrap}
+.admin-modern .studio-model-copy button{min-height:44px;font-size:12px}
+.admin-modern .studio-preview-caption{font-size:10px;background:#202744eb;color:#fff}
+.admin-modern .studio-profile-help{color:#68718a;font-size:12px;line-height:1.7}
+.admin-modern .studio-profile-status{display:flex;flex-wrap:wrap;gap:8px 14px;background:#f6f3ff;border-radius:12px;padding:14px;font-size:12px;margin:20px 0}
+.admin-modern .studio-profile-status strong{color:#6837b7}
+.admin-modern .studio-profile-status small{width:100%;color:#68718a}
+.admin-modern .studio-profile-fields{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 16px;margin-bottom:14px}
+.admin-modern .studio-profile-wide{grid-column:1/-1}
+.admin-modern .studio-profile-fields label{min-width:0}
+.admin-modern .studio-profile-fields small{font-size:11px;color:#68718a;line-height:1.5}
+.admin-modern .studio-panel input,.admin-modern .studio-panel textarea,.admin-modern .studio-panel select{width:100%;min-width:0;border:1px solid #ddd8ec;border-radius:10px;background:#fff;color:#202744;min-height:44px;font-size:16px;padding:11px 12px;box-sizing:border-box}
+.admin-modern .studio-sheet{color:#202744}
+.admin-modern .studio-sheet>header>button{background:#f1ecff;color:#6837b7}
+.admin-modern .studio-sheet-backdrop{background:#141e3c80}
+.admin-modern .studio-sheet footer span{color:#68718a}
+.admin-modern .studio-visual-toolbar button,.admin-modern .studio-context-tabs button{color:#493764}
+.admin-modern .studio-context-tabs button.active{background:#ede9fe;color:#6837b7}
+.admin-modern .publication-panel{background:#fff;border-color:#e5deef;color:#202744;border-radius:16px}
+.admin-modern .publication-panel button{background:#7437d5;border-color:#7437d5;color:#fff;border-radius:10px;min-height:44px}
+.admin-modern .publication-panel a{color:#6837b7}
+.admin-modern .publication-panel input{max-width:100%;min-width:0}
+.admin-modern .auth-shell{background:#f5f5fb;color:#202744}
+.admin-modern .auth-brand,.admin-modern .auth-eyebrow{color:#7437d5}
+.admin-modern .auth-submit{background:#7437d5}
+.admin-modern .studio-model-bar{gap:10px}
+.admin-modern .studio-model-bar strong{overflow-wrap:anywhere}
+.admin-modern .studio-sidebar-note{background:#222d4e;color:#fff;border:1px solid #354163}
+.admin-modern .studio-sidebar-note p,.admin-modern .studio-profile small{color:#b0bad5}
+.admin-modern .studio-profile{border-color:#34405e}
+.admin-modern .studio-profile>span:first-child{background:#6d3cc4;color:white}
+.admin-modern .studio-topbar{background:#fff;border-color:#e8e8f2}
+.admin-modern .auth-session-bar{background:#fff;color:#65547e;border-bottom:1px solid #e7e2ef}
+.admin-modern .studio-content{padding:32px;max-width:1350px}
+.admin-modern .studio-kicker{color:#7c3aed}
+.admin-modern .studio-page-header h1{font-size:34px;letter-spacing:-1px}
+.admin-modern .studio-primary{background:#7437d5;color:white;border-color:#7437d5;border-radius:12px;box-shadow:0 4px 10px #7437d51a}
+.admin-modern .studio-secondary{background:white;border-color:#ddd8ec;border-radius:12px;color:#59319a}
+.admin-modern .studio-stats{gap:18px}
+.admin-modern .studio-stats>button{background:#fff;border:1px solid #e9e8f2;border-radius:20px;box-shadow:0 5px 20px #18213d06;padding:23px;text-align:left}
+.admin-modern .studio-stats strong{color:#252e4c;font-size:34px}
+.admin-modern .studio-stats>button:nth-child(3){background:#f1ecff;border-color:#e3d8ff}
+.admin-modern .studio-home-feature{background:linear-gradient(115deg,#202b50,#3c285e);border-radius:24px;color:white;padding:32px;margin-top:26px}
+.admin-modern .studio-home-feature h2,.admin-modern .studio-home-feature p{color:white}
+.admin-modern .studio-home-feature .studio-kicker{color:#c9b5fc}
+.admin-modern .studio-feature-art{color:#d8c5ff}
+.admin-modern .studio-feature-art span{color:#d8c5ff}
+.admin-modern .studio-client-card,.admin-modern .studio-panel,.admin-modern .studio-empty{background:#fff;border:1px solid #e7e7f1;border-radius:20px;box-shadow:0 7px 25px #17203805}
+.admin-modern .studio-avatar{background:#eee7fc;color:#6733b9;border-radius:15px}
+.admin-modern .studio-site-link{background:#f7f5fc;border-color:#eee8f7;border-radius:12px}
+.admin-modern .studio-card-actions button,.admin-modern .studio-shortcuts button{border-color:#e2def0;border-radius:12px;color:#6733b9;background:#fff}
+.admin-modern .studio-status{background:#f1ecff;color:#6837b7}
+.admin-modern .studio-search,.admin-modern .studio-list-tools select{background:white;border-color:#e2dfed;border-radius:12px}
+.admin-modern .studio-model-card{border-radius:22px;background:white;border:1px solid #e6e2f0;box-shadow:0 8px 24px #17203808;overflow:hidden}
+.admin-modern .studio-model-copy{padding:20px}
+.admin-modern .studio-model-copy>small{color:#7437d5}
+.admin-modern .studio-filters{gap:8px;flex-wrap:wrap;margin-bottom:24px}
+.admin-modern .studio-filters button{background:#fff;border:1px solid #e2dced;border-radius:999px;color:#655b77;min-height:42px;padding:10px 16px}
+.admin-modern .studio-filters button.selected{background:#7437d5;color:white;border-color:#7437d5}
+.admin-modern .studio-section-heading button,.admin-modern .studio-open-site{color:#7437d5}
+.admin-modern .studio-edit-bar{border-color:#e7e2f0;background:#fff;border-radius:14px;padding:12px}
+.admin-modern .studio-visual-toolbar{background:#fff;border-color:#e5deef;border-radius:16px}
+.admin-modern .studio-visual-panel{border-color:#e5deef;border-radius:18px;background:white}
+.admin-modern .studio-toast{background:#352050;color:#fff;border-radius:14px}
+.admin-modern button:focus-visible,.admin-modern a:focus-visible{outline-color:#a78bfa}
+@media(max-width:900px){.admin-modern .studio-content{padding:22px}.admin-modern .studio-stats{gap:12px}.admin-modern .studio-home-feature{padding:24px}}
+@media(max-width:760px){
+ .admin-demo-label{font-size:10px;padding:8px 10px}
+ .admin-modern .studio-main{margin-left:0}
+ .admin-modern .studio-content{padding:20px 14px 100px}
+ .admin-modern .studio-sidebar{top:auto;bottom:0;left:0;right:0;width:100%;padding:8px 6px calc(8px + env(safe-area-inset-bottom));background:#141e3c;border-radius:20px 20px 0 0;box-shadow:0 -8px 24px #14203c18}
+ .admin-modern .studio-sidebar{height:auto;min-height:74px}
+ .admin-modern .studio-sidebar nav{width:100%;gap:3px}
+ .admin-modern .studio-sidebar nav button{min-height:52px;padding:6px 2px;border-radius:12px;gap:5px;font-size:10px;color:#c3cce3}
+ .admin-modern .studio-sidebar nav button.active{background:#7541d8}
+ .admin-modern .studio-sidebar nav button:nth-child(3){background:#7541d8;color:#fff}
+ .admin-modern .studio-sidebar nav button:nth-child(3) svg{background:transparent;color:inherit;padding:0;width:20px;height:20px;border-radius:0}
+ .admin-modern .studio-page-header{gap:12px;flex-wrap:wrap}
+ .admin-modern .studio-page-header h1{font-size:27px}
+ .admin-modern .studio-stats>button{padding:16px;border-radius:16px;min-width:0}
+ .admin-modern .studio-stats strong{font-size:29px}
+ .admin-modern .studio-home-feature{padding:22px 20px;border-radius:20px}
+ .admin-modern .studio-edit-bar{flex-wrap:wrap;gap:10px}
+ .admin-modern .studio-edit-bar>div{flex-wrap:wrap;gap:6px}
+ .admin-modern .studio-visual-toolbar{flex-wrap:wrap;gap:6px;padding:10px}
+ .admin-modern .studio-visual-toolbar button{min-height:44px}
+ .admin-modern .studio-visual-panel{max-width:100%;min-width:0}
+ .admin-modern .studio-menu-collapsed .studio-sidebar{display:flex}
+ .admin-modern .studio-sidebar nav{grid-template-columns:repeat(5,minmax(0,1fr))}
+ .admin-modern .studio-sidebar nav button{min-width:0;font-size:9px;overflow-wrap:anywhere;line-height:1.25}
+ .admin-modern .studio-library-tools{align-items:stretch;flex-direction:column;gap:6px}
+ .admin-modern .studio-library-tools p{margin:0}
+ .admin-modern .studio-filters{display:flex;overflow:visible;white-space:normal;gap:6px}
+ .admin-modern .studio-filters button{font-size:11px;padding:9px 12px}
+ .admin-modern .studio-model-grid{grid-template-columns:1fr;gap:14px}
+ .admin-modern .studio-model-copy{padding:14px}
+ .admin-modern .studio-model-copy p{min-height:0}
+ .admin-modern .studio-profile-fields{grid-template-columns:1fr}
+ .admin-modern .studio-profile-wide{grid-column:auto}
+ .admin-modern .studio-client-detail{grid-template-columns:1fr}
+ .admin-modern .studio-topbar{gap:12px;padding:14px;font-size:10px}
+}
+@media(min-width:380px) and (max-width:760px){.admin-modern .studio-model-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.admin-modern .studio-model-copy h3{font-size:14px}.admin-modern .studio-model-copy p{font-size:11px}.admin-modern .studio-model-copy>div{display:grid;grid-template-columns:1fr;gap:7px}.admin-modern .studio-model-phone{border-width:3px;border-radius:16px;width:calc(100% - 18px);margin-top:12px}.admin-modern .studio-model-copy>small{font-size:10px}.admin-modern .studio-preview-caption{font-size:8px;padding:6px}.admin-modern .studio-phone-cutout{width:40px;height:9px}}

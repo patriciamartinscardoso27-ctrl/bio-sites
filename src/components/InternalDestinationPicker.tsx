@@ -1,0 +1,5 @@
+import type {Action,Bio} from '../types/biosite'
+import {labels} from '../data/templates'
+export function InternalDestinationPicker({bio,action,onChange}:{bio:Bio;action:Action;onChange:(p:Partial<Action>)=>void}){
+ return <><fieldset className="studio-destination-picker"><legend>Destino do botão</legend><button type="button" aria-pressed={action.destination!=='section'} onClick={()=>onChange({destination:'external',sectionId:undefined})}>↗ Ação externa</button><button type="button" aria-pressed={action.destination==='section'} onClick={()=>onChange({destination:'section'})}>↓ Seção deste BioSite</button></fieldset>{action.destination==='section'&&<div className="studio-internal-sections"><strong>Escolha a seção</strong>{bio.sections.filter(s=>s.kind!=='actions').map(s=><button key={s.id} type="button" aria-pressed={action.sectionId===s.id} onClick={()=>onChange({sectionId:s.id})}><span>{s.title||labels[s.kind]}</span><small>{labels[s.kind]} · {s.enabled?'Visível':'Esta seção está oculta'}</small></button>)}{!bio.sections.some(s=>s.kind!=='actions')&&<p>Adicione uma seção para usar a navegação interna.</p>}</div>}</>
+}
