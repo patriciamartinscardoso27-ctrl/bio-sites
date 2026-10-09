@@ -55,6 +55,7 @@ export function createApi({ repository, getRepository = connectRepository, getAu
   }
   return async (req,res,next = () => {res.statusCode=404;res.end()}) => {
     const pathname = (req.url || '/').split('?')[0]
+    let stage='request'
     if (!pathname.startsWith('/api/')) return next()
     const reply = (status,value) => {
       res.writeHead(status, {'Content-Type':'application/json; charset=utf-8','Cache-Control':'no-store','X-Content-Type-Options':'nosniff'})
@@ -68,7 +69,11 @@ export function createApi({ repository, getRepository = connectRepository, getAu
       if(pathname==='/api/auth/request-password-reset'&&req.method==='POST')return reply(200,await auth.requestReset(req,res,await body(req,8192)))
       if(pathname==='/api/auth/reset-password'&&req.method==='POST')return reply(200,await auth.resetPassword(req,res,await body(req,8192)))
       if(pathname==='/api/auth/session'&&req.method==='GET')return reply(200,{authenticated:Boolean(await auth.session(req,res))})
-      if(pathname==='/api/auth/login'&&req.method==='POST')return reply(200,await auth.login(req,res,await body(req,8192)))
+      if(pathname==='/api/auth/login'&&req.method==='POST'){
+        stage='login.body';const value=await body(req,8192)
+        stage='login.auth';const result=await auth.login(req,res,value)
+        stage='login.reply';return reply(200,result)
+      }
       if(pathname==='/api/auth/logout'&&req.method==='POST')return reply(200,await auth.logout(req,res))
       if(pathname.startsWith('/api/auth/'))throw new ApiError(404,'Rota não encontrada.')
       const session=await auth.session(req,res)
@@ -100,6 +105,12 @@ export function createApi({ repository, getRepository = connectRepository, getAu
       }
       throw new ApiError(404,'Rota não encontrada.')
     } catch(error) {
+      if(!(error instanceof ApiError))console.error('[biosite-api-failure]',JSON.stringify({
+        route:/^\/api\/auth\/(login|session|logout|request-password-reset|reset-password)$/.test(pathname)?pathname:'other',
+        stage,kind:['TypeError','ReferenceError','SyntaxError','RangeError'].includes(error?.name)?error.name:'Error',
+        code:/^ERR_[A-Z_]{1,60}$/.test(error?.code||'')?error.code:undefined,
+        frames:(error?.stack||'').split('\n').slice(1,6).map(line=>line.match(/(?:server|api)\/[\w./-]+\.mjs:\d+:\d+/)?.[0]).filter(Boolean),
+      }))
       reply(error instanceof ApiError ? error.status : 503, {error:error instanceof ApiError ? error.message : 'Serviço indisponível. Nenhum detalhe privado foi exposto.',...(error instanceof ApiError&&['AI_TIMEOUT','AI_CONNECTION','AI_PROVIDER','AI_INVALID_RESPONSE'].includes(error.code)?{code:error.code}:{})})
     }
   }
