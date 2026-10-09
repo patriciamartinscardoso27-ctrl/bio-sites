@@ -13,7 +13,7 @@ export function createAppServer({dist=defaultDist,api=createApi(),pageGuard=crea
       if (!['GET','HEAD'].includes(req.method)) {res.writeHead(405);res.end();return}
       try {
         const path=decodeURIComponent(new URL(req.url,'http://localhost').pathname)
-        const file=resolve(dist,['/','/login','/admin','/forgot-password','/reset-password'].includes(path)||/^\/b\/[a-z0-9]+(?:-[a-z0-9]+)*$/.test(path)?'index.html':'.'+path)
+        const file=resolve(dist,['/','/login','/admin','/forgot-password','/reset-password','/accept-invite'].includes(path)||/^\/b\/[a-z0-9]+(?:-[a-z0-9]+)*$/.test(path)?'index.html':'.'+path)
         if (!file.startsWith(resolve(dist)+sep)) {res.writeHead(404);res.end();return}
         const data=await readFile(file)
         res.writeHead(200,{'Content-Type':types[extname(file)]||'application/octet-stream','X-Content-Type-Options':'nosniff','Referrer-Policy':'no-referrer','Cache-Control':'no-store'})

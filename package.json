@@ -3,7 +3,9 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "engines": {"node": "24.x"},
+  "engines": {
+    "node": "24.x"
+  },
   "scripts": {
     "dev": "node --watch --watch-preserve-output node_modules/vite/bin/vite.js --configLoader native",
     "start": "node server/start.mjs",
@@ -18,9 +20,13 @@
     "test:identity": "node --test --test-concurrency=1 tests/iconLibrary.test.mjs tests/googleIcons.test.mjs tests/identityPalette.test.mjs tests/colorPicker.test.mjs"
   },
   "dependencies": {
+    "@capacitor/android": "^8.5.3",
+    "@capacitor/app": "^8.1.2",
+    "@capacitor/core": "^8.5.3",
     "@fortawesome/free-brands-svg-icons": "^7.3.1",
     "@neondatabase/auth": "0.5.0-beta",
     "@neondatabase/serverless": "^1.2.0",
+    "@noble/ciphers": "^2.4.0",
     "@tailwindcss/vite": "^4.3.3",
     "lucide-react": "^1.51.0",
     "react": "^19.2.8",
@@ -31,6 +37,8 @@
     "tailwindcss": "^4.3.3"
   },
   "devDependencies": {
+    "@capacitor/cli": "^8.5.3",
+    "@electric-sql/pglite": "^0.5.8",
     "@types/node": "^24.13.3",
     "@types/react": "^19.2.18",
     "@types/react-dom": "^19.2.7",

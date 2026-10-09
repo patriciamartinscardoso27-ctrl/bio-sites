@@ -15,11 +15,12 @@ async function request<T>(path: string, init?: RequestInit): Promise<T> {
   return result as T
 }
 export const biositesApi = {
-  async list(): Promise<BioSiteSummary[]> {
+  async list(ownerId?:string): Promise<BioSiteSummary[]> {
     const items: BioSiteSummary[]=[]
     let cursor: string | null = null
     do {
-      const page: {items:BioSiteSummary[];nextCursor:string|null} = await request(`/api/biosites${cursor ? '?cursor='+encodeURIComponent(cursor) : ''}`)
+      const params=new URLSearchParams();if(cursor)params.set('cursor',cursor);if(ownerId)params.set('ownerId',ownerId)
+      const page: {items:BioSiteSummary[];nextCursor:string|null} = await request(`/api/biosites${params.size?'?'+params.toString():''}`)
       items.push(...page.items);cursor=page.nextCursor
     } while(cursor)
     return items

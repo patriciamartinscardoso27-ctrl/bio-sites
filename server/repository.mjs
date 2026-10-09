@@ -21,16 +21,22 @@ export async function connectRepository() {
   }
   // A separate timeout per request; never reuse an expired AbortSignal.
   const sql = neon(config.DATABASE_URL)
-  return createRepository(sql,{publicationWritesEnabled:config.BIOSITE_PUBLICATION_WRITES==='enabled'})
+  return createRepository(sql,{publicationWritesEnabled:config.BIOSITE_PUBLICATION_WRITES==='enabled',multiuserEnabled:config.BIOSITE_MULTIUSER==='enabled'})
 }
 
-export function createRepository(sql,{publicationWritesEnabled=false}={}) {
+export function createRepository(sql,{publicationWritesEnabled=false,multiuserEnabled=false,actor,selectedOwner}={}) {
   const projectScope = sql`SELECT id FROM public.biosite_admin WHERE singleton=true`
+  const siteScope=multiuserEnabled?sql`SELECT o.biosite_id FROM public.biosite_ownership o JOIN public.biosite_users u ON u.auth_id=${actor?.id||''} AND u.status='active' WHERE (o.user_id=u.id OR u.role='principal') AND (${selectedOwner||null}::uuid IS NULL OR o.user_id=${selectedOwner||null}::uuid)`:null
+  const ownership=multiuserEnabled?sql`b.id IN (${siteScope})`:sql`b.admin_id IN (${projectScope})`
   const projection = sql`b.id, b.slug, b.status, b.lock_version::text AS "lockVersion",
     b.draft_revision::text AS "draftRevision", b.published_revision::text AS "publishedRevision",
     b.created_at AS "createdAt", b.updated_at AS "updatedAt", b.published_at AS "publishedAt"`
   const queryOptions = () => ({ fetchOptions: { signal: AbortSignal.timeout(20000) } })
-  const execute = async query => (await sql.transaction([query], queryOptions()))[0]
+  const transaction=async queries=>{
+    if(!multiuserEnabled)return sql.transaction(queries,queryOptions())
+    const result=await sql.transaction([sql`SET LOCAL ROLE biosites_app_runtime`,sql`SELECT set_config('biosites.auth_id',${actor?.id||''},true),set_config('biosites.public',${actor?'no':'yes'},true)`,...queries],queryOptions());return result.slice(2)
+  }
+  const execute = async query => (await transaction([query]))[0]
   const checkId = id => { if (!isUuid(id)) throw new ApiError(400,'Identificador inválido.') }
   const safe = async fn => {
     try { return await fn() } catch (error) {
@@ -42,6 +48,7 @@ export function createRepository(sql,{publicationWritesEnabled=false}={}) {
   }
   return {
     publicationWritesEnabled,
+    forActor(user,ownerId){if(!multiuserEnabled)return this;if(!user?.id||user.status!=='active')throw new ApiError(401,'Entre novamente para continuar.');if(ownerId&&(!isUuid(ownerId)||user.role!=='principal'))throw new ApiError(403,'Filtro exclusivo do Administrador principal.');return createRepository(sql,{publicationWritesEnabled,multiuserEnabled,actor:user,selectedOwner:ownerId})},
     async getPublished(slug){
       validateSlug(slug)
       return safe(async()=>{const rows=await execute(sql`SELECT b.slug,b.published_revision::text AS revision,b.published_at AS "publishedAt",r.content FROM public.biosites b JOIN public.biosite_revisions r ON r.biosite_id=b.id AND r.version=b.published_revision WHERE b.slug=${slug} AND b.status='published'`);if(!rows.length)throw new ApiError(404,'Página não encontrada.');const row=normalize(rows[0]);return {...row,content:publicContent(row.content)}})
@@ -49,12 +56,12 @@ export function createRepository(sql,{publicationWritesEnabled=false}={}) {
     async publish(id,lockVersion,draftRevision){
       if(!publicationWritesEnabled)throw new ApiError(403,'Publicação remota aguardando autorização de ativação.')
       checkId(id);validateVersion(lockVersion);validateVersion(draftRevision);assertPublishable(await this.get(id))
-      return safe(async()=>{const rows=await execute(sql`UPDATE public.biosites b SET status='published',published_revision=b.draft_revision WHERE b.id=${id}::uuid AND b.admin_id IN (${projectScope}) AND b.lock_version=${lockVersion}::bigint AND b.draft_revision=${draftRevision}::bigint RETURNING b.id`);if(!rows.length)throw new ApiError(409,'O rascunho mudou. Reabra antes de publicar.');return this.get(id)})
+      return safe(async()=>{const rows=await execute(sql`UPDATE public.biosites b SET status='published',published_revision=b.draft_revision WHERE b.id=${id}::uuid AND ${ownership} AND b.lock_version=${lockVersion}::bigint AND b.draft_revision=${draftRevision}::bigint RETURNING b.id`);if(!rows.length)throw new ApiError(409,'O rascunho mudou. Reabra antes de publicar.');return this.get(id)})
     },
     async unpublish(id,lockVersion){
       if(!publicationWritesEnabled)throw new ApiError(403,'Publicação remota aguardando autorização de ativação.')
       checkId(id);validateVersion(lockVersion);assertPublishable(await this.get(id))
-      return safe(async()=>{const rows=await execute(sql`UPDATE public.biosites b SET status='unpublished' WHERE b.id=${id}::uuid AND b.admin_id IN (${projectScope}) AND b.lock_version=${lockVersion}::bigint RETURNING b.id`);if(!rows.length)throw new ApiError(409,'Este BioSite mudou. Reabra antes de retirar do ar.');return this.get(id)})
+      return safe(async()=>{const rows=await execute(sql`UPDATE public.biosites b SET status='unpublished' WHERE b.id=${id}::uuid AND ${ownership} AND b.lock_version=${lockVersion}::bigint RETURNING b.id`);if(!rows.length)throw new ApiError(409,'Este BioSite mudou. Reabra antes de retirar do ar.');return this.get(id)})
     },
     async isAdminEmail(adminId,email) {
       return safe(async()=>Boolean((await execute(sql`SELECT 1 FROM neon_auth."user" WHERE id=${adminId} AND lower(email)=lower(${email}) LIMIT 1`)).length))
@@ -65,7 +72,7 @@ export function createRepository(sql,{publicationWritesEnabled=false}={}) {
         const rows = await execute(sql`SELECT ${projection}, r.content->>'name' AS name, r.category, r.content->>'style' AS style, r.content->>'layoutPreset' AS "layoutPreset",
           r.content->>'logo' AS logo, r.content->>'phone' AS phone, r.content->>'telephone' AS telephone, r.content->>'email' AS email, r.content->>'address' AS address, r.content->'client'->>'responsible' AS responsible, COALESCE(r.content->'client'->>'city',r.content->>'address') AS city, r.template_id AS "templateId", (r.content->'composition' IS NOT NULL) AS generated
           FROM public.biosites b JOIN public.biosite_revisions r ON r.biosite_id=b.id AND r.version=b.draft_revision
-          WHERE b.admin_id IN (${projectScope}) AND (${cursor ?? null}::uuid IS NULL OR b.id > ${cursor ?? null}::uuid)
+          WHERE ${ownership} AND (${cursor ?? null}::uuid IS NULL OR b.id > ${cursor ?? null}::uuid)
           ORDER BY b.id LIMIT 51`)
         return { items: rows.slice(0,50).map(normalize), nextCursor: rows.length > 50 ? rows[49].id : null }
       })
@@ -75,7 +82,7 @@ export function createRepository(sql,{publicationWritesEnabled=false}={}) {
       return safe(async () => {
         const rows = await execute(sql`SELECT ${projection}, r.template_id AS "templateId",r.content
           FROM public.biosites b JOIN public.biosite_revisions r ON r.biosite_id=b.id AND r.version=b.draft_revision
-          WHERE b.id=${id}::uuid AND b.admin_id IN (${projectScope})`)
+          WHERE b.id=${id}::uuid AND ${ownership}`)
         if (!rows.length) throw new ApiError(404,'BioSite não encontrado.')
         return normalize(rows[0])
       })
@@ -83,11 +90,16 @@ export function createRepository(sql,{publicationWritesEnabled=false}={}) {
     async create(content) {
       const templateId=validateBio(content)
       const slug=slugFor(content)
+      if(multiuserEnabled){
+        let existing;try{existing=await this.get(content.id)}catch(e){if(e.status!==404)throw e}
+        if(existing){if(!isDeepStrictEqual(existing.content,content))throw new ApiError(409,'Este identificador já possui conteúdo salvo.');return existing}
+      }
       return safe(async () => {
         // UUID supplied by createBio acts as the retry/idempotency key.
-        const [, , , rows] = await sql.transaction([
-          sql`INSERT INTO public.biosite_admin(singleton) VALUES(true) ON CONFLICT (singleton) DO NOTHING`,
-          sql`INSERT INTO public.biosites(id,admin_id,slug,draft_revision)
+        const [, , , rows] = await transaction([
+          multiuserEnabled?sql`SELECT id FROM public.biosite_admin WHERE singleton=true`:sql`INSERT INTO public.biosite_admin(singleton) VALUES(true) ON CONFLICT (singleton) DO NOTHING`,
+          multiuserEnabled?sql`INSERT INTO public.biosites(id,admin_id,slug,draft_revision)
+            SELECT ${content.id}::uuid,id,${slug},1 FROM public.biosite_admin WHERE singleton=true`:sql`INSERT INTO public.biosites(id,admin_id,slug,draft_revision)
             SELECT ${content.id}::uuid,id,${slug},1 FROM public.biosite_admin WHERE singleton=true
             ON CONFLICT (id) DO NOTHING`,
           sql`INSERT INTO public.biosite_revisions(biosite_id,version,category,template_id,content)
@@ -95,8 +107,8 @@ export function createRepository(sql,{publicationWritesEnabled=false}={}) {
             ON CONFLICT (biosite_id,version) DO NOTHING`,
           sql`SELECT ${projection}, r.template_id AS "templateId",r.content
             FROM public.biosites b JOIN public.biosite_revisions r ON r.biosite_id=b.id AND r.version=b.draft_revision
-            WHERE b.id=${content.id}::uuid AND b.admin_id IN (${projectScope})`,
-        ], queryOptions())
+            WHERE b.id=${content.id}::uuid AND ${ownership}`,
+        ])
         if (!rows[0]) throw new ApiError(409,'Não foi possível criar o BioSite.')
         if (!isDeepStrictEqual(rows[0].content,content)) throw new ApiError(409,'Este identificador já possui conteúdo salvo. Abra o BioSite existente; a cópia local foi preservada.')
         return normalize(rows[0])
@@ -108,7 +120,7 @@ export function createRepository(sql,{publicationWritesEnabled=false}={}) {
       return safe(async () => {
         const rows=await execute(sql`WITH locked AS (
             SELECT b.id,b.draft_revision FROM public.biosites b
-            WHERE b.id=${id}::uuid AND b.admin_id IN (${projectScope}) AND b.lock_version=${lockVersion}::bigint FOR UPDATE
+            WHERE b.id=${id}::uuid AND ${ownership} AND b.lock_version=${lockVersion}::bigint FOR UPDATE
           ), revision AS (
             INSERT INTO public.biosite_revisions(biosite_id,version,category,template_id,content)
             SELECT id,draft_revision+1,${content.category},${templateId},${JSON.stringify(content)}::jsonb FROM locked
@@ -126,3 +138,4 @@ export function createRepository(sql,{publicationWritesEnabled=false}={}) {
     },
   }
 }
+
