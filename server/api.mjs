@@ -18,7 +18,7 @@ export function canonicalLocalPage(req,res,next) {
   res.writeHead(302,{Location:url.href,'Cache-Control':'no-store','Referrer-Policy':'no-referrer'});res.end()
 }
 export function localRequest(req) {
-  const address = req.socket.remoteAddress
+  const address = req.socket?.remoteAddress
   if (!['127.0.0.1','::1','::ffff:127.0.0.1'].includes(address)) return false
   let url
   try { url = new URL(`http://${req.headers.host}`) } catch { return false }

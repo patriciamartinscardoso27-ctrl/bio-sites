@@ -2,6 +2,18 @@ import { handleAuthProxyRequest, NEON_AUTH_SESSION_COOKIE_NAME } from '@neondata
 import { ApiError, isUuid } from './validation.mjs'
 import { connectRepository } from './repository.mjs'
 import {serverConfig,requestOrigin} from './config.mjs'
+import {isIP} from 'node:net'
+
+function clientAddress(req){
+  if(req.socket?.remoteAddress)return req.socket.remoteAddress
+  // Vercel's function request does not expose a Node socket. Trust its platform header only there.
+  if(process.env.VERCEL==='1'){
+    const header=req.headers['x-vercel-forwarded-for']
+    const address=typeof header==='string'?header.split(',')[0].trim():''
+    if(isIP(address))return address
+  }
+  return 'unavailable-client'
+}
 
 let configured
 export async function getAuth() {
@@ -17,7 +29,7 @@ export async function getAuth() {
 export function createAdminAuth({baseUrl,adminId,cookieSecret,proxy=handleAuthProxyRequest,isAdminEmail=async email=>(await connectRepository()).isAdminEmail(adminId,email)}) {
   const attempts=new Map()
   const limit=(req)=>{
-    const key='recovery:'+req.socket.remoteAddress,now=Date.now(),previous=attempts.get(key)
+    const key='recovery:'+clientAddress(req),now=Date.now(),previous=attempts.get(key)
     const entry=previous&&previous.until>now?previous:{count:0,until:now+60000}
     attempts.set(key,entry)
     if(++entry.count>5)throw new ApiError(429,'Aguarde um minuto antes de tentar novamente.')
@@ -74,7 +86,7 @@ export function createAdminAuth({baseUrl,adminId,cookieSecret,proxy=handleAuthPr
     async login(req,res,value) {
       if(typeof value.email!=='string'||value.email.length>256||typeof value.password!=='string'||value.password.length<1||value.password.length>1024
         ||Object.keys(value).some(k=>!['email','password'].includes(k)))throw new ApiError(400,'Informe e-mail e senha válidos.')
-      const key=req.socket.remoteAddress
+      const key=clientAddress(req)
       const now=Date.now(),previous=attempts.get(key)
       const entry=previous&&previous.until>now?previous:{count:0,until:now+60000}
       if(++entry.count>10)throw new ApiError(429,'Muitas tentativas. Aguarde um minuto e tente novamente.')

@@ -113,3 +113,27 @@ test('admin login, server authorization, logout and independent stored data',asy
     assert.deepEqual(stored.map(s=>s.content.name),['A','B'])
   }finally{await new Promise(resolve=>server.close(resolve))}
 })
+
+test('socketless Vercel requests can log in and retain login and recovery throttling',async()=>{
+  const previous=process.env.VERCEL
+  process.env.VERCEL='1'
+  const adminId='577703bb-0f7a-477b-8a26-c781fb4d9c7b'
+  const auth=createAdminAuth({adminId,baseUrl:'https://example.invalid/auth',cookieSecret:'x'.repeat(48),isAdminEmail:async()=>false,proxy:async({path,request})=>{
+    if(path==='sign-in/email')return (await request.json()).password==='fixture-valid'?Response.json({user:{id:adminId}},{headers:{'Set-Cookie':`${cookie}=fixture; HttpOnly; Secure; Path=/`}}):Response.json({},{status:401})
+    assert.equal(path,'get-session')
+    return Response.json({user:{id:adminId},session:{userId:adminId,expiresAt:new Date(Date.now()+60000).toISOString()}})
+  }})
+  const req=address=>({headers:{host:'localhost:5173','x-vercel-forwarded-for':address}})
+  const responseHeaders={}
+  const res={getHeader:name=>responseHeaders[name],setHeader:(name,value)=>{responseHeaders[name]=value}}
+  try{
+    assert.deepEqual(await auth.login(req('203.0.113.1'),res,{email:'admin@example.invalid',password:'fixture-valid'}),{authenticated:true})
+    assert(responseHeaders['Set-Cookie'].length)
+    for(let i=0;i<10;i++)await assert.rejects(auth.login(req('203.0.113.2'),res,{email:'admin@example.invalid',password:'wrong'}),e=>e.status===401)
+    await assert.rejects(auth.login(req('203.0.113.2'),res,{email:'admin@example.invalid',password:'wrong'}),e=>e.status===429)
+    assert.deepEqual(await auth.login(req('203.0.113.3'),res,{email:'admin@example.invalid',password:'fixture-valid'}),{authenticated:true})
+    for(let i=0;i<5;i++)assert.deepEqual(await auth.requestReset(req('203.0.113.4'),res,{email:'other@example.invalid'}),{ok:true})
+    await assert.rejects(auth.requestReset(req('203.0.113.4'),res,{email:'other@example.invalid'}),e=>e.status===429)
+    assert.equal(localRequest({method:'GET',url:'/login',headers:{host:'localhost:5173'}}),false)
+  }finally{if(previous===undefined)delete process.env.VERCEL;else process.env.VERCEL=previous}
+})
