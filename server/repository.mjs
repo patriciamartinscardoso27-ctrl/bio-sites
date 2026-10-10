@@ -3,6 +3,7 @@ import { neon } from '@neondatabase/serverless'
 import { ApiError, isUuid, slugFor, validateBio, validateVersion } from './validation.mjs'
 import {serverConfig} from './config.mjs'
 import {validateSlug,assertPublishable,publicContent} from './publication.mjs'
+import {createSales} from './sales.mjs'
 
 const root = new URL('../', import.meta.url)
 const normalize = record => Object.fromEntries(Object.entries(record).map(([key,value]) => [key,value instanceof Date ? value.toISOString() : value]))
@@ -48,6 +49,7 @@ export function createRepository(sql,{publicationWritesEnabled=false,multiuserEn
   }
   return {
     publicationWritesEnabled,
+    sales:multiuserEnabled&&actor?createSales(sql,actor):undefined,
     forActor(user,ownerId){if(!multiuserEnabled)return this;if(!user?.id||user.status!=='active')throw new ApiError(401,'Entre novamente para continuar.');if(ownerId&&(!isUuid(ownerId)||user.role!=='principal'))throw new ApiError(403,'Filtro exclusivo do Administrador principal.');return createRepository(sql,{publicationWritesEnabled,multiuserEnabled,actor:user,selectedOwner:ownerId})},
     async getPublished(slug){
       validateSlug(slug)

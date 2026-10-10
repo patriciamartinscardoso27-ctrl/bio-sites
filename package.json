@@ -17,7 +17,8 @@
     "neon:check": "node scripts/check-neon.mjs",
     "preview": "vite preview",
     "test:builder": "node --test tests/aiBuilder.test.mjs tests/aiCreationUI.test.mjs tests/geminiVision.test.mjs tests/sectionInsertion.test.mjs tests/contextualRemoval.test.mjs",
-    "test:identity": "node --test --test-concurrency=1 tests/iconLibrary.test.mjs tests/googleIcons.test.mjs tests/identityPalette.test.mjs tests/colorPicker.test.mjs"
+    "test:identity": "node --test --test-concurrency=1 tests/iconLibrary.test.mjs tests/googleIcons.test.mjs tests/identityPalette.test.mjs tests/colorPicker.test.mjs",
+    "test:sales": "node --test --test-concurrency=1 tests/sales.test.mjs tests/sales-ui.test.mjs"
   },
   "dependencies": {
     "@capacitor/android": "^8.5.3",

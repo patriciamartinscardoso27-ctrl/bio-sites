@@ -110,6 +110,18 @@ export function createApi({ repository, getRepository = connectRepository, getAu
       // Check permissions before parsing uploads or invoking any Gemini provider operation.
       if(pathname.startsWith('/api/reference/'))principalOnly(session)
       const scopedRepo=async(ownerId)=>{const db=await repo();return db.forActor?db.forActor(session,ownerId):db}
+      if(pathname==='/api/sales'||pathname.startsWith('/api/sales/')){
+        const sales=(await scopedRepo()).sales
+        if(!sales)throw new ApiError(503,'Vendas exigem o multiusuário ativo.')
+        if(pathname==='/api/sales'&&req.method==='GET')return reply(200,await sales.list(new URL(req.url,'http://local').searchParams))
+        if(pathname==='/api/sales'&&req.method==='POST')return reply(201,await sales.create(await body(req,16384)))
+        const bySite=/^\/api\/sales\/by-biosite\/([^/]+)$/.exec(pathname)
+        if(bySite&&req.method==='GET')return reply(200,await sales.forSite(bySite[1]))
+        const sale=/^\/api\/sales\/([^/]+)$/.exec(pathname)
+        if(sale&&req.method==='GET')return reply(200,await sales.get(sale[1]))
+        if(sale&&req.method==='PUT')return reply(200,await sales.update(sale[1],await body(req,16384)))
+        throw new ApiError(404,'Operação de venda não disponível.')
+      }
       if(pathname==='/api/publication/config'&&req.method==='GET')return reply(200,{origin:requestOrigin(req),writesEnabled:Boolean((await repo()).publicationWritesEnabled)})
       const publication=/^\/api\/biosites\/([^/]+)\/(publish|unpublish)$/.exec(pathname)
       if(publication&&req.method==='POST'){
