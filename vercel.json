@@ -1,7 +1,8 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "framework": "vite",
-  "buildCommand": "npm run build",
+  "installCommand": "npm ci --include=optional",
+  "buildCommand": "node server/check-native-runtime.mjs && npm run build",
   "outputDirectory": "dist",
   "functions": {"api/handler.mjs": {"includeFiles": "{server,src}/**", "maxDuration": 30}},
   "rewrites": [
