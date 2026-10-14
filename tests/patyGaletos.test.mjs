@@ -45,4 +45,15 @@ test('client preview and public renderer stay identical after editing',async()=>
  assert.notEqual(model.bio.description,edited.description)
 })
 
+test('client location connects both map buttons without touching other layouts',async()=>{
+ const {patyLocationPatch}=await vite.ssrLoadModule('/src/lib/patyLocation.ts')
+ const current=createBio(model),mapsUrl='https://maps.app.goo.gl/X6dW4ioGXCXiKihA8'
+ const patch=patyLocationPatch(current,{mapsUrl}),updated={...current,...patch}
+ await React.act(async()=>root.render(React.createElement(BioSite,{bio:updated})))
+ const maps=[...document.querySelectorAll('a')].filter(a=>a.href===mapsUrl)
+ assert.equal(maps.length,2)
+ assert.deepEqual(patyLocationPatch({...current,layoutPreset:undefined},{mapsUrl}),{mapsUrl})
+ assert.equal(current.mapsUrl,'')
+})
+
 test('cleanup',async()=>{await React.act(async()=>root.unmount());await vite.close();dom.window.close()})
