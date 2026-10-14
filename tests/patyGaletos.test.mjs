@@ -32,4 +32,17 @@ test('embedded editor retains filters, imagery and all field targets',async()=>{
  await render(true);assert.equal(document.querySelectorAll('.pg-filter').length,5);assert.equal(document.querySelectorAll('.pg-gallery img').length,3)
  for(const selector of ['.pg-cover','.pg-logo','.pg-hero h1','.pg-product img','.pg-product h3','.pg-product strong','.pg-product-bottom a','.pg-categories img','.pg-about p','.pg-info [data-editor-field="hours"]','.pg-location p','.pg-order'])assert(resolveEditorTarget(document.querySelector(selector),model.bio),selector)
 })
+test('client preview and public renderer stay identical after editing',async()=>{
+ const {PublishedRenderer}=await vite.ssrLoadModule('/src/components/PublicBioSite.tsx')
+ const {publicContent}=await import('../server/publication.mjs')
+ assert((await fs.readFile('src/App.tsx','utf8')).includes("bio.layoutPreset==='paty-galetos'?<PublishedRenderer bio={bio}/>:<BioSite bio={bio}/>"))
+ const edited=createBio(model);edited.description='Descrição editada';edited.sections.find(s=>s.kind==='about').text='Sobre editado'
+ await React.act(async()=>root.render(React.createElement(PublishedRenderer,{bio:edited})))
+ const preview=document.querySelector('.pg-site').outerHTML
+ assert.match(preview,/Descrição editada/);assert.match(preview,/Sobre editado/)
+ await React.act(async()=>root.render(React.createElement(PublishedRenderer,{bio:publicContent(edited)})))
+ assert.equal(document.querySelector('.pg-site').outerHTML,preview)
+ assert.notEqual(model.bio.description,edited.description)
+})
+
 test('cleanup',async()=>{await React.act(async()=>root.unmount());await vite.close();dom.window.close()})
