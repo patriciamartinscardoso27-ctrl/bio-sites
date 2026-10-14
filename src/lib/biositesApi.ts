@@ -1,3 +1,4 @@
+import {prepareSaveRequest,unpackSaveImages} from './saveTransport'
 import type { Bio } from '../types/biosite'
 
 export interface BioSiteSummary {
@@ -9,8 +10,9 @@ export interface BioSiteSummary {
 export interface SavedBioSite extends Omit<BioSiteSummary, 'name' | 'category' | 'style'> { templateId: string; content: Bio }
 export class BioSiteApiError extends Error {status:number;constructor(message:string,status:number){super(message);this.status=status}}
 async function request<T>(path: string, init?: RequestInit): Promise<T> {
-  const response = await fetch(path, { ...init, headers: { 'Content-Type':'application/json' }, credentials:'same-origin', cache:'no-store', signal:AbortSignal.timeout(25000) })
-  const result = await response.json()
+  const transport=typeof init?.body==='string'&&/\/api\/biosites(?:\/|$)/.test(path)?await prepareSaveRequest(init.body):undefined
+  const response = await fetch(path, { ...init, ...(transport?{body:transport.body}:{}),headers: {'X-Biosite-Accept-Transport':'images-v1',...(transport?.headers||{ 'Content-Type':'application/json' })}, credentials:'same-origin', cache:'no-store', signal:AbortSignal.timeout(25000) })
+  let result:{error?:string};try{result=unpackSaveImages(await response.json())}catch{throw new BioSiteApiError(response.status===413?'O envio excedeu o limite de tamanho. Suas alterações continuam nesta aba.':'Resposta inválida do servidor. Suas alterações continuam nesta aba.',response.status)}
   if(response.status===401)window.dispatchEvent(new Event('biosite-session-expired'))
   if (!response.ok) throw new BioSiteApiError(result.error || 'Não foi possível acessar o servidor.',response.status)
   return result as T

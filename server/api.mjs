@@ -1,3 +1,4 @@
+import {decodeSavePayload,encodeResponsePayload} from './body-transport.mjs'
 import { ApiError } from './validation.mjs'
 import { connectRepository } from './repository.mjs'
 import { getAuth as configuredAuth } from './auth.mjs'
@@ -36,7 +37,8 @@ export function localRequest(req) {
   return !['POST','PUT','PATCH','DELETE'].includes(req.method) || req.headers.origin === url.origin
 }
 async function body(req,limit=maxBody) {
-  if (!/^application\/json(?:\s*;|$)/i.test(req.headers['content-type'] || '')) throw new ApiError(415,'Envie conteúdo JSON.')
+  const gzip=req.headers['x-biosite-body-encoding']==='gzip'
+  if (!(gzip?/^application\/octet-stream(?:\s*;|$)/i:/^application\/json(?:\s*;|$)/i).test(req.headers['content-type'] || '')) throw new ApiError(415,'Envie conteúdo JSON.')
   if (Number(req.headers['content-length']) > limit) throw new ApiError(413,'Conteúdo muito grande. Reduza as imagens.')
   const chunks=[];let size=0
   for await (const chunk of req) {
@@ -44,11 +46,7 @@ async function body(req,limit=maxBody) {
     if (size > limit) throw new ApiError(413,'Conteúdo muito grande. Reduza as imagens.')
     chunks.push(chunk)
   }
-  try {
-    const value=JSON.parse(Buffer.concat(chunks).toString('utf8'))
-    if (!value || typeof value !== 'object' || Array.isArray(value)) throw new Error()
-    return value
-  } catch { throw new ApiError(400,'JSON inválido.') }
+  return decodeSavePayload(Buffer.concat(chunks),{gzip,limit})
 }
 export function createApi({ repository, getRepository = connectRepository, getAuth = configuredAuth, vision = createVisionService(),requestAllowed=localRequest,users=getUsers,signupGuard=getSignupGuard,getMailer=async()=>{const config=await serverConfig();return createInviteMailer({key:config.RESEND_API_KEY,from:config.BIOSITE_INVITE_FROM})} } = {}) {
   let pending
@@ -62,8 +60,9 @@ export function createApi({ repository, getRepository = connectRepository, getAu
     let stage='request'
     if (!pathname.startsWith('/api/')) return next()
     const reply = (status,value) => {
-      res.writeHead(status, {'Content-Type':'application/json; charset=utf-8','Cache-Control':'no-store','X-Content-Type-Options':'nosniff'})
-      res.end(JSON.stringify(value))
+      const encoded=encodeResponsePayload(value,req.headers['accept-encoding']||'',req.headers['x-biosite-accept-transport']==='images-v1')
+      res.writeHead(status, {'Content-Type':'application/json; charset=utf-8','Cache-Control':'no-store','X-Content-Type-Options':'nosniff',...encoded.headers})
+      res.end(encoded.body)
     }
     try {
       // Neon is a server caller: authenticate the raw signed body, never browser Origin.

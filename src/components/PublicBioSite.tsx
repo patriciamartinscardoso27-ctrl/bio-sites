@@ -1,3 +1,4 @@
+import {unpackSaveImages} from '../lib/saveTransport'
 import {useEffect,useLayoutEffect,useRef,useState} from 'react'
 import type {Bio} from '../types/biosite'
 import {BioSite} from './BioSite'
@@ -17,7 +18,7 @@ export function PublishedRenderer({bio}:{bio:Bio}){
 export function PublicBioSite(){
  const [bio,setBio]=useState<Bio|null>(null),[error,setError]=useState('')
  useEffect(()=>{const controller=new AbortController();const slug=location.pathname.slice(3);if(!/^[a-z0-9]+(-[a-z0-9]+)*$/.test(slug)||slug.length>100){setError('Página não encontrada.');return}
-  fetch('/api/public/biosites/'+encodeURIComponent(slug),{cache:'no-store',credentials:'omit',signal:controller.signal}).then(async response=>{if(!response.ok)throw Error(response.status===404?'Página não encontrada ou retirada do ar.':'Não foi possível carregar esta página. Tente novamente.');return response.json()}).then(value=>{if(value.suspended){document.title='Temporariamente indisponível · Bio Sites';setError('Este site está temporariamente indisponível');return}setBio(value.content);document.title=value.content.name+' · Bio Sites'}).catch(e=>{if(e.name!=='AbortError')setError(e.message)});return()=>controller.abort()
+  fetch('/api/public/biosites/'+encodeURIComponent(slug),{cache:'no-store',credentials:'omit',headers:{'X-Biosite-Accept-Transport':'images-v1'},signal:controller.signal}).then(async response=>{if(!response.ok)throw Error(response.status===404?'Página não encontrada ou retirada do ar.':'Não foi possível carregar esta página. Tente novamente.');return unpackSaveImages(await response.json())}).then(value=>{if(value.suspended){document.title='Temporariamente indisponível · Bio Sites';setError('Este site está temporariamente indisponível');return}setBio(value.content);document.title=value.content.name+' · Bio Sites'}).catch(e=>{if(e.name!=='AbortError')setError(e.message)});return()=>controller.abort()
  },[])
  if(error)return <main className="public-message"><span className="public-unavailable-mark" aria-hidden="true">◈</span><h1>{error==='Este site está temporariamente indisponível'?error:'BioSite indisponível'}</h1><p>{error==='Este site está temporariamente indisponível'?'Por favor, volte mais tarde.':error}</p></main>
  return bio?<PublishedRenderer bio={bio}/>:<main className="public-message" role="status">Carregando BioSite…</main>
