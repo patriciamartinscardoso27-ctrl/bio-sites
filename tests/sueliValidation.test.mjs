@@ -19,13 +19,14 @@ const click=async el=>React.act(async()=>el.dispatchEvent(new window.MouseEvent(
 test('client and reusable seed validate, contain independent content and local assets',async()=>{
  assert(model);const demo=createBio(model),real=createBio(client)
  for(const bio of [demo,real]){validateBio(JSON.parse(JSON.stringify(bio)),bio.id);for(const url of [bio.cover,bio.logo,...bio.photos,...bio.sections.flatMap(s=>[s.image,...(s.content?.photos||[]),...(s.content?.items||[]).map(i=>i.image)])].filter(Boolean))await fs.access('public'+url)}
- assert.equal(real.name,'Sueli Nascimento');assert.equal(demo.name,'Seu Studio')
- for(const field of ['phone','instagram','address'])assert.equal(demo[field],'')
- assert.notEqual(demo.logo,real.logo)
+ assert.equal(real.name,'Sueli Nascimento');assert.equal(demo.name,model.previewBio.name)
+ for(const field of ['phone','instagram'])assert.equal(demo[field],'')
+ assert.equal(demo.logo,real.logo)
  assert.equal(model.label,'Beleza Premium — SN Studio')
  assert.equal(model.previewBio.name,'Sueli Nascimento')
  assert.equal(model.previewBio.logo,real.logo)
- const content=JSON.stringify(demo);assert(!content.includes('/images/sueli-nascimento/'));assert(!content.includes('SN Studio'));assert(!content.includes('Sueli Nascimento'))
+ const content=JSON.stringify(demo);assert(content.includes('/images/sueli-nascimento/'));assert(content.includes('Sueli Nascimento'))
+ assert.deepEqual(JSON.parse(JSON.stringify({...demo,id:model.previewBio.id})),JSON.parse(JSON.stringify(model.previewBio)))
  assert.notEqual(demo.id,real.id);const original=JSON.stringify(model)
  demo.sections.find(s=>s.kind==='services').content.items[0].title='Editado';real.name='Cliente editada';assert.equal(JSON.stringify(model),original)
  const hashes=JSON.parse(await fs.readFile('tests/fixtures/sueli-existing-models.json','utf8'))
@@ -43,8 +44,8 @@ test('all service and result filters, carousel arrows and dots work',async()=>{
  for(const selector of ['.sn-cover','.sn-logo img','.sn-brand h1','.sn-portrait img','.sn-intro-copy h2','.sn-service img','.sn-service h3','.sn-service .sn-button','.sn-banner h2','.sn-result-grid img','.sn-about-copy img','[data-editor-field="hours"]','[data-editor-field="address"]'])assert(resolveEditorTarget(document.querySelector(selector),client.bio),selector)
  for(const a of document.querySelectorAll('a[href^="#"]'))assert(document.getElementById(a.getAttribute('href').slice(1)),a.outerHTML)
 })
-test('shared visual editor changes client name without modifying library',async()=>{
- let current=createBio(client);const original=JSON.stringify(model)
+test('shared visual editor changes cloned model name without modifying library',async()=>{
+ let current=createBio(model);const original=JSON.stringify(model)
  function Harness(){const [bio,setBio]=React.useState(current);return React.createElement(VisualBioEditor,{bio,onChange:patch=>setBio(old=>(current={...old,...patch})),onAdvanced(){}})}
  await React.act(async()=>root.render(React.createElement(Harness)));await click(document.querySelector('.sn-brand h1'))
  const label=[...document.querySelectorAll('label')].find(e=>e.textContent.startsWith('Nome')),input=label?.querySelector('textarea,input');assert(input,'Name field in visual editor')

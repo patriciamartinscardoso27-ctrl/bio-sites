@@ -2,6 +2,7 @@ import type {Bio,Template,Action,GenericIcon} from '../types/biosite'
 import {essenciaRose} from './essenciaRose'
 import {section} from './officialBeautyModels'
 import {entryTextKey} from '../lib/entryText'
+import {sueliApprovedVisual} from './sueliApprovedVisual'
 export const sueliNascimentoId='sueli-nascimento' as const
 const photo=(name:string)=>'/images/sueli-nascimento/'+name+'.webp'
 export function sueliNascimento(base:Bio):Template{
@@ -41,22 +42,11 @@ export function sueliNascimento(base:Bio):Template{
  return {id,categoryId:'beauty',label:'Sueli Nascimento — Beleza & Estilo',subtitle:'SN Studio · Preto, rosé e pêssego. Serviços, resultados reais e nosso espaço.',icon:'✦',bio:b}
 }
 
-/** Library seed with neutral content; client snapshots never enter readyTemplates. */
-export function sueliReusable(base:Bio):Template{
- const template=sueliNascimento(base),b=template.bio
- template.label='Beleza Premium — SN Studio'
- template.subtitle='Referência Sueli Nascimento: salão, retrato oval, serviços rosé, resultados e espaço.'
+/** Approved visual seed; each use creates an independent editable snapshot. */
+export function sueliReusable(_base:Bio):Template{
+ const b=structuredClone(sueliApprovedVisual)
+ const template:Template={id:sueliNascimentoId,categoryId:'beauty',label:'Beleza Premium — SN Studio',subtitle:'Referência Sueli Nascimento: salão, retrato oval, serviços rosé, resultados e espaço.',icon:'✦',bio:b}
  template.previewBio=structuredClone(b)
- template.previewBio.phone='';template.previewBio.instagram='';template.previewBio.address='';template.previewBio.mapsUrl=''
- b.name='Seu Studio';b.logo='/images/official-batch-2/beauty-monogram.svg';b.phone='';b.instagram='';b.address='';b.client=undefined
- b.sections.find(s=>s.id.endsWith('-location'))!.enabled=true
- b.sections.find(s=>s.kind==='actions')!.content!.actions![2].enabled=true
- const assets:Record<string,string>={salon:'beauty-salon.png',portrait:'beauty-hero.png',about:'beauty-hero.png',nails:'beauty-nails.png',feet:'beauty-oil.png',hair:'beauty-hair.png',brows:'beauty-brows.png',space:'beauty-salon-reception.png',before:'beauty-hair.png',after:'beauty-hair-straight.png','result-nails':'beauty-nails-french.png','brow-before':'beauty-brows.png','brow-after':'beauty-brows-after.webp','feet-before':'beauty-oil.png','feet-after':'beauty-oil.png',spa:'beauty-oil.png',banner:'beauty-hair.png','result-banner':'beauty-hair.png'}
- const neutralize=(value:unknown):unknown=>typeof value==='string'?value.replace(/\/images\/sueli-nascimento\/([a-z-]+)\.webp/g,(_,key:string)=>'/images/official-batch-2/'+assets[key]).replaceAll('SN Studio','seu studio'):Array.isArray(value)?value.map(neutralize):value&&typeof value==='object'?Object.fromEntries(Object.entries(value).map(([key,v])=>[key,neutralize(v)])):value
- template.bio=neutralize(b) as Bio
- const results=template.bio.sections.find(s=>s.id.endsWith('-results'))!
- results.title='Inspirações de Beleza';results.text='Fotos demonstrativas. Personalize com seus trabalhos.'
- results.content?.highlights?.forEach(h=>h.label='')
- template.bio.hours='Segunda a Sexta: A informar\nSábado: A informar\nDomingo: A informar'
+ template.bio=structuredClone(template.previewBio)
  return template
 }
