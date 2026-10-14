@@ -5,7 +5,7 @@ import { createApi, createAdminPageGuard, localRequest, canonicalLocalPage } fro
 
 // https://vite.dev/config/
 export default defineConfig({
-  server: { host: '127.0.0.1', strictPort: true, fs: { deny: ['.env', '.env.*', '*.{crt,pem}', '**/.git/**', '**/server/**', '**/scripts/**', '**/migrations/**'] } },
+  server: { host: '127.0.0.1', strictPort: true, watch:{ignored:['**/artifacts/**']}, fs: { deny: ['.env', '.env.*', '*.{crt,pem}', '**/.git/**', '**/server/**', '**/scripts/**', '**/migrations/**'] } },
   preview: { host: '127.0.0.1' },
   plugins: [react(), tailwindcss(), {
     name: 'biosite-server-api',

@@ -7,11 +7,12 @@ export interface BioSiteSummary {
   logo?:string; phone?:string; telephone?:string; email?:string; responsible?:string; address?:string; city?:string; templateId?:string; generated?:boolean; layoutPreset?:Bio['layoutPreset'];
 }
 export interface SavedBioSite extends Omit<BioSiteSummary, 'name' | 'category' | 'style'> { templateId: string; content: Bio }
+export class BioSiteApiError extends Error {status:number;constructor(message:string,status:number){super(message);this.status=status}}
 async function request<T>(path: string, init?: RequestInit): Promise<T> {
   const response = await fetch(path, { ...init, headers: { 'Content-Type':'application/json' }, credentials:'same-origin', cache:'no-store', signal:AbortSignal.timeout(25000) })
   const result = await response.json()
   if(response.status===401)window.dispatchEvent(new Event('biosite-session-expired'))
-  if (!response.ok) throw new Error(result.error || 'Não foi possível acessar o servidor.')
+  if (!response.ok) throw new BioSiteApiError(result.error || 'Não foi possível acessar o servidor.',response.status)
   return result as T
 }
 export const biositesApi = {
