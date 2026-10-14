@@ -44,6 +44,14 @@ test('all service and result filters, carousel arrows and dots work',async()=>{
  for(const selector of ['.sn-cover','.sn-logo img','.sn-brand h1','.sn-portrait img','.sn-intro-copy h2','.sn-service img','.sn-service h3','.sn-service .sn-button','.sn-banner h2','.sn-result-grid img','.sn-about-copy img','[data-editor-field="hours"]','[data-editor-field="address"]'])assert(resolveEditorTarget(document.querySelector(selector),client.bio),selector)
  for(const a of document.querySelectorAll('a[href^="#"]'))assert(document.getElementById(a.getAttribute('href').slice(1)),a.outerHTML)
 })
+test('editor embedding preserves visual filters, gallery arrows and dots',async()=>{
+ await React.act(async()=>root.render(React.createElement(BioSite,{bio:createBio(model),embedded:true})))
+ assert.equal(document.querySelectorAll('.sn-filter').length,10)
+ assert.equal(document.querySelectorAll('.sn-prev,.sn-next').length,2)
+ assert.equal(document.querySelectorAll('.sn-dot').length,2)
+ assert.equal(document.querySelector('.sn-brand h1').textContent,model.previewBio.name)
+ assert.equal(document.querySelector('.sn-portrait img').getAttribute('src'),model.previewBio.photos[0])
+})
 test('shared visual editor changes cloned model name without modifying library',async()=>{
  let current=createBio(model);const original=JSON.stringify(model)
  function Harness(){const [bio,setBio]=React.useState(current);return React.createElement(VisualBioEditor,{bio,onChange:patch=>setBio(old=>(current={...old,...patch})),onAdvanced(){}})}
