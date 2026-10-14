@@ -1,4 +1,9 @@
 @font-face{font-family:SNscript;src:url('/fonts/jocastrya/DancingScript.ttf');font-display:swap}
+.biosite.sn-site .sn-introduction{position:relative}
+.biosite.sn-site .studio-insertion-point{position:absolute;height:0;margin:0;z-index:5}
+.biosite.sn-site .sn-introduction>.studio-insertion-point{position:absolute;inset:0 auto auto 0;z-index:5}
+.biosite.sn-site .sn-introduction>.sn-portrait{grid-column:1;grid-row:1}
+.biosite.sn-site .sn-introduction>.sn-intro-copy{grid-column:2;grid-row:1}
 .biosite.sn-site .sn-actions>[data-action-id]>svg{display:none}
 .biosite.sn-site .sn-introduction{grid-template-columns:minmax(0,56fr) minmax(0,44fr)}
 .biosite.sn-site .sn-intro-copy p{letter-spacing:.6px;font-size:9px!important}
