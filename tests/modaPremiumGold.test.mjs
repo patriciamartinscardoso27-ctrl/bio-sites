@@ -11,7 +11,7 @@ const {readyTemplates,templates,createBio}=await vite.ssrLoadModule('/src/data/t
 const root=createRoot(document.getElementById('root')),template=readyTemplates.find(t=>t.id==='moda-premium-gold'),original=JSON.stringify(template)
 const render=async element=>React.act(async()=>root.render(element)),click=async e=>{assert(e);await React.act(async()=>e.dispatchEvent(new window.MouseEvent('click',{bubbles:true,cancelable:true})))}
 test('ready template preserves original 21 and complete ordered structure',()=>{
- assert.equal(templates.length,21);assert.equal(readyTemplates.length,76);const bio=createBio(template);assert.equal(validateBio(JSON.parse(JSON.stringify(bio)),bio.id),'moda-premium-gold')
+ assert.equal(templates.length,21);assert.equal(readyTemplates.length,79);const bio=createBio(template);assert.equal(validateBio(JSON.parse(JSON.stringify(bio)),bio.id),'moda-premium-gold')
  assert.equal(bio.sections.length,14);assert.deepEqual(bio.sections.map(s=>s.kind),['actions','benefits','categories','promotion','products','benefits','gallery','about','promotion','hours','location','whatsapp','about','actions'])
  assert.equal(bio.sections[0].content.actions.length,4);assert.equal(bio.sections[2].content.highlights.length,3);assert.equal(bio.sections[4].content.items.length,4);assert.equal(bio.sections[6].content.photos.length,6);assert.equal(bio.sections[6].visual.columns,3)
 })

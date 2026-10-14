@@ -215,7 +215,10 @@ import {loteSixTemplates} from './loteSixModels'
 import {loteFourTemplates} from './loteFourModels'
 import {loteThreeTemplates} from './loteThreeModels'
 import {loteTwoTemplates} from './loteTwoModels'
+import {essenciaRose} from './essenciaRose'
+import {jocastryaOriginal} from './jocastryaOriginal'
 import {refreshOriginal} from './originalRefresh'
-export const readyTemplates:Template[]=[modaPremiumGold(templates[0].bio),bellaModa(templates[0].bio),urbanBlack(templates[0].bio),charmmeModa(templates[0].bio),lumiereBoutique(templates[0].bio),vibeStore(templates[0].bio),urbanBlackTwo(templates[0].bio),nexoModa(templates[0].bio),atelier27(templates[0].bio),lumiereModaFeminina(templates[0].bio),imperiumBarbearia(templates[0].bio),barberPro(templates[0].bio),royalBarber(templates[0].bio),bravoBarbearia(templates[0].bio),theCutBarbearia(templates[0].bio),...officialBeautyTemplates(templates[0].bio),...beautyLoteOneTemplates(templates[0].bio),...loteTwoTemplates(templates[0].bio),...loteThreeTemplates(templates[0].bio),...loteFourTemplates(templates[0].bio),...loteFiveTemplates(templates[0].bio),...loteSixTemplates(templates[0].bio),...loteSevenTemplates(templates[0].bio),...templates.map(refreshOriginal)]
+import {sueliReusable} from './sueliNascimento'
+export const readyTemplates:Template[]=[modaPremiumGold(templates[0].bio),bellaModa(templates[0].bio),urbanBlack(templates[0].bio),charmmeModa(templates[0].bio),lumiereBoutique(templates[0].bio),vibeStore(templates[0].bio),urbanBlackTwo(templates[0].bio),nexoModa(templates[0].bio),atelier27(templates[0].bio),lumiereModaFeminina(templates[0].bio),imperiumBarbearia(templates[0].bio),barberPro(templates[0].bio),royalBarber(templates[0].bio),bravoBarbearia(templates[0].bio),theCutBarbearia(templates[0].bio),...officialBeautyTemplates(templates[0].bio),...beautyLoteOneTemplates(templates[0].bio),...loteTwoTemplates(templates[0].bio),...loteThreeTemplates(templates[0].bio),...loteFourTemplates(templates[0].bio),...loteFiveTemplates(templates[0].bio),...loteSixTemplates(templates[0].bio),...loteSevenTemplates(templates[0].bio),...templates.map(refreshOriginal),essenciaRose(templates[0].bio),jocastryaOriginal(templates[0].bio),sueliReusable(templates[0].bio)]
 
 

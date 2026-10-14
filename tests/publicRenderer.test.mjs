@@ -15,7 +15,7 @@ test('public destination validation rejects placeholders, unsafe URLs and empty 
  for(const href of ['#products','https://example.com/','https://instagram.com/mybusiness','https://wa.me/5511987654321'])assert.equal(isPublicDestination(href,'http://localhost'),true,href)
 })
 test('all 76 public snapshots preserve the exact real renderer markup and exclude internal client data',()=>{
- assert.equal(readyTemplates.length,76)
+ assert.equal(readyTemplates.length,79)
  for(const template of readyTemplates){const bio=createBio(template);bio.client={notes:'PRIVATE-NOTE',responsible:'PRIVATE-NAME'};const projected=publicContent(bio)
   assert.equal(renderToStaticMarkup(React.createElement(BioSite,{bio:projected})),renderToStaticMarkup(React.createElement(BioSite,{bio})),template.id)
   assert(!JSON.stringify(projected).includes('PRIVATE-'))

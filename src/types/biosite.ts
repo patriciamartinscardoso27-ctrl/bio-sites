@@ -19,7 +19,7 @@ export type VisualStyle = 'boutique-gold' | 'fashion-pink' | 'clean-nude' | 'urb
   | 'auto-premium' | 'performance-red' | 'tech-blue' | 'industrial' | 'clean-professional'
   | 'business-premium' | 'modern-blue' | 'clean-minimal' | 'vibrant-sales' | 'elegant-corporate'
 export interface Bio { manual?: boolean; appearance?: Appearance; heroEnabled?: boolean; id: string; style: VisualStyle; name: string; category: string; headline: string; tagline: string; highlights: Highlight[]; benefits: string[]; description: string; color: string; cover: string; logo: string; phone: string; address: string; hours: string; instagram: string; telephone?: string; email?: string; facebook?: string; tiktok?: string; reviewsUrl?: string; mapsUrl?: string; website?: string; menuUrl?: string; sections: Section[]; actions: Action[]; services: Item[]; products: Item[]; photos: string[] }
-export interface Template { id: string; categoryId: string; label: string; subtitle: string; icon: string; bio: Bio }
+export interface Template { id: string; categoryId: string; label: string; subtitle: string; icon: string; bio: Bio; previewBio?:Bio }
 export interface ClientDetails { responsible?: string; city?: string; notes?: string }
 export interface Item { action?:Action }
 export interface Bio { client?: ClientDetails }

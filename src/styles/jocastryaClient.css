@@ -1,0 +1,12 @@
+/* Private client preview: never loaded by the catalog or published customer sites. */
+.biosite.moda-premium-gold[data-ready-model="jocastrya-estetica-original"][data-client-finish="jocastrya"][data-library-batch] [data-section-id$="-about"] .jocastrya-script-line{font-size:clamp(25px,8vw,32px);overflow-wrap:anywhere}
+.biosite.moda-premium-gold[data-ready-model="jocastrya-estetica-original"][data-client-finish="jocastrya"][data-library-batch] .gold-hero-photo,
+.biosite.moda-premium-gold[data-ready-model="jocastrya-estetica-original"][data-client-finish="jocastrya"][data-library-batch] [data-section-id$="-about"] .gold-banner img{mask-image:linear-gradient(90deg,transparent,#000 28%),linear-gradient(180deg,transparent,#000 12%,#000 92%,transparent);mask-composite:intersect}
+.biosite.moda-premium-gold[data-ready-model="jocastrya-estetica-original"][data-client-finish="jocastrya"][data-library-batch] [data-section-id$="-space"] img{width:100%!important;aspect-ratio:1.3;object-fit:cover;background:var(--paper)}
+.biosite.moda-premium-gold[data-ready-model="jocastrya-estetica-original"][data-client-finish="jocastrya"][data-library-batch] .gold-services .gold-product-price{max-width:calc(100% - 87px);font-size:12px;line-height:1.2}
+@media(max-width:350px){
+ .biosite.moda-premium-gold[data-ready-model="jocastrya-estetica-original"][data-client-finish="jocastrya"][data-library-batch] .gold-services strong{max-width:80px!important;white-space:normal!important;font-size:11px!important;line-height:1.2!important}
+ .biosite.moda-premium-gold[data-ready-model="jocastrya-estetica-original"][data-client-finish="jocastrya"][data-library-batch] [data-section-id$="-about"] .jocastrya-script-line{font-size:22px!important;white-space:nowrap}
+ .biosite.moda-premium-gold[data-ready-model="jocastrya-estetica-original"][data-client-finish="jocastrya"][data-library-batch] [data-section-id$="-care"] .gold-banner{min-height:280px!important;aspect-ratio:auto!important}
+ .biosite.moda-premium-gold[data-ready-model="jocastrya-estetica-original"][data-client-finish="jocastrya"][data-library-batch] [data-section-id$="-care"] h2{font-size:21px!important}
+}

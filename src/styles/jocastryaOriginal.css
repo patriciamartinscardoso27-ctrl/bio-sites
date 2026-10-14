@@ -1,0 +1,158 @@
+@font-face{font-family:JocastryaScript;src:url('/fonts/jocastrya/DancingScript.ttf') format('truetype');font-weight:400 700;font-display:swap}
+/* This composition is scoped to the original reference; previous presets are untouched. */
+.biosite.moda-premium-gold[data-ready-model="jocastrya-estetica-original"][data-library-batch]{max-width:500px;background:var(--paper);color:var(--ink);font-family:Arial,sans-serif;overflow-wrap:anywhere}
+.biosite.moda-premium-gold[data-ready-model="jocastrya-estetica-original"][data-library-batch] .gold-hero{min-height:375px;aspect-ratio:1.04;padding:23px 21px;color:var(--ink);background:var(--paper)}
+.biosite.moda-premium-gold[data-ready-model="jocastrya-estetica-original"][data-library-batch] .gold-hero-photo{object-position:var(--local-image-position,72% 40%)}
+.biosite.moda-premium-gold[data-ready-model="jocastrya-estetica-original"][data-library-batch] .gold-hero-shade{background:linear-gradient(90deg,var(--paper) 0%,color-mix(in srgb,var(--paper) 85%,transparent) 27%,transparent 67%)}
+.biosite.moda-premium-gold[data-ready-model="jocastrya-estetica-original"][data-library-batch] .gold-hero-content{width:53%;padding:0;max-width:none}
+.biosite.moda-premium-gold[data-ready-model="jocastrya-estetica-original"][data-library-batch] .gold-hero-content>.gold-logo{width:58px;height:58px;margin:0 auto 5px;background:transparent;color:var(--gold-dark)}
+.biosite.moda-premium-gold[data-ready-model="jocastrya-estetica-original"][data-library-batch] .gold-logo>span{font:42px/1 Georgia,serif}
+.biosite.moda-premium-gold[data-ready-model="jocastrya-estetica-original"][data-library-batch] .gold-hero-content>h1{display:block;color:var(--gold-dark);font-size:24px!important;text-align:center;line-height:1.1;text-transform:none;margin:4px 0}
+.biosite.moda-premium-gold[data-ready-model="jocastrya-estetica-original"][data-library-batch] .gold-tagline{display:block;text-align:center;font-size:8px;letter-spacing:1px;color:var(--gold-dark)}
+.biosite.moda-premium-gold[data-ready-model="jocastrya-estetica-original"][data-library-batch] .gold-hero-headline{width:100%;font-size:clamp(25px,7.6cqw,36px)!important;line-height:1.1!important;margin:38px 0 18px;font-style:italic;color:var(--gold-dark);letter-spacing:-.4px}
+.biosite.moda-premium-gold[data-ready-model="jocastrya-estetica-original"][data-library-batch] .gold-hero-content>p{font-size:13px;line-height:1.4;color:var(--ink);font-weight:600}
+.biosite.moda-premium-gold[data-ready-model="jocastrya-estetica-original"][data-library-batch] .gold-hero-tools{display:none}
+.biosite.moda-premium-gold[data-ready-model="jocastrya-estetica-original"][data-library-batch] .gold-body{padding:0 12px 14px;gap:7px}
+.biosite.moda-premium-gold[data-ready-model="jocastrya-estetica-original"][data-library-batch] .gold-section{padding:10px 0;min-width:0}
+.biosite.moda-premium-gold[data-ready-model="jocastrya-estetica-original"][data-library-batch] .gold-section h2{font-family:Arial,sans-serif;font-weight:600;font-size:22px;line-height:1.15}
+.biosite.moda-premium-gold[data-ready-model="jocastrya-estetica-original"][data-library-batch] .gold-actions{gap:8px;padding:0}
+.biosite.moda-premium-gold[data-ready-model="jocastrya-estetica-original"][data-library-batch] .gold-actions .action-icon-tile{border-radius:15px!important;width:100%!important;height:62px!important;color:var(--paper);background:var(--button-fill,var(--gold-dark))!important}
+.biosite.moda-premium-gold[data-ready-model="jocastrya-estetica-original"][data-library-batch] .gold-actions .action-icon-slot{width:100%;max-width:100%}
+.biosite.moda-premium-gold[data-ready-model="jocastrya-estetica-original"][data-library-batch] .gold-actions>a,.biosite.moda-premium-gold[data-ready-model="jocastrya-estetica-original"][data-library-batch] .gold-actions>.unconfigured-action{display:flex;flex-direction:column;gap:8px;align-items:center;padding:0;background:none;border:0;opacity:1;min-width:0;letter-spacing:0}
+.biosite.moda-premium-gold[data-ready-model="jocastrya-estetica-original"][data-library-batch] .gold-benefit-grid{gap:8px}
+.biosite.moda-premium-gold[data-ready-model="jocastrya-estetica-original"][data-library-batch] .gold-benefit-grid h3,.biosite.moda-premium-gold[data-ready-model="jocastrya-estetica-original"][data-library-batch] .gold-benefit-grid p{font-size:10px;line-height:1.25;text-align:center;font-weight:400}
+.biosite.moda-premium-gold[data-ready-model="jocastrya-estetica-original"][data-library-batch] .gold-benefit-grid svg{color:var(--gold-dark);margin-bottom:7px}
+.biosite.moda-premium-gold[data-ready-model="jocastrya-estetica-original"][data-library-batch] .gold-banner{border-radius:18px;min-height:275px;aspect-ratio:var(--media-aspect,1.15)}
+.biosite.moda-premium-gold[data-ready-model="jocastrya-estetica-original"][data-library-batch] .gold-banner-copy{width:var(--content-width,52%);padding:17px 13px;color:var(--ink);background:color-mix(in srgb,var(--local-panel,var(--paper)) 93%,transparent)}
+.biosite.moda-premium-gold[data-ready-model="jocastrya-estetica-original"][data-library-batch] .gold-banner h2{font-family:Georgia,serif;font-size:clamp(20px,5.8cqw,27px);font-weight:400;white-space:pre-line}
+.biosite.moda-premium-gold[data-ready-model="jocastrya-estetica-original"][data-library-batch] .gold-banner p{font-size:12px;line-height:1.45}
+.biosite.moda-premium-gold[data-ready-model="jocastrya-estetica-original"][data-library-batch] .gold-banner-button{background:var(--gold-dark);color:var(--paper);font-size:12px;padding:10px 12px;border-radius:10px}
+.biosite.moda-premium-gold[data-ready-model="jocastrya-estetica-original"][data-library-batch] .gold-filter-bar{display:flex;gap:6px;overflow:auto;padding:10px 0 13px;scrollbar-width:thin}
+.biosite.moda-premium-gold[data-ready-model="jocastrya-estetica-original"][data-library-batch] .gold-filter-bar a{flex-shrink:0;font-size:10px;padding:6px 8px;color:var(--ink);border-radius:20px;background:transparent}
+.biosite.moda-premium-gold[data-ready-model="jocastrya-estetica-original"][data-library-batch] .gold-filter-bar a[aria-pressed=true]{background:var(--gold-dark);color:var(--paper)}
+.biosite.moda-premium-gold[data-ready-model="jocastrya-estetica-original"][data-library-batch] .gold-services .gold-product-list{grid-template-columns:1fr;gap:9px}
+.biosite.moda-premium-gold[data-ready-model="jocastrya-estetica-original"][data-library-batch] .gold-services .gold-product{display:grid;grid-template-columns:35% minmax(0,1fr);grid-template-rows:1fr auto;column-gap:13px;border-radius:13px;background:transparent;overflow:visible}
+.biosite.moda-premium-gold[data-ready-model="jocastrya-estetica-original"][data-library-batch] .gold-services .gold-product>img{grid-row:1/3;width:100%;height:100%;min-height:116px;aspect-ratio:1.2;object-fit:cover;border-radius:13px}
+.biosite.moda-premium-gold[data-ready-model="jocastrya-estetica-original"][data-library-batch] .gold-services .gold-product>div{padding:3px 0;background:transparent}
+.biosite.moda-premium-gold[data-ready-model="jocastrya-estetica-original"][data-library-batch] .gold-services .gold-product h3{font-size:14px;line-height:1.2;color:var(--ink)}
+.biosite.moda-premium-gold[data-ready-model="jocastrya-estetica-original"][data-library-batch] .gold-services .gold-product p{font-size:11px;line-height:1.35;margin:5px 0;color:var(--ink)}
+.biosite.moda-premium-gold[data-ready-model="jocastrya-estetica-original"][data-library-batch] .gold-services .gold-product strong{font-size:14px;color:var(--gold)}
+.biosite.moda-premium-gold[data-ready-model="jocastrya-estetica-original"][data-library-batch] .gold-services .gold-product-contact{justify-self:end;display:flex;gap:5px;position:static;width:auto;height:auto;padding:8px 12px;margin:0;border:0;background:color-mix(in srgb,var(--gold) 82%,var(--ink));color:var(--paper);border-radius:10px;font-size:11px}
+.biosite.moda-premium-gold[data-ready-model="jocastrya-estetica-original"][data-library-batch] .gold-services .gold-product-contact span{display:inline}
+.biosite.moda-premium-gold[data-ready-model="jocastrya-estetica-original"][data-library-batch] .gold-gallery-grid{gap:5px}
+.biosite.moda-premium-gold[data-ready-model="jocastrya-estetica-original"][data-library-batch] [data-section-id="jocastrya-estetica-original-space"] .gold-gallery-grid{grid-template-columns:1fr}
+.biosite.moda-premium-gold[data-ready-model="jocastrya-estetica-original"][data-library-batch] .gold-hours-card{background:var(--card);color:var(--ink)}
+.biosite.moda-premium-gold[data-ready-model="jocastrya-estetica-original"][data-library-batch] .gold-whatsapp-card{min-height:72px;background:var(--gold-dark);color:var(--paper);border-radius:15px;padding:15px;gap:10px}
+.biosite.moda-premium-gold[data-ready-model="jocastrya-estetica-original"][data-library-batch] .gold-whatsapp-card h2{font-size:18px;color:inherit}
+.biosite.moda-premium-gold[data-ready-model="jocastrya-estetica-original"][data-library-batch] .gold-whatsapp-card>span:last-child{background:var(--gold);color:var(--paper)}
+.biosite.moda-premium-gold[data-ready-model="jocastrya-estetica-original"][data-library-batch] .gold-map-button{background:var(--gold);color:var(--paper);font-size:15px;padding:13px}
+.biosite.moda-premium-gold[data-ready-model="jocastrya-estetica-original"][data-library-batch] [data-section-id="jocastrya-estetica-original-footer"]{text-align:center;font-size:11px;color:var(--gold-dark)}
+@container(max-width:350px){.biosite.moda-premium-gold[data-ready-model="jocastrya-estetica-original"][data-library-batch] .gold-services .gold-product{column-gap:10px}.biosite.moda-premium-gold[data-ready-model="jocastrya-estetica-original"][data-library-batch] .gold-banner-copy{padding:13px 10px}.biosite.moda-premium-gold[data-ready-model="jocastrya-estetica-original"][data-library-batch] .gold-banner p{font-size:11px}}
+
+.biosite.moda-premium-gold[data-ready-model="jocastrya-estetica-original"][data-library-batch] .gold-services .gold-product{aspect-ratio:auto;color:var(--ink);background:transparent;width:100%;height:auto;isolation:auto}
+.biosite.moda-premium-gold[data-ready-model="jocastrya-estetica-original"][data-library-batch] .gold-services .gold-product::before{display:none}
+.biosite.moda-premium-gold[data-ready-model="jocastrya-estetica-original"][data-library-batch] .gold-services .gold-product>img{position:static;inset:auto;z-index:auto}
+.biosite.moda-premium-gold[data-ready-model="jocastrya-estetica-original"][data-library-batch] .gold-services .gold-product>div{grid-column:2;grid-row:1;width:auto;margin:0;padding:0}
+.biosite.moda-premium-gold[data-ready-model="jocastrya-estetica-original"][data-library-batch] .gold-services .gold-product h3{font-size:14px!important;overflow-wrap:anywhere}
+.biosite.moda-premium-gold[data-ready-model="jocastrya-estetica-original"][data-library-batch] .gold-services .gold-product-contact>span{display:inline}
+.biosite.moda-premium-gold[data-ready-model="jocastrya-estetica-original"][data-library-batch] .gold-actions strong{font-size:12px!important;letter-spacing:0}
+.biosite.moda-premium-gold[data-ready-model="jocastrya-estetica-original"][data-library-batch] [data-section-id="jocastrya-estetica-original-about"] .gold-banner{min-height:350px}
+.biosite.moda-premium-gold[data-ready-model="jocastrya-estetica-original"][data-library-batch] [data-section-id="jocastrya-estetica-original-space"] .gold-gallery-grid{grid-template-columns:none;grid-auto-flow:column;grid-auto-columns:100%;overflow-x:auto;scroll-snap-type:x mandatory}
+.biosite.moda-premium-gold[data-ready-model="jocastrya-estetica-original"][data-library-batch] [data-section-id="jocastrya-estetica-original-space"] .gold-gallery-grid>*{scroll-snap-align:start}
+
+@container(max-width:350px){.biosite.moda-premium-gold[data-ready-model="jocastrya-estetica-original"][data-library-batch] .gold-hours,.biosite.moda-premium-gold[data-ready-model="jocastrya-estetica-original"][data-library-batch] .gold-location{grid-column:1/-1}}
+
+/* Photograph crops are individual replaceable assets, with all copy rendered as editable text. */
+.biosite.moda-premium-gold[data-ready-model="jocastrya-estetica-original"][data-library-batch] .gold-hero{aspect-ratio:1.13;min-height:0;padding:24px 19px 18px}
+.biosite.moda-premium-gold[data-ready-model="jocastrya-estetica-original"][data-library-batch] .gold-hero-photo{left:auto;right:0;width:49%;height:100%;object-fit:cover;object-position:50% 50%}
+.biosite.moda-premium-gold[data-ready-model="jocastrya-estetica-original"][data-library-batch] .gold-hero-shade{background:linear-gradient(90deg,var(--paper) 45%,transparent 61%)}
+.biosite.moda-premium-gold[data-ready-model="jocastrya-estetica-original"][data-library-batch] .gold-hero-content{width:53%}
+.biosite.moda-premium-gold[data-ready-model="jocastrya-estetica-original"][data-library-batch] .gold-logo img{width:100%;height:100%;object-fit:contain;mix-blend-mode:multiply}
+.biosite.moda-premium-gold[data-ready-model="jocastrya-estetica-original"][data-library-batch] .gold-hero-content>h1{font-family:Georgia,serif;font-size:23px!important;letter-spacing:2px;text-transform:uppercase}
+.biosite.moda-premium-gold[data-ready-model="jocastrya-estetica-original"][data-library-batch] .gold-tagline{white-space:pre-line;font-size:8px;line-height:1.4;letter-spacing:1px}
+.biosite.moda-premium-gold[data-ready-model="jocastrya-estetica-original"][data-library-batch] .gold-hero-headline{font-family:JocastryaScript,cursive;font-size:clamp(24px,8cqw,37px)!important;line-height:1.15!important;font-style:normal;margin:22px 0 13px;letter-spacing:0}
+.biosite.moda-premium-gold[data-ready-model="jocastrya-estetica-original"][data-library-batch] .gold-hero-content>p{font-size:clamp(10px,3.1cqw,15px);line-height:1.25;margin:0}
+.biosite.moda-premium-gold[data-ready-model="jocastrya-estetica-original"][data-library-batch] .gold-body{padding:8px 15px 15px;gap:5px}
+.biosite.moda-premium-gold[data-ready-model="jocastrya-estetica-original"][data-library-batch] .gold-actions .action-icon-tile{height:58px!important;border-radius:13px!important;background:var(--gold-dark)!important}
+.biosite.moda-premium-gold[data-ready-model="jocastrya-estetica-original"][data-library-batch] .gold-actions .action-icon-tile svg{width:32px;height:32px}
+.biosite.moda-premium-gold[data-ready-model="jocastrya-estetica-original"][data-library-batch] .gold-actions strong{font-size:11px!important}
+.biosite.moda-premium-gold[data-ready-model="jocastrya-estetica-original"][data-library-batch] .gold-actions small{font-size:9px;line-height:1.2}
+.biosite.moda-premium-gold[data-ready-model="jocastrya-estetica-original"][data-library-batch] .gold-benefit-grid{gap:6px}
+.biosite.moda-premium-gold[data-ready-model="jocastrya-estetica-original"][data-library-batch] .gold-benefit-grid svg{margin-bottom:4px}
+.biosite.moda-premium-gold[data-ready-model="jocastrya-estetica-original"][data-library-batch] [data-section-id$="-care"] .gold-banner{min-height:0;aspect-ratio:1.68;border-radius:15px}
+.biosite.moda-premium-gold[data-ready-model="jocastrya-estetica-original"][data-library-batch] .gold-banner img{width:52%;object-fit:cover;object-position:center}
+.biosite.moda-premium-gold[data-ready-model="jocastrya-estetica-original"][data-library-batch] .gold-banner-copy{width:48%;background:var(--local-panel,var(--paper));padding:15px 12px}
+.biosite.moda-premium-gold[data-ready-model="jocastrya-estetica-original"][data-library-batch] [data-section-id$="-care"] .gold-banner h2{font:19px/1.2 Arial,sans-serif}
+.biosite.moda-premium-gold[data-ready-model="jocastrya-estetica-original"][data-library-batch] [data-section-id$="-care"] .gold-banner p{font-size:11px;line-height:1.3}
+.biosite.moda-premium-gold[data-ready-model="jocastrya-estetica-original"][data-library-batch] .gold-banner-button{padding:9px 11px;font-size:11px;white-space:normal}
+.biosite.moda-premium-gold[data-ready-model="jocastrya-estetica-original"][data-library-batch] .gold-services{padding-top:18px}
+.biosite.moda-premium-gold[data-ready-model="jocastrya-estetica-original"][data-library-batch] .gold-services>p{font-size:12px;margin:5px 0 0}
+.biosite.moda-premium-gold[data-ready-model="jocastrya-estetica-original"][data-library-batch] .gold-services .gold-product{grid-template-columns:34% minmax(0,1fr);grid-template-rows:1fr auto;column-gap:12px;min-height:90px}
+.biosite.moda-premium-gold[data-ready-model="jocastrya-estetica-original"][data-library-batch] .gold-services .gold-product>img{min-height:90px;aspect-ratio:1.34;height:100%;max-height:112px}
+.biosite.moda-premium-gold[data-ready-model="jocastrya-estetica-original"][data-library-batch] .gold-services .gold-product h3{font-size:13px!important;line-height:1.1}
+.biosite.moda-premium-gold[data-ready-model="jocastrya-estetica-original"][data-library-batch] .gold-services .gold-product p{font-size:11px;line-height:1.25;margin:4px 0}
+.biosite.moda-premium-gold[data-ready-model="jocastrya-estetica-original"][data-library-batch] .gold-services .gold-product strong{display:block;text-align:left;font-size:13px;position:absolute;bottom:7px}
+.biosite.moda-premium-gold[data-ready-model="jocastrya-estetica-original"][data-library-batch] .gold-services .gold-product>div{position:relative;padding-bottom:27px}
+.biosite.moda-premium-gold[data-ready-model="jocastrya-estetica-original"][data-library-batch] .gold-services .gold-product-contact{grid-row:2;grid-column:2;margin-top:-27px;padding:7px 9px;align-self:end;position:relative;z-index:1;background:var(--gold);font-size:11px}
+.biosite.moda-premium-gold[data-ready-model="jocastrya-estetica-original"][data-library-batch] [data-section-id$="-results"]{display:grid;grid-template-columns:42% 58%;grid-template-rows:auto 1fr;background:var(--gold-dark);color:var(--paper);border-radius:16px;padding:0;overflow:hidden;min-height:110px}
+.biosite.moda-premium-gold[data-ready-model="jocastrya-estetica-original"][data-library-batch] [data-section-id$="-results"] .gold-section-heading{grid-column:1;grid-row:1;padding:12px 10px 0;display:block}
+.biosite.moda-premium-gold[data-ready-model="jocastrya-estetica-original"][data-library-batch] [data-section-id$="-results"] h2{white-space:pre-line;font:19px/1.15 Arial,sans-serif;color:var(--paper)}
+.biosite.moda-premium-gold[data-ready-model="jocastrya-estetica-original"][data-library-batch] [data-section-id$="-results"] .gold-section-heading>span{display:none}
+.biosite.moda-premium-gold[data-ready-model="jocastrya-estetica-original"][data-library-batch] [data-section-id$="-results"]>p{font-size:11px;line-height:1.3;grid-column:1;grid-row:2;padding:4px 10px 10px;margin:0}
+.biosite.moda-premium-gold[data-ready-model="jocastrya-estetica-original"][data-library-batch] [data-section-id$="-results"] .gold-gallery-grid{grid-column:2;grid-row:1/3;grid-template-columns:1fr 1fr;gap:2px}
+.biosite.moda-premium-gold[data-ready-model="jocastrya-estetica-original"][data-library-batch] [data-section-id$="-results"] .gold-gallery-cell{height:100%;border-radius:0;min-width:0}
+.biosite.moda-premium-gold[data-ready-model="jocastrya-estetica-original"][data-library-batch] [data-section-id$="-results"] .gold-gallery-cell>div:first-child{height:100%}
+.biosite.moda-premium-gold[data-ready-model="jocastrya-estetica-original"][data-library-batch] [data-section-id$="-results"] img{height:100%;aspect-ratio:auto;object-fit:cover}
+.biosite.moda-premium-gold[data-ready-model="jocastrya-estetica-original"][data-library-batch] [data-section-id$="-results"] .gold-gallery-caption{bottom:5px;background:#503320dd;border-radius:20px;font-size:9px;padding:3px 5px;width:fit-content;left:6px}
+.biosite.moda-premium-gold[data-ready-model="jocastrya-estetica-original"][data-library-batch] [data-section-id$="-about"]{position:relative;margin-top:10px;padding:0}
+.biosite.moda-premium-gold[data-ready-model="jocastrya-estetica-original"][data-library-batch] [data-section-id$="-about"]>p{position:absolute;top:16px;left:16px;z-index:3;background:#b69782;color:var(--paper);border-radius:20px;font-size:10px;padding:5px 12px;margin:0}
+.biosite.moda-premium-gold[data-ready-model="jocastrya-estetica-original"][data-library-batch] [data-section-id$="-about"] .gold-banner{min-height:320px;aspect-ratio:1.1;border-radius:0}
+.biosite.moda-premium-gold[data-ready-model="jocastrya-estetica-original"][data-library-batch] [data-section-id$="-about"] .gold-banner img{right:0;left:auto;width:48%;height:100%;object-fit:cover}
+.biosite.moda-premium-gold[data-ready-model="jocastrya-estetica-original"][data-library-batch] [data-section-id$="-about"] .gold-banner-copy{width:55%;padding:50px 12px 10px 16px;background:linear-gradient(90deg,var(--paper) 89%,transparent)}
+.biosite.moda-premium-gold[data-ready-model="jocastrya-estetica-original"][data-library-batch] [data-section-id$="-about"] h2{font-size:26px;line-height:1.05;letter-spacing:-1px}
+.biosite.moda-premium-gold[data-ready-model="jocastrya-estetica-original"][data-library-batch] .jocastrya-script-line{display:block;font:40px/1.1 JocastryaScript,cursive;letter-spacing:0}
+.biosite.moda-premium-gold[data-ready-model="jocastrya-estetica-original"][data-library-batch] [data-section-id$="-about"] .gold-banner p{font-size:11px;line-height:1.4;margin:9px 0}
+.biosite.moda-premium-gold[data-ready-model="jocastrya-estetica-original"][data-library-batch] [data-section-id$="-space"] .gold-gallery-grid{grid-template-columns:1fr;border-radius:13px}
+.biosite.moda-premium-gold[data-ready-model="jocastrya-estetica-original"][data-library-batch] [data-section-id$="-space"] img{aspect-ratio:3.7;object-fit:cover}
+.biosite.moda-premium-gold[data-ready-model="jocastrya-estetica-original"][data-library-batch] [data-section-id$="-contact"] .gold-whatsapp-card{min-height:85px;padding:15px;background:linear-gradient(90deg,var(--gold-dark) 45%,transparent 100%);position:relative;isolation:isolate;overflow:hidden}
+.biosite.moda-premium-gold[data-ready-model="jocastrya-estetica-original"][data-library-batch] .gold-cta-photo{position:absolute;right:0;width:52%;height:100%;object-fit:cover;z-index:-2;opacity:.6}
+.biosite.moda-premium-gold[data-ready-model="jocastrya-estetica-original"][data-library-batch] [data-section-id$="-contact"] h2{font-size:17px}
+@container(max-width:350px){.biosite.moda-premium-gold[data-ready-model="jocastrya-estetica-original"][data-library-batch] .gold-services .gold-product p{font-size:10px}.biosite.moda-premium-gold[data-ready-model="jocastrya-estetica-original"][data-library-batch] [data-section-id$="-about"] .gold-banner{min-height:340px}.biosite.moda-premium-gold[data-ready-model="jocastrya-estetica-original"][data-library-batch] [data-section-id$="-care"] .gold-banner{min-height:205px}.biosite.moda-premium-gold[data-ready-model="jocastrya-estetica-original"][data-library-batch] .gold-filter-bar a{font-size:9px;padding:5px 6px}}
+.biosite.moda-premium-gold[data-ready-model="jocastrya-estetica-original"][data-library-batch][data-responsive-contract=stable][data-responsive-contract=stable] .gold-hero .gold-tagline{color:var(--gold-dark);text-shadow:none;margin:3px 0 0}
+.biosite.moda-premium-gold[data-ready-model="jocastrya-estetica-original"][data-library-batch] .gold-hero-content>p{width:100%;max-width:100%;font-size:12px!important;line-height:1.25!important}
+.biosite.moda-premium-gold[data-ready-model="jocastrya-estetica-original"][data-library-batch][data-responsive-contract=stable][data-responsive-contract=stable] [data-section-id$="-about"] .gold-banner-copy{padding:50px 12px 12px 16px}
+.biosite.moda-premium-gold[data-ready-model="jocastrya-estetica-original"][data-library-batch][data-responsive-contract=stable][data-responsive-contract=stable] [data-section-id$="-care"] .gold-banner-copy{padding:14px 12px}
+.biosite.moda-premium-gold[data-ready-model="jocastrya-estetica-original"][data-library-batch] [data-section-id$="-about"] .gold-banner h2{font-family:Georgia,serif;font-size:26px!important;font-weight:400;letter-spacing:-.7px}
+.biosite.moda-premium-gold[data-ready-model="jocastrya-estetica-original"][data-library-batch][data-responsive-contract=stable][data-responsive-contract=stable] .gold-whatsapp-card:has(.gold-cta-photo):before{background:linear-gradient(90deg,var(--gold-dark) 0%,color-mix(in srgb,var(--gold-dark) 85%,transparent) 50%,transparent 100%)}
+.biosite.moda-premium-gold[data-ready-model="jocastrya-estetica-original"][data-library-batch] .gold-cta-photo{inset:0 0 0 auto;width:50%;opacity:1}
+.biosite.moda-premium-gold[data-ready-model="jocastrya-estetica-original"][data-library-batch] .gold-hours-card h2{font-size:13px!important;white-space:nowrap;gap:5px}
+.biosite.moda-premium-gold[data-ready-model="jocastrya-estetica-original"][data-library-batch] .gold-hours-card{padding:10px 8px}
+.biosite.moda-premium-gold[data-ready-model="jocastrya-estetica-original"][data-library-batch] .gold-hours-card>div{font-size:10px;padding:7px 0;gap:3px}
+.biosite.moda-premium-gold[data-ready-model="jocastrya-estetica-original"][data-library-batch] .gold-map-button{background:transparent;color:var(--ink);font-size:13px;padding:10px 0;font-weight:600;justify-content:flex-start}
+.biosite.moda-premium-gold[data-ready-model="jocastrya-estetica-original"][data-library-batch] .gold-location-media{height:85px}
+@container(max-width:350px){.biosite.moda-premium-gold[data-ready-model="jocastrya-estetica-original"][data-library-batch] .gold-hero{min-height:335px}.biosite.moda-premium-gold[data-ready-model="jocastrya-estetica-original"][data-library-batch] .gold-hero-content>h1{font-size:19px!important;letter-spacing:1px}.biosite.moda-premium-gold[data-ready-model="jocastrya-estetica-original"][data-library-batch] .gold-benefit-grid :is(h3,p){font-size:9px!important;overflow-wrap:normal;word-break:normal}.biosite.moda-premium-gold[data-ready-model="jocastrya-estetica-original"][data-library-batch] [data-section-id$="-about"] .gold-banner h2{font-size:21px!important}.biosite.moda-premium-gold[data-ready-model="jocastrya-estetica-original"][data-library-batch] .jocastrya-script-line{font-size:32px}}
+
+/* Final portrait integration: only opacity masks, never retouching the professional's face. */
+.biosite.moda-premium-gold[data-ready-model="jocastrya-estetica-original"][data-library-batch] .gold-hero{background:radial-gradient(ellipse at 25% 30%,color-mix(in srgb,var(--paper) 65%,white),transparent 57%),var(--paper);min-height:355px;aspect-ratio:1.07;padding:24px 18px 18px}
+.biosite.moda-premium-gold[data-ready-model="jocastrya-estetica-original"][data-library-batch] .gold-hero-photo{width:62%;object-fit:var(--local-image-fit,cover);object-position:var(--local-image-position,50% 50%);mask-image:linear-gradient(90deg,transparent 0%,#000 25%,#000 100%);border-radius:0}
+.biosite.moda-premium-gold[data-ready-model="jocastrya-estetica-original"][data-library-batch] .gold-hero-shade{background:linear-gradient(0deg,var(--paper) 0%,color-mix(in srgb,var(--paper) 25%,transparent) 6%,transparent 16%);pointer-events:none}
+.biosite.moda-premium-gold[data-ready-model="jocastrya-estetica-original"][data-library-batch] .gold-hero-content{width:52%;max-width:52%}
+.biosite.moda-premium-gold[data-ready-model="jocastrya-estetica-original"][data-library-batch] .gold-hero-content>.gold-logo{height:55px;width:55px;border-radius:0}
+.biosite.moda-premium-gold[data-ready-model="jocastrya-estetica-original"][data-library-batch] .gold-hero-headline{font-family:var(--local-font,JocastryaScript,cursive);margin:28px 0 18px;font-size:clamp(27px,8.2cqw,39px)!important;line-height:1.13!important}
+.biosite.moda-premium-gold[data-ready-model="jocastrya-estetica-original"][data-library-batch] .gold-body{gap:5px;background:var(--paper);padding-top:0}
+.biosite.moda-premium-gold[data-ready-model="jocastrya-estetica-original"][data-library-batch] .gold-actions .action-icon-tile{height:60px!important;box-shadow:inset 0 1px 0 #ffffff15}
+.biosite.moda-premium-gold[data-ready-model="jocastrya-estetica-original"][data-library-batch] .gold-actions .action-tile-label{gap:3px}
+.biosite.moda-premium-gold[data-ready-model="jocastrya-estetica-original"][data-library-batch] .gold-actions strong{font-weight:600}
+.biosite.moda-premium-gold[data-ready-model="jocastrya-estetica-original"][data-library-batch] .gold-hero-content>h1{font-family:var(--local-font,Georgia,serif);font-size:21px!important;letter-spacing:1.2px}
+.biosite.moda-premium-gold[data-ready-model="jocastrya-estetica-original"][data-library-batch] .gold-services .gold-product>img{object-fit:var(--local-image-fit,cover);object-position:var(--local-image-position,center);border-radius:12px}
+.biosite.moda-premium-gold[data-ready-model="jocastrya-estetica-original"][data-library-batch][data-responsive-contract=stable][data-responsive-contract=stable] .gold-services .gold-product>div{padding:2px 0 28px}
+.biosite.moda-premium-gold[data-ready-model="jocastrya-estetica-original"][data-library-batch] .gold-services .gold-product h3{font-family:Arial,sans-serif;font-weight:600;letter-spacing:-.15px;margin:0}
+.biosite.moda-premium-gold[data-ready-model="jocastrya-estetica-original"][data-library-batch] .gold-services .gold-product strong{font-family:Arial,sans-serif;font-weight:600;letter-spacing:0}
+.biosite.moda-premium-gold[data-ready-model="jocastrya-estetica-original"][data-library-batch] [data-section-id$="-about"] .gold-banner{border-radius:18px;min-height:335px;background:var(--paper)}
+.biosite.moda-premium-gold[data-ready-model="jocastrya-estetica-original"][data-library-batch] [data-section-id$="-about"] .gold-banner img{width:60%;mask-image:linear-gradient(90deg,transparent,#000 28%,#000);object-fit:var(--local-image-fit,cover);object-position:var(--local-image-position,center)}
+.biosite.moda-premium-gold[data-ready-model="jocastrya-estetica-original"][data-library-batch] [data-section-id$="-about"] .gold-banner-shade{background:none}
+.biosite.moda-premium-gold[data-ready-model="jocastrya-estetica-original"][data-library-batch] [data-section-id$="-about"] .gold-banner-copy{background:linear-gradient(90deg,var(--paper) 90%,transparent);width:54%}
+.biosite.moda-premium-gold[data-ready-model="jocastrya-estetica-original"][data-library-batch] [data-section-id$="-space"] img{aspect-ratio:2.73;object-fit:var(--local-image-fit,cover);object-position:var(--local-image-position,center)}
+.biosite.moda-premium-gold[data-ready-model="jocastrya-estetica-original"][data-library-batch] [data-section-id$="-contact"] .gold-whatsapp-card{grid-template-columns:40px minmax(0,1fr) 32px;gap:12px}
+.biosite.moda-premium-gold[data-ready-model="jocastrya-estetica-original"][data-library-batch] [data-section-id$="-contact"] h2{font-family:Arial,sans-serif;font-weight:500;font-size:17px}
+@container(max-width:350px){.biosite.moda-premium-gold[data-ready-model="jocastrya-estetica-original"][data-library-batch] .gold-hero{min-height:335px;padding-inline:14px}.biosite.moda-premium-gold[data-ready-model="jocastrya-estetica-original"][data-library-batch] .gold-hero-headline{font-size:27px!important;margin:24px 0 15px}.biosite.moda-premium-gold[data-ready-model="jocastrya-estetica-original"][data-library-batch] .gold-hero-content>p{font-size:11px!important}.biosite.moda-premium-gold[data-ready-model="jocastrya-estetica-original"][data-library-batch] [data-section-id$="-about"] .gold-banner{min-height:355px}.biosite.moda-premium-gold[data-ready-model="jocastrya-estetica-original"][data-library-batch] .gold-services .gold-product-contact{font-size:10px;padding:7px 8px}}

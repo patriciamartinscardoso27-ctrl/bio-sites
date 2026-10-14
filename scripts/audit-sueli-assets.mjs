@@ -1,0 +1,5 @@
+import {readdir,readFile,writeFile} from 'node:fs/promises'
+import sharp from 'sharp'
+const dir='public/images/sueli-nascimento',files=await readdir(dir),results=[]
+for(const file of files){if(!/^[a-z0-9-]+\.(webp|svg)$/.test(file))throw Error('Capitalização ou nome não portátil: '+file);const path='/images/sueli-nascimento/'+file,response=await fetch('http://127.0.0.1:5173'+path),bytes=Buffer.from(await response.arrayBuffer()),local=await readFile(dir+'/'+file);if(!response.ok||!response.headers.get('content-type')?.startsWith('image/')||!bytes.equals(local))throw Error('Asset não servido corretamente: '+path);const meta=await sharp(local).metadata();results.push({path,status:response.status,mime:response.headers.get('content-type'),width:meta.width,height:meta.height,bytes:local.length})}
+await writeFile('artifacts/sueli-nascimento/assets-audit.json',JSON.stringify({checkedAt:new Date().toISOString(),allPassed:true,assets:results},null,2));console.log(JSON.stringify({allPassed:true,count:results.length,status:'Todos os assets retornam 200, MIME de imagem e bytes iguais aos arquivos locais.'}))

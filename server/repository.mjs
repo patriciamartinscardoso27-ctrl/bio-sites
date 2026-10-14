@@ -53,7 +53,12 @@ export function createRepository(sql,{publicationWritesEnabled=false,multiuserEn
     forActor(user,ownerId){if(!multiuserEnabled)return this;if(!user?.id||user.status!=='active')throw new ApiError(401,'Entre novamente para continuar.');if(ownerId&&(!isUuid(ownerId)||user.role!=='principal'))throw new ApiError(403,'Filtro exclusivo do Administrador principal.');return createRepository(sql,{publicationWritesEnabled,multiuserEnabled,actor:user,selectedOwner:ownerId})},
     async getPublished(slug){
       validateSlug(slug)
-      return safe(async()=>{const rows=await execute(sql`SELECT b.slug,b.published_revision::text AS revision,b.published_at AS "publishedAt",r.content FROM public.biosites b JOIN public.biosite_revisions r ON r.biosite_id=b.id AND r.version=b.published_revision WHERE b.slug=${slug} AND b.status='published'`);if(!rows.length)throw new ApiError(404,'Página não encontrada.');const row=normalize(rows[0]);return {...row,content:publicContent(row.content)}})
+      return safe(async()=>{const rows=await execute(sql`SELECT b.slug,b.published_revision::text AS revision,b.published_at AS "publishedAt",r.content FROM public.biosites b JOIN public.biosite_revisions r ON r.biosite_id=b.id AND r.version=b.published_revision WHERE b.slug=${slug} AND b.status='published'`);if(!rows.length){
+        // Public availability only. Never read revision content outside the scoped RLS transaction.
+        const unavailable=await sql`SELECT 1 AS suspended FROM public.biosites WHERE slug=${slug} AND status='unpublished' AND published_revision IS NOT NULL LIMIT 1`;
+        if(unavailable.length)return {suspended:true};
+        throw new ApiError(404,'Página não encontrada.');
+      }const row=normalize(rows[0]);return {...row,content:publicContent(row.content)}})
     },
     async publish(id,lockVersion,draftRevision){
       if(!publicationWritesEnabled)throw new ApiError(403,'Publicação remota aguardando autorização de ativação.')
@@ -64,6 +69,15 @@ export function createRepository(sql,{publicationWritesEnabled=false,multiuserEn
       if(!publicationWritesEnabled)throw new ApiError(403,'Publicação remota aguardando autorização de ativação.')
       checkId(id);validateVersion(lockVersion);assertPublishable(await this.get(id))
       return safe(async()=>{const rows=await execute(sql`UPDATE public.biosites b SET status='unpublished' WHERE b.id=${id}::uuid AND ${ownership} AND b.lock_version=${lockVersion}::bigint RETURNING b.id`);if(!rows.length)throw new ApiError(409,'Este BioSite mudou. Reabra antes de retirar do ar.');return this.get(id)})
+    },
+    async suspend(id,lockVersion){
+      const current=await this.get(id);if(current.status!=='published')throw new ApiError(409,'Somente BioSites ativos podem ser suspensos.');return this.unpublish(id,lockVersion)
+    },
+    async reactivate(id,lockVersion){
+      if(!publicationWritesEnabled)throw new ApiError(403,'Publicação remota aguardando autorização de ativação.')
+      checkId(id);validateVersion(lockVersion);const current=await this.get(id);assertPublishable(current)
+      if(!current.publishedRevision)throw new ApiError(409,'Publique o BioSite antes de reativar.')
+      return safe(async()=>{const rows=await execute(sql`UPDATE public.biosites b SET status='published' WHERE b.id=${id}::uuid AND ${ownership} AND b.lock_version=${lockVersion}::bigint AND b.status='unpublished' AND b.published_revision IS NOT NULL RETURNING b.id`);if(!rows.length)throw new ApiError(409,'Este BioSite mudou. Reabra antes de reativar.');return this.get(id)})
     },
     async isAdminEmail(adminId,email) {
       return safe(async()=>Boolean((await execute(sql`SELECT 1 FROM neon_auth."user" WHERE id=${adminId} AND lower(email)=lower(${email}) LIMIT 1`)).length))

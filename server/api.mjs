@@ -123,11 +123,11 @@ export function createApi({ repository, getRepository = connectRepository, getAu
         throw new ApiError(404,'Operação de venda não disponível.')
       }
       if(pathname==='/api/publication/config'&&req.method==='GET')return reply(200,{origin:requestOrigin(req),writesEnabled:Boolean((await repo()).publicationWritesEnabled)})
-      const publication=/^\/api\/biosites\/([^/]+)\/(publish|unpublish)$/.exec(pathname)
+      const publication=/^\/api\/biosites\/([^/]+)\/(publish|unpublish|suspend|reactivate)$/.exec(pathname)
       if(publication&&req.method==='POST'){
         const value=await body(req,8192),allowed=publication[2]==='publish'?['lockVersion','draftRevision']:['lockVersion']
         if(Object.keys(value).some(k=>!allowed.includes(k)))throw new ApiError(400,'Campos não permitidos.')
-        const db=await scopedRepo();return reply(200,publication[2]==='publish'?await db.publish(publication[1],value.lockVersion,value.draftRevision):await db.unpublish(publication[1],value.lockVersion))
+        const db=await scopedRepo();return reply(200,publication[2]==='publish'?await db.publish(publication[1],value.lockVersion,value.draftRevision):publication[2]==='reactivate'?await db.reactivate(publication[1],value.lockVersion):publication[2]==='suspend'?await db.suspend(publication[1],value.lockVersion):await db.unpublish(publication[1],value.lockVersion))
       }
       if(pathname==='/api/reference/status'&&req.method==='GET')return reply(200,await vision.status())
       if(pathname==='/api/reference/analyze'&&req.method==='POST')return reply(200,await vision.analyze(await body(req,7*1024*1024),session.id))

@@ -10,11 +10,13 @@ import { modelDesigns } from '../data/modelDesigns'
 import { PremiumBioSite } from './PremiumBioSite'
 import {FlexibleBioSite} from './biosite/FlexibleBioSite'
 import { CollectionBioSite } from './CollectionBioSite'
+import {SueliLayout} from './biosite/SueliLayout'
 
 
 
 export function BioSite(input: { bio: Bio; embedded?: boolean }) {
   const props={...input,bio:resolvePalette(input.bio)}
+  if(props.bio.layoutPreset==='sueli-nascimento')return <SueliLayout {...props}/>
   if (props.bio.layoutPreset) return <FashionPremiumLayout {...props}/>
   if (props.bio.renderMode==='flexible') return <FlexibleBioSite {...props}/>
   if (props.bio.manual) return <CollectionBioSite {...props}/>

@@ -31,6 +31,8 @@ export const biositesApi = {
   publicationConfig:()=>request<{origin:string;writesEnabled:boolean}>('/api/publication/config'),
   publish:(record:SavedBioSite)=>request<SavedBioSite>(`/api/biosites/${encodeURIComponent(record.id)}/publish`,{method:'POST',body:JSON.stringify({lockVersion:record.lockVersion,draftRevision:record.draftRevision})}),
   unpublish:(record:SavedBioSite)=>request<SavedBioSite>(`/api/biosites/${encodeURIComponent(record.id)}/unpublish`,{method:'POST',body:JSON.stringify({lockVersion:record.lockVersion})}),
+  suspend:(record:SavedBioSite)=>request<SavedBioSite>(`/api/biosites/${encodeURIComponent(record.id)}/suspend`,{method:'POST',body:JSON.stringify({lockVersion:record.lockVersion})}),
+  reactivate:(record:SavedBioSite)=>request<SavedBioSite>(`/api/biosites/${encodeURIComponent(record.id)}/reactivate`,{method:'POST',body:JSON.stringify({lockVersion:record.lockVersion})}),
 }
 export function summarize(saved: SavedBioSite): BioSiteSummary {
   const {content,templateId: _templateId,...metadata}=saved
