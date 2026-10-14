@@ -56,4 +56,22 @@ test('client location connects both map buttons without touching other layouts',
  assert.equal(current.mapsUrl,'')
 })
 
+test('empty beverage image opens the image uploader and can be replaced like the other cards',async()=>{
+ const b=createBio(model),section=b.sections.find(s=>s.kind==='categories')
+ await React.act(async()=>root.render(React.createElement(BioSite,{bio:b,embedded:true})))
+ const slot=document.querySelector('.pg-category-symbol'),target=resolveEditorTarget(slot,b)
+ assert.equal(target.kind,'entry');assert.equal(target.collection,'highlights');assert.equal(target.part,'image');assert.equal(target.field,'image')
+ const {ContextualEntryEditor}=await vite.ssrLoadModule('/src/components/ContextualEntryEditor.tsx')
+ let patch
+ await React.act(async()=>root.render(React.createElement(ContextualEntryEditor,{bio:b,section,collection:'highlights',index:target.index,part:target.part,field:target.field,onChange:p=>patch=p,onRemoved:()=>{}})))
+ assert(document.querySelector('input[type=file]'),'upload available immediately')
+ const input=document.querySelector('[data-editor-control=image]')
+ await React.act(async()=>{Object.getOwnPropertyDescriptor(window.HTMLInputElement.prototype,'value').set.call(input,'/images/paty-galetos/galeto.webp');input.dispatchEvent(new window.Event('input',{bubbles:true}))})
+ assert(patch);const updated={...b,...patch}
+ await React.act(async()=>root.render(React.createElement(BioSite,{bio:updated})))
+ const card=[...document.querySelectorAll('[data-highlight-id]')].find(e=>e.textContent==='Bebidas')
+ assert.equal(card.querySelector('img').getAttribute('src'),'/images/paty-galetos/galeto.webp');assert.equal(card.querySelector('.pg-category-symbol'),null)
+ assert.equal(section.content.highlights[target.index].image,'','original remains intact')
+})
+
 test('cleanup',async()=>{await React.act(async()=>root.unmount());await vite.close();dom.window.close()})
