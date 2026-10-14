@@ -1,0 +1,9 @@
+import sharp from 'sharp'
+import {mkdir,writeFile,unlink} from 'node:fs/promises'
+const temp='C:/Users/W10/AppData/Local/Temp/',dir='public/images/paty-galetos'
+const originals={logo:'aad7378e-aee6-49cf-8234-5eb312c8e104',costela:'f311bd12-fd46-457a-8c44-518423cee3e8',delivery:'c382c2ca-3a88-422c-9d80-234f6addfdec',box:'be230efc-0f7c-4995-beb8-281a612bba17',marmita:'824da468-9a4e-4ac1-918f-d4165dbe0b6c',bowl:'1b8ea4f6-a04b-41b2-b1b2-d48e798bccd0',galeto:'7662ef7c-ce11-41f2-892b-81202cab8b7b',bags:'9cb25bf9-1af3-4e8d-b698-b05fba905b3e'}
+const assets={logo:['logo',[46,489,620,620]],hero:['galeto',[0,190,720,990]],marmita:['marmita',[0,475,720,715]],costela:['costela',[0,184,720,1010]],galeto:['galeto',[0,190,720,990]],'category-galeto':['galeto',[20,406,680,730]],'category-costela':['costela',[10,194,690,975]],'category-marmita':['bowl',[0,870,720,485]],tropeiro:['bowl',[163,1054,428,202]],acompanhamentos:['marmita',[36,755,242,281]],bag:['bags',[0,595,720,650]],'gallery-box':['box',[0,650,720,594]],'gallery-marmita':['bowl',[0,815,720,540]],'gallery-galeto':['costela',[0,184,720,1010]],banner:['bowl',[0,870,720,485]],'menu-banner':['galeto',[0,190,720,990]],delivery:['delivery',[0,370,720,990]]}
+await mkdir(dir,{recursive:true});const manifest=[]
+for(const [name,[key,[left,top,width,height]]] of Object.entries(assets)){const source=temp+'codex-clipboard-'+originals[key]+'.jpg';await sharp(source).extract({left,top,width,height}).webp({quality:96}).toFile(dir+'/'+name+'.webp');manifest.push({asset:name+'.webp',original:originals[key]+'.jpg',crop:{left,top,width,height},purpose:'Only client-provided original screenshots; no mockup crops or generated images.'})}
+try{await unlink(dir+'/bebidas.webp')}catch{}
+await writeFile(dir+'/sources.json',JSON.stringify(manifest,null,2));console.log('Imported '+manifest.length+' assets from client originals; no mockup source.')

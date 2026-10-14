@@ -11,11 +11,13 @@ import { PremiumBioSite } from './PremiumBioSite'
 import {FlexibleBioSite} from './biosite/FlexibleBioSite'
 import { CollectionBioSite } from './CollectionBioSite'
 import {SueliLayout} from './biosite/SueliLayout'
+import {PatyGaletosLayout} from './biosite/PatyGaletosLayout'
 
 
 
 export function BioSite(input: { bio: Bio; embedded?: boolean }) {
   const props={...input,bio:resolvePalette(input.bio)}
+  if(props.bio.layoutPreset==='paty-galetos')return <PatyGaletosLayout {...props}/>
   if(props.bio.layoutPreset==='sueli-nascimento')return <SueliLayout {...props}/>
   if (props.bio.layoutPreset) return <FashionPremiumLayout {...props}/>
   if (props.bio.renderMode==='flexible') return <FlexibleBioSite {...props}/>

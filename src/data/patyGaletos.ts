@@ -1,0 +1,28 @@
+import type {Bio,Template,Action,GenericIcon} from '../types/biosite'
+import {section} from './officialBeautyModels'
+import {entryTextKey} from '../lib/entryText'
+export const patyGaletosId='paty-galetos'
+ const image=(name:string)=>name==='bebidas'?'':'/images/paty-galetos/'+name+'.webp'
+export function patyGaletos(base:Bio):Template{
+ const id=patyGaletosId
+ const link=(target:string,label:string,icon:GenericIcon='external'):Action=>({id:id+'-link-'+target,kind:'custom',icon,label,message:'',destination:'section',sectionId:id+'-'+target})
+ const order=(suffix:string):Action=>({id:id+'-order-'+suffix,kind:'whatsapp',icon:'whatsapp',label:'Pedir pelo WhatsApp',message:'Olá! Gostaria de fazer um pedido.'})
+ const benefits=(suffix:string,entries:[string,GenericIcon][])=>{const s=section(id+'-'+suffix,'benefits','',{content:{benefits:entries.map(([text])=>text)},entryIcons:{}});entries.forEach(([text,icon],i)=>s.entryIcons![entryTextKey('benefits',text)]={id:id+'-'+suffix+'-'+i,kind:'custom',icon,label:text,message:''});return s}
+ const categories=[['Galeto Assado','category-galeto','galetos'],['Costela Suína','category-costela','costela'],['Marmitas','category-marmita','marmitas'],['Feijão Tropeiro','tropeiro','acompanhamentos'],['Acompanhamentos','acompanhamentos','acompanhamentos'],['Bebidas','bebidas','bebidas']]
+ const b:Bio={...structuredClone(base),id,layoutPreset:id,name:'PATY\nGALETOS',category:'Restaurante / Lanchonete',style:'gourmet-dark',headline:'GALETOS\nASSADOS',tagline:'',description:'Marmitas e almoço caseiro\ncom muito sabor!',logo:image('logo'),cover:image('hero'),phone:'',instagram:'',address:'',mapsUrl:'',telephone:'',email:'',facebook:'',tiktok:'',reviewsUrl:'',website:'',menuUrl:'',client:undefined,color:'#ff7900',appearance:{theme:'dark',font:'sans',buttons:'rounded',cards:'rounded',background:'#0b0804',panel:'#231306',secondary:'#341800',text:'#fff7e8',highlight:'#ff7900',border:'#85501c'},identity:{brandColors:['#ff7900','#0b0804','#fff0c9']},textVisual:{headline:{font:'condensed',fontSize:56,weight:'bold'},name:{font:'serif',fontSize:24,weight:'bold'}},heroVisual:{overlay:20,imagePositionX:80,imagePositionY:40},hours:'Segunda à Sexta: 09:00 - 19:00\nSábado: 09:00 - 17:00\nDomingo: Fechado',actions:[],services:[],products:[],photos:[],highlights:[],benefits:[],sections:[]}
+ b.sections=[
+ section(id+'-actions','actions','',{content:{actions:[{...order('main'),label:'WhatsApp',subtitle:'Peça agora',iconColorMode:'original'},{id:id+'-instagram',kind:'instagram',icon:'instagram',label:'Instagram',subtitle:'Nos siga',message:'',iconColorMode:'original'},{id:id+'-location-action',kind:'location',icon:'pin',label:'Como chegar',subtitle:'Ver no mapa',message:''},{...link('products','Nosso cardápio','bag'),subtitle:'Ver opções'}]}}),
+ section(id+'-delivery','promotion','Entregamos em toda a região!',{text:'Com segurança e rapidez',action:order('delivery'),ctaLabel:'Consultar entrega'}),
+ section(id+'-home-banner','promotion','MARMITAS\nE ALMOÇO\nCASEIRO',{text:'Qualidade e sabor\ntodos os dias!',image:image('banner'),ctaLabel:'Ver cardápio',action:link('products','Ver cardápio')}),
+ benefits('home-benefits',[['Sabor|Incomparável','food'],['Comida|Caseira','food'],['Entrega|Rápida','delivery'],['Clientes|Satisfeitos','heart']]),
+ section(id+'-products','products','Nossos Destaques',{ctaLabel:'Ver todos',action:link('categories','Ver todos'),content:{items:[['Marmita Caprichada','Arroz, feijão, farofa\ne salada.','R$ 25,00','marmita','marmitas'],['Costela Suína','Suculenta e no\nponto certo.','R$ 28,00','costela','costela'],['Galeto Assado','Sabor que faz\na diferença.','R$ 24,00','galeto','galetos']].map(([title,description,price,photo,category],i)=>({id:id+'-product-'+i,title,description,price,image:image(photo),categoryId:category,action:order('product-'+i)}))}}),
+ section(id+'-categories','categories','Cardápio',{content:{actions:[['Todos','all'],['Marmitas','marmitas'],['Galetos','galetos'],['Costela','costela'],['Acompanhamentos','acompanhamentos']].map(([label,key])=>({...link('categories',label),id:key})),highlights:categories.map(([label,photo,category],i)=>({id:id+'-category-'+i,label,image:image(photo),caption:category,action:link('products','Ver '+label)}))}}),
+ section(id+'-menu-banner','promotion','COMIDA BOA\nTODO DIA',{text:'Do nosso forno para a sua mesa!',image:image('menu-banner'),action:order('menu-banner')}),
+ section(id+'-about','about','Sobre Nós',{text:'A Paty Galetos nasceu com o propósito de levar galeto assado, marmitas e comida caseira de qualidade para o seu dia a dia. Aqui você encontra refeições saborosas, bem temperadas e feitas com muito carinho, sempre pensando no melhor para nossos clientes.',image:image('bag')}),
+ benefits('about-benefits',[['Qualidade|em cada receita','food'],['Ingredientes|selecionados','leaf'],['Entrega|Rápida','delivery'],['Clientes|Satisfeitos','heart']]),
+ section(id+'-gallery','gallery','Galeria',{ctaLabel:'Ver mais',action:link('gallery','Ver mais'),content:{photos:[image('gallery-box'),image('gallery-marmita'),image('gallery-galeto')]}}),
+ section(id+'-hours','hours','Nosso Horário'),
+ section(id+'-location','location','Nossa Localização',{text:'Nova Almeida - ES\nEndereço completo\n(ver no mapa)',ctaLabel:'Como chegar',action:{id:id+'-map',kind:'location',icon:'pin',label:'Como chegar',message:''}}),
+ section(id+'-order','whatsapp','Faça seu pedido agora\npelo WhatsApp',{action:order('footer')})]
+ return {id,categoryId:'food',label:'Paty Galetos — Assados & Marmitas',subtitle:'Preto e laranja, galetos assados, destaques, cardápio e delivery.',icon:'🔥',bio:b}
+}

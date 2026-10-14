@@ -35,7 +35,7 @@ function image(value) {
   // Existing URL/data images are preserved; this is not a storage/upload API.
   if (value === '') return
   // Bundled official assets must stay portable when a preset is saved or cloned.
-  if (/^\/images\/(sueli-nascimento|official-batch-2|lote-two|lote-three|lote-four|lote-five|lote-six|lote-seven)\/[a-z0-9][a-z0-9-]*\.(png|jpeg|webp|svg)$/i.test(value)) return
+  if (/^\/images\/(paty-galetos|sueli-nascimento|official-batch-2|lote-two|lote-three|lote-four|lote-five|lote-six|lote-seven)\/[a-z0-9][a-z0-9-]*\.(png|jpeg|webp|svg)$/i.test(value)) return
   if (/^data:image\/(png|jpeg|webp);base64,[a-z0-9+/=\s]+$/i.test(value)) return
   try {
     const url = new URL(value)

@@ -1,0 +1,189 @@
+[
+  {
+    "asset": "logo.webp",
+    "original": "aad7378e-aee6-49cf-8234-5eb312c8e104.jpg",
+    "crop": {
+      "left": 46,
+      "top": 489,
+      "width": 620,
+      "height": 620
+    },
+    "purpose": "Only client-provided original screenshots; no mockup crops or generated images."
+  },
+  {
+    "asset": "hero.webp",
+    "original": "7662ef7c-ce11-41f2-892b-81202cab8b7b.jpg",
+    "crop": {
+      "left": 0,
+      "top": 190,
+      "width": 720,
+      "height": 990
+    },
+    "purpose": "Only client-provided original screenshots; no mockup crops or generated images."
+  },
+  {
+    "asset": "marmita.webp",
+    "original": "824da468-9a4e-4ac1-918f-d4165dbe0b6c.jpg",
+    "crop": {
+      "left": 0,
+      "top": 475,
+      "width": 720,
+      "height": 715
+    },
+    "purpose": "Only client-provided original screenshots; no mockup crops or generated images."
+  },
+  {
+    "asset": "costela.webp",
+    "original": "f311bd12-fd46-457a-8c44-518423cee3e8.jpg",
+    "crop": {
+      "left": 0,
+      "top": 184,
+      "width": 720,
+      "height": 1010
+    },
+    "purpose": "Only client-provided original screenshots; no mockup crops or generated images."
+  },
+  {
+    "asset": "galeto.webp",
+    "original": "7662ef7c-ce11-41f2-892b-81202cab8b7b.jpg",
+    "crop": {
+      "left": 0,
+      "top": 190,
+      "width": 720,
+      "height": 990
+    },
+    "purpose": "Only client-provided original screenshots; no mockup crops or generated images."
+  },
+  {
+    "asset": "category-galeto.webp",
+    "original": "7662ef7c-ce11-41f2-892b-81202cab8b7b.jpg",
+    "crop": {
+      "left": 20,
+      "top": 406,
+      "width": 680,
+      "height": 730
+    },
+    "purpose": "Only client-provided original screenshots; no mockup crops or generated images."
+  },
+  {
+    "asset": "category-costela.webp",
+    "original": "f311bd12-fd46-457a-8c44-518423cee3e8.jpg",
+    "crop": {
+      "left": 10,
+      "top": 194,
+      "width": 690,
+      "height": 975
+    },
+    "purpose": "Only client-provided original screenshots; no mockup crops or generated images."
+  },
+  {
+    "asset": "category-marmita.webp",
+    "original": "1b8ea4f6-a04b-41b2-b1b2-d48e798bccd0.jpg",
+    "crop": {
+      "left": 0,
+      "top": 870,
+      "width": 720,
+      "height": 485
+    },
+    "purpose": "Only client-provided original screenshots; no mockup crops or generated images."
+  },
+  {
+    "asset": "tropeiro.webp",
+    "original": "1b8ea4f6-a04b-41b2-b1b2-d48e798bccd0.jpg",
+    "crop": {
+      "left": 163,
+      "top": 1054,
+      "width": 428,
+      "height": 202
+    },
+    "purpose": "Only client-provided original screenshots; no mockup crops or generated images."
+  },
+  {
+    "asset": "acompanhamentos.webp",
+    "original": "824da468-9a4e-4ac1-918f-d4165dbe0b6c.jpg",
+    "crop": {
+      "left": 36,
+      "top": 755,
+      "width": 242,
+      "height": 281
+    },
+    "purpose": "Only client-provided original screenshots; no mockup crops or generated images."
+  },
+  {
+    "asset": "bag.webp",
+    "original": "9cb25bf9-1af3-4e8d-b698-b05fba905b3e.jpg",
+    "crop": {
+      "left": 0,
+      "top": 595,
+      "width": 720,
+      "height": 650
+    },
+    "purpose": "Only client-provided original screenshots; no mockup crops or generated images."
+  },
+  {
+    "asset": "gallery-box.webp",
+    "original": "be230efc-0f7c-4995-beb8-281a612bba17.jpg",
+    "crop": {
+      "left": 0,
+      "top": 650,
+      "width": 720,
+      "height": 594
+    },
+    "purpose": "Only client-provided original screenshots; no mockup crops or generated images."
+  },
+  {
+    "asset": "gallery-marmita.webp",
+    "original": "1b8ea4f6-a04b-41b2-b1b2-d48e798bccd0.jpg",
+    "crop": {
+      "left": 0,
+      "top": 815,
+      "width": 720,
+      "height": 540
+    },
+    "purpose": "Only client-provided original screenshots; no mockup crops or generated images."
+  },
+  {
+    "asset": "gallery-galeto.webp",
+    "original": "f311bd12-fd46-457a-8c44-518423cee3e8.jpg",
+    "crop": {
+      "left": 0,
+      "top": 184,
+      "width": 720,
+      "height": 1010
+    },
+    "purpose": "Only client-provided original screenshots; no mockup crops or generated images."
+  },
+  {
+    "asset": "banner.webp",
+    "original": "1b8ea4f6-a04b-41b2-b1b2-d48e798bccd0.jpg",
+    "crop": {
+      "left": 0,
+      "top": 870,
+      "width": 720,
+      "height": 485
+    },
+    "purpose": "Only client-provided original screenshots; no mockup crops or generated images."
+  },
+  {
+    "asset": "menu-banner.webp",
+    "original": "7662ef7c-ce11-41f2-892b-81202cab8b7b.jpg",
+    "crop": {
+      "left": 0,
+      "top": 190,
+      "width": 720,
+      "height": 990
+    },
+    "purpose": "Only client-provided original screenshots; no mockup crops or generated images."
+  },
+  {
+    "asset": "delivery.webp",
+    "original": "c382c2ca-3a88-422c-9d80-234f6addfdec.jpg",
+    "crop": {
+      "left": 0,
+      "top": 370,
+      "width": 720,
+      "height": 990
+    },
+    "purpose": "Only client-provided original screenshots; no mockup crops or generated images."
+  }
+]
