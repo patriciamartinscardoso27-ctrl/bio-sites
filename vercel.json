@@ -4,7 +4,7 @@
   "installCommand": "npm ci --include=optional",
   "buildCommand": "node server/check-native-runtime.mjs && npm run build",
   "outputDirectory": "dist",
-  "functions": {"api/handler.mjs": {"includeFiles": "{server,src}/**", "maxDuration": 30}},
+  "functions": {"api/handler.mjs": {"includeFiles": "{server,src}/**", "maxDuration": 150}},
   "rewrites": [
     {"source": "/api/:path*", "destination": "/api/handler?route=/api/:path*"},
     {"source": "/b/:slug", "destination": "/index.html"},

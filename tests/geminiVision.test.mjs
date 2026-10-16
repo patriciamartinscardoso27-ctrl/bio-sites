@@ -35,6 +35,6 @@ test('cropped JPEG and multiple references keep MIME/base64 and prompt through t
 test('timeouts are distinct from connection, provider and invalid JSON errors',async()=>{
  for(const [name,code] of [['TimeoutError','AI_TIMEOUT'],['TypeError','AI_CONNECTION']])await assert.rejects(createGeminiVisionProvider({key:'fake',fetchImpl:async()=>{throw Object.assign(Error('private'),{name})}}).analyzeReferenceImage(null,'barber','Demo'),e=>e.code===code&&!e.message.includes('private'));
  await assert.rejects(createGeminiVisionProvider({key:'fake',fetchImpl:async()=>Response.json({error:{message:'private'}},{status:400})}).analyzeReferenceImage(null),e=>e.code==='AI_PROVIDER');
- await assert.rejects(createGeminiVisionProvider({key:'fake',fetchImpl:async()=>Response.json({candidates:[{finishReason:'STOP',content:{parts:[{text:'invalid'}]}}]})}).analyzeReferenceImage(null),e=>e.code==='AI_INVALID_RESPONSE');
+ await assert.rejects(createGeminiVisionProvider({key:'fake',fetchImpl:async()=>Response.json({candidates:[{finishReason:'STOP',content:{parts:[{text:'invalid'}]}}]})}).analyzeReferenceImage(null),e=>e.code==='AI_JSON_PARSE');
 });
 

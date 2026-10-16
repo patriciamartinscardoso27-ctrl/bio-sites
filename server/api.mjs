@@ -57,9 +57,11 @@ export function createApi({ repository, getRepository = connectRepository, getAu
   }
   return async (req,res,next = () => {res.statusCode=404;res.end()}) => {
     const pathname = (req.url || '/').split('?')[0]
-    let stage='request'
+    let stage='request',requestBytes=0
+    const started=Date.now(),referenceRoute=pathname==='/api/reference/analyze'
     if (!pathname.startsWith('/api/')) return next()
     const reply = (status,value) => {
+      if(referenceRoute)console.info(JSON.stringify({service:'reference-api',stage,httpStatus:status,elapsedMs:Date.now()-started,requestBytes}))
       const encoded=encodeResponsePayload(value,req.headers['accept-encoding']||'',req.headers['x-biosite-accept-transport']==='images-v1')
       res.writeHead(status, {'Content-Type':'application/json; charset=utf-8','Cache-Control':'no-store','X-Content-Type-Options':'nosniff',...encoded.headers})
       res.end(encoded.body)
@@ -129,7 +131,12 @@ export function createApi({ repository, getRepository = connectRepository, getAu
         const db=await scopedRepo();return reply(200,publication[2]==='publish'?await db.publish(publication[1],value.lockVersion,value.draftRevision):publication[2]==='reactivate'?await db.reactivate(publication[1],value.lockVersion):publication[2]==='suspend'?await db.suspend(publication[1],value.lockVersion):await db.unpublish(publication[1],value.lockVersion))
       }
       if(pathname==='/api/reference/status'&&req.method==='GET')return reply(200,await vision.status())
-      if(pathname==='/api/reference/analyze'&&req.method==='POST')return reply(200,await vision.analyze(await body(req,7*1024*1024),session.id))
+      if(pathname==='/api/reference/analyze'&&req.method==='POST'){
+        stage='upload';requestBytes=Number(req.headers['content-length'])||0
+        const value=await body(req,4_000_000);requestBytes=Buffer.byteLength(JSON.stringify(value))
+        stage='generation';const result=await vision.analyze(value,session.id)
+        stage='complete';return reply(200,result)
+      }
       if (pathname === '/api/biosites' && req.method === 'GET') {
         const params=new URL(req.url,'http://localhost').searchParams,cursor=params.get('cursor')??undefined,ownerId=params.get('ownerId')??undefined
         if(ownerId)principalOnly(session)
@@ -155,7 +162,7 @@ export function createApi({ repository, getRepository = connectRepository, getAu
         code:/^ERR_[A-Z_]{1,60}$/.test(error?.code||'')?error.code:undefined,
         frames:(error?.stack||'').split('\n').slice(1,6).map(line=>line.match(/(?:server|api)\/[\w./-]+\.mjs:\d+:\d+/)?.[0]).filter(Boolean),
       }))
-      reply(error instanceof ApiError ? error.status : 503, {error:error instanceof ApiError ? error.message : 'Serviço indisponível. Nenhum detalhe privado foi exposto.',...(error instanceof ApiError&&['AI_TIMEOUT','AI_CONNECTION','AI_PROVIDER','AI_INVALID_RESPONSE'].includes(error.code)?{code:error.code}:{})})
+      reply(error instanceof ApiError ? error.status : 503, {error:error instanceof ApiError ? error.message : 'Serviço indisponível. Nenhum detalhe privado foi exposto.',...(error instanceof ApiError&&['AI_TIMEOUT','AI_CONNECTION','AI_PROVIDER','AI_INVALID_RESPONSE','AI_TRUNCATED','AI_JSON_PARSE','AI_OUTPUT_TOO_LARGE','AI_VALIDATION','AI_FIDELITY','AI_REFERENCE_AMBIGUOUS'].includes(error.code)?{code:error.code}:{})})
     }
   }
 }
