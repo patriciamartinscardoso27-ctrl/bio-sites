@@ -5,6 +5,8 @@ export function assertPublishable(record){if(auditDraftIds.has(record.id)||/TEST
 export function publicContent(content){
  const keys=['id','style','name','category','headline','tagline','highlights','benefits','description','color','cover','logo','phone','address','hours','instagram','telephone','email','facebook','tiktok','reviewsUrl','mapsUrl','website','menuUrl','sections','actions','services','products','photos','manual','appearance','heroEnabled','heroLayout','heroVisual','textVisual','designVisual','renderMode','layoutPreset']
  const result=Object.fromEntries(keys.filter(k=>content[k]!==undefined).map(k=>[k,structuredClone(content[k])]))
+ // Opt-in visual contract contains public composition only; V1 projection is unchanged.
+ if(content.premiumV2)result.premiumV2=structuredClone(content.premiumV2)
  // Rendering needs the palette, never internal source names or composition metadata.
  if(content.identity)result.identity={brandColors:content.identity.brandColors,extractedColors:content.identity.extractedColors}
  if(content.composition)result.composition={preferences:{categoryId:content.composition.preferences?.categoryId}}

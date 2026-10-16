@@ -1,3 +1,4 @@
+import {validatePremiumVisualV2} from '../src/lib/premiumVisualV2.ts'
 import {readyModelIds} from '../src/data/readyModelIds.ts'
 import {visualNumberBounds,visualEnumValues,normalizeGradient} from '../src/lib/visualSpec.ts'
 import { catalog } from './catalog.mjs'
@@ -94,6 +95,7 @@ function checkComposition(value){
  rows(initial,'items',row=>{fields(row,['id']);visual(row.visual)})
 }
 export function validateBio(content, id) {
+  if(content?.premiumV2!==undefined){try{validatePremiumVisualV2(content)}catch(e){throw new ApiError(400,e.message)}}
   fields(content, ['id','style','name','category','headline','tagline','description','color','phone','address','hours','instagram'],
     ['telephone','email','facebook','tiktok','reviewsUrl','mapsUrl','website','menuUrl'])
   if (!isUuid(content.id) || (id && content.id !== id) || !content.name.trim() || content.name.length > 300 || content.category.length > 100) fail()

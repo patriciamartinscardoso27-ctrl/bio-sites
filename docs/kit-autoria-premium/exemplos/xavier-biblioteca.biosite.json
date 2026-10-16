@@ -1,0 +1,546 @@
+{
+  "format": "bio-sites-premium",
+  "schemaVersion": 1,
+  "renderer": {
+    "id": "biosite",
+    "version": 1,
+    "profile": "preset",
+    "presetId": "moda-premium-gold"
+  },
+  "components": [
+    {
+      "id": "hero",
+      "version": 1
+    },
+    {
+      "id": "section.actions",
+      "version": 1
+    },
+    {
+      "id": "section.benefits",
+      "version": 1
+    },
+    {
+      "id": "section.categories",
+      "version": 1
+    },
+    {
+      "id": "section.promotion",
+      "version": 1
+    },
+    {
+      "id": "section.products",
+      "version": 1
+    },
+    {
+      "id": "section.gallery",
+      "version": 1
+    },
+    {
+      "id": "section.about",
+      "version": 1
+    },
+    {
+      "id": "section.hours",
+      "version": 1
+    },
+    {
+      "id": "section.location",
+      "version": 1
+    },
+    {
+      "id": "section.whatsapp",
+      "version": 1
+    }
+  ],
+  "assets": {
+    "version": 1,
+    "storage": "references",
+    "media": [
+      {
+        "path": "cover",
+        "source": "https://images.unsplash.com/photo-1539109136881-3be0616acf4b?auto=format&fit=crop&w=1000&q=85"
+      },
+      {
+        "path": "sections[2].content.highlights[0].image",
+        "source": "https://images.unsplash.com/photo-1595777457583-95e059d581b8?auto=format&fit=crop&w=1000&q=85"
+      },
+      {
+        "path": "sections[2].content.highlights[1].image",
+        "source": "https://images.unsplash.com/photo-1539109136881-3be0616acf4b?auto=format&fit=crop&w=1000&q=85"
+      },
+      {
+        "path": "sections[2].content.highlights[2].image",
+        "source": "https://images.unsplash.com/photo-1541099649105-f69ad21f3246?auto=format&fit=crop&w=1000&q=85"
+      },
+      {
+        "path": "sections[3].image",
+        "source": "https://images.unsplash.com/photo-1539109136881-3be0616acf4b?auto=format&fit=crop&w=1000&q=85"
+      },
+      {
+        "path": "sections[4].content.items[0].image",
+        "source": "https://images.unsplash.com/photo-1595777457583-95e059d581b8?auto=format&fit=crop&w=1000&q=85"
+      },
+      {
+        "path": "sections[4].content.items[1].image",
+        "source": "https://images.unsplash.com/photo-1539109136881-3be0616acf4b?auto=format&fit=crop&w=1000&q=85"
+      },
+      {
+        "path": "sections[4].content.items[2].image",
+        "source": "https://images.unsplash.com/photo-1541099649105-f69ad21f3246?auto=format&fit=crop&w=1000&q=85"
+      },
+      {
+        "path": "sections[4].content.items[3].image",
+        "source": "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=1000&q=85"
+      },
+      {
+        "path": "sections[6].content.photos[0]",
+        "source": "https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=1000&q=85"
+      },
+      {
+        "path": "sections[6].content.photos[1]",
+        "source": "https://images.unsplash.com/photo-1548036328-c9fa89d128fa?auto=format&fit=crop&w=1000&q=85"
+      },
+      {
+        "path": "sections[6].content.photos[2]",
+        "source": "https://images.unsplash.com/photo-1539109136881-3be0616acf4b?auto=format&fit=crop&w=1000&q=85"
+      },
+      {
+        "path": "sections[6].content.photos[3]",
+        "source": "https://images.unsplash.com/photo-1434389677669-e08b4cac3105?auto=format&fit=crop&w=1000&q=85"
+      },
+      {
+        "path": "sections[6].content.photos[4]",
+        "source": "https://images.unsplash.com/photo-1548036328-c9fa89d128fa?auto=format&fit=crop&w=1000&q=85"
+      },
+      {
+        "path": "sections[6].content.photos[5]",
+        "source": "https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=1000&q=85"
+      },
+      {
+        "path": "sections[7].image",
+        "source": "https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=1000&q=85"
+      },
+      {
+        "path": "sections[8].image",
+        "source": "https://images.unsplash.com/photo-1539109136881-3be0616acf4b?auto=format&fit=crop&w=1000&q=85"
+      }
+    ]
+  },
+  "editing": {
+    "version": 1,
+    "adapter": "existing-editor"
+  },
+  "design": {
+    "id": "f7a7a623-dcb7-45de-9c7b-9b2fc9f3e222",
+    "style": "boutique-gold",
+    "name": "Xavier Modas",
+    "category": "Loja de roupas",
+    "headline": "",
+    "tagline": "MODA FEMININA",
+    "description": "Moda feminina, estilo e qualidade para você ✨",
+    "color": "#a87930",
+    "cover": "https://images.unsplash.com/photo-1539109136881-3be0616acf4b?auto=format&fit=crop&w=1000&q=85",
+    "logo": "",
+    "phone": "5511999990000",
+    "instagram": "https://www.instagram.com/",
+    "address": "Jacaraípe, ES\nEndereço completo (editar no painel)",
+    "hours": "Segunda à Sexta: 09:00 - 19:00\nSábado: 09:00 - 17:00\nDomingo: Fechado",
+    "highlights": [],
+    "benefits": [],
+    "sections": [
+      {
+        "id": "gold-actions",
+        "kind": "actions",
+        "title": "",
+        "text": "",
+        "enabled": true,
+        "content": {
+          "actions": [
+            {
+              "id": "gold-wa",
+              "kind": "whatsapp",
+              "icon": "whatsapp",
+              "label": "WhatsApp",
+              "subtitle": "Fale agora",
+              "message": "Olá! Gostaria de conhecer a coleção.",
+              "appearanceMode": "brand"
+            },
+            {
+              "id": "gold-ig",
+              "kind": "instagram",
+              "icon": "instagram",
+              "label": "Instagram",
+              "subtitle": "Nos siga",
+              "message": "",
+              "appearanceMode": "brand"
+            },
+            {
+              "id": "gold-map",
+              "kind": "location",
+              "icon": "location",
+              "label": "Como chegar",
+              "subtitle": "Ver no mapa",
+              "message": "",
+              "appearanceMode": "custom",
+              "visual": {
+                "backgroundGradient": "linear-gradient(130deg, #dbb153, #a76d19)",
+                "iconColor": "#fffaf2",
+                "textColor": "#ffffff",
+                "radiusPx": 16
+              }
+            },
+            {
+              "id": "gold-catalog",
+              "kind": "custom",
+              "icon": "bag",
+              "label": "Ver produtos",
+              "subtitle": "Nossa vitrine",
+              "message": "",
+              "destination": "section",
+              "sectionId": "gold-products",
+              "appearanceMode": "custom",
+              "visual": {
+                "background": "#faf5ee",
+                "iconColor": "#8d5a24",
+                "textColor": "#ffffff",
+                "radiusPx": 16
+              }
+            }
+          ]
+        },
+        "visual": {
+          "columns": 4,
+          "iconSize": 80,
+          "glyphSize": 44,
+          "labelSize": 14,
+          "subtitleSize": 11,
+          "gap": 16
+        }
+      },
+      {
+        "id": "gold-shipping",
+        "kind": "benefits",
+        "title": "",
+        "text": "",
+        "enabled": true,
+        "layout": "list",
+        "content": {
+          "benefits": [
+            "Enviamos para todo o Brasil|Com segurança e rapidez"
+          ]
+        }
+      },
+      {
+        "id": "gold-collections",
+        "kind": "categories",
+        "title": "Nossas Coleções",
+        "text": "",
+        "enabled": true,
+        "content": {
+          "highlights": [
+            {
+              "id": "gold-dresses",
+              "label": "Vestidos",
+              "caption": "Ver mais",
+              "image": "https://images.unsplash.com/photo-1595777457583-95e059d581b8?auto=format&fit=crop&w=1000&q=85"
+            },
+            {
+              "id": "gold-blouses",
+              "label": "Blusas",
+              "caption": "Ver mais",
+              "image": "https://images.unsplash.com/photo-1539109136881-3be0616acf4b?auto=format&fit=crop&w=1000&q=85"
+            },
+            {
+              "id": "gold-jeans",
+              "label": "Calças",
+              "caption": "Ver mais",
+              "image": "https://images.unsplash.com/photo-1541099649105-f69ad21f3246?auto=format&fit=crop&w=1000&q=85"
+            }
+          ]
+        },
+        "visual": {
+          "columns": 3,
+          "mediaAspect": 70
+        }
+      },
+      {
+        "id": "gold-news",
+        "kind": "promotion",
+        "title": "Novidades\ntoda semana 💛",
+        "text": "Peças selecionadas para\nvocê estar sempre na moda.",
+        "enabled": true,
+        "image": "https://images.unsplash.com/photo-1539109136881-3be0616acf4b?auto=format&fit=crop&w=1000&q=85",
+        "ctaLabel": "Ver novidades",
+        "visual": {
+          "background": "#070907",
+          "mediaPlacement": "background",
+          "imagePositionX": 80,
+          "imagePositionY": 30,
+          "overlay": 10,
+          "mediaAspect": 185,
+          "text": "#101010",
+          "panel": "#e9d6be"
+        },
+        "titleVisual": {
+          "font": "serif",
+          "fontSize": 24,
+          "lineHeight": 110
+        }
+      },
+      {
+        "id": "gold-products",
+        "kind": "products",
+        "title": "Produtos em Destaque",
+        "text": "",
+        "enabled": true,
+        "layout": "list",
+        "visual": {
+          "mediaAspect": 82
+        },
+        "content": {
+          "items": [
+            {
+              "id": "gold-dress",
+              "title": "Vestido Primavera",
+              "description": "Leveza e elegância para\ntodas as ocasiões.",
+              "price": "R$ 129,90",
+              "image": "https://images.unsplash.com/photo-1595777457583-95e059d581b8?auto=format&fit=crop&w=1000&q=85"
+            },
+            {
+              "id": "gold-suit",
+              "title": "Conjunto Alfaiataria",
+              "description": "Moda e conforto no\nseu dia a dia.",
+              "price": "R$ 199,90",
+              "image": "https://images.unsplash.com/photo-1539109136881-3be0616acf4b?auto=format&fit=crop&w=1000&q=85"
+            },
+            {
+              "id": "gold-pants",
+              "title": "Calça Jeans Wide Leg",
+              "description": "Tendência e estilo para\nqualquer look.",
+              "price": "R$ 149,90",
+              "image": "https://images.unsplash.com/photo-1541099649105-f69ad21f3246?auto=format&fit=crop&w=1000&q=85"
+            },
+            {
+              "id": "gold-blouse",
+              "title": "Blusa Canelada",
+              "description": "Básica e versátil, combina\ncom tudo.",
+              "price": "R$ 69,90",
+              "image": "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=1000&q=85"
+            }
+          ]
+        }
+      },
+      {
+        "id": "gold-benefits",
+        "kind": "benefits",
+        "title": "",
+        "text": "",
+        "enabled": true,
+        "content": {
+          "benefits": [
+            "Envio rápido|para todo o Brasil",
+            "Compra segura|e atendimento",
+            "Peças selecionadas|com muito carinho"
+          ]
+        }
+      },
+      {
+        "id": "gold-gallery",
+        "kind": "gallery",
+        "title": "Galeria",
+        "text": "",
+        "enabled": true,
+        "visual": {
+          "columns": 3,
+          "mediaAspect": 95
+        },
+        "content": {
+          "photos": [
+            "https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=1000&q=85",
+            "https://images.unsplash.com/photo-1548036328-c9fa89d128fa?auto=format&fit=crop&w=1000&q=85",
+            "https://images.unsplash.com/photo-1539109136881-3be0616acf4b?auto=format&fit=crop&w=1000&q=85",
+            "https://images.unsplash.com/photo-1434389677669-e08b4cac3105?auto=format&fit=crop&w=1000&q=85",
+            "https://images.unsplash.com/photo-1548036328-c9fa89d128fa?auto=format&fit=crop&w=1000&q=85",
+            "https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=1000&q=85"
+          ]
+        }
+      },
+      {
+        "id": "gold-about",
+        "kind": "about",
+        "title": "Sobre Nós",
+        "text": "A Xavier Modas nasceu com o propósito de oferecer moda feminina de qualidade, com estilo e preço justo. Aqui você encontra peças selecionadas com muito carinho, sempre pensando em realçar a sua beleza e autoestima.",
+        "enabled": true,
+        "image": "https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=1000&q=85",
+        "visual": {
+          "mediaPlacement": "right",
+          "mediaWidth": 44,
+          "mediaAspect": 76
+        }
+      },
+      {
+        "id": "gold-confidence",
+        "kind": "promotion",
+        "title": "Mais que moda,\né autoestima ✨",
+        "text": "Vista-se de você\nem todas as ocasiões.",
+        "enabled": true,
+        "image": "https://images.unsplash.com/photo-1539109136881-3be0616acf4b?auto=format&fit=crop&w=1000&q=85",
+        "ctaLabel": "",
+        "visual": {
+          "mediaPlacement": "background",
+          "imagePositionX": 85,
+          "imagePositionY": 25,
+          "overlay": 45,
+          "mediaAspect": 195,
+          "text": "#ffffff",
+          "panel": "#77542c"
+        },
+        "titleVisual": {
+          "fontSize": 21,
+          "weight": "bold",
+          "lineHeight": 130
+        }
+      },
+      {
+        "id": "gold-hours",
+        "kind": "hours",
+        "title": "Nosso Horário",
+        "text": "",
+        "enabled": true
+      },
+      {
+        "id": "gold-location",
+        "kind": "location",
+        "title": "Como chegar",
+        "text": "",
+        "enabled": true
+      },
+      {
+        "id": "gold-whatsapp",
+        "kind": "whatsapp",
+        "title": "Tire suas dúvidas\ne faça seu pedido",
+        "text": "",
+        "enabled": true,
+        "ctaLabel": "",
+        "visual": {
+          "panel": "#10100d",
+          "text": "#ffffff",
+          "iconColor": "#c79c50"
+        }
+      },
+      {
+        "id": "gold-identity",
+        "kind": "about",
+        "title": "",
+        "text": "",
+        "enabled": true,
+        "block": "text"
+      },
+      {
+        "id": "gold-social",
+        "kind": "actions",
+        "title": "",
+        "text": "",
+        "enabled": true,
+        "layout": "inline",
+        "content": {
+          "actions": [
+            {
+              "id": "gold-footer-ig",
+              "kind": "instagram",
+              "icon": "instagram",
+              "label": "Instagram",
+              "subtitle": "",
+              "message": "",
+              "appearanceMode": "theme"
+            },
+            {
+              "id": "gold-footer-tiktok",
+              "kind": "tiktok",
+              "icon": "tiktok",
+              "label": "TikTok",
+              "subtitle": "",
+              "message": "",
+              "appearanceMode": "theme"
+            },
+            {
+              "id": "gold-footer-fb",
+              "kind": "facebook",
+              "icon": "facebook",
+              "label": "Facebook",
+              "subtitle": "",
+              "message": "",
+              "appearanceMode": "theme"
+            },
+            {
+              "id": "gold-footer-pin",
+              "kind": "custom",
+              "icon": "pinterest",
+              "label": "Pinterest",
+              "subtitle": "",
+              "message": "",
+              "mode": "url",
+              "source": "custom",
+              "url": "https://www.pinterest.com/",
+              "appearanceMode": "theme"
+            }
+          ]
+        }
+      }
+    ],
+    "actions": [],
+    "services": [],
+    "products": [],
+    "photos": [],
+    "layoutPreset": "moda-premium-gold",
+    "facebook": "https://www.facebook.com/",
+    "tiktok": "https://www.tiktok.com/",
+    "heroVisual": {
+      "heroComposition": "cover",
+      "imageFit": "cover",
+      "imagePositionX": 65,
+      "imagePositionY": 35,
+      "minHeight": 450,
+      "overlay": 80,
+      "logoSize": 150,
+      "align": "left"
+    },
+    "textVisual": {
+      "name": {
+        "font": "serif",
+        "fontSize": 60,
+        "weight": "regular",
+        "lineHeight": 105
+      },
+      "description": {
+        "fontSize": 20,
+        "lineHeight": 140
+      }
+    },
+    "appearance": {
+      "theme": "light",
+      "font": "sans",
+      "buttons": "rounded",
+      "cards": "rounded",
+      "background": "#faf5ee",
+      "text": "#101010",
+      "panel": "#f4eee7",
+      "secondary": "#895b24",
+      "highlight": "#a87930",
+      "border": "#eadfd2"
+    },
+    "identity": {
+      "brandColors": [
+        "#a87930",
+        "#101010",
+        "#faf5ee"
+      ],
+      "logoPalette": [
+        "#a87930",
+        "#101010",
+        "#faf5ee"
+      ]
+    }
+  }
+}

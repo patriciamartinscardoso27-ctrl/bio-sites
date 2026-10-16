@@ -1,0 +1,1198 @@
+{
+  "format": "bio-sites-premium",
+  "schemaVersion": 2,
+  "renderer": {
+    "id": "biosite",
+    "version": 2,
+    "profile": "premium"
+  },
+  "components": [
+    {
+      "id": "hero.premium",
+      "version": 1
+    },
+    {
+      "id": "section.actions",
+      "version": 1
+    },
+    {
+      "id": "section.banner",
+      "version": 1
+    },
+    {
+      "id": "section.benefits",
+      "version": 1
+    },
+    {
+      "id": "section.catalog",
+      "version": 1
+    },
+    {
+      "id": "section.gallery",
+      "version": 1
+    },
+    {
+      "id": "section.hours",
+      "version": 1
+    },
+    {
+      "id": "section.location",
+      "version": 1
+    },
+    {
+      "id": "section.profiles",
+      "version": 1
+    },
+    {
+      "id": "section.text",
+      "version": 1
+    }
+  ],
+  "assets": {
+    "version": 1,
+    "storage": "references",
+    "media": [
+      {
+        "path": "cover",
+        "source": "/images/official-batch-2/essencia-real-adriana.webp"
+      },
+      {
+        "path": "logo",
+        "source": "/images/official-batch-2/essencia-real-logo-real.webp"
+      },
+      {
+        "path": "sections[2].content.items[0].image",
+        "source": "/images/official-batch-2/essencia-real-equipe-trabalho.webp"
+      },
+      {
+        "path": "sections[2].content.items[1].image",
+        "source": "/images/official-batch-2/essencia-real-unhas-nail-art.webp"
+      },
+      {
+        "path": "sections[3].image",
+        "source": "/images/official-batch-2/essencia-real-resultado-cliente.webp"
+      },
+      {
+        "path": "sections[4].content.items[0].image",
+        "source": "/images/official-batch-2/essencia-real-servico-corte.webp"
+      },
+      {
+        "path": "sections[4].content.items[1].image",
+        "source": "/images/official-batch-2/essencia-real-resultado-finalizacao.webp"
+      },
+      {
+        "path": "sections[4].content.items[2].image",
+        "source": "/images/official-batch-2/essencia-real-servico-tratamento.webp"
+      },
+      {
+        "path": "sections[4].content.items[3].image",
+        "source": "/images/official-batch-2/essencia-real-servico-cor.webp"
+      },
+      {
+        "path": "sections[5].content.photos[0]",
+        "source": "/images/official-batch-2/essencia-real-resultado-cacheado-longo.webp"
+      },
+      {
+        "path": "sections[5].content.photos[1]",
+        "source": "/images/official-batch-2/essencia-real-resultado-luzes.webp"
+      },
+      {
+        "path": "sections[5].content.photos[2]",
+        "source": "/images/official-batch-2/essencia-real-resultado-cachos-curtos.webp"
+      },
+      {
+        "path": "sections[5].content.photos[3]",
+        "source": "/images/official-batch-2/essencia-real-resultado-definicao.webp"
+      },
+      {
+        "path": "sections[5].content.photos[4]",
+        "source": "/images/official-batch-2/essencia-real-resultado-volume.webp"
+      },
+      {
+        "path": "sections[5].content.photos[5]",
+        "source": "/images/official-batch-2/essencia-real-resultado-mechas.webp"
+      },
+      {
+        "path": "sections[6].content.photos[0]",
+        "source": "/images/official-batch-2/essencia-real-unhas-verde.webp"
+      },
+      {
+        "path": "sections[6].content.photos[1]",
+        "source": "/images/official-batch-2/essencia-real-unhas-vermelho.webp"
+      },
+      {
+        "path": "sections[6].content.photos[2]",
+        "source": "/images/official-batch-2/essencia-real-unhas-nail-art.webp"
+      },
+      {
+        "path": "sections[7].image",
+        "source": "/images/official-batch-2/essencia-real-resultado-cacheado-longo.webp"
+      },
+      {
+        "path": "sections[8].image",
+        "source": "/images/official-batch-2/essencia-real-espaco-video.webp"
+      },
+      {
+        "path": "sections[9].content.photos[0]",
+        "source": "/images/official-batch-2/essencia-real-espaco-detalhe.webp"
+      },
+      {
+        "path": "sections[9].content.photos[1]",
+        "source": "/images/official-batch-2/essencia-real-produtos.webp"
+      },
+      {
+        "path": "sections[9].content.photos[2]",
+        "source": "/images/official-batch-2/essencia-real-logo-real.webp"
+      },
+      {
+        "path": "sections[10].image",
+        "source": "/images/official-batch-2/essencia-real-espaco-detalhe.webp"
+      },
+      {
+        "path": "sections[12].image",
+        "source": "/images/official-batch-2/essencia-real-resultado-mechas.webp"
+      }
+    ]
+  },
+  "editing": {
+    "version": 1,
+    "adapter": "existing-editor"
+  },
+  "design": {
+    "id": "08a8d6d3-99ce-45a0-a1ec-41ca34b506b2",
+    "style": "black-gold",
+    "name": "Essência dos Cachos",
+    "category": "Salão / Estética",
+    "headline": "Beleza real para\nsua essência",
+    "tagline": "CACHOS · BELEZA · AUTOCUIDADO",
+    "description": "Cabelos saudáveis, cachos definidos e unhas que completam a sua beleza. Tudo em um só lugar.",
+    "color": "#e6bd68",
+    "cover": "/images/official-batch-2/essencia-real-adriana.webp",
+    "logo": "/images/official-batch-2/essencia-real-logo-real.webp",
+    "phone": "",
+    "address": "Endereço a confirmar antes de publicar",
+    "hours": "Segunda a Sexta: 09:00 - 19:00\nSábado: 09:00 - 17:00\nDomingo: Fechado",
+    "instagram": "https://www.instagram.com/essenciadoscachosoficial/",
+    "products": [],
+    "services": [],
+    "photos": [],
+    "highlights": [],
+    "benefits": [],
+    "actions": [
+      {
+        "id": "hero-contact",
+        "label": "AGENDAR PELO WHATSAPP",
+        "message": "",
+        "kind": "custom",
+        "source": "custom",
+        "url": "https://example.com/contato",
+        "icon": "whatsapp"
+      }
+    ],
+    "sections": [
+      {
+        "id": "contacts",
+        "kind": "actions",
+        "title": "",
+        "text": "",
+        "enabled": true,
+        "content": {
+          "actions": [
+            {
+              "id": "wa",
+              "label": "WhatsApp",
+              "message": "",
+              "kind": "custom",
+              "source": "custom",
+              "url": "https://example.com/contato",
+              "icon": "whatsapp",
+              "subtitle": "Fale conosco"
+            },
+            {
+              "id": "ig",
+              "label": "Instagram",
+              "message": "",
+              "kind": "instagram",
+              "source": "business",
+              "url": "https://example.com/contato",
+              "icon": "instagram",
+              "subtitle": "Nos siga"
+            },
+            {
+              "id": "map",
+              "label": "Como chegar",
+              "message": "",
+              "kind": "custom",
+              "source": "custom",
+              "url": "https://example.com/contato",
+              "icon": "location",
+              "subtitle": "Ver no mapa",
+              "destination": "section",
+              "sectionId": "location"
+            },
+            {
+              "id": "book",
+              "label": "Agendar",
+              "message": "",
+              "kind": "custom",
+              "source": "custom",
+              "url": "https://example.com/contato",
+              "icon": "calendar",
+              "subtitle": "Seu horário"
+            }
+          ]
+        }
+      },
+      {
+        "id": "values",
+        "kind": "benefits",
+        "title": "",
+        "text": "",
+        "enabled": true,
+        "content": {
+          "benefits": [
+            "Beleza|Natural",
+            "Atendimento|Personalizado",
+            "Ambiente|Acolhedor",
+            "Resultados|Reais"
+          ]
+        }
+      },
+      {
+        "id": "team",
+        "kind": "products",
+        "title": "Nossa Equipe",
+        "text": "Duas especialidades, um mesmo propósito: realçar a sua beleza.",
+        "enabled": true,
+        "content": {
+          "items": [
+            {
+              "id": "adriana",
+              "title": "Adriana Oliveira",
+              "description": "Cuidado com cabelos cacheados e crespos.",
+              "image": "/images/official-batch-2/essencia-real-equipe-trabalho.webp",
+              "price": "Especialista em cachos"
+            },
+            {
+              "id": "nails-specialist",
+              "title": "Especialidade em unhas",
+              "description": "Esmaltação e nail art com atenção a cada detalhe. Foto da profissional a fornecer.",
+              "image": "/images/official-batch-2/essencia-real-unhas-nail-art.webp",
+              "price": "Unhas e autocuidado"
+            }
+          ]
+        }
+      },
+      {
+        "id": "story",
+        "kind": "promotion",
+        "title": "Mais que cabelo,\nautoconfiança!",
+        "text": "Cada detalhe é pensado para valorizar sua beleza natural.",
+        "enabled": true,
+        "image": "/images/official-batch-2/essencia-real-resultado-cliente.webp",
+        "ctaLabel": "CONHEÇA NOSSA HISTÓRIA",
+        "action": {
+          "id": "story-link",
+          "label": "Conheça nossa história",
+          "message": "",
+          "kind": "custom",
+          "source": "custom",
+          "url": "https://example.com/contato",
+          "destination": "section",
+          "sectionId": "about"
+        }
+      },
+      {
+        "id": "services",
+        "kind": "services",
+        "title": "Nossos Serviços",
+        "text": "Cuidado especializado para realçar sua beleza.",
+        "enabled": true,
+        "content": {
+          "items": [
+            {
+              "id": "cut",
+              "title": "Cortes Especiais",
+              "description": "Cortes que valorizam sua curvatura. Atendimento personalizado para forma, movimento e volume.",
+              "image": "/images/official-batch-2/essencia-real-servico-corte.webp",
+              "price": ""
+            },
+            {
+              "id": "finish",
+              "title": "Finalização",
+              "description": "Definição, brilho e movimento para seus cachos. Técnicas adequadas à textura dos seus fios.",
+              "image": "/images/official-batch-2/essencia-real-resultado-finalizacao.webp",
+              "price": ""
+            },
+            {
+              "id": "treatment",
+              "title": "Tratamentos Capilares",
+              "description": "Hidratação, nutrição e reconstrução conforme a necessidade dos fios.",
+              "image": "/images/official-batch-2/essencia-real-servico-tratamento.webp",
+              "price": ""
+            },
+            {
+              "id": "color",
+              "title": "Coloração e Mechas",
+              "description": "Mais estilo e personalidade com planejamento e cuidado.",
+              "image": "/images/official-batch-2/essencia-real-servico-cor.webp",
+              "price": ""
+            }
+          ]
+        }
+      },
+      {
+        "id": "results",
+        "kind": "gallery",
+        "title": "Resultados Reais",
+        "text": "Transformações que mostram a beleza de cada cacho.",
+        "enabled": true,
+        "content": {
+          "photos": [
+            "/images/official-batch-2/essencia-real-resultado-cacheado-longo.webp",
+            "/images/official-batch-2/essencia-real-resultado-luzes.webp",
+            "/images/official-batch-2/essencia-real-resultado-cachos-curtos.webp",
+            "/images/official-batch-2/essencia-real-resultado-definicao.webp",
+            "/images/official-batch-2/essencia-real-resultado-volume.webp",
+            "/images/official-batch-2/essencia-real-resultado-mechas.webp"
+          ]
+        }
+      },
+      {
+        "id": "nails",
+        "kind": "gallery",
+        "title": "Beleza até nas pontas dos dedos",
+        "text": "Unhas com estilo e cuidado.",
+        "enabled": true,
+        "content": {
+          "photos": [
+            "/images/official-batch-2/essencia-real-unhas-verde.webp",
+            "/images/official-batch-2/essencia-real-unhas-vermelho.webp",
+            "/images/official-batch-2/essencia-real-unhas-nail-art.webp"
+          ]
+        }
+      },
+      {
+        "id": "care",
+        "kind": "promotion",
+        "title": "Cachos saudáveis,\nautoestima em alta",
+        "text": "Tratamentos que cuidam dos seus fios e realçam sua beleza natural.",
+        "enabled": true,
+        "image": "/images/official-batch-2/essencia-real-resultado-cacheado-longo.webp",
+        "ctaLabel": "QUERO MEU HORÁRIO",
+        "action": {
+          "id": "care-action",
+          "label": "Quero meu horário",
+          "message": "",
+          "kind": "custom",
+          "source": "custom",
+          "url": "https://example.com/contato",
+          "icon": "whatsapp"
+        }
+      },
+      {
+        "id": "about",
+        "kind": "about",
+        "title": "Sobre o Estúdio",
+        "text": "Um espaço de beleza e autocuidado, com atendimento personalizado e cuidado com a beleza natural.",
+        "enabled": true,
+        "image": "/images/official-batch-2/essencia-real-espaco-video.webp"
+      },
+      {
+        "id": "space",
+        "kind": "gallery",
+        "title": "Nosso Espaço",
+        "text": "Um ambiente pensado para você se sentir bem.",
+        "enabled": true,
+        "content": {
+          "photos": [
+            "/images/official-batch-2/essencia-real-espaco-detalhe.webp",
+            "/images/official-batch-2/essencia-real-produtos.webp",
+            "/images/official-batch-2/essencia-real-logo-real.webp"
+          ]
+        }
+      },
+      {
+        "id": "location",
+        "kind": "location",
+        "title": "Nossa Localização",
+        "text": "",
+        "enabled": true,
+        "image": "/images/official-batch-2/essencia-real-espaco-detalhe.webp",
+        "content": {
+          "address": "Serra — ES\nEndereço completo a confirmar",
+          "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Serra+ES"
+        }
+      },
+      {
+        "id": "hours",
+        "kind": "hours",
+        "title": "Nosso Horário",
+        "text": "",
+        "enabled": true
+      },
+      {
+        "id": "closing",
+        "kind": "promotion",
+        "title": "Vamos realçar sua beleza?",
+        "text": "Agende seu horário e viva uma experiência de cuidado e autoestima.",
+        "enabled": true,
+        "image": "/images/official-batch-2/essencia-real-resultado-mechas.webp",
+        "ctaLabel": "FALAR NO WHATSAPP",
+        "action": {
+          "id": "closing-action",
+          "label": "Falar no WhatsApp",
+          "message": "",
+          "kind": "custom",
+          "source": "custom",
+          "url": "https://example.com/contato",
+          "icon": "whatsapp"
+        }
+      }
+    ],
+    "premiumV2": {
+      "version": 2,
+      "page": {
+        "font": "sans",
+        "surface": {
+          "color": "#090807"
+        },
+        "maxWidth": 480,
+        "gap": 22
+      },
+      "hero": {
+        "version": 1,
+        "height": 580,
+        "responsive": {
+          "medium": {
+            "height": 600
+          },
+          "large": {
+            "height": 620
+          }
+        },
+        "surface": {
+          "color": "#090807"
+        },
+        "photo": {
+          "box": {
+            "x": 28,
+            "y": 20,
+            "width": 72,
+            "height": 78
+          },
+          "fit": "cover",
+          "position": {
+            "x": 50,
+            "y": 40
+          }
+        },
+        "logo": {
+          "box": {
+            "x": 5,
+            "y": 3,
+            "width": 53,
+            "height": 29
+          },
+          "fit": "contain"
+        },
+        "layers": [
+          {
+            "kind": "gradient",
+            "value": {
+              "angle": 90,
+              "stops": [
+                {
+                  "color": "#090807",
+                  "at": 0,
+                  "opacity": 100
+                },
+                {
+                  "color": "#090807",
+                  "at": 36,
+                  "opacity": 93
+                },
+                {
+                  "color": "#090807",
+                  "at": 70,
+                  "opacity": 0
+                }
+              ]
+            }
+          },
+          {
+            "kind": "gradient",
+            "box": {
+              "x": 0,
+              "y": 75,
+              "width": 100,
+              "height": 25
+            },
+            "value": {
+              "angle": 0,
+              "stops": [
+                {
+                  "color": "#090807",
+                  "at": 0,
+                  "opacity": 100
+                },
+                {
+                  "color": "#090807",
+                  "at": 100,
+                  "opacity": 0
+                }
+              ]
+            }
+          }
+        ],
+        "texts": [
+          {
+            "field": "headline",
+            "box": {
+              "x": 5,
+              "y": 34,
+              "width": 53,
+              "height": 24
+            },
+            "type": {
+              "family": "serif",
+              "size": 34,
+              "sizeMedium": 36,
+              "sizeLarge": 38,
+              "weight": 400,
+              "lineHeight": 110,
+              "color": "#e6bd68"
+            }
+          },
+          {
+            "field": "description",
+            "box": {
+              "x": 5,
+              "y": 61,
+              "width": 44,
+              "height": 25
+            },
+            "type": {
+              "family": "sans",
+              "size": 14,
+              "lineHeight": 140,
+              "color": "#f9f0df"
+            }
+          },
+          {
+            "field": "tagline",
+            "box": {
+              "x": 5,
+              "y": 31,
+              "width": 90,
+              "height": 4
+            },
+            "type": {
+              "size": 10,
+              "letterSpacing": 5,
+              "color": "#f9f0df"
+            }
+          }
+        ],
+        "cta": {
+          "actionId": "hero-contact",
+          "box": {
+            "x": 5,
+            "y": 89,
+            "width": 90,
+            "height": 9
+          },
+          "button": {
+            "layout": "row",
+            "height": 50,
+            "surface": {
+              "gradient": "linear-gradient(120deg, #f3d37d, #c9912c)",
+              "borderColor": "#f1d995",
+              "borderWidth": 1,
+              "radius": 24
+            },
+            "iconColor": "#241603",
+            "label": {
+              "family": "sans",
+              "size": 12,
+              "weight": 700,
+              "color": "#241603"
+            },
+            "caption": {
+              "size": 10,
+              "color": "#241603"
+            }
+          }
+        }
+      },
+      "sections": {
+        "contacts": {
+          "version": 1,
+          "component": "actions",
+          "padding": 4,
+          "gap": 8,
+          "columns": 4,
+          "button": {
+            "layout": "tile",
+            "height": 96,
+            "surface": {
+              "gradient": "linear-gradient(135deg, #54360d, #221607)",
+              "borderColor": "#ae843e",
+              "borderWidth": 1,
+              "radius": 12
+            },
+            "iconSurface": {
+              "radius": 8
+            },
+            "iconColor": "#e6bd68",
+            "iconSize": 27,
+            "label": {
+              "size": 11,
+              "weight": 400,
+              "color": "#f9f0df"
+            },
+            "caption": {
+              "size": 10,
+              "color": "#d8c8ac"
+            }
+          },
+          "buttons": {
+            "ig": {
+              "layout": "tile",
+              "height": 96,
+              "surface": {
+                "gradient": "linear-gradient(135deg, #54360d, #221607)",
+                "borderColor": "#ae843e",
+                "borderWidth": 1,
+                "radius": 12
+              },
+              "iconSurface": {
+                "radius": 8
+              },
+              "iconColor": "#f9d3a4",
+              "iconSize": 27,
+              "label": {
+                "size": 11,
+                "weight": 400,
+                "color": "#f9f0df"
+              },
+              "caption": {
+                "size": 10,
+                "color": "#d8c8ac"
+              }
+            },
+            "map": {
+              "layout": "tile",
+              "height": 96,
+              "surface": {
+                "gradient": "linear-gradient(135deg, #54360d, #221607)",
+                "borderColor": "#ae843e",
+                "borderWidth": 1,
+                "radius": 12
+              },
+              "iconSurface": {
+                "radius": 8
+              },
+              "iconColor": "#edbd62",
+              "iconSize": 27,
+              "label": {
+                "size": 11,
+                "weight": 400,
+                "color": "#f9f0df"
+              },
+              "caption": {
+                "size": 10,
+                "color": "#d8c8ac"
+              }
+            }
+          }
+        },
+        "values": {
+          "version": 1,
+          "heading": {
+            "family": "serif",
+            "size": 25,
+            "weight": 400,
+            "color": "#f9f0df"
+          },
+          "text": {
+            "family": "sans",
+            "size": 14,
+            "lineHeight": 145,
+            "color": "#f9f0df"
+          },
+          "padding": 4,
+          "gap": 12,
+          "component": "benefits",
+          "columns": 4,
+          "itemTitle": {
+            "size": 12,
+            "color": "#e6bd68",
+            "align": "center"
+          },
+          "itemText": {
+            "size": 10,
+            "color": "#f9f0df",
+            "align": "center"
+          },
+          "cardSurface": {
+            "color": "#090807"
+          }
+        },
+        "team": {
+          "version": 1,
+          "heading": {
+            "family": "serif",
+            "size": 25,
+            "weight": 400,
+            "color": "#f9f0df"
+          },
+          "text": {
+            "family": "sans",
+            "size": 14,
+            "lineHeight": 145,
+            "color": "#f9f0df"
+          },
+          "padding": 4,
+          "gap": 12,
+          "component": "profiles",
+          "variant": "vertical",
+          "columns": 2,
+          "imageAspect": 75,
+          "cardSurface": {
+            "color": "#15110d",
+            "borderColor": "#4a3921",
+            "borderWidth": 1,
+            "radius": 12
+          },
+          "itemTitle": {
+            "family": "serif",
+            "size": 20,
+            "color": "#f9f0df"
+          },
+          "itemText": {
+            "size": 12,
+            "color": "#e6bd68"
+          }
+        },
+        "story": {
+          "version": 1,
+          "heading": {
+            "family": "serif",
+            "size": 31,
+            "color": "#e6bd68"
+          },
+          "text": {
+            "size": 14,
+            "lineHeight": 140,
+            "color": "#f9f0df"
+          },
+          "padding": 4,
+          "gap": 12,
+          "component": "banner",
+          "height": 320,
+          "surface": {
+            "borderColor": "#6d542c",
+            "borderWidth": 1,
+            "radius": 14
+          },
+          "layers": [
+            {
+              "kind": "image",
+              "source": "image",
+              "position": {
+                "x": 65,
+                "y": 50
+              }
+            },
+            {
+              "kind": "gradient",
+              "value": {
+                "angle": 90,
+                "stops": [
+                  {
+                    "color": "#090807",
+                    "at": 0,
+                    "opacity": 92
+                  },
+                  {
+                    "color": "#090807",
+                    "at": 100,
+                    "opacity": 20
+                  }
+                ]
+              }
+            }
+          ],
+          "button": {
+            "layout": "row",
+            "height": 50,
+            "surface": {
+              "color": "#684715",
+              "borderColor": "#e6bd68",
+              "borderWidth": 1,
+              "radius": 25
+            },
+            "iconColor": "#241603",
+            "label": {
+              "size": 11,
+              "color": "#f9f0df"
+            },
+            "caption": {
+              "size": 10,
+              "color": "#241603"
+            }
+          }
+        },
+        "services": {
+          "version": 1,
+          "heading": {
+            "family": "serif",
+            "size": 25,
+            "weight": 400,
+            "color": "#f9f0df"
+          },
+          "text": {
+            "family": "sans",
+            "size": 14,
+            "lineHeight": 145,
+            "color": "#f9f0df"
+          },
+          "padding": 4,
+          "gap": 12,
+          "component": "catalog",
+          "variant": "horizontal",
+          "columns": 1,
+          "mediaWidth": 34,
+          "imageAspect": 100,
+          "details": true,
+          "cardSurface": {
+            "color": "#12100c",
+            "borderColor": "#49371e",
+            "borderWidth": 1,
+            "radius": 14
+          },
+          "itemTitle": {
+            "size": 17,
+            "color": "#f9f0df"
+          },
+          "itemText": {
+            "size": 13,
+            "color": "#f9f0df"
+          }
+        },
+        "results": {
+          "version": 1,
+          "heading": {
+            "family": "serif",
+            "size": 25,
+            "weight": 400,
+            "color": "#f9f0df"
+          },
+          "text": {
+            "family": "sans",
+            "size": 14,
+            "lineHeight": 145,
+            "color": "#f9f0df"
+          },
+          "padding": 4,
+          "gap": 12,
+          "component": "gallery",
+          "variant": "featured",
+          "columns": 3,
+          "imageAspect": 80,
+          "images": [
+            {
+              "index": 0,
+              "aspect": 80,
+              "span": 1
+            },
+            {
+              "index": 1,
+              "aspect": 80
+            },
+            {
+              "index": 2,
+              "aspect": 80
+            },
+            {
+              "index": 3,
+              "aspect": 80
+            },
+            {
+              "index": 4,
+              "aspect": 80
+            },
+            {
+              "index": 5,
+              "aspect": 80
+            }
+          ]
+        },
+        "nails": {
+          "version": 1,
+          "heading": {
+            "family": "serif",
+            "size": 25,
+            "weight": 400,
+            "color": "#f9f0df"
+          },
+          "text": {
+            "family": "sans",
+            "size": 14,
+            "lineHeight": 145,
+            "color": "#f9f0df"
+          },
+          "padding": 4,
+          "gap": 12,
+          "component": "gallery",
+          "variant": "grid",
+          "columns": 3,
+          "imageAspect": 65
+        },
+        "care": {
+          "version": 1,
+          "heading": {
+            "family": "serif",
+            "size": 27,
+            "color": "#e6bd68"
+          },
+          "text": {
+            "family": "sans",
+            "size": 14,
+            "lineHeight": 145,
+            "color": "#f9f0df"
+          },
+          "padding": 4,
+          "gap": 12,
+          "component": "banner",
+          "height": 250,
+          "surface": {
+            "borderColor": "#6d542c",
+            "borderWidth": 1,
+            "radius": 14
+          },
+          "layers": [
+            {
+              "kind": "image",
+              "source": "image",
+              "position": {
+                "x": 65,
+                "y": 50
+              }
+            },
+            {
+              "kind": "gradient",
+              "value": {
+                "angle": 90,
+                "stops": [
+                  {
+                    "color": "#090807",
+                    "at": 0,
+                    "opacity": 92
+                  },
+                  {
+                    "color": "#090807",
+                    "at": 100,
+                    "opacity": 20
+                  }
+                ]
+              }
+            }
+          ],
+          "button": {
+            "layout": "row",
+            "height": 50,
+            "surface": {
+              "gradient": "linear-gradient(120deg, #f3d37d, #c9912c)",
+              "borderColor": "#f1d995",
+              "borderWidth": 1,
+              "radius": 24
+            },
+            "iconColor": "#241603",
+            "label": {
+              "family": "sans",
+              "size": 12,
+              "weight": 700,
+              "color": "#241603"
+            },
+            "caption": {
+              "size": 10,
+              "color": "#241603"
+            }
+          }
+        },
+        "about": {
+          "version": 1,
+          "heading": {
+            "family": "serif",
+            "size": 25,
+            "weight": 400,
+            "color": "#f9f0df"
+          },
+          "text": {
+            "family": "sans",
+            "size": 14,
+            "lineHeight": 145,
+            "color": "#f9f0df"
+          },
+          "padding": 4,
+          "gap": 12,
+          "component": "text",
+          "variant": "stacked",
+          "imageAspect": 140
+        },
+        "space": {
+          "version": 1,
+          "heading": {
+            "family": "serif",
+            "size": 25,
+            "weight": 400,
+            "color": "#f9f0df"
+          },
+          "text": {
+            "family": "sans",
+            "size": 14,
+            "lineHeight": 145,
+            "color": "#f9f0df"
+          },
+          "padding": 4,
+          "gap": 12,
+          "component": "gallery",
+          "variant": "featured",
+          "columns": 2,
+          "imageAspect": 110,
+          "images": [
+            {
+              "index": 0,
+              "span": 2,
+              "aspect": 145
+            },
+            {
+              "index": 1,
+              "aspect": 100
+            },
+            {
+              "index": 2,
+              "aspect": 100
+            }
+          ]
+        },
+        "location": {
+          "version": 1,
+          "heading": {
+            "family": "serif",
+            "size": 25,
+            "color": "#2e2417"
+          },
+          "text": {
+            "size": 14,
+            "color": "#2e2417"
+          },
+          "padding": 4,
+          "gap": 12,
+          "component": "location",
+          "variant": "split",
+          "mediaWidth": 50,
+          "imageAspect": 80,
+          "surface": {
+            "color": "#f7efdf",
+            "radius": 14
+          }
+        },
+        "hours": {
+          "version": 1,
+          "heading": {
+            "family": "serif",
+            "size": 25,
+            "weight": 400,
+            "color": "#f9f0df"
+          },
+          "text": {
+            "size": 13,
+            "color": "#21170a"
+          },
+          "padding": 4,
+          "gap": 12,
+          "component": "hours",
+          "cardSurface": {
+            "color": "#f7efdf",
+            "radius": 14
+          }
+        },
+        "closing": {
+          "version": 1,
+          "heading": {
+            "family": "serif",
+            "size": 27,
+            "color": "#e6bd68"
+          },
+          "text": {
+            "family": "sans",
+            "size": 14,
+            "lineHeight": 145,
+            "color": "#f9f0df"
+          },
+          "padding": 4,
+          "gap": 12,
+          "component": "banner",
+          "height": 240,
+          "surface": {
+            "borderColor": "#e6bd68",
+            "borderWidth": 1,
+            "radius": 16
+          },
+          "layers": [
+            {
+              "kind": "image",
+              "source": "image",
+              "position": {
+                "x": 65,
+                "y": 50
+              }
+            },
+            {
+              "kind": "gradient",
+              "value": {
+                "angle": 90,
+                "stops": [
+                  {
+                    "color": "#090807",
+                    "at": 0,
+                    "opacity": 92
+                  },
+                  {
+                    "color": "#090807",
+                    "at": 100,
+                    "opacity": 20
+                  }
+                ]
+              }
+            }
+          ],
+          "button": {
+            "layout": "row",
+            "height": 50,
+            "surface": {
+              "gradient": "linear-gradient(120deg, #f3d37d, #c9912c)",
+              "borderColor": "#f1d995",
+              "borderWidth": 1,
+              "radius": 24
+            },
+            "iconColor": "#241603",
+            "label": {
+              "family": "sans",
+              "size": 12,
+              "weight": 700,
+              "color": "#241603"
+            },
+            "caption": {
+              "size": 10,
+              "color": "#241603"
+            }
+          }
+        }
+      }
+    }
+  }
+}

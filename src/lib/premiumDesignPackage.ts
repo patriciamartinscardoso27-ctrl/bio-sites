@@ -1,11 +1,12 @@
 import type {Bio} from '../types/biosite'
 import {readyModelIds} from '../data/readyModelIds'
+import {validatePremiumVisualV2} from './premiumVisualV2'
 
 export const premiumPackageMaxBytes=4_000_000
 export const premiumSectionKinds=['actions','categories','promotion','services','products','gallery','about','benefits','hours','location','whatsapp','testimonials'] as const
 export interface PremiumDesignPackage {
- format:'bio-sites-premium';schemaVersion:1
- renderer:{id:'biosite';version:1;profile:'preset'|'flexible'|'standard';presetId?:string}
+ format:'bio-sites-premium';schemaVersion:1|2
+ renderer:{id:'biosite';version:1|2;profile:'preset'|'flexible'|'standard'|'premium';presetId?:string}
  components:{id:string;version:1}[]
  assets:{version:1;storage:'references';media:{path:string;source:string}[]}
  editing:{version:1;adapter:'existing-editor'}
@@ -66,6 +67,18 @@ export function assertPremiumPackage(value:unknown):asserts value is PremiumDesi
  if(new TextEncoder().encode(JSON.stringify(value)).byteLength>premiumPackageMaxBytes)fail('O pacote JSON deve ter até 4 MB. ZIP será suportado em uma etapa futura.')
  boundedTree(value);keys(value,['format','schemaVersion','renderer','components','assets','editing','design'],'Pacote')
  const p=value as PremiumDesignPackage
+ if(p.format==='bio-sites-premium'&&p.schemaVersion===2){
+  keys(p.renderer,['id','version','profile'],'Renderizador V2')
+  if(p.renderer.id!=='biosite'||p.renderer.version!==2||p.renderer.profile!=='premium')fail('Renderizador V2 incompatível.')
+  validatePremiumVisualV2(p.design)
+  const design=structuredClone(p.design);delete design.premiumV2
+  const surrogate={...p,schemaVersion:1,renderer:{id:'biosite',version:1,profile:'standard'},components:components(design),design}
+  assertPremiumPackage(surrogate)
+  if(!Array.isArray(p.components))fail('Catálogo V2 inválido.')
+  p.components.forEach(c=>keys(c,['id','version'],'Componente V2'))
+  if(JSON.stringify([...p.components].sort((a,b)=>a.id.localeCompare(b.id)))!==JSON.stringify(v2Components(p.design)))fail('Catálogo V2 não corresponde aos componentes da composição.')
+  return
+ }
  if(p.format!=='bio-sites-premium'||p.schemaVersion!==1)fail('Formato ou versão de pacote não suportado.')
  keys(p.renderer,['id','version','profile','presetId'],'Renderizador')
  keys(p.editing,['version','adapter'],'Edição')
@@ -87,8 +100,11 @@ export function assertPremiumPackage(value:unknown):asserts value is PremiumDesi
 }
 export function exportPremiumDesign(bio:Bio):PremiumDesignPackage {
  const design=structuredClone(bio);delete design.client
- const result:PremiumDesignPackage={format:'bio-sites-premium',schemaVersion:1,renderer:profile(design),components:components(design),assets:{version:1,storage:'references',media:premiumMedia(design)},editing:{version:1,adapter:'existing-editor'},design}
+ const result:PremiumDesignPackage={format:'bio-sites-premium',schemaVersion:design.premiumV2?2:1,renderer:design.premiumV2?{id:'biosite',version:2,profile:'premium'}:profile(design),components:design.premiumV2?v2Components(design):components(design),assets:{version:1,storage:'references',media:premiumMedia(design)},editing:{version:1,adapter:'existing-editor'},design}
  assertPremiumPackage(result);return result
+}
+function v2Components(bio:Bio):PremiumDesignPackage['components']{
+ return [...new Set([...(bio.heroEnabled!==false?['hero.premium']:[]),...bio.sections.map(s=>'section.'+bio.premiumV2!.sections[s.id].component)])].sort().map(id=>({id,version:1}))
 }
 export function importPremiumDesign(value:unknown,id:string):Bio {
  assertPremiumPackage(value)

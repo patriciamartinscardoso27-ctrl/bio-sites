@@ -1,0 +1,858 @@
+{
+  "schemaVersion": 1,
+  "source": "Current local source; not a production availability assertion.",
+  "categories": [
+    "loja de roupas",
+    "barbearia",
+    "salão / estética",
+    "restaurante / lanchonete",
+    "doceria / padaria",
+    "oficina / serviços",
+    "comercial geral"
+  ],
+  "styles": [
+    "boutique-gold",
+    "fashion-pink",
+    "clean-nude",
+    "black-gold",
+    "vintage-barber",
+    "urban-street",
+    "rose-gold",
+    "nude-elegance",
+    "luxury-black",
+    "gourmet-dark",
+    "fast-food-red",
+    "rustic-kitchen",
+    "candy-pink",
+    "chocolate-premium",
+    "clean-patisserie",
+    "auto-premium",
+    "performance-red",
+    "tech-blue",
+    "business-premium",
+    "modern-blue",
+    "clean-minimal"
+  ],
+  "actionKinds": [
+    "whatsapp",
+    "instagram",
+    "facebook",
+    "tiktok",
+    "reviews",
+    "location",
+    "phone",
+    "email",
+    "website",
+    "menu",
+    "booking",
+    "quote",
+    "order",
+    "custom"
+  ],
+  "icons": [
+    "whatsapp",
+    "instagram",
+    "facebook",
+    "tiktok",
+    "youtube",
+    "phone",
+    "email",
+    "message",
+    "link",
+    "globe",
+    "location",
+    "map",
+    "route",
+    "navigation",
+    "store",
+    "bag",
+    "cart",
+    "catalog",
+    "gift",
+    "food",
+    "delivery",
+    "coffee",
+    "cake",
+    "pizza",
+    "scissors",
+    "wrench",
+    "briefcase",
+    "sparkles",
+    "calendar",
+    "clock",
+    "calendar-check",
+    "credit-card",
+    "wallet",
+    "banknote",
+    "star",
+    "heart",
+    "camera",
+    "gallery",
+    "document",
+    "info",
+    "users",
+    "check",
+    "home",
+    "linkedin",
+    "twitter",
+    "telegram",
+    "pinterest",
+    "spotify",
+    "smartphone",
+    "chat",
+    "support",
+    "tag",
+    "qr-code",
+    "burger",
+    "car",
+    "construction",
+    "beauty",
+    "share",
+    "download",
+    "external",
+    "search",
+    "user",
+    "google",
+    "google-reviews",
+    "reviews",
+    "stars",
+    "tooth",
+    "shield-check",
+    "leaf",
+    "sofa",
+    "ruler",
+    "building",
+    "diamond",
+    "scale",
+    "gavel",
+    "hand-coins",
+    "dumbbell",
+    "chart",
+    "apple",
+    "zap",
+    "graduation",
+    "medal",
+    "paw",
+    "glasses",
+    "flower",
+    "ring",
+    "crown",
+    "lock",
+    "settings",
+    "thumbs-up",
+    "flame",
+    "running",
+    "target",
+    "play",
+    "pin",
+    "menu"
+  ],
+  "sectionKinds": [
+    "testimonials",
+    "actions",
+    "categories",
+    "promotion",
+    "services",
+    "products",
+    "gallery",
+    "about",
+    "benefits",
+    "hours",
+    "location",
+    "whatsapp"
+  ],
+  "sectionLayouts": {
+    "categories": [
+      "two",
+      "three",
+      "four",
+      "grid",
+      "carousel"
+    ],
+    "benefits": [
+      "cards",
+      "list"
+    ],
+    "actions": [
+      "square",
+      "rounded",
+      "two",
+      "three",
+      "four",
+      "list",
+      "pill",
+      "inline"
+    ],
+    "products": [
+      "compact",
+      "large",
+      "two",
+      "three",
+      "list",
+      "carousel"
+    ],
+    "services": [
+      "compact",
+      "large",
+      "two",
+      "three",
+      "list",
+      "carousel"
+    ],
+    "gallery": [
+      "grid",
+      "mosaic",
+      "carousel"
+    ],
+    "testimonials": [
+      "cards",
+      "carousel",
+      "spotlight"
+    ]
+  },
+  "heroLayouts": [
+    "full",
+    "compact",
+    "center",
+    "overlap",
+    "left"
+  ],
+  "visualNumberBounds": {
+    "cardPaddingX": 100,
+    "cardPaddingY": 100,
+    "cardGap": 80,
+    "cardTitleSize": 60,
+    "cardBodySize": 36,
+    "priceSize": 48,
+    "headingGap": 80,
+    "contentWidth": 100,
+    "surfaceRadius": 80,
+    "surfaceBorderWidth": 12,
+    "imagePositionX": 100,
+    "imagePositionY": 100,
+    "bodySize": 36,
+    "lineHeight": 240,
+    "letterSpacing": 20,
+    "fontWeight": 900,
+    "mediaAspect": 1000,
+    "heightPercent": 600,
+    "widthPercent": 100,
+    "paddingX": 100,
+    "paddingY": 160,
+    "gap": 80,
+    "minHeight": 900,
+    "mediaHeight": 900,
+    "iconSize": 96,
+    "borderWidth": 12,
+    "columns": 4,
+    "radiusPx": 80,
+    "maxWidth": 1200,
+    "mediaWidth": 100,
+    "fontSize": 60,
+    "logoSize": 160,
+    "glyphSize": 64,
+    "buttonHeight": 220,
+    "labelSize": 28,
+    "subtitleSize": 22,
+    "overlay": 95
+  },
+  "visualEnumValues": {
+    "cardSurface": [
+      "plain",
+      "panel"
+    ],
+    "surfaceShadow": [
+      "none",
+      "soft",
+      "strong"
+    ],
+    "textStyle": [
+      "normal",
+      "italic"
+    ],
+    "radius": [
+      "square",
+      "rounded",
+      "pill"
+    ],
+    "shadow": [
+      "none",
+      "soft",
+      "strong"
+    ],
+    "spacing": [
+      "compact",
+      "normal",
+      "wide"
+    ],
+    "titleSize": [
+      "small",
+      "medium",
+      "large"
+    ],
+    "align": [
+      "left",
+      "center",
+      "right"
+    ],
+    "font": [
+      "sans",
+      "serif",
+      "condensed"
+    ],
+    "weight": [
+      "regular",
+      "bold"
+    ],
+    "imageFit": [
+      "cover",
+      "contain"
+    ],
+    "imagePosition": [
+      "center",
+      "top",
+      "bottom"
+    ],
+    "style": [
+      "solid",
+      "outline",
+      "soft"
+    ],
+    "borderStyle": [
+      "solid",
+      "dashed",
+      "dotted"
+    ],
+    "heroComposition": [
+      "cover",
+      "stacked",
+      "split",
+      "profile",
+      "overlap"
+    ],
+    "contentPosition": [
+      "top",
+      "center",
+      "bottom"
+    ],
+    "actionFormat": [
+      "tiles",
+      "cards",
+      "rows",
+      "icons"
+    ],
+    "iconPosition": [
+      "top",
+      "left"
+    ],
+    "cardMedia": [
+      "top",
+      "left",
+      "background"
+    ],
+    "mediaPlacement": [
+      "top",
+      "bottom",
+      "left",
+      "right",
+      "background"
+    ]
+  },
+  "visualColorKeys": [
+    "surfaceText",
+    "background",
+    "text",
+    "titleColor",
+    "iconColor",
+    "textColor",
+    "hoverColor",
+    "highlight",
+    "panel",
+    "border"
+  ],
+  "readyModelIds": [
+    "moda-premium-gold",
+    "bella-moda-feminina",
+    "urban-black-moda-masculina",
+    "charmme-moda-feminina",
+    "lumiere-boutique",
+    "vibe-store",
+    "urban-black-2",
+    "nexo-moda-masculina",
+    "atelier-27",
+    "lumiere-moda-feminina",
+    "imperium-barbearia",
+    "barber-pro",
+    "royal-barber",
+    "bravo-barbearia",
+    "the-cut-barbearia",
+    "beauty-nude-light",
+    "beauty-nude-dark",
+    "essencia-rose-estetica",
+    "essencia-dos-cachos",
+    "jocastrya-estetica-original",
+    "sueli-nascimento",
+    "paty-galetos",
+    "eclat-beleza",
+    "nails-glam",
+    "lumiere-beleza-estetica",
+    "nail-lux",
+    "bella-nails-studio",
+    "lash-beauty",
+    "cilios-studio",
+    "lash-more",
+    "burger-fire",
+    "sabor-da-casa",
+    "bistro-sabor",
+    "doce-encanto",
+    "acai-da-hora",
+    "bella-pizza",
+    "grill-express",
+    "sabor-mineiro",
+    "sabor-mineiro-reenvio",
+    "boteco-do-amigo",
+    "garage-prime",
+    "autolex",
+    "prime-car",
+    "prime-car-reenvio",
+    "racing-auto-service",
+    "arqdesign",
+    "sorriso-odontologia",
+    "oralprime",
+    "almeida-costa",
+    "almeida-costa-completo",
+    "almeida-costa-completo-reenvio",
+    "rafael-ferreira-personal",
+    "amigo-pet",
+    "otica-vision",
+    "lux-joias",
+    "flora-boutique",
+    "casa-estilo",
+    "resenha-barbearia",
+    "rafael-ferreira-personal-laranja",
+    "acai-da-hora-roxo",
+    "sweets-candy-pink",
+    "auto-tech-blue",
+    "fashion-boutique-gold",
+    "fashion-fashion-pink",
+    "fashion-clean-nude",
+    "barber-black-gold",
+    "barber-vintage-barber",
+    "barber-urban-street",
+    "beauty-rose-gold",
+    "beauty-nude-elegance",
+    "beauty-luxury-black",
+    "food-gourmet-dark",
+    "food-fast-food-red",
+    "food-rustic-kitchen",
+    "sweets-chocolate-premium",
+    "sweets-clean-patisserie",
+    "auto-auto-premium",
+    "auto-performance-red",
+    "business-business-premium",
+    "business-modern-blue",
+    "business-clean-minimal"
+  ],
+  "readyTemplates": [
+    {
+      "id": "moda-premium-gold",
+      "label": "Moda Premium Gold",
+      "name": "Xavier Modas"
+    },
+    {
+      "id": "bella-moda-feminina",
+      "label": "Bella Moda Feminina",
+      "name": "Bella"
+    },
+    {
+      "id": "urban-black-moda-masculina",
+      "label": "Urban Black Moda Masculina",
+      "name": "Urban Black"
+    },
+    {
+      "id": "charmme-moda-feminina",
+      "label": "Charmme Moda Feminina",
+      "name": "Charmme"
+    },
+    {
+      "id": "lumiere-boutique",
+      "label": "Lumière Boutique",
+      "name": "Lumière"
+    },
+    {
+      "id": "vibe-store",
+      "label": "Vibe Store",
+      "name": "Vibe"
+    },
+    {
+      "id": "urban-black-2",
+      "label": "Urban Black 2",
+      "name": "Urban Black"
+    },
+    {
+      "id": "nexo-moda-masculina",
+      "label": "Nexo Moda Masculina",
+      "name": "Nexo"
+    },
+    {
+      "id": "atelier-27",
+      "label": "Atelier 27",
+      "name": "Atelier 27"
+    },
+    {
+      "id": "lumiere-moda-feminina",
+      "label": "Lumière Moda Feminina",
+      "name": "Lumière"
+    },
+    {
+      "id": "imperium-barbearia",
+      "label": "Imperium Barbearia",
+      "name": "Imperium"
+    },
+    {
+      "id": "barber-pro",
+      "label": "Barber Pro",
+      "name": "Barber Pro"
+    },
+    {
+      "id": "royal-barber",
+      "label": "Royal Barber",
+      "name": "Royal"
+    },
+    {
+      "id": "bravo-barbearia",
+      "label": "Bravo Barbearia",
+      "name": "Bravo"
+    },
+    {
+      "id": "the-cut-barbearia",
+      "label": "The Cut Barbearia",
+      "name": "The Cut"
+    },
+    {
+      "id": "beauty-nude-light",
+      "label": "Beauty Nude",
+      "name": "Beauty Nude"
+    },
+    {
+      "id": "beauty-nude-dark",
+      "label": "Beauty Nude Black",
+      "name": "Beauty Nude"
+    },
+    {
+      "id": "eclat-beleza",
+      "label": "Éclat",
+      "name": "Éclat"
+    },
+    {
+      "id": "nails-glam",
+      "label": "Nails Glam",
+      "name": "Nails Glam"
+    },
+    {
+      "id": "lumiere-beleza-estetica",
+      "label": "Lumière Beleza e Estética",
+      "name": "Lumière"
+    },
+    {
+      "id": "nail-lux",
+      "label": "Nail Lux",
+      "name": "Nail Lux"
+    },
+    {
+      "id": "bella-nails-studio",
+      "label": "Bella Nails Studio",
+      "name": "Bella Nails Studio"
+    },
+    {
+      "id": "lash-beauty",
+      "label": "Lash Beauty",
+      "name": "Lash Beauty"
+    },
+    {
+      "id": "cilios-studio",
+      "label": "Cílios Studio",
+      "name": "Cílios Studio"
+    },
+    {
+      "id": "lash-more",
+      "label": "Lash More",
+      "name": "Lash More"
+    },
+    {
+      "id": "burger-fire",
+      "label": "Burger Fire",
+      "name": "Burger Fire"
+    },
+    {
+      "id": "sabor-da-casa",
+      "label": "Sabor da Casa",
+      "name": "Sabor da Casa"
+    },
+    {
+      "id": "bistro-sabor",
+      "label": "Bistrô Sabor",
+      "name": "Bistrô Sabor"
+    },
+    {
+      "id": "doce-encanto",
+      "label": "Doce Encanto",
+      "name": "Doce Encanto"
+    },
+    {
+      "id": "acai-da-hora",
+      "label": "Açaí da Hora",
+      "name": "Açaí da Hora"
+    },
+    {
+      "id": "bella-pizza",
+      "label": "Bella Pizza",
+      "name": "Bella Pizza"
+    },
+    {
+      "id": "grill-express",
+      "label": "Grill Express",
+      "name": "Grill Express"
+    },
+    {
+      "id": "sabor-mineiro",
+      "label": "Sabor Mineiro — Arquivo 1",
+      "name": "Sabor Mineiro"
+    },
+    {
+      "id": "sabor-mineiro-reenvio",
+      "label": "Sabor Mineiro — Arquivo 2",
+      "name": "Sabor Mineiro"
+    },
+    {
+      "id": "boteco-do-amigo",
+      "label": "Boteco do Amigo",
+      "name": "Boteco do Amigo"
+    },
+    {
+      "id": "garage-prime",
+      "label": "Garage Prime",
+      "name": "Garage Prime"
+    },
+    {
+      "id": "autolex",
+      "label": "AutoLex",
+      "name": "AutoLex"
+    },
+    {
+      "id": "prime-car",
+      "label": "Prime Car — Arquivo 1",
+      "name": "Prime Car"
+    },
+    {
+      "id": "prime-car-reenvio",
+      "label": "Prime Car — Arquivo 2",
+      "name": "Prime Car"
+    },
+    {
+      "id": "racing-auto-service",
+      "label": "Racing Auto Service",
+      "name": "Racing Auto Service"
+    },
+    {
+      "id": "arqdesign",
+      "label": "ArqDesign",
+      "name": "ArqDesign"
+    },
+    {
+      "id": "sorriso-odontologia",
+      "label": "Sorriso Odontologia",
+      "name": "Sorriso Odontologia"
+    },
+    {
+      "id": "oralprime",
+      "label": "OralPrime — Odontologia",
+      "name": "OralPrime"
+    },
+    {
+      "id": "almeida-costa",
+      "label": "Almeida & Costa — Compacto",
+      "name": "Almeida & Costa"
+    },
+    {
+      "id": "almeida-costa-completo",
+      "label": "Almeida & Costa — Completo, Arquivo 1",
+      "name": "Almeida & Costa"
+    },
+    {
+      "id": "almeida-costa-completo-reenvio",
+      "label": "Almeida & Costa — Completo, Arquivo 2",
+      "name": "Almeida & Costa"
+    },
+    {
+      "id": "rafael-ferreira-personal",
+      "label": "Rafael Ferreira — Personal Trainer",
+      "name": "Rafael Ferreira"
+    },
+    {
+      "id": "amigo-pet",
+      "label": "Amigo Pet",
+      "name": "Amigo Pet"
+    },
+    {
+      "id": "otica-vision",
+      "label": "Ótica Vision",
+      "name": "Ótica Vision"
+    },
+    {
+      "id": "lux-joias",
+      "label": "Lux Joias",
+      "name": "Lux Joias"
+    },
+    {
+      "id": "flora-boutique",
+      "label": "Flora Boutique",
+      "name": "Flora Boutique"
+    },
+    {
+      "id": "casa-estilo",
+      "label": "Casa & Estilo",
+      "name": "Casa & Estilo"
+    },
+    {
+      "id": "resenha-barbearia",
+      "label": "Resenha Barbearia",
+      "name": "Resenha Barbearia"
+    },
+    {
+      "id": "rafael-ferreira-personal-laranja",
+      "label": "Rafael Ferreira Personal Trainer — Laranja",
+      "name": "Rafael Ferreira"
+    },
+    {
+      "id": "acai-da-hora-roxo",
+      "label": "Açaí da Hora — Roxo",
+      "name": "Açaí da Hora"
+    },
+    {
+      "id": "fashion-boutique-gold",
+      "label": "Boutique Gold",
+      "name": "Loja da Ana"
+    },
+    {
+      "id": "fashion-fashion-pink",
+      "label": "Fashion Pink",
+      "name": "PINK CLUB"
+    },
+    {
+      "id": "fashion-clean-nude",
+      "label": "Clean Nude",
+      "name": "alma boutique"
+    },
+    {
+      "id": "barber-black-gold",
+      "label": "Black Gold",
+      "name": "Barbearia do João"
+    },
+    {
+      "id": "barber-vintage-barber",
+      "label": "Vintage Barber",
+      "name": "Seu Antônio"
+    },
+    {
+      "id": "barber-urban-street",
+      "label": "Urban Street",
+      "name": "RUA 13"
+    },
+    {
+      "id": "beauty-rose-gold",
+      "label": "Rose Gold",
+      "name": "Aurora Beauty"
+    },
+    {
+      "id": "beauty-nude-elegance",
+      "label": "Nude Elegance",
+      "name": "essenza studio"
+    },
+    {
+      "id": "beauty-luxury-black",
+      "label": "Luxury Black",
+      "name": "ÉCLAT"
+    },
+    {
+      "id": "food-gourmet-dark",
+      "label": "Gourmet Dark",
+      "name": "BRASA & MESA"
+    },
+    {
+      "id": "food-fast-food-red",
+      "label": "Fast Food Red",
+      "name": "BURGER HOUSE"
+    },
+    {
+      "id": "food-rustic-kitchen",
+      "label": "Rustic Kitchen",
+      "name": "Casa do Sabor"
+    },
+    {
+      "id": "sweets-candy-pink",
+      "label": "Candy Pink",
+      "name": "Doce Flor"
+    },
+    {
+      "id": "sweets-chocolate-premium",
+      "label": "Chocolate Premium",
+      "name": "CACAU ATELIER"
+    },
+    {
+      "id": "sweets-clean-patisserie",
+      "label": "Clean Patisserie",
+      "name": "petit atelier"
+    },
+    {
+      "id": "auto-auto-premium",
+      "label": "Auto Premium",
+      "name": "PRIME AUTO"
+    },
+    {
+      "id": "auto-performance-red",
+      "label": "Performance Red",
+      "name": "TORQUE LAB"
+    },
+    {
+      "id": "auto-tech-blue",
+      "label": "Tech Blue",
+      "name": "NEXO AUTO"
+    },
+    {
+      "id": "business-business-premium",
+      "label": "Business Premium",
+      "name": "ESSENCIAL STORE"
+    },
+    {
+      "id": "business-modern-blue",
+      "label": "Modern Blue",
+      "name": "nexo store"
+    },
+    {
+      "id": "business-clean-minimal",
+      "label": "Clean Minimal",
+      "name": "claro."
+    },
+    {
+      "id": "essencia-rose-estetica",
+      "label": "Essência Rosé — Estética",
+      "name": "Essência Rosé"
+    },
+    {
+      "id": "jocastrya-estetica-original",
+      "label": "Jocastrya — Estética Original",
+      "name": "Jocastrya"
+    },
+    {
+      "id": "sueli-nascimento",
+      "label": "Beleza Premium — SN Studio",
+      "name": "Sueli Nascimento"
+    },
+    {
+      "id": "essencia-dos-cachos",
+      "label": "Essência dos Cachos",
+      "name": "Essência dos Cachos"
+    }
+  ]
+}

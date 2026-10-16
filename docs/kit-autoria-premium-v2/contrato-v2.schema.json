@@ -1,0 +1,3190 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Bio-Sites Premium V2 — structural authoring schema",
+  "$comment": "Cross-field checks (bindings, component-kind, visual property applicability, box boundaries, sorted stops, inventories, UUID, links) require the real runtime validator. No arbitrary code.",
+  "type": "object",
+  "properties": {
+    "format": {
+      "const": "bio-sites-premium"
+    },
+    "schemaVersion": {
+      "const": 2
+    },
+    "renderer": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "const": "biosite"
+        },
+        "version": {
+          "const": 2
+        },
+        "profile": {
+          "const": "premium"
+        }
+      },
+      "required": [
+        "id",
+        "version",
+        "profile"
+      ],
+      "additionalProperties": false
+    },
+    "components": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "enum": [
+              "hero.premium",
+              "section.actions",
+              "section.banner",
+              "section.catalog",
+              "section.gallery",
+              "section.profiles",
+              "section.text",
+              "section.benefits",
+              "section.hours",
+              "section.location",
+              "section.testimonials"
+            ]
+          },
+          "version": {
+            "const": 1
+          }
+        },
+        "required": [
+          "id",
+          "version"
+        ],
+        "additionalProperties": false
+      },
+      "maxItems": 11
+    },
+    "assets": {
+      "type": "object",
+      "properties": {
+        "version": {
+          "const": 1
+        },
+        "storage": {
+          "const": "references"
+        },
+        "media": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "path": {
+                "type": "string",
+                "maxLength": 100000,
+                "pattern": "^[^\\u0000]*$"
+              },
+              "source": {
+                "type": "string",
+                "maxLength": 4000000,
+                "pattern": "^[^\\u0000]*$"
+              }
+            },
+            "required": [
+              "path",
+              "source"
+            ],
+            "additionalProperties": false
+          },
+          "maxItems": 1000
+        }
+      },
+      "required": [
+        "version",
+        "storage",
+        "media"
+      ],
+      "additionalProperties": false
+    },
+    "editing": {
+      "type": "object",
+      "properties": {
+        "version": {
+          "const": 1
+        },
+        "adapter": {
+          "const": "existing-editor"
+        }
+      },
+      "required": [
+        "version",
+        "adapter"
+      ],
+      "additionalProperties": false
+    },
+    "design": {
+      "$ref": "#/$defs/design"
+    }
+  },
+  "required": [
+    "format",
+    "schemaVersion",
+    "renderer",
+    "components",
+    "assets",
+    "editing",
+    "design"
+  ],
+  "additionalProperties": false,
+  "$defs": {
+    "entryId": {
+      "type": "string",
+      "maxLength": 200,
+      "pattern": "^[^\\u0000]*$",
+      "minLength": 1
+    },
+    "image": {
+      "type": "string",
+      "maxLength": 16777216,
+      "pattern": "^[^\\u0000]*$",
+      "description": "Empty string, approved /images path, data:image png/jpeg/webp base64 or absolute HTTP(S) URL without credentials; runtime check."
+    },
+    "gradient": {
+      "type": "string",
+      "maxLength": 240,
+      "description": "linear-gradient(integerdeg, #RRGGBB [0..100%], ...), angle -360..360, 2..6 stops. Validated by normalizeGradient."
+    },
+    "visual": {
+      "type": "object",
+      "properties": {
+        "surfaceText": {
+          "type": "string",
+          "pattern": "^#[0-9a-fA-F]{6}$"
+        },
+        "background": {
+          "type": "string",
+          "pattern": "^#[0-9a-fA-F]{6}$"
+        },
+        "text": {
+          "type": "string",
+          "pattern": "^#[0-9a-fA-F]{6}$"
+        },
+        "titleColor": {
+          "type": "string",
+          "pattern": "^#[0-9a-fA-F]{6}$"
+        },
+        "iconColor": {
+          "type": "string",
+          "pattern": "^#[0-9a-fA-F]{6}$"
+        },
+        "textColor": {
+          "type": "string",
+          "pattern": "^#[0-9a-fA-F]{6}$"
+        },
+        "hoverColor": {
+          "type": "string",
+          "pattern": "^#[0-9a-fA-F]{6}$"
+        },
+        "highlight": {
+          "type": "string",
+          "pattern": "^#[0-9a-fA-F]{6}$"
+        },
+        "panel": {
+          "type": "string",
+          "pattern": "^#[0-9a-fA-F]{6}$"
+        },
+        "border": {
+          "type": "string",
+          "pattern": "^#[0-9a-fA-F]{6}$"
+        },
+        "cardPaddingX": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "cardPaddingY": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "cardGap": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 80
+        },
+        "cardTitleSize": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 60
+        },
+        "cardBodySize": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 36
+        },
+        "priceSize": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 48
+        },
+        "headingGap": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 80
+        },
+        "contentWidth": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "surfaceRadius": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 80
+        },
+        "surfaceBorderWidth": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 12
+        },
+        "imagePositionX": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "imagePositionY": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "bodySize": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 36
+        },
+        "lineHeight": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 240
+        },
+        "letterSpacing": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 20
+        },
+        "fontWeight": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 900
+        },
+        "mediaAspect": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 1000
+        },
+        "heightPercent": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 600
+        },
+        "widthPercent": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "paddingX": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "paddingY": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 160
+        },
+        "gap": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 80
+        },
+        "minHeight": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 900
+        },
+        "mediaHeight": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 900
+        },
+        "iconSize": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 96
+        },
+        "borderWidth": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 12
+        },
+        "columns": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 4
+        },
+        "radiusPx": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 80
+        },
+        "maxWidth": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 1200
+        },
+        "mediaWidth": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "fontSize": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 60
+        },
+        "logoSize": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 160
+        },
+        "glyphSize": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 64
+        },
+        "buttonHeight": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 220
+        },
+        "labelSize": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 28
+        },
+        "subtitleSize": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 22
+        },
+        "overlay": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 95
+        },
+        "cardSurface": {
+          "enum": [
+            "plain",
+            "panel"
+          ]
+        },
+        "surfaceShadow": {
+          "enum": [
+            "none",
+            "soft",
+            "strong"
+          ]
+        },
+        "textStyle": {
+          "enum": [
+            "normal",
+            "italic"
+          ]
+        },
+        "radius": {
+          "enum": [
+            "square",
+            "rounded",
+            "pill"
+          ]
+        },
+        "shadow": {
+          "enum": [
+            "none",
+            "soft",
+            "strong"
+          ]
+        },
+        "spacing": {
+          "enum": [
+            "compact",
+            "normal",
+            "wide"
+          ]
+        },
+        "titleSize": {
+          "enum": [
+            "small",
+            "medium",
+            "large"
+          ]
+        },
+        "align": {
+          "enum": [
+            "left",
+            "center",
+            "right"
+          ]
+        },
+        "font": {
+          "enum": [
+            "sans",
+            "serif",
+            "condensed"
+          ]
+        },
+        "weight": {
+          "enum": [
+            "regular",
+            "bold"
+          ]
+        },
+        "imageFit": {
+          "enum": [
+            "cover",
+            "contain"
+          ]
+        },
+        "imagePosition": {
+          "enum": [
+            "center",
+            "top",
+            "bottom"
+          ]
+        },
+        "style": {
+          "enum": [
+            "solid",
+            "outline",
+            "soft"
+          ]
+        },
+        "borderStyle": {
+          "enum": [
+            "solid",
+            "dashed",
+            "dotted"
+          ]
+        },
+        "heroComposition": {
+          "enum": [
+            "cover",
+            "stacked",
+            "split",
+            "profile",
+            "overlap"
+          ]
+        },
+        "contentPosition": {
+          "enum": [
+            "top",
+            "center",
+            "bottom"
+          ]
+        },
+        "actionFormat": {
+          "enum": [
+            "tiles",
+            "cards",
+            "rows",
+            "icons"
+          ]
+        },
+        "iconPosition": {
+          "enum": [
+            "top",
+            "left"
+          ]
+        },
+        "cardMedia": {
+          "enum": [
+            "top",
+            "left",
+            "background"
+          ]
+        },
+        "mediaPlacement": {
+          "enum": [
+            "top",
+            "bottom",
+            "left",
+            "right",
+            "background"
+          ]
+        },
+        "backgroundImage": {
+          "$ref": "#/$defs/image"
+        },
+        "backgroundGradient": {
+          "$ref": "#/$defs/gradient"
+        },
+        "overlayGradient": {
+          "$ref": "#/$defs/gradient"
+        },
+        "colorBindings": {
+          "type": "object",
+          "properties": {
+            "background": {
+              "enum": [
+                "background",
+                "panel",
+                "primary",
+                "secondary",
+                "highlight",
+                "text",
+                "muted"
+              ]
+            },
+            "panel": {
+              "enum": [
+                "background",
+                "panel",
+                "primary",
+                "secondary",
+                "highlight",
+                "text",
+                "muted"
+              ]
+            },
+            "text": {
+              "enum": [
+                "background",
+                "panel",
+                "primary",
+                "secondary",
+                "highlight",
+                "text",
+                "muted"
+              ]
+            },
+            "titleColor": {
+              "enum": [
+                "background",
+                "panel",
+                "primary",
+                "secondary",
+                "highlight",
+                "text",
+                "muted"
+              ]
+            },
+            "highlight": {
+              "enum": [
+                "background",
+                "panel",
+                "primary",
+                "secondary",
+                "highlight",
+                "text",
+                "muted"
+              ]
+            },
+            "border": {
+              "enum": [
+                "background",
+                "panel",
+                "primary",
+                "secondary",
+                "highlight",
+                "text",
+                "muted"
+              ]
+            },
+            "iconColor": {
+              "enum": [
+                "background",
+                "panel",
+                "primary",
+                "secondary",
+                "highlight",
+                "text",
+                "muted"
+              ]
+            },
+            "textColor": {
+              "enum": [
+                "background",
+                "panel",
+                "primary",
+                "secondary",
+                "highlight",
+                "text",
+                "muted"
+              ]
+            },
+            "hoverColor": {
+              "enum": [
+                "background",
+                "panel",
+                "primary",
+                "secondary",
+                "highlight",
+                "text",
+                "muted"
+              ]
+            }
+          },
+          "required": [],
+          "additionalProperties": false
+        }
+      },
+      "required": [],
+      "additionalProperties": false
+    },
+    "textOptions": {
+      "type": "object",
+      "properties": {
+        "label": {
+          "type": "object",
+          "properties": {
+            "hidden": {
+              "type": "boolean"
+            },
+            "visual": {
+              "$ref": "#/$defs/v2EditableVisual"
+            }
+          },
+          "required": [],
+          "additionalProperties": false
+        },
+        "subtitle": {
+          "type": "object",
+          "properties": {
+            "hidden": {
+              "type": "boolean"
+            },
+            "visual": {
+              "$ref": "#/$defs/v2EditableVisual"
+            }
+          },
+          "required": [],
+          "additionalProperties": false
+        },
+        "description": {
+          "type": "object",
+          "properties": {
+            "hidden": {
+              "type": "boolean"
+            },
+            "visual": {
+              "$ref": "#/$defs/v2EditableVisual"
+            }
+          },
+          "required": [],
+          "additionalProperties": false
+        },
+        "title": {
+          "type": "object",
+          "properties": {
+            "hidden": {
+              "type": "boolean"
+            },
+            "visual": {
+              "$ref": "#/$defs/v2EditableVisual"
+            }
+          },
+          "required": [],
+          "additionalProperties": false
+        },
+        "text": {
+          "type": "object",
+          "properties": {
+            "hidden": {
+              "type": "boolean"
+            },
+            "visual": {
+              "$ref": "#/$defs/v2EditableVisual"
+            }
+          },
+          "required": [],
+          "additionalProperties": false
+        },
+        "price": {
+          "type": "object",
+          "properties": {
+            "hidden": {
+              "type": "boolean"
+            },
+            "visual": {
+              "$ref": "#/$defs/v2EditableVisual"
+            }
+          },
+          "required": [],
+          "additionalProperties": false
+        },
+        "auxiliary": {
+          "type": "object",
+          "properties": {
+            "hidden": {
+              "type": "boolean"
+            },
+            "visual": {
+              "$ref": "#/$defs/v2EditableVisual"
+            }
+          },
+          "required": [],
+          "additionalProperties": false
+        },
+        "badge": {
+          "type": "object",
+          "properties": {
+            "hidden": {
+              "type": "boolean"
+            },
+            "visual": {
+              "$ref": "#/$defs/v2EditableVisual"
+            }
+          },
+          "required": [],
+          "additionalProperties": false
+        },
+        "ctaLabel": {
+          "type": "object",
+          "properties": {
+            "hidden": {
+              "type": "boolean"
+            },
+            "visual": {
+              "$ref": "#/$defs/v2EditableVisual"
+            }
+          },
+          "required": [],
+          "additionalProperties": false
+        },
+        "caption": {
+          "type": "object",
+          "properties": {
+            "hidden": {
+              "type": "boolean"
+            },
+            "visual": {
+              "$ref": "#/$defs/v2EditableVisual"
+            }
+          },
+          "required": [],
+          "additionalProperties": false
+        }
+      },
+      "required": [],
+      "additionalProperties": false
+    },
+    "textVisual": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "$ref": "#/$defs/visual"
+        },
+        "description": {
+          "$ref": "#/$defs/visual"
+        },
+        "tagline": {
+          "$ref": "#/$defs/visual"
+        },
+        "headline": {
+          "$ref": "#/$defs/visual"
+        }
+      },
+      "required": [],
+      "additionalProperties": false
+    },
+    "appearance": {
+      "type": "object",
+      "properties": {
+        "theme": {
+          "enum": [
+            "light",
+            "dark"
+          ]
+        },
+        "secondary": {
+          "type": "string",
+          "pattern": "^#[0-9a-fA-F]{6}$"
+        },
+        "font": {
+          "enum": [
+            "sans",
+            "serif",
+            "condensed"
+          ]
+        },
+        "buttons": {
+          "enum": [
+            "rounded",
+            "square",
+            "pill"
+          ]
+        },
+        "cards": {
+          "enum": [
+            "rounded",
+            "square"
+          ]
+        },
+        "background": {
+          "type": "string",
+          "pattern": "^#[0-9a-fA-F]{6}$"
+        },
+        "text": {
+          "type": "string",
+          "pattern": "^#[0-9a-fA-F]{6}$"
+        },
+        "panel": {
+          "type": "string",
+          "pattern": "^#[0-9a-fA-F]{6}$"
+        },
+        "muted": {
+          "type": "string",
+          "pattern": "^#[0-9a-fA-F]{6}$"
+        },
+        "highlight": {
+          "type": "string",
+          "pattern": "^#[0-9a-fA-F]{6}$"
+        },
+        "border": {
+          "type": "string",
+          "pattern": "^#[0-9a-fA-F]{6}$"
+        },
+        "buttonDefault": {
+          "type": "string",
+          "pattern": "^#[0-9a-fA-F]{6}$"
+        },
+        "buttonBackground": {
+          "type": "string",
+          "pattern": "^#[0-9a-fA-F]{6}$"
+        },
+        "buttonIcon": {
+          "type": "string",
+          "pattern": "^#[0-9a-fA-F]{6}$"
+        },
+        "buttonText": {
+          "type": "string",
+          "pattern": "^#[0-9a-fA-F]{6}$"
+        },
+        "buttonHover": {
+          "type": "string",
+          "pattern": "^#[0-9a-fA-F]{6}$"
+        },
+        "buttonMode": {
+          "enum": [
+            "original",
+            "theme",
+            "mono",
+            "light",
+            "dark",
+            "custom"
+          ]
+        }
+      },
+      "required": [
+        "theme",
+        "secondary",
+        "font",
+        "buttons",
+        "cards"
+      ],
+      "additionalProperties": false
+    },
+    "action": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "$ref": "#/$defs/entryId"
+        },
+        "label": {
+          "type": "string",
+          "maxLength": 100000,
+          "pattern": "^[^\\u0000]*$"
+        },
+        "message": {
+          "type": "string",
+          "maxLength": 100000,
+          "pattern": "^[^\\u0000]*$"
+        },
+        "kind": {
+          "enum": [
+            "whatsapp",
+            "instagram",
+            "facebook",
+            "tiktok",
+            "reviews",
+            "location",
+            "phone",
+            "email",
+            "website",
+            "menu",
+            "booking",
+            "quote",
+            "order",
+            "custom"
+          ]
+        },
+        "enabled": {
+          "type": "boolean"
+        },
+        "source": {
+          "enum": [
+            "business",
+            "custom"
+          ]
+        },
+        "mode": {
+          "enum": [
+            "whatsapp",
+            "url"
+          ]
+        },
+        "url": {
+          "type": "string",
+          "maxLength": 100000,
+          "pattern": "^[^\\u0000]*$"
+        },
+        "number": {
+          "type": "string",
+          "maxLength": 100000,
+          "pattern": "^[^\\u0000]*$"
+        },
+        "email": {
+          "type": "string",
+          "maxLength": 100000,
+          "pattern": "^[^\\u0000]*$"
+        },
+        "icon": {
+          "enum": [
+            "whatsapp",
+            "instagram",
+            "facebook",
+            "tiktok",
+            "youtube",
+            "phone",
+            "email",
+            "message",
+            "link",
+            "globe",
+            "location",
+            "map",
+            "route",
+            "navigation",
+            "store",
+            "bag",
+            "cart",
+            "catalog",
+            "gift",
+            "food",
+            "delivery",
+            "coffee",
+            "cake",
+            "pizza",
+            "scissors",
+            "wrench",
+            "briefcase",
+            "sparkles",
+            "calendar",
+            "clock",
+            "calendar-check",
+            "credit-card",
+            "wallet",
+            "banknote",
+            "star",
+            "heart",
+            "camera",
+            "gallery",
+            "document",
+            "info",
+            "users",
+            "check",
+            "home",
+            "linkedin",
+            "twitter",
+            "telegram",
+            "pinterest",
+            "spotify",
+            "smartphone",
+            "chat",
+            "support",
+            "tag",
+            "qr-code",
+            "burger",
+            "car",
+            "construction",
+            "beauty",
+            "share",
+            "download",
+            "external",
+            "search",
+            "user",
+            "google",
+            "google-reviews",
+            "reviews",
+            "stars",
+            "tooth",
+            "shield-check",
+            "leaf",
+            "sofa",
+            "ruler",
+            "building",
+            "diamond",
+            "scale",
+            "gavel",
+            "hand-coins",
+            "dumbbell",
+            "chart",
+            "apple",
+            "zap",
+            "graduation",
+            "medal",
+            "paw",
+            "glasses",
+            "flower",
+            "ring",
+            "crown",
+            "lock",
+            "settings",
+            "thumbs-up",
+            "flame",
+            "running",
+            "target",
+            "play",
+            "pin",
+            "menu"
+          ]
+        },
+        "subtitle": {
+          "type": "string",
+          "maxLength": 100000,
+          "pattern": "^[^\\u0000]*$"
+        },
+        "description": {
+          "type": "string",
+          "maxLength": 100000,
+          "pattern": "^[^\\u0000]*$"
+        },
+        "textOptions": {
+          "$ref": "#/$defs/textOptions"
+        },
+        "destination": {
+          "enum": [
+            "external",
+            "section"
+          ]
+        },
+        "sectionId": {
+          "type": "string",
+          "maxLength": 200,
+          "pattern": "^[^\\u0000]*$"
+        }
+      },
+      "required": [
+        "id",
+        "label",
+        "message"
+      ],
+      "additionalProperties": false
+    },
+    "item": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "$ref": "#/$defs/entryId"
+        },
+        "title": {
+          "type": "string",
+          "maxLength": 100000,
+          "pattern": "^[^\\u0000]*$"
+        },
+        "description": {
+          "type": "string",
+          "maxLength": 100000,
+          "pattern": "^[^\\u0000]*$"
+        },
+        "price": {
+          "type": "string",
+          "maxLength": 100000,
+          "pattern": "^[^\\u0000]*$"
+        },
+        "image": {
+          "$ref": "#/$defs/image"
+        },
+        "categoryId": {
+          "type": "string",
+          "maxLength": 100000,
+          "pattern": "^[^\\u0000]*$"
+        },
+        "action": {
+          "$ref": "#/$defs/action"
+        },
+        "textOptions": {
+          "$ref": "#/$defs/textOptions"
+        }
+      },
+      "required": [
+        "id",
+        "title",
+        "description",
+        "price",
+        "image"
+      ],
+      "additionalProperties": false
+    },
+    "highlight": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "$ref": "#/$defs/entryId"
+        },
+        "label": {
+          "type": "string",
+          "maxLength": 100000,
+          "pattern": "^[^\\u0000]*$"
+        },
+        "image": {
+          "$ref": "#/$defs/image"
+        },
+        "caption": {
+          "type": "string",
+          "maxLength": 100000,
+          "pattern": "^[^\\u0000]*$"
+        },
+        "textOptions": {
+          "$ref": "#/$defs/textOptions"
+        },
+        "action": {
+          "$ref": "#/$defs/action"
+        }
+      },
+      "required": [
+        "id",
+        "label",
+        "image"
+      ],
+      "additionalProperties": false
+    },
+    "section": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "$ref": "#/$defs/entryId"
+        },
+        "kind": {
+          "enum": [
+            "testimonials",
+            "actions",
+            "categories",
+            "promotion",
+            "services",
+            "products",
+            "gallery",
+            "about",
+            "benefits",
+            "hours",
+            "location",
+            "whatsapp"
+          ]
+        },
+        "title": {
+          "type": "string",
+          "maxLength": 100000,
+          "pattern": "^[^\\u0000]*$"
+        },
+        "text": {
+          "type": "string",
+          "maxLength": 100000,
+          "pattern": "^[^\\u0000]*$"
+        },
+        "enabled": {
+          "type": "boolean"
+        },
+        "image": {
+          "$ref": "#/$defs/image"
+        },
+        "badge": {
+          "type": "string",
+          "maxLength": 100000,
+          "pattern": "^[^\\u0000]*$"
+        },
+        "ctaLabel": {
+          "type": "string",
+          "maxLength": 100000,
+          "pattern": "^[^\\u0000]*$"
+        },
+        "subtitle": {
+          "type": "string",
+          "maxLength": 100000,
+          "pattern": "^[^\\u0000]*$"
+        },
+        "auxiliary": {
+          "type": "string",
+          "maxLength": 100000,
+          "pattern": "^[^\\u0000]*$"
+        },
+        "textOptions": {
+          "$ref": "#/$defs/textOptions"
+        },
+        "action": {
+          "$ref": "#/$defs/action"
+        },
+        "content": {
+          "type": "object",
+          "properties": {
+            "items": {
+              "type": "array",
+              "items": {
+                "$ref": "#/$defs/item"
+              },
+              "maxItems": 500
+            },
+            "actions": {
+              "type": "array",
+              "items": {
+                "$ref": "#/$defs/action"
+              },
+              "maxItems": 500
+            },
+            "photos": {
+              "type": "array",
+              "items": {
+                "$ref": "#/$defs/image"
+              },
+              "maxItems": 500
+            },
+            "benefits": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "maxLength": 100000,
+                "pattern": "^[^\\u0000]*$"
+              },
+              "maxItems": 500
+            },
+            "highlights": {
+              "type": "array",
+              "items": {
+                "$ref": "#/$defs/highlight"
+              },
+              "maxItems": 500
+            },
+            "hours": {
+              "type": "string",
+              "maxLength": 100000,
+              "pattern": "^[^\\u0000]*$"
+            },
+            "address": {
+              "type": "string",
+              "maxLength": 100000,
+              "pattern": "^[^\\u0000]*$"
+            },
+            "mapsUrl": {
+              "type": "string",
+              "maxLength": 100000,
+              "pattern": "^[^\\u0000]*$"
+            }
+          },
+          "required": [],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "id",
+        "kind",
+        "title",
+        "text",
+        "enabled"
+      ],
+      "additionalProperties": false
+    },
+    "design": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[1-8][0-9a-fA-F]{3}-[89abAB][0-9a-fA-F]{3}-[0-9a-fA-F]{12}$"
+        },
+        "manual": {
+          "type": "boolean"
+        },
+        "heroEnabled": {
+          "type": "boolean"
+        },
+        "style": {
+          "enum": [
+            "boutique-gold",
+            "fashion-pink",
+            "clean-nude",
+            "black-gold",
+            "vintage-barber",
+            "urban-street",
+            "rose-gold",
+            "nude-elegance",
+            "luxury-black",
+            "gourmet-dark",
+            "fast-food-red",
+            "rustic-kitchen",
+            "candy-pink",
+            "chocolate-premium",
+            "clean-patisserie",
+            "auto-premium",
+            "performance-red",
+            "tech-blue",
+            "business-premium",
+            "modern-blue",
+            "clean-minimal"
+          ]
+        },
+        "name": {
+          "type": "string",
+          "maxLength": 300,
+          "pattern": "^[^\\u0000]*$",
+          "minLength": 1
+        },
+        "category": {
+          "type": "string",
+          "maxLength": 100,
+          "pattern": "^[^\\u0000]*$",
+          "description": "Case-insensitive membership in catalogo.json categories; runtime check required."
+        },
+        "headline": {
+          "type": "string",
+          "maxLength": 100000,
+          "pattern": "^[^\\u0000]*$"
+        },
+        "tagline": {
+          "type": "string",
+          "maxLength": 100000,
+          "pattern": "^[^\\u0000]*$"
+        },
+        "highlights": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/highlight"
+          },
+          "maxItems": 500
+        },
+        "benefits": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "maxLength": 100000,
+            "pattern": "^[^\\u0000]*$"
+          },
+          "maxItems": 500
+        },
+        "description": {
+          "type": "string",
+          "maxLength": 100000,
+          "pattern": "^[^\\u0000]*$"
+        },
+        "color": {
+          "type": "string",
+          "maxLength": 100000,
+          "pattern": "^[^\\u0000]*$"
+        },
+        "cover": {
+          "$ref": "#/$defs/image"
+        },
+        "logo": {
+          "$ref": "#/$defs/image"
+        },
+        "phone": {
+          "type": "string",
+          "maxLength": 100000,
+          "pattern": "^[^\\u0000]*$"
+        },
+        "address": {
+          "type": "string",
+          "maxLength": 100000,
+          "pattern": "^[^\\u0000]*$"
+        },
+        "hours": {
+          "type": "string",
+          "maxLength": 100000,
+          "pattern": "^[^\\u0000]*$"
+        },
+        "instagram": {
+          "type": "string",
+          "maxLength": 100000,
+          "pattern": "^[^\\u0000]*$"
+        },
+        "telephone": {
+          "type": "string",
+          "maxLength": 100000,
+          "pattern": "^[^\\u0000]*$"
+        },
+        "email": {
+          "type": "string",
+          "maxLength": 100000,
+          "pattern": "^[^\\u0000]*$"
+        },
+        "facebook": {
+          "type": "string",
+          "maxLength": 100000,
+          "pattern": "^[^\\u0000]*$"
+        },
+        "tiktok": {
+          "type": "string",
+          "maxLength": 100000,
+          "pattern": "^[^\\u0000]*$"
+        },
+        "reviewsUrl": {
+          "type": "string",
+          "maxLength": 100000,
+          "pattern": "^[^\\u0000]*$"
+        },
+        "mapsUrl": {
+          "type": "string",
+          "maxLength": 100000,
+          "pattern": "^[^\\u0000]*$"
+        },
+        "website": {
+          "type": "string",
+          "maxLength": 100000,
+          "pattern": "^[^\\u0000]*$"
+        },
+        "menuUrl": {
+          "type": "string",
+          "maxLength": 100000,
+          "pattern": "^[^\\u0000]*$"
+        },
+        "sections": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/section"
+          },
+          "maxItems": 500
+        },
+        "actions": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/action"
+          },
+          "maxItems": 500
+        },
+        "services": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/item"
+          },
+          "maxItems": 500
+        },
+        "products": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/item"
+          },
+          "maxItems": 500
+        },
+        "photos": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/image"
+          },
+          "maxItems": 500
+        },
+        "premiumV2": {
+          "$ref": "#/$defs/premiumV2"
+        }
+      },
+      "required": [
+        "id",
+        "style",
+        "name",
+        "category",
+        "headline",
+        "tagline",
+        "description",
+        "color",
+        "phone",
+        "address",
+        "hours",
+        "instagram",
+        "cover",
+        "logo",
+        "sections",
+        "actions",
+        "services",
+        "products",
+        "highlights",
+        "benefits",
+        "photos",
+        "premiumV2"
+      ],
+      "additionalProperties": false
+    },
+    "v2Box": {
+      "type": "object",
+      "properties": {
+        "x": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "y": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "width": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 100
+        },
+        "height": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 100
+        }
+      },
+      "required": [
+        "x",
+        "y",
+        "width",
+        "height"
+      ],
+      "additionalProperties": false
+    },
+    "v2Type": {
+      "type": "object",
+      "properties": {
+        "family": {
+          "enum": [
+            "sans",
+            "serif",
+            "condensed"
+          ]
+        },
+        "size": {
+          "type": "integer",
+          "minimum": 8,
+          "maximum": 72
+        },
+        "sizeMedium": {
+          "type": "integer",
+          "minimum": 8,
+          "maximum": 72
+        },
+        "sizeLarge": {
+          "type": "integer",
+          "minimum": 8,
+          "maximum": 72
+        },
+        "weight": {
+          "type": "integer",
+          "minimum": 300,
+          "maximum": 900
+        },
+        "lineHeight": {
+          "type": "integer",
+          "minimum": 100,
+          "maximum": 240
+        },
+        "letterSpacing": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 20
+        },
+        "color": {
+          "type": "string",
+          "pattern": "^#[0-9a-fA-F]{6}$"
+        },
+        "align": {
+          "enum": [
+            "left",
+            "center",
+            "right"
+          ]
+        }
+      },
+      "required": [],
+      "additionalProperties": false
+    },
+    "v2Gradient": {
+      "oneOf": [
+        {
+          "type": "string",
+          "maxLength": 240,
+          "description": "Same constrained linear-gradient grammar as V1; runtime validation required."
+        },
+        {
+          "type": "object",
+          "properties": {
+            "angle": {
+              "type": "integer",
+              "minimum": -360,
+              "maximum": 360
+            },
+            "stops": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "color": {
+                    "type": "string",
+                    "pattern": "^#[0-9a-fA-F]{6}$"
+                  },
+                  "at": {
+                    "type": "integer",
+                    "minimum": 0,
+                    "maximum": 100
+                  },
+                  "opacity": {
+                    "type": "integer",
+                    "minimum": 0,
+                    "maximum": 100
+                  }
+                },
+                "required": [
+                  "color",
+                  "at"
+                ],
+                "additionalProperties": false
+              },
+              "maxItems": 6,
+              "minItems": 2
+            }
+          },
+          "required": [
+            "angle",
+            "stops"
+          ],
+          "additionalProperties": false
+        }
+      ]
+    },
+    "v2Surface": {
+      "type": "object",
+      "properties": {
+        "color": {
+          "type": "string",
+          "pattern": "^#[0-9a-fA-F]{6}$"
+        },
+        "gradient": {
+          "$ref": "#/$defs/v2Gradient"
+        },
+        "borderColor": {
+          "type": "string",
+          "pattern": "^#[0-9a-fA-F]{6}$"
+        },
+        "borderWidth": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 8
+        },
+        "radius": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 64
+        },
+        "shadow": {
+          "enum": [
+            "none",
+            "soft",
+            "strong"
+          ]
+        }
+      },
+      "required": [],
+      "additionalProperties": false
+    },
+    "v2Button": {
+      "type": "object",
+      "properties": {
+        "surface": {
+          "$ref": "#/$defs/v2Surface"
+        },
+        "iconSurface": {
+          "$ref": "#/$defs/v2Surface"
+        },
+        "iconColor": {
+          "type": "string",
+          "pattern": "^#[0-9a-fA-F]{6}$"
+        },
+        "iconSize": {
+          "type": "integer",
+          "minimum": 12,
+          "maximum": 56
+        },
+        "label": {
+          "$ref": "#/$defs/v2Type"
+        },
+        "caption": {
+          "$ref": "#/$defs/v2Type"
+        },
+        "layout": {
+          "enum": [
+            "tile",
+            "row",
+            "inline"
+          ]
+        },
+        "height": {
+          "type": "integer",
+          "minimum": 32,
+          "maximum": 160
+        }
+      },
+      "required": [],
+      "additionalProperties": false
+    },
+    "v2Layer": {
+      "oneOf": [
+        {
+          "type": "object",
+          "properties": {
+            "kind": {
+              "const": "image"
+            },
+            "source": {
+              "type": "string",
+              "pattern": "^(cover|image|photo\\.[0-9]+)$"
+            },
+            "fit": {
+              "enum": [
+                "cover",
+                "contain"
+              ]
+            },
+            "position": {
+              "type": "object",
+              "properties": {
+                "x": {
+                  "type": "integer",
+                  "minimum": 0,
+                  "maximum": 100
+                },
+                "y": {
+                  "type": "integer",
+                  "minimum": 0,
+                  "maximum": 100
+                }
+              },
+              "required": [
+                "x",
+                "y"
+              ],
+              "additionalProperties": false
+            },
+            "box": {
+              "$ref": "#/$defs/v2Box"
+            },
+            "opacity": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 100
+            }
+          },
+          "required": [
+            "kind",
+            "source"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "kind": {
+              "const": "gradient"
+            },
+            "value": {
+              "$ref": "#/$defs/v2Gradient"
+            },
+            "box": {
+              "$ref": "#/$defs/v2Box"
+            },
+            "opacity": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 100
+            }
+          },
+          "required": [
+            "kind",
+            "value"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "kind": {
+              "const": "solid"
+            },
+            "color": {
+              "type": "string",
+              "pattern": "^#[0-9a-fA-F]{6}$"
+            },
+            "box": {
+              "$ref": "#/$defs/v2Box"
+            },
+            "opacity": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 100
+            }
+          },
+          "required": [
+            "kind",
+            "color"
+          ],
+          "additionalProperties": false
+        }
+      ]
+    },
+    "v2Media": {
+      "type": "object",
+      "properties": {
+        "box": {
+          "$ref": "#/$defs/v2Box"
+        },
+        "fit": {
+          "enum": [
+            "cover",
+            "contain"
+          ]
+        },
+        "position": {
+          "type": "object",
+          "properties": {
+            "x": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 100
+            },
+            "y": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 100
+            }
+          },
+          "required": [
+            "x",
+            "y"
+          ],
+          "additionalProperties": false
+        },
+        "responsive": {
+          "type": "object",
+          "properties": {
+            "medium": {
+              "$ref": "#/$defs/v2Box"
+            },
+            "large": {
+              "$ref": "#/$defs/v2Box"
+            }
+          },
+          "required": [],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "box"
+      ],
+      "additionalProperties": false
+    },
+    "v2TextRegion": {
+      "type": "object",
+      "properties": {
+        "field": {
+          "enum": [
+            "name",
+            "headline",
+            "tagline",
+            "description"
+          ]
+        },
+        "box": {
+          "$ref": "#/$defs/v2Box"
+        },
+        "type": {
+          "$ref": "#/$defs/v2Type"
+        },
+        "responsive": {
+          "type": "object",
+          "properties": {
+            "medium": {
+              "$ref": "#/$defs/v2Box"
+            },
+            "large": {
+              "$ref": "#/$defs/v2Box"
+            }
+          },
+          "required": [],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "field",
+        "box"
+      ],
+      "additionalProperties": false
+    },
+    "v2Hero": {
+      "type": "object",
+      "properties": {
+        "version": {
+          "const": 1
+        },
+        "height": {
+          "type": "integer",
+          "minimum": 240,
+          "maximum": 1000
+        },
+        "surface": {
+          "$ref": "#/$defs/v2Surface"
+        },
+        "layers": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/v2Layer"
+          },
+          "maxItems": 6
+        },
+        "photo": {
+          "$ref": "#/$defs/v2Media"
+        },
+        "logo": {
+          "$ref": "#/$defs/v2Media"
+        },
+        "texts": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/v2TextRegion"
+          },
+          "maxItems": 4
+        },
+        "cta": {
+          "type": "object",
+          "properties": {
+            "actionId": {
+              "type": "string",
+              "maxLength": 200
+            },
+            "box": {
+              "$ref": "#/$defs/v2Box"
+            },
+            "button": {
+              "$ref": "#/$defs/v2Button"
+            }
+          },
+          "required": [
+            "actionId",
+            "box"
+          ],
+          "additionalProperties": false
+        },
+        "responsive": {
+          "type": "object",
+          "properties": {
+            "medium": {
+              "type": "object",
+              "properties": {
+                "height": {
+                  "type": "integer",
+                  "minimum": 240,
+                  "maximum": 1000
+                }
+              },
+              "required": [
+                "height"
+              ],
+              "additionalProperties": false
+            },
+            "large": {
+              "type": "object",
+              "properties": {
+                "height": {
+                  "type": "integer",
+                  "minimum": 240,
+                  "maximum": 1000
+                }
+              },
+              "required": [
+                "height"
+              ],
+              "additionalProperties": false
+            }
+          },
+          "required": [],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "version",
+        "height",
+        "texts"
+      ],
+      "additionalProperties": false
+    },
+    "v2Section_actions": {
+      "type": "object",
+      "properties": {
+        "version": {
+          "const": 1
+        },
+        "component": {
+          "const": "actions"
+        },
+        "surface": {
+          "$ref": "#/$defs/v2Surface"
+        },
+        "heading": {
+          "$ref": "#/$defs/v2Type"
+        },
+        "text": {
+          "$ref": "#/$defs/v2Type"
+        },
+        "padding": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 80
+        },
+        "gap": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 48
+        },
+        "columns": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 4
+        },
+        "responsive": {
+          "type": "object",
+          "properties": {
+            "medium": {
+              "type": "object",
+              "properties": {
+                "columns": {
+                  "type": "integer",
+                  "minimum": 1,
+                  "maximum": 4
+                },
+                "gap": {
+                  "type": "integer",
+                  "minimum": 0,
+                  "maximum": 48
+                },
+                "padding": {
+                  "type": "integer",
+                  "minimum": 0,
+                  "maximum": 80
+                }
+              },
+              "required": [],
+              "additionalProperties": false
+            },
+            "large": {
+              "type": "object",
+              "properties": {
+                "columns": {
+                  "type": "integer",
+                  "minimum": 1,
+                  "maximum": 4
+                },
+                "gap": {
+                  "type": "integer",
+                  "minimum": 0,
+                  "maximum": 48
+                },
+                "padding": {
+                  "type": "integer",
+                  "minimum": 0,
+                  "maximum": 80
+                }
+              },
+              "required": [],
+              "additionalProperties": false
+            }
+          },
+          "required": [],
+          "additionalProperties": false
+        },
+        "button": {
+          "$ref": "#/$defs/v2Button"
+        },
+        "buttons": {
+          "type": "object",
+          "additionalProperties": {
+            "$ref": "#/$defs/v2Button"
+          }
+        }
+      },
+      "required": [
+        "version",
+        "component"
+      ],
+      "additionalProperties": false
+    },
+    "v2Section_banner": {
+      "type": "object",
+      "properties": {
+        "version": {
+          "const": 1
+        },
+        "component": {
+          "const": "banner"
+        },
+        "surface": {
+          "$ref": "#/$defs/v2Surface"
+        },
+        "heading": {
+          "$ref": "#/$defs/v2Type"
+        },
+        "text": {
+          "$ref": "#/$defs/v2Type"
+        },
+        "padding": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 80
+        },
+        "gap": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 48
+        },
+        "layers": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/v2Layer"
+          },
+          "maxItems": 6
+        },
+        "height": {
+          "type": "integer",
+          "minimum": 120,
+          "maximum": 800
+        },
+        "button": {
+          "$ref": "#/$defs/v2Button"
+        }
+      },
+      "required": [
+        "version",
+        "component"
+      ],
+      "additionalProperties": false
+    },
+    "v2Section_catalog": {
+      "type": "object",
+      "properties": {
+        "version": {
+          "const": 1
+        },
+        "component": {
+          "const": "catalog"
+        },
+        "surface": {
+          "$ref": "#/$defs/v2Surface"
+        },
+        "heading": {
+          "$ref": "#/$defs/v2Type"
+        },
+        "text": {
+          "$ref": "#/$defs/v2Type"
+        },
+        "padding": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 80
+        },
+        "gap": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 48
+        },
+        "columns": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 4
+        },
+        "responsive": {
+          "type": "object",
+          "properties": {
+            "medium": {
+              "type": "object",
+              "properties": {
+                "columns": {
+                  "type": "integer",
+                  "minimum": 1,
+                  "maximum": 4
+                },
+                "gap": {
+                  "type": "integer",
+                  "minimum": 0,
+                  "maximum": 48
+                },
+                "padding": {
+                  "type": "integer",
+                  "minimum": 0,
+                  "maximum": 80
+                }
+              },
+              "required": [],
+              "additionalProperties": false
+            },
+            "large": {
+              "type": "object",
+              "properties": {
+                "columns": {
+                  "type": "integer",
+                  "minimum": 1,
+                  "maximum": 4
+                },
+                "gap": {
+                  "type": "integer",
+                  "minimum": 0,
+                  "maximum": 48
+                },
+                "padding": {
+                  "type": "integer",
+                  "minimum": 0,
+                  "maximum": 80
+                }
+              },
+              "required": [],
+              "additionalProperties": false
+            }
+          },
+          "required": [],
+          "additionalProperties": false
+        },
+        "variant": {
+          "enum": [
+            "vertical",
+            "horizontal",
+            "overlay"
+          ]
+        },
+        "imageAspect": {
+          "type": "integer",
+          "minimum": 40,
+          "maximum": 300
+        },
+        "imageFit": {
+          "enum": [
+            "cover",
+            "contain"
+          ]
+        },
+        "imagePosition": {
+          "type": "object",
+          "properties": {
+            "x": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 100
+            },
+            "y": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 100
+            }
+          },
+          "required": [
+            "x",
+            "y"
+          ],
+          "additionalProperties": false
+        },
+        "mediaWidth": {
+          "type": "integer",
+          "minimum": 20,
+          "maximum": 80
+        },
+        "cardSurface": {
+          "$ref": "#/$defs/v2Surface"
+        },
+        "itemTitle": {
+          "$ref": "#/$defs/v2Type"
+        },
+        "itemText": {
+          "$ref": "#/$defs/v2Type"
+        },
+        "price": {
+          "$ref": "#/$defs/v2Type"
+        },
+        "details": {
+          "type": "boolean"
+        },
+        "button": {
+          "$ref": "#/$defs/v2Button"
+        }
+      },
+      "required": [
+        "version",
+        "component"
+      ],
+      "additionalProperties": false
+    },
+    "v2Section_gallery": {
+      "type": "object",
+      "properties": {
+        "version": {
+          "const": 1
+        },
+        "component": {
+          "const": "gallery"
+        },
+        "surface": {
+          "$ref": "#/$defs/v2Surface"
+        },
+        "heading": {
+          "$ref": "#/$defs/v2Type"
+        },
+        "text": {
+          "$ref": "#/$defs/v2Type"
+        },
+        "padding": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 80
+        },
+        "gap": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 48
+        },
+        "columns": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 4
+        },
+        "responsive": {
+          "type": "object",
+          "properties": {
+            "medium": {
+              "type": "object",
+              "properties": {
+                "columns": {
+                  "type": "integer",
+                  "minimum": 1,
+                  "maximum": 4
+                },
+                "gap": {
+                  "type": "integer",
+                  "minimum": 0,
+                  "maximum": 48
+                },
+                "padding": {
+                  "type": "integer",
+                  "minimum": 0,
+                  "maximum": 80
+                }
+              },
+              "required": [],
+              "additionalProperties": false
+            },
+            "large": {
+              "type": "object",
+              "properties": {
+                "columns": {
+                  "type": "integer",
+                  "minimum": 1,
+                  "maximum": 4
+                },
+                "gap": {
+                  "type": "integer",
+                  "minimum": 0,
+                  "maximum": 48
+                },
+                "padding": {
+                  "type": "integer",
+                  "minimum": 0,
+                  "maximum": 80
+                }
+              },
+              "required": [],
+              "additionalProperties": false
+            }
+          },
+          "required": [],
+          "additionalProperties": false
+        },
+        "variant": {
+          "enum": [
+            "grid",
+            "featured",
+            "before-after"
+          ]
+        },
+        "imageAspect": {
+          "type": "integer",
+          "minimum": 40,
+          "maximum": 300
+        },
+        "images": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "index": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 499
+              },
+              "aspect": {
+                "type": "integer",
+                "minimum": 40,
+                "maximum": 300
+              },
+              "span": {
+                "type": "integer",
+                "minimum": 1,
+                "maximum": 4
+              },
+              "fit": {
+                "enum": [
+                  "cover",
+                  "contain"
+                ]
+              },
+              "position": {
+                "type": "object",
+                "properties": {
+                  "x": {
+                    "type": "integer",
+                    "minimum": 0,
+                    "maximum": 100
+                  },
+                  "y": {
+                    "type": "integer",
+                    "minimum": 0,
+                    "maximum": 100
+                  }
+                },
+                "required": [
+                  "x",
+                  "y"
+                ],
+                "additionalProperties": false
+              }
+            },
+            "required": [
+              "index"
+            ],
+            "additionalProperties": false
+          },
+          "maxItems": 100
+        },
+        "comparison": {
+          "type": "object",
+          "properties": {
+            "before": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 499
+            },
+            "after": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 499
+            },
+            "beforeLabel": {
+              "type": "string",
+              "maxLength": 40
+            },
+            "afterLabel": {
+              "type": "string",
+              "maxLength": 40
+            }
+          },
+          "required": [
+            "before",
+            "after"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "version",
+        "component"
+      ],
+      "additionalProperties": false
+    },
+    "v2Section_profiles": {
+      "type": "object",
+      "properties": {
+        "version": {
+          "const": 1
+        },
+        "component": {
+          "const": "profiles"
+        },
+        "surface": {
+          "$ref": "#/$defs/v2Surface"
+        },
+        "heading": {
+          "$ref": "#/$defs/v2Type"
+        },
+        "text": {
+          "$ref": "#/$defs/v2Type"
+        },
+        "padding": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 80
+        },
+        "gap": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 48
+        },
+        "columns": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 4
+        },
+        "responsive": {
+          "type": "object",
+          "properties": {
+            "medium": {
+              "type": "object",
+              "properties": {
+                "columns": {
+                  "type": "integer",
+                  "minimum": 1,
+                  "maximum": 4
+                },
+                "gap": {
+                  "type": "integer",
+                  "minimum": 0,
+                  "maximum": 48
+                },
+                "padding": {
+                  "type": "integer",
+                  "minimum": 0,
+                  "maximum": 80
+                }
+              },
+              "required": [],
+              "additionalProperties": false
+            },
+            "large": {
+              "type": "object",
+              "properties": {
+                "columns": {
+                  "type": "integer",
+                  "minimum": 1,
+                  "maximum": 4
+                },
+                "gap": {
+                  "type": "integer",
+                  "minimum": 0,
+                  "maximum": 48
+                },
+                "padding": {
+                  "type": "integer",
+                  "minimum": 0,
+                  "maximum": 80
+                }
+              },
+              "required": [],
+              "additionalProperties": false
+            }
+          },
+          "required": [],
+          "additionalProperties": false
+        },
+        "variant": {
+          "enum": [
+            "vertical",
+            "overlay"
+          ]
+        },
+        "imageAspect": {
+          "type": "integer",
+          "minimum": 40,
+          "maximum": 300
+        },
+        "imageFit": {
+          "enum": [
+            "cover",
+            "contain"
+          ]
+        },
+        "imagePosition": {
+          "type": "object",
+          "properties": {
+            "x": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 100
+            },
+            "y": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 100
+            }
+          },
+          "required": [
+            "x",
+            "y"
+          ],
+          "additionalProperties": false
+        },
+        "cardSurface": {
+          "$ref": "#/$defs/v2Surface"
+        },
+        "itemTitle": {
+          "$ref": "#/$defs/v2Type"
+        },
+        "itemText": {
+          "$ref": "#/$defs/v2Type"
+        },
+        "button": {
+          "$ref": "#/$defs/v2Button"
+        }
+      },
+      "required": [
+        "version",
+        "component"
+      ],
+      "additionalProperties": false
+    },
+    "v2Section_text": {
+      "type": "object",
+      "properties": {
+        "version": {
+          "const": 1
+        },
+        "component": {
+          "const": "text"
+        },
+        "surface": {
+          "$ref": "#/$defs/v2Surface"
+        },
+        "heading": {
+          "$ref": "#/$defs/v2Type"
+        },
+        "text": {
+          "$ref": "#/$defs/v2Type"
+        },
+        "padding": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 80
+        },
+        "gap": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 48
+        },
+        "variant": {
+          "enum": [
+            "split",
+            "stacked"
+          ]
+        },
+        "mediaWidth": {
+          "type": "integer",
+          "minimum": 20,
+          "maximum": 80
+        },
+        "imageAspect": {
+          "type": "integer",
+          "minimum": 40,
+          "maximum": 300
+        },
+        "imageFit": {
+          "enum": [
+            "cover",
+            "contain"
+          ]
+        },
+        "imagePosition": {
+          "type": "object",
+          "properties": {
+            "x": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 100
+            },
+            "y": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 100
+            }
+          },
+          "required": [
+            "x",
+            "y"
+          ],
+          "additionalProperties": false
+        },
+        "button": {
+          "$ref": "#/$defs/v2Button"
+        }
+      },
+      "required": [
+        "version",
+        "component"
+      ],
+      "additionalProperties": false
+    },
+    "v2Section_benefits": {
+      "type": "object",
+      "properties": {
+        "version": {
+          "const": 1
+        },
+        "component": {
+          "const": "benefits"
+        },
+        "surface": {
+          "$ref": "#/$defs/v2Surface"
+        },
+        "heading": {
+          "$ref": "#/$defs/v2Type"
+        },
+        "text": {
+          "$ref": "#/$defs/v2Type"
+        },
+        "padding": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 80
+        },
+        "gap": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 48
+        },
+        "columns": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 4
+        },
+        "responsive": {
+          "type": "object",
+          "properties": {
+            "medium": {
+              "type": "object",
+              "properties": {
+                "columns": {
+                  "type": "integer",
+                  "minimum": 1,
+                  "maximum": 4
+                },
+                "gap": {
+                  "type": "integer",
+                  "minimum": 0,
+                  "maximum": 48
+                },
+                "padding": {
+                  "type": "integer",
+                  "minimum": 0,
+                  "maximum": 80
+                }
+              },
+              "required": [],
+              "additionalProperties": false
+            },
+            "large": {
+              "type": "object",
+              "properties": {
+                "columns": {
+                  "type": "integer",
+                  "minimum": 1,
+                  "maximum": 4
+                },
+                "gap": {
+                  "type": "integer",
+                  "minimum": 0,
+                  "maximum": 48
+                },
+                "padding": {
+                  "type": "integer",
+                  "minimum": 0,
+                  "maximum": 80
+                }
+              },
+              "required": [],
+              "additionalProperties": false
+            }
+          },
+          "required": [],
+          "additionalProperties": false
+        },
+        "cardSurface": {
+          "$ref": "#/$defs/v2Surface"
+        },
+        "itemTitle": {
+          "$ref": "#/$defs/v2Type"
+        },
+        "itemText": {
+          "$ref": "#/$defs/v2Type"
+        }
+      },
+      "required": [
+        "version",
+        "component"
+      ],
+      "additionalProperties": false
+    },
+    "v2Section_hours": {
+      "type": "object",
+      "properties": {
+        "version": {
+          "const": 1
+        },
+        "component": {
+          "const": "hours"
+        },
+        "surface": {
+          "$ref": "#/$defs/v2Surface"
+        },
+        "heading": {
+          "$ref": "#/$defs/v2Type"
+        },
+        "text": {
+          "$ref": "#/$defs/v2Type"
+        },
+        "padding": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 80
+        },
+        "gap": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 48
+        },
+        "cardSurface": {
+          "$ref": "#/$defs/v2Surface"
+        }
+      },
+      "required": [
+        "version",
+        "component"
+      ],
+      "additionalProperties": false
+    },
+    "v2Section_location": {
+      "type": "object",
+      "properties": {
+        "version": {
+          "const": 1
+        },
+        "component": {
+          "const": "location"
+        },
+        "surface": {
+          "$ref": "#/$defs/v2Surface"
+        },
+        "heading": {
+          "$ref": "#/$defs/v2Type"
+        },
+        "text": {
+          "$ref": "#/$defs/v2Type"
+        },
+        "padding": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 80
+        },
+        "gap": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 48
+        },
+        "variant": {
+          "enum": [
+            "split",
+            "stacked"
+          ]
+        },
+        "mediaWidth": {
+          "type": "integer",
+          "minimum": 20,
+          "maximum": 80
+        },
+        "imageAspect": {
+          "type": "integer",
+          "minimum": 40,
+          "maximum": 300
+        },
+        "imageFit": {
+          "enum": [
+            "cover",
+            "contain"
+          ]
+        },
+        "imagePosition": {
+          "type": "object",
+          "properties": {
+            "x": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 100
+            },
+            "y": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 100
+            }
+          },
+          "required": [
+            "x",
+            "y"
+          ],
+          "additionalProperties": false
+        },
+        "button": {
+          "$ref": "#/$defs/v2Button"
+        }
+      },
+      "required": [
+        "version",
+        "component"
+      ],
+      "additionalProperties": false
+    },
+    "v2Section_testimonials": {
+      "type": "object",
+      "properties": {
+        "version": {
+          "const": 1
+        },
+        "component": {
+          "const": "testimonials"
+        },
+        "surface": {
+          "$ref": "#/$defs/v2Surface"
+        },
+        "heading": {
+          "$ref": "#/$defs/v2Type"
+        },
+        "text": {
+          "$ref": "#/$defs/v2Type"
+        },
+        "padding": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 80
+        },
+        "gap": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 48
+        },
+        "columns": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 4
+        },
+        "responsive": {
+          "type": "object",
+          "properties": {
+            "medium": {
+              "type": "object",
+              "properties": {
+                "columns": {
+                  "type": "integer",
+                  "minimum": 1,
+                  "maximum": 4
+                },
+                "gap": {
+                  "type": "integer",
+                  "minimum": 0,
+                  "maximum": 48
+                },
+                "padding": {
+                  "type": "integer",
+                  "minimum": 0,
+                  "maximum": 80
+                }
+              },
+              "required": [],
+              "additionalProperties": false
+            },
+            "large": {
+              "type": "object",
+              "properties": {
+                "columns": {
+                  "type": "integer",
+                  "minimum": 1,
+                  "maximum": 4
+                },
+                "gap": {
+                  "type": "integer",
+                  "minimum": 0,
+                  "maximum": 48
+                },
+                "padding": {
+                  "type": "integer",
+                  "minimum": 0,
+                  "maximum": 80
+                }
+              },
+              "required": [],
+              "additionalProperties": false
+            }
+          },
+          "required": [],
+          "additionalProperties": false
+        },
+        "cardSurface": {
+          "$ref": "#/$defs/v2Surface"
+        },
+        "itemTitle": {
+          "$ref": "#/$defs/v2Type"
+        },
+        "itemText": {
+          "$ref": "#/$defs/v2Type"
+        }
+      },
+      "required": [
+        "version",
+        "component"
+      ],
+      "additionalProperties": false
+    },
+    "v2Section": {
+      "oneOf": [
+        {
+          "$ref": "#/$defs/v2Section_actions"
+        },
+        {
+          "$ref": "#/$defs/v2Section_banner"
+        },
+        {
+          "$ref": "#/$defs/v2Section_catalog"
+        },
+        {
+          "$ref": "#/$defs/v2Section_gallery"
+        },
+        {
+          "$ref": "#/$defs/v2Section_profiles"
+        },
+        {
+          "$ref": "#/$defs/v2Section_text"
+        },
+        {
+          "$ref": "#/$defs/v2Section_benefits"
+        },
+        {
+          "$ref": "#/$defs/v2Section_hours"
+        },
+        {
+          "$ref": "#/$defs/v2Section_location"
+        },
+        {
+          "$ref": "#/$defs/v2Section_testimonials"
+        }
+      ]
+    },
+    "premiumV2": {
+      "type": "object",
+      "properties": {
+        "version": {
+          "const": 2
+        },
+        "page": {
+          "type": "object",
+          "properties": {
+            "surface": {
+              "$ref": "#/$defs/v2Surface"
+            },
+            "font": {
+              "enum": [
+                "sans",
+                "serif",
+                "condensed"
+              ]
+            },
+            "maxWidth": {
+              "type": "integer",
+              "minimum": 320,
+              "maximum": 1200
+            },
+            "gap": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 60
+            }
+          },
+          "required": [],
+          "additionalProperties": false
+        },
+        "hero": {
+          "$ref": "#/$defs/v2Hero"
+        },
+        "sections": {
+          "type": "object",
+          "maxProperties": 500,
+          "additionalProperties": {
+            "$ref": "#/$defs/v2Section"
+          }
+        }
+      },
+      "required": [
+        "version",
+        "page",
+        "sections"
+      ],
+      "additionalProperties": false
+    },
+    "v2EditableVisual": {
+      "type": "object",
+      "properties": {
+        "text": {
+          "type": "string",
+          "pattern": "^#[0-9a-fA-F]{6}$"
+        },
+        "fontSize": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 60
+        },
+        "font": {
+          "enum": [
+            "sans",
+            "serif",
+            "condensed"
+          ]
+        },
+        "weight": {
+          "enum": [
+            "regular",
+            "bold"
+          ]
+        },
+        "align": {
+          "enum": [
+            "left",
+            "center",
+            "right"
+          ]
+        },
+        "lineHeight": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 240
+        },
+        "letterSpacing": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 20
+        },
+        "fontWeight": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 900
+        },
+        "textStyle": {
+          "enum": [
+            "normal",
+            "italic"
+          ]
+        }
+      },
+      "required": [],
+      "additionalProperties": false
+    }
+  }
+}

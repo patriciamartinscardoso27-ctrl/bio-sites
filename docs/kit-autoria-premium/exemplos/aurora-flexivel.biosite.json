@@ -1,0 +1,352 @@
+{
+  "format": "bio-sites-premium",
+  "schemaVersion": 1,
+  "renderer": {
+    "id": "biosite",
+    "version": 1,
+    "profile": "flexible"
+  },
+  "components": [
+    {
+      "id": "hero",
+      "version": 1
+    },
+    {
+      "id": "section.actions",
+      "version": 1
+    },
+    {
+      "id": "section.products",
+      "version": 1
+    },
+    {
+      "id": "section.promotion",
+      "version": 1
+    },
+    {
+      "id": "section.benefits",
+      "version": 1
+    },
+    {
+      "id": "section.gallery",
+      "version": 1
+    },
+    {
+      "id": "section.about",
+      "version": 1
+    },
+    {
+      "id": "section.hours",
+      "version": 1
+    }
+  ],
+  "assets": {
+    "version": 1,
+    "storage": "references",
+    "media": [
+      {
+        "path": "cover",
+        "source": "https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=900&q=80"
+      },
+      {
+        "path": "sections[1].content.items[0].image",
+        "source": "https://images.unsplash.com/photo-1595777457583-95e059d581b8?auto=format&fit=crop&w=900&q=80"
+      },
+      {
+        "path": "sections[1].content.items[1].image",
+        "source": "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=900&q=80"
+      },
+      {
+        "path": "sections[2].image",
+        "source": "https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=900&q=80"
+      },
+      {
+        "path": "sections[4].content.photos[0]",
+        "source": "https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=900&q=80"
+      },
+      {
+        "path": "sections[4].content.photos[1]",
+        "source": "https://images.unsplash.com/photo-1595777457583-95e059d581b8?auto=format&fit=crop&w=900&q=80"
+      },
+      {
+        "path": "sections[4].content.photos[2]",
+        "source": "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=900&q=80"
+      },
+      {
+        "path": "sections[5].image",
+        "source": "https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=900&q=80"
+      }
+    ]
+  },
+  "editing": {
+    "version": 1,
+    "adapter": "existing-editor"
+  },
+  "design": {
+    "id": "8bd5cc65-99b6-4f72-aed8-1ce76c867111",
+    "manual": true,
+    "renderMode": "flexible",
+    "style": "clean-minimal",
+    "name": "Aurora Atelier — demonstração fictícia",
+    "category": "Loja de roupas",
+    "headline": "Curadoria para o seu dia",
+    "tagline": "MODA · CUIDADO · IDENTIDADE",
+    "description": "Uma composição premium de exemplo. Substitua textos e fotos por conteúdo autorizado.",
+    "color": "#c99a4e",
+    "cover": "https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=900&q=80",
+    "logo": "",
+    "phone": "",
+    "instagram": "https://www.instagram.com/",
+    "address": "Endereço demonstrativo — preencher antes de publicar",
+    "hours": "Segunda a sexta: 09:00 - 18:00\nSábado: 09:00 - 13:00",
+    "appearance": {
+      "theme": "dark",
+      "secondary": "#66462d",
+      "font": "serif",
+      "buttons": "pill",
+      "cards": "rounded",
+      "background": "#11100e",
+      "text": "#faf4e8",
+      "panel": "#211b15",
+      "muted": "#c8baa4",
+      "highlight": "#e4b865",
+      "border": "#55422b",
+      "buttonMode": "theme",
+      "buttonDefault": "#c99a4e"
+    },
+    "heroVisual": {
+      "heroComposition": "cover",
+      "minHeight": 430,
+      "overlay": 65,
+      "imagePositionX": 50,
+      "imagePositionY": 40,
+      "align": "left",
+      "contentPosition": "bottom",
+      "paddingX": 24,
+      "paddingY": 32
+    },
+    "textVisual": {
+      "name": {
+        "font": "serif",
+        "fontSize": 34,
+        "lineHeight": 110
+      },
+      "description": {
+        "fontSize": 16,
+        "lineHeight": 150
+      }
+    },
+    "designVisual": {
+      "background": "#11100e",
+      "text": "#faf4e8",
+      "panel": "#211b15",
+      "maxWidth": 480,
+      "paddingX": 16,
+      "radiusPx": 18
+    },
+    "actions": [],
+    "products": [],
+    "services": [],
+    "photos": [],
+    "highlights": [],
+    "benefits": [],
+    "sections": [
+      {
+        "id": "atalhos",
+        "kind": "actions",
+        "title": "Explore o atelier",
+        "text": "",
+        "enabled": true,
+        "layout": "two",
+        "visual": {
+          "columns": 2,
+          "gap": 12,
+          "actionFormat": "cards",
+          "iconPosition": "left"
+        },
+        "content": {
+          "actions": [
+            {
+              "id": "ver-colecao",
+              "kind": "custom",
+              "icon": "bag",
+              "label": "Ver coleção",
+              "message": "",
+              "destination": "section",
+              "sectionId": "colecao"
+            },
+            {
+              "id": "contato-demo",
+              "kind": "custom",
+              "icon": "link",
+              "label": "Contato de exemplo",
+              "message": "",
+              "source": "custom",
+              "url": "https://example.com/contato"
+            }
+          ]
+        }
+      },
+      {
+        "id": "colecao",
+        "kind": "products",
+        "title": "Peças selecionadas",
+        "text": "",
+        "enabled": true,
+        "layout": "two",
+        "visual": {
+          "background": "#1a1611",
+          "panel": "#2b2118",
+          "text": "#faf4e8",
+          "columns": 2,
+          "gap": 14,
+          "radiusPx": 16,
+          "cardMedia": "top",
+          "cardPaddingX": 14,
+          "cardPaddingY": 16,
+          "cardTitleSize": 19,
+          "priceSize": 19
+        },
+        "content": {
+          "items": [
+            {
+              "id": "vestido-demo",
+              "title": "Vestido Aurora",
+              "description": "Peça fictícia para demonstrar o card.",
+              "price": "R$ 129,90",
+              "image": "https://images.unsplash.com/photo-1595777457583-95e059d581b8?auto=format&fit=crop&w=900&q=80",
+              "action": {
+                "id": "produto-demo",
+                "kind": "custom",
+                "label": "Consultar peça",
+                "message": "",
+                "source": "custom",
+                "url": "https://example.com/produto"
+              }
+            },
+            {
+              "id": "look-demo",
+              "title": "Look Essencial",
+              "description": "Conteúdo ilustrativo, sem oferta comercial real.",
+              "price": "R$ 199,90",
+              "image": "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=900&q=80"
+            }
+          ]
+        }
+      },
+      {
+        "id": "banner",
+        "kind": "promotion",
+        "title": "Sua identidade em cada detalhe",
+        "text": "Banner demonstrativo com imagem e tratamento de cor.",
+        "enabled": true,
+        "image": "https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=900&q=80",
+        "ctaLabel": "Ver coleção",
+        "action": {
+          "id": "banner-colecao",
+          "kind": "custom",
+          "label": "Ver coleção",
+          "message": "",
+          "destination": "section",
+          "sectionId": "colecao"
+        },
+        "visual": {
+          "background": "#302015",
+          "backgroundGradient": "linear-gradient(135deg, #302015 0%, #14100c 100%)",
+          "mediaPlacement": "right",
+          "mediaWidth": 45,
+          "radiusPx": 20,
+          "paddingX": 20,
+          "paddingY": 24
+        }
+      },
+      {
+        "id": "diferenciais",
+        "kind": "benefits",
+        "title": "Detalhes que importam",
+        "text": "",
+        "enabled": true,
+        "layout": "cards",
+        "content": {
+          "benefits": [
+            "Curadoria|Seleção de peças com identidade",
+            "Cuidado|Atendimento próximo"
+          ]
+        },
+        "visual": {
+          "columns": 2,
+          "text": "#faf4e8",
+          "background": "#17130f"
+        }
+      },
+      {
+        "id": "galeria",
+        "kind": "gallery",
+        "title": "Inspiração",
+        "text": "",
+        "enabled": true,
+        "layout": "grid",
+        "visual": {
+          "columns": 3,
+          "gap": 8,
+          "mediaAspect": 80,
+          "radiusPx": 12
+        },
+        "content": {
+          "photos": [
+            "https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=900&q=80",
+            "https://images.unsplash.com/photo-1595777457583-95e059d581b8?auto=format&fit=crop&w=900&q=80",
+            "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=900&q=80"
+          ]
+        }
+      },
+      {
+        "id": "historia",
+        "kind": "about",
+        "title": "Sobre o Aurora",
+        "text": "Este estabelecimento é fictício e existe apenas para exemplificar o contrato declarativo. As fotos são ilustrativas.",
+        "enabled": true,
+        "image": "https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=900&q=80",
+        "visual": {
+          "mediaPlacement": "right",
+          "mediaWidth": 45,
+          "paddingY": 24
+        }
+      },
+      {
+        "id": "horarios",
+        "kind": "hours",
+        "title": "Horários",
+        "text": "",
+        "enabled": true,
+        "content": {
+          "hours": "Segunda a sexta: 09:00 - 18:00\nSábado: 09:00 - 13:00"
+        }
+      },
+      {
+        "id": "convite",
+        "kind": "about",
+        "title": "Vamos criar sua próxima escolha?",
+        "text": "Troque o destino de demonstração pelo contato autorizado do estabelecimento.",
+        "enabled": true,
+        "block": "cta",
+        "ctaLabel": "Contato de exemplo",
+        "action": {
+          "id": "final-demo",
+          "kind": "custom",
+          "label": "Contato de exemplo",
+          "message": "",
+          "source": "custom",
+          "url": "https://example.com/contato"
+        },
+        "visual": {
+          "background": "#342518",
+          "text": "#fff2d6",
+          "radiusPx": 20,
+          "paddingX": 24,
+          "paddingY": 28
+        }
+      }
+    ]
+  }
+}

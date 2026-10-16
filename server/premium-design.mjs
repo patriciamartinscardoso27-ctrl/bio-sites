@@ -30,7 +30,7 @@ export function processPremiumDesign(value){
   if(value.operation!=='import'||value.bio!==undefined)throw Error('Operação de pacote inválida.')
   assertPremiumPackage(value.package);checkDesign(value.package.design)
   const bio=importPremiumDesign(value.package,randomUUID());validateBio(bio)
-  return {bio,compatibility:{schemaVersion:1,rendererVersion:1,mediaCount:value.package.assets.media.length,storage:'references',persisted:false}}
+  return {bio,compatibility:{schemaVersion:value.package.schemaVersion,rendererVersion:value.package.renderer.version,mediaCount:value.package.assets.media.length,storage:'references',persisted:false}}
  }catch(error){
   if(error instanceof ApiError)throw error
   throw new ApiError(400,error instanceof Error?error.message:'Pacote inválido.')

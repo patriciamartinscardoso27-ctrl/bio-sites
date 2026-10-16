@@ -80,3 +80,4 @@ export interface Bio { layoutPreset?:typeof import('../data/readyModelIds').read
 export interface VisualSettings { cardPaddingX?:number;cardPaddingY?:number;cardGap?:number;cardTitleSize?:number;cardBodySize?:number;priceSize?:number;headingGap?:number;contentWidth?:number;overlayGradient?:string;cardSurface?:'plain'|'panel' }
 
 export interface VisualSettings {surfaceText?:string}
+export interface Bio { premiumV2?:import('../lib/premiumVisualV2').PremiumVisualV2 }

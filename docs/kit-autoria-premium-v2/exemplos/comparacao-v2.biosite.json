@@ -1,0 +1,104 @@
+{
+  "format": "bio-sites-premium",
+  "schemaVersion": 2,
+  "renderer": {
+    "id": "biosite",
+    "version": 2,
+    "profile": "premium"
+  },
+  "components": [
+    {
+      "id": "section.gallery",
+      "version": 1
+    }
+  ],
+  "assets": {
+    "version": 1,
+    "storage": "references",
+    "media": [
+      {
+        "path": "cover",
+        "source": "/images/official-batch-2/essencia-real-adriana.webp"
+      },
+      {
+        "path": "logo",
+        "source": "/images/official-batch-2/essencia-real-logo-real.webp"
+      },
+      {
+        "path": "sections[0].content.photos[0]",
+        "source": "/images/official-batch-2/essencia-real-resultado-cacheado-longo.webp"
+      },
+      {
+        "path": "sections[0].content.photos[1]",
+        "source": "/images/official-batch-2/essencia-real-resultado-definicao.webp"
+      }
+    ]
+  },
+  "editing": {
+    "version": 1,
+    "adapter": "existing-editor"
+  },
+  "design": {
+    "id": "08a8d6d3-99ce-45a0-a1ec-41ca34b506b2",
+    "style": "black-gold",
+    "name": "Comparação demonstrativa V2",
+    "category": "Salão / Estética",
+    "headline": "Beleza real para\nsua essência",
+    "tagline": "CACHOS · BELEZA · AUTOCUIDADO",
+    "description": "Cabelos saudáveis, cachos definidos e unhas que completam a sua beleza. Tudo em um só lugar.",
+    "color": "#e6bd68",
+    "cover": "/images/official-batch-2/essencia-real-adriana.webp",
+    "logo": "/images/official-batch-2/essencia-real-logo-real.webp",
+    "phone": "",
+    "address": "Endereço a confirmar antes de publicar",
+    "hours": "Segunda a Sexta: 09:00 - 19:00\nSábado: 09:00 - 17:00\nDomingo: Fechado",
+    "instagram": "https://www.instagram.com/essenciadoscachosoficial/",
+    "products": [],
+    "services": [],
+    "photos": [],
+    "highlights": [],
+    "benefits": [],
+    "actions": [],
+    "sections": [
+      {
+        "id": "comparison",
+        "kind": "gallery",
+        "title": "Comparação de enquadramentos — demonstração",
+        "text": "",
+        "enabled": true,
+        "content": {
+          "photos": [
+            "/images/official-batch-2/essencia-real-resultado-cacheado-longo.webp",
+            "/images/official-batch-2/essencia-real-resultado-definicao.webp"
+          ]
+        }
+      }
+    ],
+    "premiumV2": {
+      "version": 2,
+      "page": {
+        "font": "sans",
+        "surface": {
+          "color": "#090807"
+        },
+        "maxWidth": 480,
+        "gap": 22
+      },
+      "sections": {
+        "comparison": {
+          "version": 1,
+          "component": "gallery",
+          "variant": "before-after",
+          "imageAspect": 100,
+          "comparison": {
+            "before": 0,
+            "after": 1,
+            "beforeLabel": "Foto A",
+            "afterLabel": "Foto B"
+          }
+        }
+      }
+    },
+    "heroEnabled": false
+  }
+}

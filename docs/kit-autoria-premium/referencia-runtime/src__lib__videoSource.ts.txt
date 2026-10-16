@@ -1,0 +1,5 @@
+export function safeVideoSource(value:unknown):string{
+ if(typeof value!=='string'||value.length>4000)return ''
+ if(/^\/videos\/essencia-cachos\/[a-z0-9][a-z0-9-]*\.mp4$/.test(value))return value
+ try{const url=new URL(value);return url.protocol==='https:'&&!url.username&&!url.password?url.href:''}catch{return ''}
+}

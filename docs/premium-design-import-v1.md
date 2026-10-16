@@ -30,6 +30,14 @@ Composições flexíveis não precisam escolher um modelo fixo: aceitam combina�
 
 ## Preservação e edição
 
+### Origem da exportação
+
+O seletor inicia em **Modelos Prontos**, usando diretamente `readyTemplates` de `src/data/templates.ts`, a mesma biblioteca do painel. A fonte é `template.previewBio || template.bio`, exatamente como a visualização completa da biblioteca. Não há personalização, regeneração nem consulta ao Neon nessa origem. O pacote preserva o preset e todas as propriedades públicas do modelo; original e cópia são exibidos pelo `BioSite` existente. O download permanece `.biosite.json`.
+
+**Bio-Sites de clientes** é uma origem separada e explícita. Apenas nessa seleção a lista de clientes é consultada. Trocar origem ou seleção limpa a prévia anterior; nenhuma opção cria ou sobrescreve registros. A importação de arquivo externo continua disponível independentemente da origem. Somente a aprovação explícita cria novo rascunho.
+
+Modelos usam IDs de catálogo, enquanto o validador de BioSites exige UUID. A cópia em memória recebe um UUID transitório, como no fluxo existente de usar modelo; nenhuma outra propriedade é transformada. O teste automatizado também usa o modelo premium real `moda-premium-gold` da biblioteca (Xavier Modas), verifica igualdade estrutural exceto UUID raiz, imutabilidade do modelo e igualdade do markup pelo renderizador real. Isso não comprova disponibilidade de imagens remotas nem igualdade de pixels no navegador.
+
 Exportação não normaliza/recria o layout nem seleciona outro modelo. Todos os dados públicos suportados são mantidos; notas internas `client` não entram no pacote. A importação muda apenas o UUID raiz; os IDs de seções, itens, botões e destinos internos permanecem para preservar o editor e a navegação. São verificadas versões, catálogo, preset, propriedades, limites numéricos e inventário de arquivos.
 
 O editor continua sendo o existente, sem modificação de seus componentes. Esta versão não adiciona bloqueio de edição estrutural. Fotos, textos, produtos e links mantêm os vínculos atuais; o conteúdo pode ser editado após a aprovação do rascunho.

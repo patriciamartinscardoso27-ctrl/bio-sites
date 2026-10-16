@@ -1,0 +1,2650 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Bio-Sites Premium v1 — structural authoring reference",
+  "$comment": "Documentation aid, not a replacement for assertPremiumPackage + processPremiumDesign. Cross-field, URL, byte, node, uniqueness and runtime compatibility checks require validar.mjs. See README for known runtime tolerances.",
+  "type": "object",
+  "properties": {
+    "format": {
+      "const": "bio-sites-premium"
+    },
+    "schemaVersion": {
+      "const": 1
+    },
+    "renderer": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "const": "biosite"
+        },
+        "version": {
+          "const": 1
+        },
+        "profile": {
+          "enum": [
+            "preset",
+            "flexible",
+            "standard"
+          ]
+        },
+        "presetId": {
+          "enum": [
+            "moda-premium-gold",
+            "bella-moda-feminina",
+            "urban-black-moda-masculina",
+            "charmme-moda-feminina",
+            "lumiere-boutique",
+            "vibe-store",
+            "urban-black-2",
+            "nexo-moda-masculina",
+            "atelier-27",
+            "lumiere-moda-feminina",
+            "imperium-barbearia",
+            "barber-pro",
+            "royal-barber",
+            "bravo-barbearia",
+            "the-cut-barbearia",
+            "beauty-nude-light",
+            "beauty-nude-dark",
+            "essencia-rose-estetica",
+            "essencia-dos-cachos",
+            "jocastrya-estetica-original",
+            "sueli-nascimento",
+            "paty-galetos",
+            "eclat-beleza",
+            "nails-glam",
+            "lumiere-beleza-estetica",
+            "nail-lux",
+            "bella-nails-studio",
+            "lash-beauty",
+            "cilios-studio",
+            "lash-more",
+            "burger-fire",
+            "sabor-da-casa",
+            "bistro-sabor",
+            "doce-encanto",
+            "acai-da-hora",
+            "bella-pizza",
+            "grill-express",
+            "sabor-mineiro",
+            "sabor-mineiro-reenvio",
+            "boteco-do-amigo",
+            "garage-prime",
+            "autolex",
+            "prime-car",
+            "prime-car-reenvio",
+            "racing-auto-service",
+            "arqdesign",
+            "sorriso-odontologia",
+            "oralprime",
+            "almeida-costa",
+            "almeida-costa-completo",
+            "almeida-costa-completo-reenvio",
+            "rafael-ferreira-personal",
+            "amigo-pet",
+            "otica-vision",
+            "lux-joias",
+            "flora-boutique",
+            "casa-estilo",
+            "resenha-barbearia",
+            "rafael-ferreira-personal-laranja",
+            "acai-da-hora-roxo",
+            "sweets-candy-pink",
+            "auto-tech-blue",
+            "fashion-boutique-gold",
+            "fashion-fashion-pink",
+            "fashion-clean-nude",
+            "barber-black-gold",
+            "barber-vintage-barber",
+            "barber-urban-street",
+            "beauty-rose-gold",
+            "beauty-nude-elegance",
+            "beauty-luxury-black",
+            "food-gourmet-dark",
+            "food-fast-food-red",
+            "food-rustic-kitchen",
+            "sweets-chocolate-premium",
+            "sweets-clean-patisserie",
+            "auto-auto-premium",
+            "auto-performance-red",
+            "business-business-premium",
+            "business-modern-blue",
+            "business-clean-minimal"
+          ]
+        }
+      },
+      "required": [
+        "id",
+        "version",
+        "profile"
+      ],
+      "additionalProperties": false
+    },
+    "components": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "enum": [
+              "hero",
+              "section.testimonials",
+              "section.actions",
+              "section.categories",
+              "section.promotion",
+              "section.services",
+              "section.products",
+              "section.gallery",
+              "section.about",
+              "section.benefits",
+              "section.hours",
+              "section.location",
+              "section.whatsapp"
+            ]
+          },
+          "version": {
+            "const": 1
+          }
+        },
+        "required": [
+          "id",
+          "version"
+        ],
+        "additionalProperties": false
+      },
+      "maxItems": 13
+    },
+    "assets": {
+      "type": "object",
+      "properties": {
+        "version": {
+          "const": 1
+        },
+        "storage": {
+          "const": "references"
+        },
+        "media": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "path": {
+                "type": "string",
+                "maxLength": 100000,
+                "pattern": "^[^\\u0000]*$"
+              },
+              "source": {
+                "type": "string",
+                "maxLength": 4000000,
+                "pattern": "^[^\\u0000]*$"
+              }
+            },
+            "required": [
+              "path",
+              "source"
+            ],
+            "additionalProperties": false
+          },
+          "maxItems": 1000
+        }
+      },
+      "required": [
+        "version",
+        "storage",
+        "media"
+      ],
+      "additionalProperties": false
+    },
+    "editing": {
+      "type": "object",
+      "properties": {
+        "version": {
+          "const": 1
+        },
+        "adapter": {
+          "const": "existing-editor"
+        }
+      },
+      "required": [
+        "version",
+        "adapter"
+      ],
+      "additionalProperties": false
+    },
+    "design": {
+      "$ref": "#/$defs/design"
+    }
+  },
+  "required": [
+    "format",
+    "schemaVersion",
+    "renderer",
+    "components",
+    "assets",
+    "editing",
+    "design"
+  ],
+  "additionalProperties": false,
+  "$defs": {
+    "entryId": {
+      "type": "string",
+      "maxLength": 200,
+      "pattern": "^[^\\u0000]*$",
+      "minLength": 1
+    },
+    "image": {
+      "type": "string",
+      "maxLength": 16777216,
+      "pattern": "^[^\\u0000]*$",
+      "description": "Empty string, approved /images path, data:image png/jpeg/webp base64 or absolute HTTP(S) URL without credentials; runtime check."
+    },
+    "gradient": {
+      "type": "string",
+      "maxLength": 240,
+      "description": "linear-gradient(integerdeg, #RRGGBB [0..100%], ...), angle -360..360, 2..6 stops. Validated by normalizeGradient."
+    },
+    "visual": {
+      "type": "object",
+      "properties": {
+        "surfaceText": {
+          "type": "string",
+          "pattern": "^#[0-9a-fA-F]{6}$"
+        },
+        "background": {
+          "type": "string",
+          "pattern": "^#[0-9a-fA-F]{6}$"
+        },
+        "text": {
+          "type": "string",
+          "pattern": "^#[0-9a-fA-F]{6}$"
+        },
+        "titleColor": {
+          "type": "string",
+          "pattern": "^#[0-9a-fA-F]{6}$"
+        },
+        "iconColor": {
+          "type": "string",
+          "pattern": "^#[0-9a-fA-F]{6}$"
+        },
+        "textColor": {
+          "type": "string",
+          "pattern": "^#[0-9a-fA-F]{6}$"
+        },
+        "hoverColor": {
+          "type": "string",
+          "pattern": "^#[0-9a-fA-F]{6}$"
+        },
+        "highlight": {
+          "type": "string",
+          "pattern": "^#[0-9a-fA-F]{6}$"
+        },
+        "panel": {
+          "type": "string",
+          "pattern": "^#[0-9a-fA-F]{6}$"
+        },
+        "border": {
+          "type": "string",
+          "pattern": "^#[0-9a-fA-F]{6}$"
+        },
+        "cardPaddingX": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "cardPaddingY": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "cardGap": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 80
+        },
+        "cardTitleSize": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 60
+        },
+        "cardBodySize": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 36
+        },
+        "priceSize": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 48
+        },
+        "headingGap": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 80
+        },
+        "contentWidth": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "surfaceRadius": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 80
+        },
+        "surfaceBorderWidth": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 12
+        },
+        "imagePositionX": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "imagePositionY": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "bodySize": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 36
+        },
+        "lineHeight": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 240
+        },
+        "letterSpacing": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 20
+        },
+        "fontWeight": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 900
+        },
+        "mediaAspect": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 1000
+        },
+        "heightPercent": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 600
+        },
+        "widthPercent": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "paddingX": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "paddingY": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 160
+        },
+        "gap": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 80
+        },
+        "minHeight": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 900
+        },
+        "mediaHeight": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 900
+        },
+        "iconSize": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 96
+        },
+        "borderWidth": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 12
+        },
+        "columns": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 4
+        },
+        "radiusPx": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 80
+        },
+        "maxWidth": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 1200
+        },
+        "mediaWidth": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "fontSize": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 60
+        },
+        "logoSize": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 160
+        },
+        "glyphSize": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 64
+        },
+        "buttonHeight": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 220
+        },
+        "labelSize": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 28
+        },
+        "subtitleSize": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 22
+        },
+        "overlay": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 95
+        },
+        "cardSurface": {
+          "enum": [
+            "plain",
+            "panel"
+          ]
+        },
+        "surfaceShadow": {
+          "enum": [
+            "none",
+            "soft",
+            "strong"
+          ]
+        },
+        "textStyle": {
+          "enum": [
+            "normal",
+            "italic"
+          ]
+        },
+        "radius": {
+          "enum": [
+            "square",
+            "rounded",
+            "pill"
+          ]
+        },
+        "shadow": {
+          "enum": [
+            "none",
+            "soft",
+            "strong"
+          ]
+        },
+        "spacing": {
+          "enum": [
+            "compact",
+            "normal",
+            "wide"
+          ]
+        },
+        "titleSize": {
+          "enum": [
+            "small",
+            "medium",
+            "large"
+          ]
+        },
+        "align": {
+          "enum": [
+            "left",
+            "center",
+            "right"
+          ]
+        },
+        "font": {
+          "enum": [
+            "sans",
+            "serif",
+            "condensed"
+          ]
+        },
+        "weight": {
+          "enum": [
+            "regular",
+            "bold"
+          ]
+        },
+        "imageFit": {
+          "enum": [
+            "cover",
+            "contain"
+          ]
+        },
+        "imagePosition": {
+          "enum": [
+            "center",
+            "top",
+            "bottom"
+          ]
+        },
+        "style": {
+          "enum": [
+            "solid",
+            "outline",
+            "soft"
+          ]
+        },
+        "borderStyle": {
+          "enum": [
+            "solid",
+            "dashed",
+            "dotted"
+          ]
+        },
+        "heroComposition": {
+          "enum": [
+            "cover",
+            "stacked",
+            "split",
+            "profile",
+            "overlap"
+          ]
+        },
+        "contentPosition": {
+          "enum": [
+            "top",
+            "center",
+            "bottom"
+          ]
+        },
+        "actionFormat": {
+          "enum": [
+            "tiles",
+            "cards",
+            "rows",
+            "icons"
+          ]
+        },
+        "iconPosition": {
+          "enum": [
+            "top",
+            "left"
+          ]
+        },
+        "cardMedia": {
+          "enum": [
+            "top",
+            "left",
+            "background"
+          ]
+        },
+        "mediaPlacement": {
+          "enum": [
+            "top",
+            "bottom",
+            "left",
+            "right",
+            "background"
+          ]
+        },
+        "backgroundImage": {
+          "$ref": "#/$defs/image"
+        },
+        "backgroundGradient": {
+          "$ref": "#/$defs/gradient"
+        },
+        "overlayGradient": {
+          "$ref": "#/$defs/gradient"
+        },
+        "colorBindings": {
+          "type": "object",
+          "properties": {
+            "background": {
+              "enum": [
+                "background",
+                "panel",
+                "primary",
+                "secondary",
+                "highlight",
+                "text",
+                "muted"
+              ]
+            },
+            "panel": {
+              "enum": [
+                "background",
+                "panel",
+                "primary",
+                "secondary",
+                "highlight",
+                "text",
+                "muted"
+              ]
+            },
+            "text": {
+              "enum": [
+                "background",
+                "panel",
+                "primary",
+                "secondary",
+                "highlight",
+                "text",
+                "muted"
+              ]
+            },
+            "titleColor": {
+              "enum": [
+                "background",
+                "panel",
+                "primary",
+                "secondary",
+                "highlight",
+                "text",
+                "muted"
+              ]
+            },
+            "highlight": {
+              "enum": [
+                "background",
+                "panel",
+                "primary",
+                "secondary",
+                "highlight",
+                "text",
+                "muted"
+              ]
+            },
+            "border": {
+              "enum": [
+                "background",
+                "panel",
+                "primary",
+                "secondary",
+                "highlight",
+                "text",
+                "muted"
+              ]
+            },
+            "iconColor": {
+              "enum": [
+                "background",
+                "panel",
+                "primary",
+                "secondary",
+                "highlight",
+                "text",
+                "muted"
+              ]
+            },
+            "textColor": {
+              "enum": [
+                "background",
+                "panel",
+                "primary",
+                "secondary",
+                "highlight",
+                "text",
+                "muted"
+              ]
+            },
+            "hoverColor": {
+              "enum": [
+                "background",
+                "panel",
+                "primary",
+                "secondary",
+                "highlight",
+                "text",
+                "muted"
+              ]
+            }
+          },
+          "required": [],
+          "additionalProperties": false
+        }
+      },
+      "required": [],
+      "additionalProperties": false
+    },
+    "textOptions": {
+      "type": "object",
+      "properties": {
+        "label": {
+          "type": "object",
+          "properties": {
+            "hidden": {
+              "type": "boolean"
+            },
+            "visual": {
+              "$ref": "#/$defs/visual"
+            }
+          },
+          "required": [],
+          "additionalProperties": false
+        },
+        "subtitle": {
+          "type": "object",
+          "properties": {
+            "hidden": {
+              "type": "boolean"
+            },
+            "visual": {
+              "$ref": "#/$defs/visual"
+            }
+          },
+          "required": [],
+          "additionalProperties": false
+        },
+        "description": {
+          "type": "object",
+          "properties": {
+            "hidden": {
+              "type": "boolean"
+            },
+            "visual": {
+              "$ref": "#/$defs/visual"
+            }
+          },
+          "required": [],
+          "additionalProperties": false
+        },
+        "title": {
+          "type": "object",
+          "properties": {
+            "hidden": {
+              "type": "boolean"
+            },
+            "visual": {
+              "$ref": "#/$defs/visual"
+            }
+          },
+          "required": [],
+          "additionalProperties": false
+        },
+        "text": {
+          "type": "object",
+          "properties": {
+            "hidden": {
+              "type": "boolean"
+            },
+            "visual": {
+              "$ref": "#/$defs/visual"
+            }
+          },
+          "required": [],
+          "additionalProperties": false
+        },
+        "price": {
+          "type": "object",
+          "properties": {
+            "hidden": {
+              "type": "boolean"
+            },
+            "visual": {
+              "$ref": "#/$defs/visual"
+            }
+          },
+          "required": [],
+          "additionalProperties": false
+        },
+        "auxiliary": {
+          "type": "object",
+          "properties": {
+            "hidden": {
+              "type": "boolean"
+            },
+            "visual": {
+              "$ref": "#/$defs/visual"
+            }
+          },
+          "required": [],
+          "additionalProperties": false
+        },
+        "badge": {
+          "type": "object",
+          "properties": {
+            "hidden": {
+              "type": "boolean"
+            },
+            "visual": {
+              "$ref": "#/$defs/visual"
+            }
+          },
+          "required": [],
+          "additionalProperties": false
+        },
+        "ctaLabel": {
+          "type": "object",
+          "properties": {
+            "hidden": {
+              "type": "boolean"
+            },
+            "visual": {
+              "$ref": "#/$defs/visual"
+            }
+          },
+          "required": [],
+          "additionalProperties": false
+        },
+        "caption": {
+          "type": "object",
+          "properties": {
+            "hidden": {
+              "type": "boolean"
+            },
+            "visual": {
+              "$ref": "#/$defs/visual"
+            }
+          },
+          "required": [],
+          "additionalProperties": false
+        }
+      },
+      "required": [],
+      "additionalProperties": false
+    },
+    "textVisual": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "$ref": "#/$defs/visual"
+        },
+        "description": {
+          "$ref": "#/$defs/visual"
+        },
+        "tagline": {
+          "$ref": "#/$defs/visual"
+        },
+        "headline": {
+          "$ref": "#/$defs/visual"
+        }
+      },
+      "required": [],
+      "additionalProperties": false
+    },
+    "appearance": {
+      "type": "object",
+      "properties": {
+        "theme": {
+          "enum": [
+            "light",
+            "dark"
+          ]
+        },
+        "secondary": {
+          "type": "string",
+          "pattern": "^#[0-9a-fA-F]{6}$"
+        },
+        "font": {
+          "enum": [
+            "sans",
+            "serif",
+            "condensed"
+          ]
+        },
+        "buttons": {
+          "enum": [
+            "rounded",
+            "square",
+            "pill"
+          ]
+        },
+        "cards": {
+          "enum": [
+            "rounded",
+            "square"
+          ]
+        },
+        "background": {
+          "type": "string",
+          "pattern": "^#[0-9a-fA-F]{6}$"
+        },
+        "text": {
+          "type": "string",
+          "pattern": "^#[0-9a-fA-F]{6}$"
+        },
+        "panel": {
+          "type": "string",
+          "pattern": "^#[0-9a-fA-F]{6}$"
+        },
+        "muted": {
+          "type": "string",
+          "pattern": "^#[0-9a-fA-F]{6}$"
+        },
+        "highlight": {
+          "type": "string",
+          "pattern": "^#[0-9a-fA-F]{6}$"
+        },
+        "border": {
+          "type": "string",
+          "pattern": "^#[0-9a-fA-F]{6}$"
+        },
+        "buttonDefault": {
+          "type": "string",
+          "pattern": "^#[0-9a-fA-F]{6}$"
+        },
+        "buttonBackground": {
+          "type": "string",
+          "pattern": "^#[0-9a-fA-F]{6}$"
+        },
+        "buttonIcon": {
+          "type": "string",
+          "pattern": "^#[0-9a-fA-F]{6}$"
+        },
+        "buttonText": {
+          "type": "string",
+          "pattern": "^#[0-9a-fA-F]{6}$"
+        },
+        "buttonHover": {
+          "type": "string",
+          "pattern": "^#[0-9a-fA-F]{6}$"
+        },
+        "buttonMode": {
+          "enum": [
+            "original",
+            "theme",
+            "mono",
+            "light",
+            "dark",
+            "custom"
+          ]
+        }
+      },
+      "required": [
+        "theme",
+        "secondary",
+        "font",
+        "buttons",
+        "cards"
+      ],
+      "additionalProperties": false
+    },
+    "action": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "$ref": "#/$defs/entryId"
+        },
+        "label": {
+          "type": "string",
+          "maxLength": 100000,
+          "pattern": "^[^\\u0000]*$"
+        },
+        "message": {
+          "type": "string",
+          "maxLength": 100000,
+          "pattern": "^[^\\u0000]*$"
+        },
+        "kind": {
+          "enum": [
+            "whatsapp",
+            "instagram",
+            "facebook",
+            "tiktok",
+            "reviews",
+            "location",
+            "phone",
+            "email",
+            "website",
+            "menu",
+            "booking",
+            "quote",
+            "order",
+            "custom"
+          ]
+        },
+        "enabled": {
+          "type": "boolean"
+        },
+        "source": {
+          "enum": [
+            "business",
+            "custom"
+          ]
+        },
+        "mode": {
+          "enum": [
+            "whatsapp",
+            "url"
+          ]
+        },
+        "url": {
+          "type": "string",
+          "maxLength": 100000,
+          "pattern": "^[^\\u0000]*$"
+        },
+        "number": {
+          "type": "string",
+          "maxLength": 100000,
+          "pattern": "^[^\\u0000]*$"
+        },
+        "email": {
+          "type": "string",
+          "maxLength": 100000,
+          "pattern": "^[^\\u0000]*$"
+        },
+        "icon": {
+          "enum": [
+            "whatsapp",
+            "instagram",
+            "facebook",
+            "tiktok",
+            "youtube",
+            "phone",
+            "email",
+            "message",
+            "link",
+            "globe",
+            "location",
+            "map",
+            "route",
+            "navigation",
+            "store",
+            "bag",
+            "cart",
+            "catalog",
+            "gift",
+            "food",
+            "delivery",
+            "coffee",
+            "cake",
+            "pizza",
+            "scissors",
+            "wrench",
+            "briefcase",
+            "sparkles",
+            "calendar",
+            "clock",
+            "calendar-check",
+            "credit-card",
+            "wallet",
+            "banknote",
+            "star",
+            "heart",
+            "camera",
+            "gallery",
+            "document",
+            "info",
+            "users",
+            "check",
+            "home",
+            "linkedin",
+            "twitter",
+            "telegram",
+            "pinterest",
+            "spotify",
+            "smartphone",
+            "chat",
+            "support",
+            "tag",
+            "qr-code",
+            "burger",
+            "car",
+            "construction",
+            "beauty",
+            "share",
+            "download",
+            "external",
+            "search",
+            "user",
+            "google",
+            "google-reviews",
+            "reviews",
+            "stars",
+            "tooth",
+            "shield-check",
+            "leaf",
+            "sofa",
+            "ruler",
+            "building",
+            "diamond",
+            "scale",
+            "gavel",
+            "hand-coins",
+            "dumbbell",
+            "chart",
+            "apple",
+            "zap",
+            "graduation",
+            "medal",
+            "paw",
+            "glasses",
+            "flower",
+            "ring",
+            "crown",
+            "lock",
+            "settings",
+            "thumbs-up",
+            "flame",
+            "running",
+            "target",
+            "play",
+            "pin",
+            "menu"
+          ]
+        },
+        "iconColorMode": {
+          "enum": [
+            "original",
+            "theme",
+            "custom"
+          ]
+        },
+        "subtitle": {
+          "type": "string",
+          "maxLength": 100000,
+          "pattern": "^[^\\u0000]*$"
+        },
+        "description": {
+          "type": "string",
+          "maxLength": 100000,
+          "pattern": "^[^\\u0000]*$"
+        },
+        "textOptions": {
+          "$ref": "#/$defs/textOptions"
+        },
+        "destination": {
+          "enum": [
+            "external",
+            "section"
+          ]
+        },
+        "sectionId": {
+          "type": "string",
+          "maxLength": 200,
+          "pattern": "^[^\\u0000]*$"
+        },
+        "visual": {
+          "$ref": "#/$defs/visual"
+        },
+        "appearanceMode": {
+          "enum": [
+            "brand",
+            "theme",
+            "custom"
+          ]
+        },
+        "titleVisual": {
+          "$ref": "#/$defs/visual"
+        }
+      },
+      "required": [
+        "id",
+        "label",
+        "message"
+      ],
+      "additionalProperties": false
+    },
+    "item": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "$ref": "#/$defs/entryId"
+        },
+        "title": {
+          "type": "string",
+          "maxLength": 100000,
+          "pattern": "^[^\\u0000]*$"
+        },
+        "description": {
+          "type": "string",
+          "maxLength": 100000,
+          "pattern": "^[^\\u0000]*$"
+        },
+        "price": {
+          "type": "string",
+          "maxLength": 100000,
+          "pattern": "^[^\\u0000]*$"
+        },
+        "image": {
+          "$ref": "#/$defs/image"
+        },
+        "categoryId": {
+          "type": "string",
+          "maxLength": 100000,
+          "pattern": "^[^\\u0000]*$"
+        },
+        "action": {
+          "$ref": "#/$defs/action"
+        },
+        "textOptions": {
+          "$ref": "#/$defs/textOptions"
+        },
+        "visual": {
+          "$ref": "#/$defs/visual"
+        }
+      },
+      "required": [
+        "id",
+        "title",
+        "description",
+        "price",
+        "image"
+      ],
+      "additionalProperties": false
+    },
+    "highlight": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "$ref": "#/$defs/entryId"
+        },
+        "label": {
+          "type": "string",
+          "maxLength": 100000,
+          "pattern": "^[^\\u0000]*$"
+        },
+        "image": {
+          "$ref": "#/$defs/image"
+        },
+        "caption": {
+          "type": "string",
+          "maxLength": 100000,
+          "pattern": "^[^\\u0000]*$"
+        },
+        "textOptions": {
+          "$ref": "#/$defs/textOptions"
+        },
+        "action": {
+          "$ref": "#/$defs/action"
+        }
+      },
+      "required": [
+        "id",
+        "label",
+        "image"
+      ],
+      "additionalProperties": false
+    },
+    "section": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "$ref": "#/$defs/entryId"
+        },
+        "kind": {
+          "enum": [
+            "testimonials",
+            "actions",
+            "categories",
+            "promotion",
+            "services",
+            "products",
+            "gallery",
+            "about",
+            "benefits",
+            "hours",
+            "location",
+            "whatsapp"
+          ]
+        },
+        "title": {
+          "type": "string",
+          "maxLength": 100000,
+          "pattern": "^[^\\u0000]*$"
+        },
+        "text": {
+          "type": "string",
+          "maxLength": 100000,
+          "pattern": "^[^\\u0000]*$"
+        },
+        "enabled": {
+          "type": "boolean"
+        },
+        "image": {
+          "$ref": "#/$defs/image"
+        },
+        "badge": {
+          "type": "string",
+          "maxLength": 100000,
+          "pattern": "^[^\\u0000]*$"
+        },
+        "ctaLabel": {
+          "type": "string",
+          "maxLength": 100000,
+          "pattern": "^[^\\u0000]*$"
+        },
+        "subtitle": {
+          "type": "string",
+          "maxLength": 100000,
+          "pattern": "^[^\\u0000]*$"
+        },
+        "auxiliary": {
+          "type": "string",
+          "maxLength": 100000,
+          "pattern": "^[^\\u0000]*$"
+        },
+        "textOptions": {
+          "$ref": "#/$defs/textOptions"
+        },
+        "entryTextOptions": {
+          "type": "object",
+          "patternProperties": {
+            "^(reviews|benefits)-[a-f0-9]{1,8}-[a-f0-9]{1,8}$": {
+              "$ref": "#/$defs/textOptions"
+            }
+          },
+          "additionalProperties": false,
+          "maxProperties": 500
+        },
+        "action": {
+          "$ref": "#/$defs/action"
+        },
+        "entryIcons": {
+          "type": "object",
+          "patternProperties": {
+            "^(reviews|benefits)-[a-f0-9]{1,8}-[a-f0-9]{1,8}$": {
+              "$ref": "#/$defs/action"
+            }
+          },
+          "additionalProperties": false,
+          "maxProperties": 500
+        },
+        "layout": {
+          "enum": [
+            "two",
+            "three",
+            "four",
+            "grid",
+            "carousel",
+            "cards",
+            "list",
+            "square",
+            "rounded",
+            "pill",
+            "inline",
+            "compact",
+            "large",
+            "mosaic",
+            "spotlight"
+          ]
+        },
+        "visual": {
+          "$ref": "#/$defs/visual"
+        },
+        "content": {
+          "type": "object",
+          "properties": {
+            "items": {
+              "type": "array",
+              "items": {
+                "$ref": "#/$defs/item"
+              },
+              "maxItems": 500
+            },
+            "actions": {
+              "type": "array",
+              "items": {
+                "$ref": "#/$defs/action"
+              },
+              "maxItems": 500
+            },
+            "photos": {
+              "type": "array",
+              "items": {
+                "$ref": "#/$defs/image"
+              },
+              "maxItems": 500
+            },
+            "benefits": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "maxLength": 100000,
+                "pattern": "^[^\\u0000]*$"
+              },
+              "maxItems": 500
+            },
+            "highlights": {
+              "type": "array",
+              "items": {
+                "$ref": "#/$defs/highlight"
+              },
+              "maxItems": 500
+            },
+            "hours": {
+              "type": "string",
+              "maxLength": 100000,
+              "pattern": "^[^\\u0000]*$"
+            },
+            "address": {
+              "type": "string",
+              "maxLength": 100000,
+              "pattern": "^[^\\u0000]*$"
+            },
+            "mapsUrl": {
+              "type": "string",
+              "maxLength": 100000,
+              "pattern": "^[^\\u0000]*$"
+            }
+          },
+          "required": [],
+          "additionalProperties": false
+        },
+        "block": {
+          "enum": [
+            "text",
+            "image-text",
+            "picture-text",
+            "image",
+            "cards",
+            "cta",
+            "list"
+          ]
+        },
+        "titleVisual": {
+          "$ref": "#/$defs/visual"
+        },
+        "video": {
+          "type": "object",
+          "properties": {
+            "src": {
+              "type": "string",
+              "maxLength": 4000
+            },
+            "poster": {
+              "$ref": "#/$defs/image"
+            }
+          },
+          "required": [
+            "src"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "id",
+        "kind",
+        "title",
+        "text",
+        "enabled"
+      ],
+      "additionalProperties": false,
+      "allOf": [
+        {
+          "if": {
+            "required": [
+              "block"
+            ]
+          },
+          "then": {
+            "properties": {
+              "kind": {
+                "const": "about"
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "kind": {
+                "const": "testimonials"
+              }
+            },
+            "required": [
+              "kind"
+            ],
+            "not": {
+              "properties": {
+                "block": {
+                  "const": "cards"
+                }
+              },
+              "required": [
+                "block"
+              ]
+            }
+          },
+          "then": {
+            "properties": {
+              "layout": {
+                "enum": [
+                  "cards",
+                  "carousel",
+                  "spotlight"
+                ]
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "kind": {
+                "const": "actions"
+              }
+            },
+            "required": [
+              "kind"
+            ],
+            "not": {
+              "properties": {
+                "block": {
+                  "const": "cards"
+                }
+              },
+              "required": [
+                "block"
+              ]
+            }
+          },
+          "then": {
+            "properties": {
+              "layout": {
+                "enum": [
+                  "square",
+                  "rounded",
+                  "two",
+                  "three",
+                  "four",
+                  "list",
+                  "pill",
+                  "inline"
+                ]
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "kind": {
+                "const": "categories"
+              }
+            },
+            "required": [
+              "kind"
+            ],
+            "not": {
+              "properties": {
+                "block": {
+                  "const": "cards"
+                }
+              },
+              "required": [
+                "block"
+              ]
+            }
+          },
+          "then": {
+            "properties": {
+              "layout": {
+                "enum": [
+                  "two",
+                  "three",
+                  "four",
+                  "grid",
+                  "carousel"
+                ]
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "kind": {
+                "const": "promotion"
+              }
+            },
+            "required": [
+              "kind"
+            ],
+            "not": {
+              "properties": {
+                "block": {
+                  "const": "cards"
+                }
+              },
+              "required": [
+                "block"
+              ]
+            }
+          },
+          "then": {
+            "not": {
+              "required": [
+                "layout"
+              ]
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "kind": {
+                "const": "services"
+              }
+            },
+            "required": [
+              "kind"
+            ],
+            "not": {
+              "properties": {
+                "block": {
+                  "const": "cards"
+                }
+              },
+              "required": [
+                "block"
+              ]
+            }
+          },
+          "then": {
+            "properties": {
+              "layout": {
+                "enum": [
+                  "compact",
+                  "large",
+                  "two",
+                  "three",
+                  "list",
+                  "carousel"
+                ]
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "kind": {
+                "const": "products"
+              }
+            },
+            "required": [
+              "kind"
+            ],
+            "not": {
+              "properties": {
+                "block": {
+                  "const": "cards"
+                }
+              },
+              "required": [
+                "block"
+              ]
+            }
+          },
+          "then": {
+            "properties": {
+              "layout": {
+                "enum": [
+                  "compact",
+                  "large",
+                  "two",
+                  "three",
+                  "list",
+                  "carousel"
+                ]
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "kind": {
+                "const": "gallery"
+              }
+            },
+            "required": [
+              "kind"
+            ],
+            "not": {
+              "properties": {
+                "block": {
+                  "const": "cards"
+                }
+              },
+              "required": [
+                "block"
+              ]
+            }
+          },
+          "then": {
+            "properties": {
+              "layout": {
+                "enum": [
+                  "grid",
+                  "mosaic",
+                  "carousel"
+                ]
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "kind": {
+                "const": "about"
+              }
+            },
+            "required": [
+              "kind"
+            ],
+            "not": {
+              "properties": {
+                "block": {
+                  "const": "cards"
+                }
+              },
+              "required": [
+                "block"
+              ]
+            }
+          },
+          "then": {
+            "not": {
+              "required": [
+                "layout"
+              ]
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "kind": {
+                "const": "benefits"
+              }
+            },
+            "required": [
+              "kind"
+            ],
+            "not": {
+              "properties": {
+                "block": {
+                  "const": "cards"
+                }
+              },
+              "required": [
+                "block"
+              ]
+            }
+          },
+          "then": {
+            "properties": {
+              "layout": {
+                "enum": [
+                  "cards",
+                  "list"
+                ]
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "kind": {
+                "const": "hours"
+              }
+            },
+            "required": [
+              "kind"
+            ],
+            "not": {
+              "properties": {
+                "block": {
+                  "const": "cards"
+                }
+              },
+              "required": [
+                "block"
+              ]
+            }
+          },
+          "then": {
+            "not": {
+              "required": [
+                "layout"
+              ]
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "kind": {
+                "const": "location"
+              }
+            },
+            "required": [
+              "kind"
+            ],
+            "not": {
+              "properties": {
+                "block": {
+                  "const": "cards"
+                }
+              },
+              "required": [
+                "block"
+              ]
+            }
+          },
+          "then": {
+            "not": {
+              "required": [
+                "layout"
+              ]
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "kind": {
+                "const": "whatsapp"
+              }
+            },
+            "required": [
+              "kind"
+            ],
+            "not": {
+              "properties": {
+                "block": {
+                  "const": "cards"
+                }
+              },
+              "required": [
+                "block"
+              ]
+            }
+          },
+          "then": {
+            "not": {
+              "required": [
+                "layout"
+              ]
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "block": {
+                "const": "cards"
+              }
+            },
+            "required": [
+              "block"
+            ]
+          },
+          "then": {
+            "properties": {
+              "layout": {
+                "enum": [
+                  "compact",
+                  "large",
+                  "two",
+                  "three",
+                  "list",
+                  "carousel"
+                ]
+              }
+            }
+          }
+        }
+      ]
+    },
+    "design": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[1-8][0-9a-fA-F]{3}-[89abAB][0-9a-fA-F]{3}-[0-9a-fA-F]{12}$"
+        },
+        "manual": {
+          "type": "boolean"
+        },
+        "appearance": {
+          "$ref": "#/$defs/appearance"
+        },
+        "heroEnabled": {
+          "type": "boolean"
+        },
+        "style": {
+          "enum": [
+            "boutique-gold",
+            "fashion-pink",
+            "clean-nude",
+            "black-gold",
+            "vintage-barber",
+            "urban-street",
+            "rose-gold",
+            "nude-elegance",
+            "luxury-black",
+            "gourmet-dark",
+            "fast-food-red",
+            "rustic-kitchen",
+            "candy-pink",
+            "chocolate-premium",
+            "clean-patisserie",
+            "auto-premium",
+            "performance-red",
+            "tech-blue",
+            "business-premium",
+            "modern-blue",
+            "clean-minimal"
+          ]
+        },
+        "name": {
+          "type": "string",
+          "maxLength": 300,
+          "pattern": "^[^\\u0000]*$",
+          "minLength": 1
+        },
+        "category": {
+          "type": "string",
+          "maxLength": 100,
+          "pattern": "^[^\\u0000]*$",
+          "description": "Case-insensitive membership in catalogo.json categories; runtime check required."
+        },
+        "headline": {
+          "type": "string",
+          "maxLength": 100000,
+          "pattern": "^[^\\u0000]*$"
+        },
+        "tagline": {
+          "type": "string",
+          "maxLength": 100000,
+          "pattern": "^[^\\u0000]*$"
+        },
+        "highlights": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/highlight"
+          },
+          "maxItems": 500
+        },
+        "benefits": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "maxLength": 100000,
+            "pattern": "^[^\\u0000]*$"
+          },
+          "maxItems": 500
+        },
+        "description": {
+          "type": "string",
+          "maxLength": 100000,
+          "pattern": "^[^\\u0000]*$"
+        },
+        "color": {
+          "type": "string",
+          "maxLength": 100000,
+          "pattern": "^[^\\u0000]*$"
+        },
+        "cover": {
+          "$ref": "#/$defs/image"
+        },
+        "logo": {
+          "$ref": "#/$defs/image"
+        },
+        "phone": {
+          "type": "string",
+          "maxLength": 100000,
+          "pattern": "^[^\\u0000]*$"
+        },
+        "address": {
+          "type": "string",
+          "maxLength": 100000,
+          "pattern": "^[^\\u0000]*$"
+        },
+        "hours": {
+          "type": "string",
+          "maxLength": 100000,
+          "pattern": "^[^\\u0000]*$"
+        },
+        "instagram": {
+          "type": "string",
+          "maxLength": 100000,
+          "pattern": "^[^\\u0000]*$"
+        },
+        "telephone": {
+          "type": "string",
+          "maxLength": 100000,
+          "pattern": "^[^\\u0000]*$"
+        },
+        "email": {
+          "type": "string",
+          "maxLength": 100000,
+          "pattern": "^[^\\u0000]*$"
+        },
+        "facebook": {
+          "type": "string",
+          "maxLength": 100000,
+          "pattern": "^[^\\u0000]*$"
+        },
+        "tiktok": {
+          "type": "string",
+          "maxLength": 100000,
+          "pattern": "^[^\\u0000]*$"
+        },
+        "reviewsUrl": {
+          "type": "string",
+          "maxLength": 100000,
+          "pattern": "^[^\\u0000]*$"
+        },
+        "mapsUrl": {
+          "type": "string",
+          "maxLength": 100000,
+          "pattern": "^[^\\u0000]*$"
+        },
+        "website": {
+          "type": "string",
+          "maxLength": 100000,
+          "pattern": "^[^\\u0000]*$"
+        },
+        "menuUrl": {
+          "type": "string",
+          "maxLength": 100000,
+          "pattern": "^[^\\u0000]*$"
+        },
+        "sections": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/section"
+          },
+          "maxItems": 500
+        },
+        "actions": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/action"
+          },
+          "maxItems": 500
+        },
+        "services": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/item"
+          },
+          "maxItems": 500
+        },
+        "products": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/item"
+          },
+          "maxItems": 500
+        },
+        "photos": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/image"
+          },
+          "maxItems": 500
+        },
+        "heroLayout": {
+          "enum": [
+            "full",
+            "compact",
+            "center",
+            "overlap",
+            "left"
+          ]
+        },
+        "heroVisual": {
+          "$ref": "#/$defs/visual"
+        },
+        "textVisual": {
+          "$ref": "#/$defs/textVisual"
+        },
+        "composition": {
+          "type": "object",
+          "properties": {
+            "engineVersion": {
+              "const": 1
+            },
+            "compositionSeed": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 100,
+              "pattern": "^[a-zA-Z0-9:_-]+$"
+            },
+            "preferences": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "type": "string",
+                  "maxLength": 300,
+                  "pattern": "^[^\\u0000]*$",
+                  "minLength": 1
+                },
+                "categoryId": {
+                  "enum": [
+                    "fashion",
+                    "barber",
+                    "beauty",
+                    "food",
+                    "sweets",
+                    "auto",
+                    "business"
+                  ]
+                },
+                "goal": {
+                  "enum": [
+                    "messages",
+                    "bookings",
+                    "orders",
+                    "quotes",
+                    "products",
+                    "services",
+                    "location",
+                    "presence"
+                  ]
+                },
+                "style": {
+                  "enum": [
+                    "surprise",
+                    "modern",
+                    "premium",
+                    "elegant",
+                    "minimal",
+                    "vibrant",
+                    "classic"
+                  ]
+                },
+                "theme": {
+                  "enum": [
+                    "light",
+                    "dark",
+                    "any"
+                  ]
+                },
+                "density": {
+                  "enum": [
+                    "compact",
+                    "balanced",
+                    "complete"
+                  ]
+                },
+                "primary": {
+                  "type": "string",
+                  "pattern": "^#[0-9a-fA-F]{6}$"
+                },
+                "accent": {
+                  "type": "string",
+                  "pattern": "^#[0-9a-fA-F]{6}$"
+                },
+                "phone": {
+                  "type": "string",
+                  "maxLength": 500,
+                  "pattern": "^[^\\u0000]*$"
+                },
+                "instagram": {
+                  "type": "string",
+                  "maxLength": 500,
+                  "pattern": "^[^\\u0000]*$"
+                }
+              },
+              "required": [
+                "name",
+                "categoryId",
+                "goal",
+                "style",
+                "theme",
+                "density"
+              ],
+              "additionalProperties": false
+            },
+            "initialVisual": {
+              "type": "object",
+              "properties": {
+                "color": {
+                  "type": "string",
+                  "pattern": "^#[0-9a-fA-F]{6}$"
+                },
+                "appearance": {
+                  "$ref": "#/$defs/appearance"
+                },
+                "heroLayout": {
+                  "enum": [
+                    "full",
+                    "compact",
+                    "center",
+                    "overlap",
+                    "left"
+                  ]
+                },
+                "heroVisual": {
+                  "$ref": "#/$defs/visual"
+                },
+                "designVisual": {
+                  "$ref": "#/$defs/visual"
+                },
+                "textVisual": {
+                  "$ref": "#/$defs/textVisual"
+                },
+                "sections": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "id": {
+                        "$ref": "#/$defs/entryId"
+                      },
+                      "layout": {
+                        "enum": [
+                          "two",
+                          "three",
+                          "four",
+                          "grid",
+                          "carousel",
+                          "cards",
+                          "list",
+                          "square",
+                          "rounded",
+                          "pill",
+                          "inline",
+                          "compact",
+                          "large",
+                          "mosaic",
+                          "spotlight"
+                        ]
+                      },
+                      "visual": {
+                        "$ref": "#/$defs/visual"
+                      },
+                      "titleVisual": {
+                        "$ref": "#/$defs/visual"
+                      }
+                    },
+                    "required": [
+                      "id"
+                    ],
+                    "additionalProperties": true
+                  },
+                  "maxItems": 500
+                },
+                "actions": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "id": {
+                        "$ref": "#/$defs/entryId"
+                      },
+                      "icon": {
+                        "enum": [
+                          "whatsapp",
+                          "instagram",
+                          "facebook",
+                          "tiktok",
+                          "youtube",
+                          "phone",
+                          "email",
+                          "message",
+                          "link",
+                          "globe",
+                          "location",
+                          "map",
+                          "route",
+                          "navigation",
+                          "store",
+                          "bag",
+                          "cart",
+                          "catalog",
+                          "gift",
+                          "food",
+                          "delivery",
+                          "coffee",
+                          "cake",
+                          "pizza",
+                          "scissors",
+                          "wrench",
+                          "briefcase",
+                          "sparkles",
+                          "calendar",
+                          "clock",
+                          "calendar-check",
+                          "credit-card",
+                          "wallet",
+                          "banknote",
+                          "star",
+                          "heart",
+                          "camera",
+                          "gallery",
+                          "document",
+                          "info",
+                          "users",
+                          "check",
+                          "home",
+                          "linkedin",
+                          "twitter",
+                          "telegram",
+                          "pinterest",
+                          "spotify",
+                          "smartphone",
+                          "chat",
+                          "support",
+                          "tag",
+                          "qr-code",
+                          "burger",
+                          "car",
+                          "construction",
+                          "beauty",
+                          "share",
+                          "download",
+                          "external",
+                          "search",
+                          "user",
+                          "google",
+                          "google-reviews",
+                          "reviews",
+                          "stars",
+                          "tooth",
+                          "shield-check",
+                          "leaf",
+                          "sofa",
+                          "ruler",
+                          "building",
+                          "diamond",
+                          "scale",
+                          "gavel",
+                          "hand-coins",
+                          "dumbbell",
+                          "chart",
+                          "apple",
+                          "zap",
+                          "graduation",
+                          "medal",
+                          "paw",
+                          "glasses",
+                          "flower",
+                          "ring",
+                          "crown",
+                          "lock",
+                          "settings",
+                          "thumbs-up",
+                          "flame",
+                          "running",
+                          "target",
+                          "play",
+                          "pin",
+                          "menu"
+                        ]
+                      },
+                      "visual": {
+                        "$ref": "#/$defs/visual"
+                      }
+                    },
+                    "required": [
+                      "id"
+                    ],
+                    "additionalProperties": true
+                  },
+                  "maxItems": 500
+                },
+                "items": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "id": {
+                        "$ref": "#/$defs/entryId"
+                      },
+                      "visual": {
+                        "$ref": "#/$defs/visual"
+                      }
+                    },
+                    "required": [
+                      "id"
+                    ],
+                    "additionalProperties": true
+                  },
+                  "maxItems": 500
+                }
+              },
+              "required": [
+                "color",
+                "sections",
+                "actions",
+                "items"
+              ],
+              "additionalProperties": false
+            }
+          },
+          "required": [
+            "engineVersion",
+            "compositionSeed",
+            "preferences",
+            "initialVisual"
+          ],
+          "additionalProperties": false
+        },
+        "renderMode": {
+          "const": "flexible"
+        },
+        "designVisual": {
+          "$ref": "#/$defs/visual"
+        },
+        "identity": {
+          "type": "object",
+          "properties": {
+            "brandColors": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "pattern": "^#[0-9a-fA-F]{6}$"
+              },
+              "maxItems": 16
+            },
+            "extractedColors": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "pattern": "^#[0-9a-fA-F]{6}$"
+              },
+              "maxItems": 16
+            },
+            "logoPalette": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "pattern": "^#[0-9a-fA-F]{6}$"
+              },
+              "maxItems": 16
+            },
+            "instagramPalette": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "pattern": "^#[0-9a-fA-F]{6}$"
+              },
+              "maxItems": 16
+            },
+            "referencePalette": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "pattern": "^#[0-9a-fA-F]{6}$"
+              },
+              "maxItems": 16
+            },
+            "instagram": {
+              "type": "string",
+              "maxLength": 500,
+              "pattern": "^[^\\u0000]*$"
+            },
+            "sources": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "name": {
+                    "type": "string",
+                    "maxLength": 300,
+                    "pattern": "^[^\\u0000]*$"
+                  },
+                  "role": {
+                    "enum": [
+                      "logo",
+                      "instagram",
+                      "reference"
+                    ]
+                  },
+                  "colors": {
+                    "type": "array",
+                    "items": {
+                      "type": "string",
+                      "pattern": "^#[0-9a-fA-F]{6}$"
+                    },
+                    "maxItems": 16
+                  }
+                },
+                "required": [
+                  "name",
+                  "role",
+                  "colors"
+                ],
+                "additionalProperties": false
+              },
+              "maxItems": 32
+            }
+          },
+          "required": [],
+          "additionalProperties": false
+        },
+        "layoutPreset": {
+          "enum": [
+            "moda-premium-gold",
+            "bella-moda-feminina",
+            "urban-black-moda-masculina",
+            "charmme-moda-feminina",
+            "lumiere-boutique",
+            "vibe-store",
+            "urban-black-2",
+            "nexo-moda-masculina",
+            "atelier-27",
+            "lumiere-moda-feminina",
+            "imperium-barbearia",
+            "barber-pro",
+            "royal-barber",
+            "bravo-barbearia",
+            "the-cut-barbearia",
+            "beauty-nude-light",
+            "beauty-nude-dark",
+            "essencia-rose-estetica",
+            "essencia-dos-cachos",
+            "jocastrya-estetica-original",
+            "sueli-nascimento",
+            "paty-galetos",
+            "eclat-beleza",
+            "nails-glam",
+            "lumiere-beleza-estetica",
+            "nail-lux",
+            "bella-nails-studio",
+            "lash-beauty",
+            "cilios-studio",
+            "lash-more",
+            "burger-fire",
+            "sabor-da-casa",
+            "bistro-sabor",
+            "doce-encanto",
+            "acai-da-hora",
+            "bella-pizza",
+            "grill-express",
+            "sabor-mineiro",
+            "sabor-mineiro-reenvio",
+            "boteco-do-amigo",
+            "garage-prime",
+            "autolex",
+            "prime-car",
+            "prime-car-reenvio",
+            "racing-auto-service",
+            "arqdesign",
+            "sorriso-odontologia",
+            "oralprime",
+            "almeida-costa",
+            "almeida-costa-completo",
+            "almeida-costa-completo-reenvio",
+            "rafael-ferreira-personal",
+            "amigo-pet",
+            "otica-vision",
+            "lux-joias",
+            "flora-boutique",
+            "casa-estilo",
+            "resenha-barbearia",
+            "rafael-ferreira-personal-laranja",
+            "acai-da-hora-roxo",
+            "sweets-candy-pink",
+            "auto-tech-blue",
+            "fashion-boutique-gold",
+            "fashion-fashion-pink",
+            "fashion-clean-nude",
+            "barber-black-gold",
+            "barber-vintage-barber",
+            "barber-urban-street",
+            "beauty-rose-gold",
+            "beauty-nude-elegance",
+            "beauty-luxury-black",
+            "food-gourmet-dark",
+            "food-fast-food-red",
+            "food-rustic-kitchen",
+            "sweets-chocolate-premium",
+            "sweets-clean-patisserie",
+            "auto-auto-premium",
+            "auto-performance-red",
+            "business-business-premium",
+            "business-modern-blue",
+            "business-clean-minimal"
+          ]
+        }
+      },
+      "required": [
+        "id",
+        "style",
+        "name",
+        "category",
+        "headline",
+        "tagline",
+        "description",
+        "color",
+        "phone",
+        "address",
+        "hours",
+        "instagram",
+        "cover",
+        "logo",
+        "sections",
+        "actions",
+        "services",
+        "products",
+        "highlights",
+        "benefits",
+        "photos"
+      ],
+      "additionalProperties": false
+    }
+  }
+}

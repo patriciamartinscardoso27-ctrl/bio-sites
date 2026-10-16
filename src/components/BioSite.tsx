@@ -1,4 +1,5 @@
 import {FashionPremiumLayout} from './biosite/FashionPremiumLayout'
+import {PremiumV2BioSite} from './biosite/PremiumV2BioSite'
 import {EditableText} from './EditableText'
 import { useId, useState, type CSSProperties } from 'react'
 import { ArrowDown, ArrowRight, ArrowUpRight, Camera, Check, Clock, Heart, MapPin, MessageCircle, Shirt, Sparkles } from 'lucide-react'
@@ -16,6 +17,7 @@ import {PatyGaletosLayout} from './biosite/PatyGaletosLayout'
 
 
 export function BioSite(input: { bio: Bio; embedded?: boolean }) {
+  if(input.bio.premiumV2)return <PremiumV2BioSite {...input}/>
   const props={...input,bio:resolvePalette(input.bio)}
   if(props.bio.layoutPreset==='paty-galetos')return <PatyGaletosLayout {...props}/>
   if(props.bio.layoutPreset==='sueli-nascimento')return <SueliLayout {...props}/>
