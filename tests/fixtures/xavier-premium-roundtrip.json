@@ -1,0 +1,412 @@
+{
+  "id": "6d0b0cd8-0f9e-46f4-86b5-8b61da1898a0",
+  "logo": "",
+  "name": "Xavier Modas",
+  "color": "#a87930",
+  "cover": "https://images.unsplash.com/photo-1539109136881-3be0616acf4b?auto=format&fit=crop&w=1000&q=85",
+  "hours": "Segunda à Sexta: 09:00 - 19:00\nSábado: 09:00 - 17:00\nDomingo: Fechado",
+  "phone": "",
+  "style": "boutique-gold",
+  "photos": [],
+  "tiktok": "https://www.tiktok.com/",
+  "actions": [],
+  "address": "Endereço demonstrativo",
+  "tagline": "MODA FEMININA",
+  "benefits": [],
+  "category": "Loja de roupas",
+  "facebook": "https://www.facebook.com/",
+  "headline": "",
+  "identity": {
+    "brandColors": [
+      "#a87930",
+      "#101010",
+      "#faf5ee"
+    ],
+    "logoPalette": [
+      "#a87930",
+      "#101010",
+      "#faf5ee"
+    ]
+  },
+  "products": [],
+  "sections": [
+    {
+      "id": "gold-actions",
+      "kind": "actions",
+      "text": "",
+      "title": "",
+      "visual": {
+        "gap": 16,
+        "columns": 4,
+        "iconSize": 80,
+        "glyphSize": 44,
+        "labelSize": 14,
+        "subtitleSize": 11
+      },
+      "content": {
+        "actions": [
+          {
+            "id": "gold-wa",
+            "icon": "whatsapp",
+            "kind": "whatsapp",
+            "label": "WhatsApp",
+            "message": "Olá! Gostaria de conhecer a coleção.",
+            "subtitle": "Fale agora",
+            "appearanceMode": "brand"
+          },
+          {
+            "id": "gold-ig",
+            "icon": "instagram",
+            "kind": "instagram",
+            "label": "Instagram",
+            "message": "",
+            "subtitle": "Nos siga",
+            "appearanceMode": "brand"
+          },
+          {
+            "id": "gold-map",
+            "icon": "location",
+            "kind": "location",
+            "label": "Como chegar",
+            "visual": {
+              "radiusPx": 16,
+              "iconColor": "#fffaf2",
+              "textColor": "#ffffff",
+              "backgroundGradient": "linear-gradient(130deg, #dbb153, #a76d19)"
+            },
+            "message": "",
+            "subtitle": "Ver no mapa",
+            "appearanceMode": "custom"
+          },
+          {
+            "id": "gold-catalog",
+            "icon": "bag",
+            "kind": "custom",
+            "label": "Ver produtos",
+            "visual": {
+              "radiusPx": 16,
+              "iconColor": "#8d5a24",
+              "textColor": "#ffffff",
+              "background": "#faf5ee"
+            },
+            "message": "",
+            "subtitle": "Nossa vitrine",
+            "sectionId": "gold-products",
+            "destination": "section",
+            "appearanceMode": "custom"
+          }
+        ]
+      },
+      "enabled": true
+    },
+    {
+      "id": "gold-shipping",
+      "kind": "benefits",
+      "text": "",
+      "title": "",
+      "layout": "list",
+      "content": {
+        "benefits": [
+          "Enviamos para todo o Brasil|Com segurança e rapidez"
+        ]
+      },
+      "enabled": true
+    },
+    {
+      "id": "gold-collections",
+      "kind": "categories",
+      "text": "",
+      "title": "Nossas Coleções",
+      "visual": {
+        "columns": 3,
+        "mediaAspect": 70
+      },
+      "content": {
+        "highlights": [
+          {
+            "id": "gold-dresses",
+            "image": "https://images.unsplash.com/photo-1595777457583-95e059d581b8?auto=format&fit=crop&w=1000&q=85",
+            "label": "Vestidos",
+            "caption": "Ver mais"
+          },
+          {
+            "id": "gold-blouses",
+            "image": "https://images.unsplash.com/photo-1539109136881-3be0616acf4b?auto=format&fit=crop&w=1000&q=85",
+            "label": "Blusas",
+            "caption": "Ver mais"
+          },
+          {
+            "id": "gold-jeans",
+            "image": "https://images.unsplash.com/photo-1541099649105-f69ad21f3246?auto=format&fit=crop&w=1000&q=85",
+            "label": "Calças",
+            "caption": "Ver mais"
+          }
+        ]
+      },
+      "enabled": true
+    },
+    {
+      "id": "gold-news",
+      "kind": "promotion",
+      "text": "Peças selecionadas para\nvocê estar sempre na moda.",
+      "image": "https://images.unsplash.com/photo-1539109136881-3be0616acf4b?auto=format&fit=crop&w=1000&q=85",
+      "title": "Novidades\ntoda semana 💛",
+      "visual": {
+        "text": "#101010",
+        "panel": "#e9d6be",
+        "overlay": 10,
+        "background": "#070907",
+        "mediaAspect": 185,
+        "imagePositionX": 80,
+        "imagePositionY": 30,
+        "mediaPlacement": "background"
+      },
+      "enabled": true,
+      "ctaLabel": "Ver novidades",
+      "titleVisual": {
+        "font": "serif",
+        "fontSize": 24,
+        "lineHeight": 110
+      }
+    },
+    {
+      "id": "gold-products",
+      "kind": "products",
+      "text": "",
+      "title": "Produtos em Destaque",
+      "layout": "list",
+      "visual": {
+        "mediaAspect": 82
+      },
+      "content": {
+        "items": [
+          {
+            "id": "gold-dress",
+            "image": "https://images.unsplash.com/photo-1595777457583-95e059d581b8?auto=format&fit=crop&w=1000&q=85",
+            "price": "R$ 149,90",
+            "title": "Vestido Teste",
+            "description": "Leveza e elegância para\ntodas as ocasiões."
+          },
+          {
+            "id": "gold-suit",
+            "image": "https://images.unsplash.com/photo-1539109136881-3be0616acf4b?auto=format&fit=crop&w=1000&q=85",
+            "price": "R$ 199,90",
+            "title": "Conjunto Alfaiataria",
+            "description": "Moda e conforto no\nseu dia a dia."
+          },
+          {
+            "id": "gold-pants",
+            "image": "https://images.unsplash.com/photo-1541099649105-f69ad21f3246?auto=format&fit=crop&w=1000&q=85",
+            "price": "R$ 149,90",
+            "title": "Calça Jeans Wide Leg",
+            "description": "Tendência e estilo para\nqualquer look."
+          },
+          {
+            "id": "gold-blouse",
+            "image": "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=1000&q=85",
+            "price": "R$ 69,90",
+            "title": "Blusa Canelada",
+            "description": "Básica e versátil, combina\ncom tudo."
+          }
+        ]
+      },
+      "enabled": true
+    },
+    {
+      "id": "gold-benefits",
+      "kind": "benefits",
+      "text": "",
+      "title": "",
+      "content": {
+        "benefits": [
+          "Envio rápido|para todo o Brasil",
+          "Compra segura|e atendimento",
+          "Peças selecionadas|com muito carinho"
+        ]
+      },
+      "enabled": true
+    },
+    {
+      "id": "gold-gallery",
+      "kind": "gallery",
+      "text": "",
+      "title": "Galeria",
+      "visual": {
+        "columns": 3,
+        "mediaAspect": 95
+      },
+      "content": {
+        "photos": [
+          "https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=1000&q=85",
+          "https://images.unsplash.com/photo-1548036328-c9fa89d128fa?auto=format&fit=crop&w=1000&q=85",
+          "https://images.unsplash.com/photo-1539109136881-3be0616acf4b?auto=format&fit=crop&w=1000&q=85",
+          "https://images.unsplash.com/photo-1434389677669-e08b4cac3105?auto=format&fit=crop&w=1000&q=85",
+          "https://images.unsplash.com/photo-1548036328-c9fa89d128fa?auto=format&fit=crop&w=1000&q=85",
+          "https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=1000&q=85"
+        ]
+      },
+      "enabled": true
+    },
+    {
+      "id": "gold-about",
+      "kind": "about",
+      "text": "A Xavier Modas nasceu com o propósito de oferecer moda feminina de qualidade, com estilo e preço justo. Aqui você encontra peças selecionadas com muito carinho, sempre pensando em realçar a sua beleza e autoestima.",
+      "image": "https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=1000&q=85",
+      "title": "Sobre Nós",
+      "visual": {
+        "mediaWidth": 44,
+        "mediaAspect": 76,
+        "mediaPlacement": "right"
+      },
+      "enabled": true
+    },
+    {
+      "id": "gold-confidence",
+      "kind": "promotion",
+      "text": "Vista-se de você\nem todas as ocasiões.",
+      "image": "https://images.unsplash.com/photo-1539109136881-3be0616acf4b?auto=format&fit=crop&w=1000&q=85",
+      "title": "Mais que moda,\né autoestima ✨",
+      "visual": {
+        "text": "#ffffff",
+        "panel": "#77542c",
+        "overlay": 45,
+        "mediaAspect": 195,
+        "imagePositionX": 85,
+        "imagePositionY": 25,
+        "mediaPlacement": "background"
+      },
+      "enabled": true,
+      "ctaLabel": "",
+      "titleVisual": {
+        "weight": "bold",
+        "fontSize": 21,
+        "lineHeight": 130
+      }
+    },
+    {
+      "id": "gold-hours",
+      "kind": "hours",
+      "text": "",
+      "title": "Nosso Horário",
+      "enabled": true
+    },
+    {
+      "id": "gold-location",
+      "kind": "location",
+      "text": "",
+      "title": "Como chegar",
+      "enabled": true
+    },
+    {
+      "id": "gold-whatsapp",
+      "kind": "whatsapp",
+      "text": "",
+      "title": "Tire suas dúvidas\ne faça seu pedido",
+      "visual": {
+        "text": "#ffffff",
+        "panel": "#10100d",
+        "iconColor": "#c79c50"
+      },
+      "enabled": true,
+      "ctaLabel": ""
+    },
+    {
+      "id": "gold-identity",
+      "kind": "about",
+      "text": "",
+      "block": "text",
+      "title": "",
+      "enabled": true
+    },
+    {
+      "id": "gold-social",
+      "kind": "actions",
+      "text": "",
+      "title": "",
+      "layout": "inline",
+      "content": {
+        "actions": [
+          {
+            "id": "gold-footer-ig",
+            "icon": "instagram",
+            "kind": "instagram",
+            "label": "Instagram",
+            "message": "",
+            "subtitle": "",
+            "appearanceMode": "theme"
+          },
+          {
+            "id": "gold-footer-tiktok",
+            "icon": "tiktok",
+            "kind": "tiktok",
+            "label": "TikTok",
+            "message": "",
+            "subtitle": "",
+            "appearanceMode": "theme"
+          },
+          {
+            "id": "gold-footer-fb",
+            "icon": "facebook",
+            "kind": "facebook",
+            "label": "Facebook",
+            "message": "",
+            "subtitle": "",
+            "appearanceMode": "theme"
+          },
+          {
+            "id": "gold-footer-pin",
+            "url": "https://www.pinterest.com/",
+            "icon": "pinterest",
+            "kind": "custom",
+            "mode": "url",
+            "label": "Pinterest",
+            "source": "custom",
+            "message": "",
+            "subtitle": "",
+            "appearanceMode": "theme"
+          }
+        ]
+      },
+      "enabled": true
+    }
+  ],
+  "services": [],
+  "instagram": "",
+  "appearance": {
+    "font": "sans",
+    "text": "#101010",
+    "cards": "rounded",
+    "panel": "#f4eee7",
+    "theme": "light",
+    "border": "#eadfd2",
+    "buttons": "rounded",
+    "highlight": "#a87930",
+    "secondary": "#895b24",
+    "background": "#faf5ee"
+  },
+  "heroVisual": {
+    "align": "left",
+    "overlay": 80,
+    "imageFit": "cover",
+    "logoSize": 150,
+    "minHeight": 450,
+    "imagePositionX": 65,
+    "imagePositionY": 35,
+    "heroComposition": "cover"
+  },
+  "highlights": [],
+  "textVisual": {
+    "name": {
+      "font": "serif",
+      "weight": "regular",
+      "fontSize": 60,
+      "lineHeight": 105
+    },
+    "description": {
+      "fontSize": 20,
+      "lineHeight": 140
+    }
+  },
+  "description": "Moda feminina, estilo e qualidade para você ✨",
+  "layoutPreset": "moda-premium-gold"
+}

@@ -3,6 +3,7 @@ import { ApiError } from './validation.mjs'
 import { connectRepository } from './repository.mjs'
 import { getAuth as configuredAuth } from './auth.mjs'
 import {createVisionService} from './vision-reference.mjs'
+import {processPremiumDesign} from './premium-design.mjs'
 import {requestOrigin} from './config.mjs'
 import {validateSlug} from './publication.mjs'
 import {getUsers,principalOnly,createInviteMailer,sendInvitation,generateManualInvitation} from './multiuser.mjs'
@@ -131,6 +132,8 @@ export function createApi({ repository, getRepository = connectRepository, getAu
         const db=await scopedRepo();return reply(200,publication[2]==='publish'?await db.publish(publication[1],value.lockVersion,value.draftRevision):publication[2]==='reactivate'?await db.reactivate(publication[1],value.lockVersion):publication[2]==='suspend'?await db.suspend(publication[1],value.lockVersion):await db.unpublish(publication[1],value.lockVersion))
       }
       if(pathname==='/api/reference/status'&&req.method==='GET')return reply(200,await vision.status())
+      // Validation/preview only: no repository access, generation or publication.
+      if(pathname==='/api/design-package'&&req.method==='POST')return reply(200,processPremiumDesign(await body(req,4_100_000)))
       if(pathname==='/api/reference/analyze'&&req.method==='POST'){
         stage='upload';requestBytes=Number(req.headers['content-length'])||0
         const value=await body(req,4_000_000);requestBytes=Buffer.byteLength(JSON.stringify(value))
