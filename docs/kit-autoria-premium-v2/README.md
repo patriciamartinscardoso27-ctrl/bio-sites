@@ -91,12 +91,12 @@ Todos têm `{version:1,component,surface?,heading?,text?,padding?,gap?}`. Headin
 | --- | --- | --- |
 | `actions` | actions | columns, responsive, button, buttons |
 | `banner` | promotion, about, whatsapp | layers, height (120–800px), button |
-| `catalog` | products, services | columns, responsive, variant, imageAspect, imageFit, imagePosition, mediaWidth, cardSurface, itemTitle, itemText, price, details, button |
-| `profiles` | products, services, categories | columns, responsive, variant, imageAspect, imageFit, imagePosition, cardSurface, itemTitle, itemText, button |
+| `catalog` | products, services | columns, responsive, variant, imageAspect, imageFit, imagePosition, mediaWidth, cardSurface, itemTitle, itemText, price, details, button, cardPadding, cardGap |
+| `profiles` | products, services, categories | columns, responsive, variant, imageAspect, imageFit, imagePosition, cardSurface, itemTitle, itemText, button, cardPadding, cardGap |
 | `gallery` | gallery | columns, responsive, variant, imageAspect, images, comparison |
 | `text` | about | variant, mediaWidth, imageAspect, imageFit, imagePosition, button |
-| `benefits` | benefits | columns, responsive, cardSurface, itemTitle, itemText |
-| `hours` | hours | cardSurface |
+| `benefits` | benefits | columns, responsive, cardSurface, itemTitle, itemText, cardPadding, cardGap, icons, iconSize, iconColor |
+| `hours` | hours | cardSurface, dividerColor |
 | `location` | location | variant, mediaWidth, imageAspect, imageFit, imagePosition, button |
 | `testimonials` | testimonials | columns, responsive, cardSurface, itemTitle, itemText |
 
@@ -104,9 +104,9 @@ Columns é inteiro 1–4; mediaWidth é 20–80%; imageAspect é 40–300 (150 =
 
 `mediaWidth` exige catálogo horizontal ou text/location split. `button` em banner/text/location exige section.action; em catálogo/perfis exige ao menos uma ação de item/coleção. Hero photo/logo configurados exigem cover/logo não vazios. Esses casos são rejeitados para não aceitar estilos ou vínculos que não teriam efeito.
 
-**Catalog:** variantes `vertical|horizontal|overlay`. Os dados são items da seção, ou products/services globais. No horizontal, mediaWidth define a coluna da imagem. `details:true` mostra a descrição inicial e abre a descrição completa num `<details>` acessível, sem navegar para outro site. Uma action explícita no item continua sendo CTA separado. Para texto inicial curto, coloque resumo e detalhes separados por `\n\n` em description.
+**Catalog:** variantes `vertical|horizontal|overlay|compact`. Os dados são items da seção, ou products/services globais. No horizontal, mediaWidth define a coluna da imagem. `details:true` mostra a descrição inicial e abre a descrição completa num `<details>` acessível, sem navegar para outro site. Uma action explícita no item continua sendo CTA separado. Para texto inicial curto, coloque resumo e detalhes separados por `\n\n` em description.
 
-**Profiles:** `vertical|overlay`. Reutiliza items (title = nome, price = especialidade, description = biografia, image = foto) ou highlights em categories (label/caption/image). Isso permite apresentar profissionais, parceiros ou estabelecimentos sem inventar outro cadastro. Os dados continuam editáveis como itens/coleções existentes.
+**Profiles:** `vertical|overlay|compact`. Reutiliza items (title = nome, price = especialidade, description = biografia, image = foto) ou highlights em categories (label/caption/image). Isso permite apresentar profissionais, parceiros ou estabelecimentos sem inventar outro cadastro. Os dados continuam editáveis como itens/coleções existentes.
 
 **Gallery:** `grid|featured|before-after`. Cada foto continua no array photos existente. imageAspect define a proporção padrão. `images:[{index,aspect?,span?,fit?,position?}]` permite tratamento individual, com índices únicos válidos. Span exige featured, não pode exceder as colunas base/responsivas. before-after exige comparison com índices distintos `{before,after,beforeLabel?,afterLabel?}`; nessa variante não envie columns/responsive/images. O slider é nativo e acessível. Imagens escolhidas devem ser uma comparação verdadeira e autorizada; o exemplo adicional usa apenas Foto A/Foto B e não faz afirmação de resultado real.
 
@@ -142,3 +142,5 @@ O schema é auxílio estrutural; regras cruzadas (kind/component, inventário, b
 Já existem fundamentos para hero, botões, camadas, banners, cards, galerias, comparação, profissionais, horários, localização e tipografia responsiva. Ainda faltam fontes personalizadas/manuscritas, máscaras livres, vídeos genéricos V2, filtros/abas de catálogo, efeitos de movimento, regiões independentes de texto em banners, editor visual da composição V2 e ZIP autocontido com upload de mídia. Não há execução de código arbitrário.
 
 O exemplo de beleza é uma prova de composição com fotos reais existentes, não uma promessa de reprodução 100% idêntica da imagem aprovada. A foto da segunda profissional não foi fornecida: o card mostra a especialidade com imagem de unhas e deixa essa necessidade explícita. Endereço e contatos comerciais também precisam de confirmação; CTAs demonstrativos usam example.com, sem gerar contatos automáticos. A proporção de destaque prioriza cabelos e mantém uma galeria menor de unhas.
+
+Composições compactas: consulte [COMPOSICOES-COMPACTAS.md](COMPOSICOES-COMPACTAS.md) e o exemplo restaurante-compacto-v2.biosite.json.

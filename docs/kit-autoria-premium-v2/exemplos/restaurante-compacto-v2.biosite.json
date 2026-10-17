@@ -1,0 +1,1298 @@
+{
+  "format": "bio-sites-premium",
+  "schemaVersion": 2,
+  "renderer": {
+    "id": "biosite",
+    "version": 2,
+    "profile": "premium"
+  },
+  "components": [
+    {
+      "id": "hero.premium",
+      "version": 1
+    },
+    {
+      "id": "section.actions",
+      "version": 1
+    },
+    {
+      "id": "section.banner",
+      "version": 1
+    },
+    {
+      "id": "section.benefits",
+      "version": 1
+    },
+    {
+      "id": "section.catalog",
+      "version": 1
+    },
+    {
+      "id": "section.gallery",
+      "version": 1
+    },
+    {
+      "id": "section.hours",
+      "version": 1
+    },
+    {
+      "id": "section.location",
+      "version": 1
+    },
+    {
+      "id": "section.text",
+      "version": 1
+    }
+  ],
+  "assets": {
+    "version": 1,
+    "storage": "references",
+    "media": [
+      {
+        "path": "cover",
+        "source": "/images/paty-galetos/hero.webp"
+      },
+      {
+        "path": "logo",
+        "source": "/images/paty-galetos/logo.webp"
+      },
+      {
+        "path": "sections[2].content.items[0].image",
+        "source": "/images/paty-galetos/marmita.webp"
+      },
+      {
+        "path": "sections[2].content.items[1].image",
+        "source": "/images/paty-galetos/costela.webp"
+      },
+      {
+        "path": "sections[2].content.items[2].image",
+        "source": "/images/paty-galetos/galeto.webp"
+      },
+      {
+        "path": "sections[3].content.items[0].image",
+        "source": "/images/paty-galetos/galeto.webp"
+      },
+      {
+        "path": "sections[3].content.items[1].image",
+        "source": "/images/paty-galetos/costela.webp"
+      },
+      {
+        "path": "sections[3].content.items[2].image",
+        "source": "/images/paty-galetos/marmita.webp"
+      },
+      {
+        "path": "sections[3].content.items[3].image",
+        "source": "/images/paty-galetos/tropeiro.webp"
+      },
+      {
+        "path": "sections[4].content.photos[0]",
+        "source": "/images/paty-galetos/galeto.webp"
+      },
+      {
+        "path": "sections[4].content.photos[1]",
+        "source": "/images/paty-galetos/costela.webp"
+      },
+      {
+        "path": "sections[4].content.photos[2]",
+        "source": "/images/paty-galetos/marmita.webp"
+      },
+      {
+        "path": "sections[4].content.photos[3]",
+        "source": "/images/paty-galetos/gallery-marmita.webp"
+      },
+      {
+        "path": "sections[4].content.photos[4]",
+        "source": "/images/paty-galetos/tropeiro.webp"
+      },
+      {
+        "path": "sections[4].content.photos[5]",
+        "source": "/images/paty-galetos/acompanhamentos.webp"
+      },
+      {
+        "path": "sections[5].image",
+        "source": "/images/paty-galetos/bag.webp"
+      },
+      {
+        "path": "sections[6].image",
+        "source": "/images/paty-galetos/bag.webp"
+      },
+      {
+        "path": "sections[8].image",
+        "source": "/images/paty-galetos/galeto.webp"
+      },
+      {
+        "path": "sections[9].image",
+        "source": "/images/paty-galetos/gallery-marmita.webp"
+      },
+      {
+        "path": "sections[10].content.photos[0]",
+        "source": "/images/paty-galetos/tropeiro.webp"
+      },
+      {
+        "path": "sections[10].content.photos[1]",
+        "source": "/images/paty-galetos/marmita.webp"
+      },
+      {
+        "path": "sections[10].content.photos[2]",
+        "source": "/images/paty-galetos/acompanhamentos.webp"
+      },
+      {
+        "path": "sections[11].image",
+        "source": "/images/paty-galetos/galeto.webp"
+      },
+      {
+        "path": "sections[12].content.photos[0]",
+        "source": "/images/paty-galetos/bag.webp"
+      },
+      {
+        "path": "sections[12].content.photos[1]",
+        "source": "/images/paty-galetos/galeto.webp"
+      },
+      {
+        "path": "sections[12].content.photos[2]",
+        "source": "/images/paty-galetos/gallery-marmita.webp"
+      }
+    ]
+  },
+  "editing": {
+    "version": 1,
+    "adapter": "existing-editor"
+  },
+  "design": {
+    "id": "b4067dbb-8296-415e-9b39-5152d8f0a94e",
+    "style": "black-gold",
+    "name": "Paty Galetos",
+    "category": "Restaurante / Lanchonete",
+    "headline": "GALETOS\nASSADOS",
+    "tagline": "GALETOS • MARMITAS • DELIVERY",
+    "description": "Marmitas e almoço caseiro\ncom muito sabor!",
+    "color": "#ff8300",
+    "cover": "/images/paty-galetos/hero.webp",
+    "logo": "/images/paty-galetos/logo.webp",
+    "phone": "(27) 99204-4561",
+    "address": "Nova Almeida – ES (endereço completo a confirmar)",
+    "hours": "Segunda a Sexta: 09:00 - 19:00\nSábado: 09:00 - 17:00\nDomingo: Fechado",
+    "instagram": "https://www.instagram.com/patygaletos/",
+    "products": [],
+    "services": [],
+    "photos": [],
+    "highlights": [],
+    "benefits": [],
+    "actions": [
+      {
+        "id": "hero-contact",
+        "label": "FAÇA SEU PEDIDO",
+        "message": "",
+        "kind": "custom",
+        "source": "custom",
+        "url": "https://wa.me/5527992044561",
+        "icon": "whatsapp"
+      }
+    ],
+    "sections": [
+      {
+        "id": "contacts",
+        "kind": "actions",
+        "title": "",
+        "text": "",
+        "enabled": true,
+        "content": {
+          "actions": [
+            {
+              "id": "wa",
+              "label": "WhatsApp",
+              "message": "",
+              "kind": "custom",
+              "source": "custom",
+              "url": "https://wa.me/5527992044561",
+              "icon": "whatsapp",
+              "subtitle": "Peça agora"
+            },
+            {
+              "id": "ig",
+              "label": "Instagram",
+              "message": "",
+              "kind": "custom",
+              "source": "custom",
+              "url": "https://www.instagram.com/patygaletos/",
+              "icon": "instagram",
+              "subtitle": "Nos siga"
+            },
+            {
+              "id": "map",
+              "label": "Como chegar",
+              "message": "",
+              "kind": "custom",
+              "source": "custom",
+              "url": "https://www.google.com/maps/search/?api=1&query=Nova+Almeida+ES",
+              "icon": "location",
+              "subtitle": "Ver no mapa"
+            },
+            {
+              "id": "book",
+              "label": "Nosso cardápio",
+              "message": "",
+              "kind": "custom",
+              "source": "custom",
+              "url": "https://wa.me/5527992044561",
+              "icon": "bag",
+              "subtitle": "Ver opções"
+            }
+          ]
+        }
+      },
+      {
+        "id": "values",
+        "kind": "benefits",
+        "title": "",
+        "text": "",
+        "enabled": true,
+        "content": {
+          "benefits": [
+            "Sabor|Incomparável",
+            "Comida|Caseira",
+            "Entrega|Rápida",
+            "Clientes|Felizes"
+          ]
+        }
+      },
+      {
+        "id": "team",
+        "kind": "products",
+        "title": "Nossos Destaques",
+        "text": "Os favoritos da Paty Galetos.",
+        "enabled": true,
+        "content": {
+          "items": [
+            {
+              "id": "adriana",
+              "title": "Marmita Caprichada",
+              "description": "Arroz, feijão, farofa e salada.",
+              "image": "/images/paty-galetos/marmita.webp",
+              "price": "R$ 25,00",
+              "action": {
+                "id": "order-team-adriana",
+                "label": "Pedir",
+                "message": "",
+                "kind": "custom",
+                "source": "custom",
+                "url": "https://wa.me/5527992044561?text=Ol%C3%A1!%20Quero%20pedir%20Marmita%20Caprichada",
+                "icon": "whatsapp"
+              }
+            },
+            {
+              "id": "nails-specialist",
+              "title": "Costela Suína",
+              "description": "Suculenta e no ponto certo.",
+              "image": "/images/paty-galetos/costela.webp",
+              "price": "R$ 28,00",
+              "action": {
+                "id": "order-team-nails-specialist",
+                "label": "Pedir",
+                "message": "",
+                "kind": "custom",
+                "source": "custom",
+                "url": "https://wa.me/5527992044561?text=Ol%C3%A1!%20Quero%20pedir%20Costela%20Su%C3%ADna",
+                "icon": "whatsapp"
+              }
+            },
+            {
+              "id": "featured-galeto",
+              "title": "Galeto Assado",
+              "description": "Sabor que faz a diferença.",
+              "image": "/images/paty-galetos/galeto.webp",
+              "price": "R$ 24,00",
+              "action": {
+                "id": "order-team-featured-galeto",
+                "label": "Pedir",
+                "message": "",
+                "kind": "custom",
+                "source": "custom",
+                "url": "https://wa.me/5527992044561?text=Ol%C3%A1!%20Quero%20pedir%20Galeto%20Assado",
+                "icon": "whatsapp"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "id": "services",
+        "kind": "services",
+        "title": "Nosso Cardápio",
+        "text": "Pratos saborosos para seu almoço.",
+        "enabled": true,
+        "content": {
+          "items": [
+            {
+              "id": "cut",
+              "title": "Galeto Assado",
+              "description": "Sabor que faz a diferença.",
+              "image": "/images/paty-galetos/galeto.webp",
+              "price": "R$ 24,00",
+              "action": {
+                "id": "order-services-cut",
+                "label": "Pedir",
+                "message": "",
+                "kind": "custom",
+                "source": "custom",
+                "url": "https://wa.me/5527992044561?text=Ol%C3%A1!%20Quero%20pedir%20Galeto%20Assado",
+                "icon": "whatsapp"
+              }
+            },
+            {
+              "id": "finish",
+              "title": "Costela Suína",
+              "description": "Suculenta e no ponto certo.",
+              "image": "/images/paty-galetos/costela.webp",
+              "price": "R$ 28,00",
+              "action": {
+                "id": "order-services-finish",
+                "label": "Pedir",
+                "message": "",
+                "kind": "custom",
+                "source": "custom",
+                "url": "https://wa.me/5527992044561?text=Ol%C3%A1!%20Quero%20pedir%20Costela%20Su%C3%ADna",
+                "icon": "whatsapp"
+              }
+            },
+            {
+              "id": "treatment",
+              "title": "Marmita Caprichada",
+              "description": "Arroz, feijão, farofa e salada.",
+              "image": "/images/paty-galetos/marmita.webp",
+              "price": "R$ 25,00",
+              "action": {
+                "id": "order-services-treatment",
+                "label": "Pedir",
+                "message": "",
+                "kind": "custom",
+                "source": "custom",
+                "url": "https://wa.me/5527992044561?text=Ol%C3%A1!%20Quero%20pedir%20Marmita%20Caprichada",
+                "icon": "whatsapp"
+              }
+            },
+            {
+              "id": "color",
+              "title": "Feijão Tropeiro",
+              "description": "Acompanhamento especial.",
+              "image": "/images/paty-galetos/tropeiro.webp",
+              "price": "Preço a confirmar",
+              "action": {
+                "id": "order-services-color",
+                "label": "Pedir",
+                "message": "",
+                "kind": "custom",
+                "source": "custom",
+                "url": "https://wa.me/5527992044561?text=Ol%C3%A1!%20Quero%20pedir%20Feij%C3%A3o%20Tropeiro",
+                "icon": "whatsapp"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "id": "results",
+        "kind": "gallery",
+        "title": "Galeria",
+        "text": "Conheça alguns dos nossos pratos.",
+        "enabled": true,
+        "content": {
+          "photos": [
+            "/images/paty-galetos/galeto.webp",
+            "/images/paty-galetos/costela.webp",
+            "/images/paty-galetos/marmita.webp",
+            "/images/paty-galetos/gallery-marmita.webp",
+            "/images/paty-galetos/tropeiro.webp",
+            "/images/paty-galetos/acompanhamentos.webp"
+          ]
+        }
+      },
+      {
+        "id": "about",
+        "kind": "about",
+        "title": "Sobre Nós",
+        "text": "A Paty Galetos nasceu com o propósito de levar galeto assado, marmitas e comida caseira de qualidade para o seu dia a dia. Aqui você encontra refeições saborosas, bem temperadas e feitas com muito carinho.",
+        "enabled": true,
+        "image": "/images/paty-galetos/bag.webp"
+      },
+      {
+        "id": "location",
+        "kind": "location",
+        "title": "Nossa Localização",
+        "text": "",
+        "enabled": true,
+        "image": "/images/paty-galetos/bag.webp",
+        "content": {
+          "address": "Nova Almeida – ES\nEndereço completo a confirmar",
+          "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Nova+Almeida+ES"
+        }
+      },
+      {
+        "id": "hours",
+        "kind": "hours",
+        "title": "Nosso Horário",
+        "text": "",
+        "enabled": true
+      },
+      {
+        "id": "closing",
+        "kind": "promotion",
+        "title": "Faça seu pedido agora!",
+        "text": "Galetos e marmitas pelo WhatsApp.",
+        "enabled": true,
+        "image": "/images/paty-galetos/galeto.webp",
+        "ctaLabel": "PEDIR PELO WHATSAPP",
+        "action": {
+          "id": "closing-action",
+          "label": "Falar no WhatsApp",
+          "message": "",
+          "kind": "custom",
+          "source": "custom",
+          "url": "https://wa.me/5527992044561",
+          "icon": "whatsapp"
+        }
+      },
+      {
+        "id": "story",
+        "kind": "promotion",
+        "title": "MARMITAS E ALMOÇO CASEIRO",
+        "text": "Qualidade e sabor todos os dias!",
+        "enabled": false,
+        "image": "/images/paty-galetos/gallery-marmita.webp",
+        "ctaLabel": "VER CARDÁPIO",
+        "action": {
+          "id": "story-link",
+          "label": "Ver cardápio",
+          "message": "",
+          "kind": "custom",
+          "source": "custom",
+          "url": "https://wa.me/5527992044561"
+        }
+      },
+      {
+        "id": "nails",
+        "kind": "gallery",
+        "title": "Acompanhamentos e Bebidas",
+        "text": "Para completar sua refeição.",
+        "enabled": false,
+        "content": {
+          "photos": [
+            "/images/paty-galetos/tropeiro.webp",
+            "/images/paty-galetos/marmita.webp",
+            "/images/paty-galetos/acompanhamentos.webp"
+          ]
+        }
+      },
+      {
+        "id": "care",
+        "kind": "promotion",
+        "title": "COMIDA BOA\nTODO DIA",
+        "text": "Do nosso forno para sua mesa!",
+        "enabled": false,
+        "image": "/images/paty-galetos/galeto.webp",
+        "ctaLabel": "FAZER PEDIDO",
+        "action": {
+          "id": "care-action",
+          "label": "Quero meu horário",
+          "message": "",
+          "kind": "custom",
+          "source": "custom",
+          "url": "https://wa.me/5527992044561",
+          "icon": "whatsapp"
+        }
+      },
+      {
+        "id": "space",
+        "kind": "gallery",
+        "title": "Mais da Paty Galetos",
+        "text": "Sabor em cada detalhe.",
+        "enabled": false,
+        "content": {
+          "photos": [
+            "/images/paty-galetos/bag.webp",
+            "/images/paty-galetos/galeto.webp",
+            "/images/paty-galetos/gallery-marmita.webp"
+          ]
+        }
+      }
+    ],
+    "premiumV2": {
+      "version": 2,
+      "page": {
+        "font": "modern",
+        "surface": {
+          "color": "#120a05"
+        },
+        "maxWidth": 430,
+        "gap": 10,
+        "padding": 8,
+        "wordWrap": "words"
+      },
+      "hero": {
+        "version": 1,
+        "height": 420,
+        "responsive": {
+          "medium": {
+            "height": 440
+          },
+          "large": {
+            "height": 460
+          }
+        },
+        "surface": {
+          "color": "#120a05"
+        },
+        "photo": {
+          "box": {
+            "x": 0,
+            "y": 0,
+            "width": 100,
+            "height": 100
+          },
+          "fit": "cover",
+          "position": {
+            "x": 53,
+            "y": 48
+          }
+        },
+        "logo": {
+          "box": {
+            "x": 5,
+            "y": 4,
+            "width": 34,
+            "height": 32
+          },
+          "fit": "contain"
+        },
+        "layers": [
+          {
+            "kind": "gradient",
+            "value": {
+              "angle": 90,
+              "stops": [
+                {
+                  "color": "#120a05",
+                  "at": 0,
+                  "opacity": 80
+                },
+                {
+                  "color": "#120a05",
+                  "at": 52,
+                  "opacity": 12
+                },
+                {
+                  "color": "#120a05",
+                  "at": 100,
+                  "opacity": 55
+                }
+              ]
+            }
+          },
+          {
+            "kind": "gradient",
+            "box": {
+              "x": 0,
+              "y": 63,
+              "width": 100,
+              "height": 37
+            },
+            "value": {
+              "angle": 0,
+              "stops": [
+                {
+                  "color": "#120a05",
+                  "at": 0,
+                  "opacity": 100
+                },
+                {
+                  "color": "#120a05",
+                  "at": 100,
+                  "opacity": 0
+                }
+              ]
+            }
+          }
+        ],
+        "texts": [
+          {
+            "field": "headline",
+            "box": {
+              "x": 5,
+              "y": 45,
+              "width": 90,
+              "height": 30
+            },
+            "type": {
+              "family": "condensed",
+              "size": 36,
+              "sizeMedium": 39,
+              "sizeLarge": 42,
+              "weight": 700,
+              "lineHeight": 100,
+              "color": "#ff8200"
+            }
+          },
+          {
+            "field": "description",
+            "box": {
+              "x": 5,
+              "y": 78,
+              "width": 90,
+              "height": 18
+            },
+            "type": {
+              "family": "sans",
+              "size": 17,
+              "lineHeight": 120,
+              "color": "#fff4e5"
+            }
+          }
+        ]
+      },
+      "sections": {
+        "contacts": {
+          "version": 1,
+          "component": "actions",
+          "padding": 8,
+          "gap": 6,
+          "columns": 4,
+          "button": {
+            "layout": "tile",
+            "height": 94,
+            "surface": {
+              "color": "#251509",
+              "borderColor": "#ab5a10",
+              "borderWidth": 1,
+              "radius": 13
+            },
+            "iconColor": "#ff8200",
+            "iconSize": 30,
+            "label": {
+              "family": "sans",
+              "size": 11,
+              "weight": 700,
+              "color": "#ffffff"
+            },
+            "caption": {
+              "family": "sans",
+              "size": 9,
+              "color": "#e7d2bb"
+            },
+            "padding": 4,
+            "gap": 3
+          },
+          "buttons": {
+            "ig": {
+              "layout": "tile",
+              "height": 94,
+              "surface": {
+                "gradient": "linear-gradient(135deg, #54360d, #221607)",
+                "borderColor": "#ae843e",
+                "borderWidth": 1,
+                "radius": 12
+              },
+              "iconSurface": {
+                "radius": 8
+              },
+              "iconColor": "#f9d3a4",
+              "iconSize": 30,
+              "label": {
+                "size": 11,
+                "weight": 400,
+                "color": "#f9f0df"
+              },
+              "caption": {
+                "size": 10,
+                "color": "#d8c8ac"
+              },
+              "padding": 4,
+              "gap": 3
+            },
+            "map": {
+              "layout": "tile",
+              "height": 94,
+              "surface": {
+                "gradient": "linear-gradient(135deg, #54360d, #221607)",
+                "borderColor": "#ae843e",
+                "borderWidth": 1,
+                "radius": 12
+              },
+              "iconSurface": {
+                "radius": 8
+              },
+              "iconColor": "#edbd62",
+              "iconSize": 30,
+              "label": {
+                "size": 11,
+                "weight": 400,
+                "color": "#f9f0df"
+              },
+              "caption": {
+                "size": 10,
+                "color": "#d8c8ac"
+              },
+              "padding": 4,
+              "gap": 3
+            }
+          },
+          "heading": {
+            "family": "sans",
+            "size": 23,
+            "weight": 700,
+            "color": "#fff4e5"
+          },
+          "text": {
+            "family": "sans",
+            "size": 13,
+            "lineHeight": 140,
+            "color": "#fff4e5"
+          },
+          "responsive": {
+            "medium": {
+              "columns": 4
+            },
+            "large": {
+              "columns": 4
+            }
+          }
+        },
+        "values": {
+          "version": 1,
+          "heading": {
+            "family": "sans",
+            "size": 23,
+            "weight": 700,
+            "color": "#fff4e5"
+          },
+          "text": {
+            "family": "sans",
+            "size": 13,
+            "lineHeight": 140,
+            "color": "#fff4e5"
+          },
+          "padding": 7,
+          "gap": 4,
+          "component": "benefits",
+          "columns": 4,
+          "itemTitle": {
+            "family": "sans",
+            "size": 11,
+            "weight": 700,
+            "color": "#ff8200",
+            "align": "center"
+          },
+          "itemText": {
+            "family": "sans",
+            "size": 10,
+            "color": "#fff4e5",
+            "align": "center"
+          },
+          "cardSurface": {
+            "color": "#211309",
+            "borderColor": "#754113",
+            "borderWidth": 1,
+            "radius": 12
+          },
+          "cardPadding": 5,
+          "cardGap": 4,
+          "icons": [
+            "flame",
+            "food",
+            "delivery",
+            "heart"
+          ],
+          "iconSize": 26,
+          "iconColor": "#ff8200"
+        },
+        "team": {
+          "version": 1,
+          "heading": {
+            "family": "sans",
+            "size": 23,
+            "weight": 700,
+            "color": "#fff4e5"
+          },
+          "text": {
+            "family": "sans",
+            "size": 13,
+            "lineHeight": 140,
+            "color": "#fff4e5"
+          },
+          "padding": 7,
+          "gap": 6,
+          "component": "catalog",
+          "variant": "compact",
+          "columns": 3,
+          "imageAspect": 125,
+          "cardSurface": {
+            "color": "#201309",
+            "borderColor": "#985017",
+            "borderWidth": 1,
+            "radius": 12
+          },
+          "itemTitle": {
+            "family": "modern",
+            "size": 11,
+            "weight": 700,
+            "color": "#ffffff",
+            "sizeMedium": 12,
+            "sizeLarge": 13,
+            "lineHeight": 120
+          },
+          "itemText": {
+            "family": "sans",
+            "size": 10,
+            "color": "#ffae43",
+            "lineHeight": 130
+          },
+          "cardPadding": 6,
+          "cardGap": 5,
+          "details": false,
+          "price": {
+            "size": 12,
+            "sizeMedium": 13,
+            "sizeLarge": 14,
+            "weight": 700,
+            "color": "#ff8200"
+          },
+          "button": {
+            "layout": "row",
+            "height": 32,
+            "padding": 3,
+            "gap": 2,
+            "showIcon": false,
+            "surface": {
+              "color": "#b44b00",
+              "radius": 7
+            },
+            "label": {
+              "size": 10,
+              "weight": 700,
+              "color": "#ffffff"
+            }
+          }
+        },
+        "story": {
+          "version": 1,
+          "heading": {
+            "family": "sans",
+            "size": 23,
+            "weight": 700,
+            "color": "#fff4e5"
+          },
+          "text": {
+            "family": "sans",
+            "size": 13,
+            "lineHeight": 140,
+            "color": "#fff4e5"
+          },
+          "padding": 8,
+          "gap": 10,
+          "component": "banner",
+          "height": 320,
+          "surface": {
+            "borderColor": "#6d542c",
+            "borderWidth": 1,
+            "radius": 14
+          },
+          "layers": [
+            {
+              "kind": "image",
+              "source": "image",
+              "position": {
+                "x": 65,
+                "y": 50
+              }
+            },
+            {
+              "kind": "gradient",
+              "value": {
+                "angle": 90,
+                "stops": [
+                  {
+                    "color": "#100905",
+                    "at": 0,
+                    "opacity": 92
+                  },
+                  {
+                    "color": "#100905",
+                    "at": 100,
+                    "opacity": 20
+                  }
+                ]
+              }
+            }
+          ],
+          "button": {
+            "layout": "row",
+            "height": 50,
+            "surface": {
+              "color": "#684715",
+              "borderColor": "#ff8300",
+              "borderWidth": 1,
+              "radius": 25
+            },
+            "iconColor": "#241603",
+            "label": {
+              "size": 11,
+              "color": "#f9f0df"
+            },
+            "caption": {
+              "size": 10,
+              "color": "#241603"
+            }
+          }
+        },
+        "services": {
+          "version": 1,
+          "heading": {
+            "family": "sans",
+            "size": 23,
+            "weight": 700,
+            "color": "#fff4e5"
+          },
+          "text": {
+            "family": "sans",
+            "size": 13,
+            "lineHeight": 140,
+            "color": "#fff4e5"
+          },
+          "padding": 7,
+          "gap": 6,
+          "component": "catalog",
+          "variant": "compact",
+          "columns": 3,
+          "imageAspect": 125,
+          "details": false,
+          "cardSurface": {
+            "color": "#1c1008",
+            "borderColor": "#8b4812",
+            "borderWidth": 1,
+            "radius": 12
+          },
+          "itemTitle": {
+            "family": "modern",
+            "size": 11,
+            "weight": 700,
+            "color": "#ffffff",
+            "sizeMedium": 12,
+            "sizeLarge": 13,
+            "lineHeight": 120
+          },
+          "itemText": {
+            "family": "sans",
+            "size": 10,
+            "color": "#e2c7a7",
+            "lineHeight": 130
+          },
+          "price": {
+            "size": 12,
+            "sizeMedium": 13,
+            "sizeLarge": 14,
+            "weight": 700,
+            "color": "#ff8200"
+          },
+          "cardPadding": 6,
+          "cardGap": 5,
+          "button": {
+            "layout": "row",
+            "height": 32,
+            "padding": 3,
+            "gap": 2,
+            "showIcon": false,
+            "surface": {
+              "color": "#b44b00",
+              "radius": 7
+            },
+            "label": {
+              "size": 10,
+              "weight": 700,
+              "color": "#ffffff"
+            }
+          }
+        },
+        "results": {
+          "version": 1,
+          "heading": {
+            "family": "sans",
+            "size": 23,
+            "weight": 700,
+            "color": "#fff4e5"
+          },
+          "text": {
+            "family": "sans",
+            "size": 13,
+            "lineHeight": 140,
+            "color": "#fff4e5"
+          },
+          "padding": 7,
+          "gap": 5,
+          "component": "gallery",
+          "variant": "grid",
+          "columns": 3,
+          "imageAspect": 100
+        },
+        "nails": {
+          "version": 1,
+          "heading": {
+            "family": "sans",
+            "size": 23,
+            "weight": 700,
+            "color": "#fff4e5"
+          },
+          "text": {
+            "family": "sans",
+            "size": 13,
+            "lineHeight": 140,
+            "color": "#fff4e5"
+          },
+          "padding": 8,
+          "gap": 10,
+          "component": "gallery",
+          "variant": "grid",
+          "columns": 3,
+          "imageAspect": 65
+        },
+        "care": {
+          "version": 1,
+          "heading": {
+            "family": "sans",
+            "size": 23,
+            "weight": 700,
+            "color": "#fff4e5"
+          },
+          "text": {
+            "family": "sans",
+            "size": 13,
+            "lineHeight": 140,
+            "color": "#fff4e5"
+          },
+          "padding": 8,
+          "gap": 10,
+          "component": "banner",
+          "height": 250,
+          "surface": {
+            "borderColor": "#6d542c",
+            "borderWidth": 1,
+            "radius": 14
+          },
+          "layers": [
+            {
+              "kind": "image",
+              "source": "image",
+              "position": {
+                "x": 65,
+                "y": 50
+              }
+            },
+            {
+              "kind": "gradient",
+              "value": {
+                "angle": 90,
+                "stops": [
+                  {
+                    "color": "#100905",
+                    "at": 0,
+                    "opacity": 92
+                  },
+                  {
+                    "color": "#100905",
+                    "at": 100,
+                    "opacity": 20
+                  }
+                ]
+              }
+            }
+          ],
+          "button": {
+            "layout": "row",
+            "height": 50,
+            "surface": {
+              "gradient": "linear-gradient(120deg, #f3d37d, #c9912c)",
+              "borderColor": "#f1d995",
+              "borderWidth": 1,
+              "radius": 24
+            },
+            "iconColor": "#241603",
+            "label": {
+              "family": "sans",
+              "size": 12,
+              "weight": 700,
+              "color": "#241603"
+            },
+            "caption": {
+              "size": 10,
+              "color": "#241603"
+            }
+          }
+        },
+        "about": {
+          "version": 1,
+          "heading": {
+            "family": "sans",
+            "size": 23,
+            "weight": 700,
+            "color": "#fff4e5"
+          },
+          "text": {
+            "family": "sans",
+            "size": 13,
+            "lineHeight": 140,
+            "color": "#fff4e5"
+          },
+          "padding": 8,
+          "gap": 10,
+          "component": "text",
+          "variant": "split",
+          "imageAspect": 95,
+          "mediaWidth": 40
+        },
+        "space": {
+          "version": 1,
+          "heading": {
+            "family": "sans",
+            "size": 23,
+            "weight": 700,
+            "color": "#fff4e5"
+          },
+          "text": {
+            "family": "sans",
+            "size": 13,
+            "lineHeight": 140,
+            "color": "#fff4e5"
+          },
+          "padding": 7,
+          "gap": 5,
+          "component": "gallery",
+          "variant": "grid",
+          "columns": 3,
+          "imageAspect": 100
+        },
+        "location": {
+          "version": 1,
+          "heading": {
+            "family": "sans",
+            "size": 21,
+            "weight": 700,
+            "color": "#fff4e5"
+          },
+          "text": {
+            "family": "sans",
+            "size": 12,
+            "color": "#fff4e5"
+          },
+          "padding": 8,
+          "gap": 10,
+          "component": "location",
+          "variant": "split",
+          "mediaWidth": 42,
+          "imageAspect": 100,
+          "surface": {
+            "color": "#241407",
+            "borderColor": "#80400e",
+            "borderWidth": 1,
+            "radius": 13
+          }
+        },
+        "hours": {
+          "version": 1,
+          "heading": {
+            "family": "sans",
+            "size": 21,
+            "weight": 700,
+            "color": "#fff4e5"
+          },
+          "text": {
+            "family": "sans",
+            "size": 12,
+            "color": "#fff4e5"
+          },
+          "padding": 8,
+          "gap": 10,
+          "component": "hours",
+          "cardSurface": {
+            "color": "#241407",
+            "borderColor": "#80400e",
+            "borderWidth": 1,
+            "radius": 13
+          },
+          "dividerColor": "#80400e"
+        },
+        "closing": {
+          "version": 1,
+          "heading": {
+            "family": "sans",
+            "size": 22,
+            "weight": 700,
+            "color": "#fff4e5"
+          },
+          "text": {
+            "family": "sans",
+            "size": 13,
+            "lineHeight": 140,
+            "color": "#fff4e5"
+          },
+          "padding": 8,
+          "gap": 10,
+          "component": "banner",
+          "height": 240,
+          "surface": {
+            "color": "#271304",
+            "borderColor": "#ff8200",
+            "borderWidth": 1,
+            "radius": 14
+          },
+          "layers": [
+            {
+              "kind": "image",
+              "source": "image",
+              "position": {
+                "x": 65,
+                "y": 50
+              }
+            },
+            {
+              "kind": "gradient",
+              "value": {
+                "angle": 90,
+                "stops": [
+                  {
+                    "color": "#100905",
+                    "at": 0,
+                    "opacity": 92
+                  },
+                  {
+                    "color": "#100905",
+                    "at": 100,
+                    "opacity": 20
+                  }
+                ]
+              }
+            }
+          ],
+          "button": {
+            "layout": "row",
+            "height": 50,
+            "surface": {
+              "gradient": "linear-gradient(120deg, #f3d37d, #c9912c)",
+              "borderColor": "#f1d995",
+              "borderWidth": 1,
+              "radius": 24
+            },
+            "iconColor": "#241603",
+            "label": {
+              "family": "sans",
+              "size": 12,
+              "weight": 700,
+              "color": "#241603"
+            },
+            "caption": {
+              "size": 10,
+              "color": "#241603"
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -25,3 +25,5 @@ Dados do estabelecimento e direção visual: [preencher].
 ---
 
 Envie ao importador apenas o arquivo JSON. A prévia não grava clientes; aprove o novo rascunho somente após conferir conteúdo, imagens, botões e composição. O ZIP do kit serve para compartilhar documentação com o ChatGPT, não para importar como design.
+
+Para layouts densos de celular, consulte COMPOSICOES-COMPACTAS.md e restaurante-compacto-v2.biosite.json. Use apenas os campos do schema atualizado: page.font modern, page.padding, page.wordWrap words, catalog/profiles.variant compact, cardPadding/cardGap, button.padding/gap/showIcon, benefits.icons/iconSize/iconColor e hours.dividerColor. Não invente ações de pedido: declare item.action com o contato correto. Gere o inventário de mídias coerente com o conteúdo inteiro. Não remova fundo embutido em imagem por CSS.

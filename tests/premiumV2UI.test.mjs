@@ -62,4 +62,10 @@ test('V2 external upload reaches real preview without implicit create',async()=>
  const input=document.querySelector('input[type=file]'),json=JSON.stringify(pack);Object.defineProperty(input,'files',{value:[{name:'v2.biosite.json',size:json.length,text:async()=>json}],configurable:true});await React.act(async()=>{input.dispatchEvent(new window.Event('change',{bubbles:true}));await new Promise(r=>setTimeout(r,10))});assert(document.querySelector('[data-premium-version="2"]'));assert.equal(created,0)
  }finally{globalThis.fetch=original}
 })
+test('compact restaurant renders three-column products, four icon tiles and dark hours with editable bindings',async()=>{
+ const pack=JSON.parse(await fs.readFile(new URL('../docs/kit-autoria-premium-v2/exemplos/restaurante-compacto-v2.biosite.json',import.meta.url),'utf8'));const bio=processPremiumDesign({operation:'import',package:pack}).bio
+ await render(React.createElement(BioSite,{bio,embedded:true}));assert.equal(document.querySelector('.premium-v2').dataset.wordWrap,'words');assert.equal(document.querySelectorAll('[data-section-id=team] .pv2-card').length,3);assert.equal(document.querySelectorAll('[data-section-id=values] svg').length,4)
+ const cards=[...document.querySelectorAll('[data-section-id=services] .pv2-card')];assert.equal(cards.length,4);for(const card of cards){assert.equal(card.dataset.variant,'compact');assert(card.querySelector('h3'));assert(card.querySelector('img'));assert(card.querySelector('a[href^="https://wa.me/"]'));assert.equal(card.querySelector('.pv2-button-icon'),null);assert.equal(resolveEditorTarget(card.querySelector('h3'),bio).kind,'item')}
+ assert.equal(document.querySelector('.pv2-hours').style.getPropertyValue('--divider-color'),'#80400e')
+})
 test('cleanup',async()=>{await React.act(async()=>root.unmount());await vite.close();dom.window.close()})

@@ -57,3 +57,12 @@ test('V2 schema references resolve and strict component properties match runtime
  const walk=v=>{if(!v||typeof v!=='object')return;if(v.$ref)assert(schema.$defs[v.$ref.slice(8)],v.$ref);Object.values(v).forEach(walk)};walk(schema)
  for(const [component,keys] of Object.entries(v2SectionProperties)){const def=schema.$defs['v2Section_'+component];assert.equal(def.additionalProperties,false);assert.deepEqual(Object.keys(def.properties).sort(),['version','component','surface','heading','text','padding','gap',...keys].sort())}
 })
+
+const compact=JSON.parse(await fs.readFile(new URL('../docs/kit-autoria-premium-v2/exemplos/restaurante-compacto-v2.biosite.json',import.meta.url),'utf8'))
+test('compact real restaurant package imports and exports without mutating content or media',()=>{
+ const source=JSON.stringify(compact),r=processPremiumDesign({operation:'import',package:compact});assert.equal(r.compatibility.persisted,false);assert.deepEqual(processPremiumDesign({operation:'export',bio:{...r.bio,id:compact.design.id}}).package,compact);assert.equal(JSON.stringify(compact),source)
+ assert.equal(r.bio.sections.find(s=>s.id==='team').content.items.length,3);assert.equal(r.bio.premiumV2.sections.services.columns,3);assert.equal(r.bio.premiumV2.sections.contacts.columns,4)
+})
+test('compact properties reject unsafe values and component mismatches',()=>{
+ for(const mutate of [p=>p.design.premiumV2.page.wordWrap='break-all',p=>p.design.premiumV2.sections.services.cardPadding=-1,p=>p.design.premiumV2.sections.services.button.showIcon='false',p=>p.design.premiumV2.sections.values.icons=['script'],p=>p.design.premiumV2.sections.hours.dividerColor='red',p=>p.design.premiumV2.sections.contacts.cardPadding=2]){const p=structuredClone(compact);mutate(p);assert.throws(()=>processPremiumDesign({operation:'import',package:p}))}
+})
