@@ -1,7 +1,7 @@
 import fs from 'node:fs/promises'
 import '../server/source-modules.mjs'
 const {processPremiumDesign}=await import('../server/premium-design.mjs')
-const real=name=>'/images/official-batch-2/essencia-real-'+name+'.webp'
+const real=name=>'/images/official-batch-2/'+(['resultado-finalizacao','resultado-cachos-curtos','produtos'].includes(name)?'premium-v2-demo-':'essencia-real-')+name+'.webp'
 const gold='#e6bd68',cream='#f9f0df',black='#090807'
 const action=(id,label,extra={})=>({id,label,message:'',kind:'custom',source:'custom',url:'https://example.com/contato',...extra})
 const goldButton={layout:'row',height:50,surface:{gradient:'linear-gradient(120deg, #f3d37d, #c9912c)',borderColor:'#f1d995',borderWidth:1,radius:24},iconColor:'#241603',label:{family:'sans',size:12,weight:700,color:'#241603'},caption:{size:10,color:'#241603'}}

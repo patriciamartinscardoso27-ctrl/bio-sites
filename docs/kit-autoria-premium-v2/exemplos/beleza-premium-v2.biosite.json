@@ -78,7 +78,7 @@
       },
       {
         "path": "sections[4].content.items[1].image",
-        "source": "/images/official-batch-2/essencia-real-resultado-finalizacao.webp"
+        "source": "/images/official-batch-2/premium-v2-demo-resultado-finalizacao.webp"
       },
       {
         "path": "sections[4].content.items[2].image",
@@ -98,7 +98,7 @@
       },
       {
         "path": "sections[5].content.photos[2]",
-        "source": "/images/official-batch-2/essencia-real-resultado-cachos-curtos.webp"
+        "source": "/images/official-batch-2/premium-v2-demo-resultado-cachos-curtos.webp"
       },
       {
         "path": "sections[5].content.photos[3]",
@@ -138,7 +138,7 @@
       },
       {
         "path": "sections[9].content.photos[1]",
-        "source": "/images/official-batch-2/essencia-real-produtos.webp"
+        "source": "/images/official-batch-2/premium-v2-demo-produtos.webp"
       },
       {
         "path": "sections[9].content.photos[2]",
@@ -321,7 +321,7 @@
               "id": "finish",
               "title": "Finalização",
               "description": "Definição, brilho e movimento para seus cachos. Técnicas adequadas à textura dos seus fios.",
-              "image": "/images/official-batch-2/essencia-real-resultado-finalizacao.webp",
+              "image": "/images/official-batch-2/premium-v2-demo-resultado-finalizacao.webp",
               "price": ""
             },
             {
@@ -351,7 +351,7 @@
           "photos": [
             "/images/official-batch-2/essencia-real-resultado-cacheado-longo.webp",
             "/images/official-batch-2/essencia-real-resultado-luzes.webp",
-            "/images/official-batch-2/essencia-real-resultado-cachos-curtos.webp",
+            "/images/official-batch-2/premium-v2-demo-resultado-cachos-curtos.webp",
             "/images/official-batch-2/essencia-real-resultado-definicao.webp",
             "/images/official-batch-2/essencia-real-resultado-volume.webp",
             "/images/official-batch-2/essencia-real-resultado-mechas.webp"
@@ -407,7 +407,7 @@
         "content": {
           "photos": [
             "/images/official-batch-2/essencia-real-espaco-detalhe.webp",
-            "/images/official-batch-2/essencia-real-produtos.webp",
+            "/images/official-batch-2/premium-v2-demo-produtos.webp",
             "/images/official-batch-2/essencia-real-logo-real.webp"
           ]
         }

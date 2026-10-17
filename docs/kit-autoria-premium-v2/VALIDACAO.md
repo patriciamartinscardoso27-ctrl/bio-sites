@@ -53,9 +53,13 @@ Foi aberto e fechado o primeiro detalhe de serviço pelo navegador: expansão na
 
 ## Exemplos e limitações
 
-- `beleza-premium-v2.biosite.json`: 32.713 bytes, 13 seções e 25 referências de mídia, todas existentes na instalação. Não altera o cliente Essência; é um pacote demonstrativo independente.
+- `beleza-premium-v2.biosite.json`: 32.725 bytes, 13 seções e 25 referências de mídia, todas existentes na instalação. Não altera o cliente Essência; é um pacote demonstrativo independente.
 - `comparacao-v2.biosite.json`: 2.840 bytes, uma seção, quatro referências contando mídias globais preservadas; mostra Foto A/Foto B, sem afirmar um antes/depois real.
 - Fontes externas/manuscritas, filtros/abas de catálogo, vídeo V2 genérico, múltiplas regiões de texto em banner e editor visual do layout V2 ainda não foram implementados.
 - A fidelidade está limitada pela resolução/recorte das fotos fornecidas. Não foi criada foto da segunda profissional, fachada inexistente ou resultado artificial; o card deixa a mídia faltante explícita. Contatos example.com e endereço de demonstração devem ser substituídos antes de qualquer publicação.
 - Não foi executada comparação matemática pixel-a-pixel com o mockup original: conteúdo/fotos disponíveis diferem. A revisão confirma o renderer real nas três larguras, não identidade visual de 100% ao mockup independente.
 - Não houve prova de salvamento/publicação em produção, por restrição expressa do usuário. Validação e projeção pública foram testadas localmente.
+
+## Publicação controlada
+
+A versão foi validada novamente com 47 testes e build. Três fotos reais necessárias ao demonstrativo usam arquivos exclusivos `premium-v2-demo-*`, sem substituir mídias de clientes. A validação em produção limita-se à exportação, reimportação e prévia em memória, sem criar ou salvar clientes.
