@@ -1,0 +1,10 @@
+import fs from 'node:fs/promises'
+const id='^[a-z][a-z0-9_-]{0,49}$'
+const str=maxLength=>({type:'string',maxLength}),obj=(properties,required=Object.keys(properties))=>({type:'object',properties,required,additionalProperties:false}),ref=name=>({$ref:'#/$defs/'+name}),record=value=>({type:'object',maxProperties:100,propertyNames:{pattern:id},additionalProperties:value})
+const field=obj({type:{enum:['text','price','image','link','whatsapp']},label:str(100),maxLength:{type:'integer',minimum:1,maximum:10000},message:str(1000),globalField:{type:'string',pattern:id},bioField:{enum:['name','phone','address','instagram']}},['type','label'])
+field.allOf=[{if:{properties:{type:{const:'image'}}},then:{not:{required:['maxLength']}}},{if:{required:['message']},then:{properties:{type:{const:'whatsapp'}}}},{if:{required:['globalField']},then:{properties:{type:{enum:['link','whatsapp']}},not:{required:['maxLength']}}}]
+const item=obj({id:{type:'string',pattern:id},values:record(str(3700000))})
+const content=obj({fields:record(str(3700000)),collections:record({type:'array',maxItems:40,items:ref('item')})})
+const manifest=obj({format:{const:'biosite-isolated-template'},version:{const:1},name:str(100),html:{const:'template.html'},css:{const:'styles.css'},business:obj({name:str(300),category:str(300),phone:str(300),address:str(300)}),fields:record({allOf:[ref('field'),{not:{required:['globalField']}}]}),collections:record(obj({label:str(100),fields:record({allOf:[ref('field'),{not:{required:['bioField']}}]}),maxItems:{type:'integer',minimum:1,maximum:40}})),content:ref('content')})
+const schema={$schema:'https://json-schema.org/draft/2020-12/schema',title:'Bio-Sites · Manifesto de Template Isolado v1',...manifest,$defs:{field,item,content},$comment:'O validador do servidor verifica vínculos HTML, referências globais, inventário, CSS, URLs, mídia, limites e categorias. JSON Schema isoladamente não comprova segurança nem fidelidade.'}
+await fs.writeFile('docs/kit-templates-isolados/manifest.schema.json',JSON.stringify(schema,null,2)+'\n')

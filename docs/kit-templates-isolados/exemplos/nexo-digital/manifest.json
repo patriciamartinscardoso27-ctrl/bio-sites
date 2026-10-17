@@ -1,0 +1,104 @@
+{
+  "format": "biosite-isolated-template",
+  "version": 1,
+  "name": "Nexo · consultoria digital",
+  "html": "template.html",
+  "css": "styles.css",
+  "business": {
+    "name": "Nexo · consultoria digital",
+    "category": "comercial geral",
+    "phone": "5527999990000",
+    "address": "Endereço de demonstração"
+  },
+  "fields": {
+    "brand": {
+      "type": "text",
+      "label": "Marca",
+      "maxLength": 200
+    },
+    "title": {
+      "type": "text",
+      "label": "Título",
+      "maxLength": 200
+    },
+    "description": {
+      "type": "text",
+      "label": "Apresentação",
+      "maxLength": 200
+    },
+    "contact": {
+      "type": "whatsapp",
+      "label": "WhatsApp"
+    },
+    "email": {
+      "type": "link",
+      "label": "Contato externo"
+    },
+    "closing": {
+      "type": "text",
+      "label": "Chamada final",
+      "maxLength": 200
+    }
+  },
+  "collections": {
+    "services": {
+      "label": "Soluções",
+      "maxItems": 12,
+      "fields": {
+        "title": {
+          "type": "text",
+          "label": "Solução",
+          "maxLength": 200
+        },
+        "description": {
+          "type": "text",
+          "label": "Descrição",
+          "maxLength": 200
+        },
+        "price": {
+          "type": "price",
+          "label": "Preço",
+          "maxLength": 30
+        }
+      }
+    }
+  },
+  "content": {
+    "fields": {
+      "brand": "NEXO / DIGITAL",
+      "title": "Ideias claras.\nNegócios em movimento.",
+      "description": "Estratégia, identidade e presença digital para quem quer dar o próximo passo.",
+      "contact": "5527999990000",
+      "email": "https://example.com/contato",
+      "closing": "Vamos construir o próximo passo?"
+    },
+    "collections": {
+      "services": [
+        {
+          "id": "estrategia",
+          "values": {
+            "title": "01 / Estratégia",
+            "description": "Direção para transformar objetivos em decisões.",
+            "price": "Sob consulta"
+          }
+        },
+        {
+          "id": "marca",
+          "values": {
+            "title": "02 / Identidade",
+            "description": "Uma marca consistente em cada ponto de contato.",
+            "price": "Sob consulta"
+          }
+        },
+        {
+          "id": "presenca",
+          "values": {
+            "title": "03 / Presença digital",
+            "description": "Conexões que aproximam sua marca das pessoas.",
+            "price": "Sob consulta"
+          }
+        }
+      ]
+    }
+  }
+}

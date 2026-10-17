@@ -1,3 +1,4 @@
+import {IsolatedTemplateFrame} from './IsolatedTemplateFrame'
 import {FashionPremiumLayout} from './biosite/FashionPremiumLayout'
 import {PremiumV2BioSite} from './biosite/PremiumV2BioSite'
 import {EditableText} from './EditableText'
@@ -17,6 +18,7 @@ import {PatyGaletosLayout} from './biosite/PatyGaletosLayout'
 
 
 export function BioSite(input: { bio: Bio; embedded?: boolean }) {
+  if(input.bio.isolatedTemplate)return <IsolatedTemplateFrame pack={input.bio.isolatedTemplate} content={input.bio.templateContent!} preview={input.embedded}/>
   if(input.bio.premiumV2)return <PremiumV2BioSite {...input}/>
   const props={...input,bio:resolvePalette(input.bio)}
   if(props.bio.layoutPreset==='paty-galetos')return <PatyGaletosLayout {...props}/>

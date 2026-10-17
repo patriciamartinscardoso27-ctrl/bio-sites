@@ -1,0 +1,102 @@
+{
+  "format": "biosite-isolated-template",
+  "version": 1,
+  "name": "Maison Lume · editorial de beleza",
+  "html": "template.html",
+  "css": "styles.css",
+  "business": {
+    "name": "Maison Lume · editorial de beleza",
+    "category": "salão / estética",
+    "phone": "5527999990000",
+    "address": "Endereço de demonstração"
+  },
+  "fields": {
+    "brand": {
+      "type": "text",
+      "label": "Marca",
+      "maxLength": 200
+    },
+    "title": {
+      "type": "text",
+      "label": "Título",
+      "maxLength": 200
+    },
+    "intro": {
+      "type": "text",
+      "label": "Apresentação",
+      "maxLength": 200
+    },
+    "photo": {
+      "type": "image",
+      "label": "Ambiente"
+    },
+    "booking": {
+      "type": "whatsapp",
+      "label": "WhatsApp"
+    },
+    "quote": {
+      "type": "text",
+      "label": "Frase",
+      "maxLength": 200
+    },
+    "hours": {
+      "type": "text",
+      "label": "Horários",
+      "maxLength": 200
+    }
+  },
+  "collections": {
+    "services": {
+      "label": "Serviços",
+      "maxItems": 10,
+      "fields": {
+        "title": {
+          "type": "text",
+          "label": "Serviço",
+          "maxLength": 200
+        },
+        "description": {
+          "type": "text",
+          "label": "Descrição",
+          "maxLength": 200
+        },
+        "price": {
+          "type": "price",
+          "label": "Preço",
+          "maxLength": 30
+        }
+      }
+    }
+  },
+  "content": {
+    "fields": {
+      "brand": "MAISON LUME",
+      "title": "Seu tempo.\nSua beleza.",
+      "intro": "Uma pausa para cuidar de você. Atendimento individual, atenção aos detalhes e beleza natural.",
+      "photo": "assets/space.webp",
+      "booking": "5527999990000",
+      "quote": "Beleza é se sentir em casa.",
+      "hours": "Atendimento com hora marcada."
+    },
+    "collections": {
+      "services": [
+        {
+          "id": "ritual",
+          "values": {
+            "title": "Ritual de cuidado",
+            "description": "Um momento dedicado a você.",
+            "price": "Sob consulta"
+          }
+        },
+        {
+          "id": "estetica",
+          "values": {
+            "title": "Estética personalizada",
+            "description": "Planejamento e atendimento individual.",
+            "price": "Sob consulta"
+          }
+        }
+      ]
+    }
+  }
+}

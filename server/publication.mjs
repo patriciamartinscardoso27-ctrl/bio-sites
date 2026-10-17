@@ -7,6 +7,7 @@ export function publicContent(content){
  const result=Object.fromEntries(keys.filter(k=>content[k]!==undefined).map(k=>[k,structuredClone(content[k])]))
  // Opt-in visual contract contains public composition only; V1 projection is unchanged.
  if(content.premiumV2)result.premiumV2=structuredClone(content.premiumV2)
+ if(content.isolatedTemplate){result.isolatedTemplate=structuredClone(content.isolatedTemplate);result.templateContent=structuredClone(content.templateContent)}
  // Rendering needs the palette, never internal source names or composition metadata.
  if(content.identity)result.identity={brandColors:content.identity.brandColors,extractedColors:content.identity.extractedColors}
  if(content.composition)result.composition={preferences:{categoryId:content.composition.preferences?.categoryId}}

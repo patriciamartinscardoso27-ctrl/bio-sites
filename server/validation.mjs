@@ -1,3 +1,4 @@
+import {validateIsolatedTemplate} from './template-security.mjs'
 import {validatePremiumVisualV2} from '../src/lib/premiumVisualV2.ts'
 import {readyModelIds} from '../src/data/readyModelIds.ts'
 import {visualNumberBounds,visualEnumValues,normalizeGradient} from '../src/lib/visualSpec.ts'
@@ -95,6 +96,8 @@ function checkComposition(value){
  rows(initial,'items',row=>{fields(row,['id']);visual(row.visual)})
 }
 export function validateBio(content, id) {
+  if(content?.isolatedTemplate!==undefined){try{if(['premiumV2','layoutPreset','renderMode','appearance','heroLayout','heroVisual','designVisual','textVisual','composition','identity','heroEnabled'].some(k=>content[k]!==undefined))throw Error('Não combine template isolado com controles de layout anteriores.');if(['sections','actions','products','services','highlights','benefits','photos'].some(k=>Array.isArray(content[k])&&content[k].length))throw Error('Edite o conteúdo deste template somente em templateContent.');validateIsolatedTemplate(content.isolatedTemplate,content.templateContent)}catch(e){throw new ApiError(400,e.message)}}
+  else if(content?.templateContent!==undefined)throw new ApiError(400,'Conteúdo de template sem pacote.')
   if(content?.premiumV2!==undefined){try{validatePremiumVisualV2(content)}catch(e){throw new ApiError(400,e.message)}}
   fields(content, ['id','style','name','category','headline','tagline','description','color','phone','address','hours','instagram'],
     ['telephone','email','facebook','tiktok','reviewsUrl','mapsUrl','website','menuUrl'])

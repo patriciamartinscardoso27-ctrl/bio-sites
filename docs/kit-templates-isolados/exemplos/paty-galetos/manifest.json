@@ -1,0 +1,141 @@
+{
+  "format": "biosite-isolated-template",
+  "version": 1,
+  "name": "Paty Galetos · template de teste",
+  "html": "template.html",
+  "css": "styles.css",
+  "business": {
+    "name": "Paty Galetos · template de teste",
+    "category": "restaurante / lanchonete",
+    "phone": "5527992044561",
+    "address": "Endereço de demonstração"
+  },
+  "fields": {
+    "brand": {
+      "type": "text",
+      "label": "Nome",
+      "maxLength": 100
+    },
+    "hero": {
+      "type": "text",
+      "label": "Chamada",
+      "maxLength": 200
+    },
+    "intro": {
+      "type": "text",
+      "label": "Apresentação",
+      "maxLength": 200
+    },
+    "cover": {
+      "type": "image",
+      "label": "Capa"
+    },
+    "logo": {
+      "type": "image",
+      "label": "Logo"
+    },
+    "phone": {
+      "type": "whatsapp",
+      "label": "WhatsApp",
+      "message": "Olá, quero fazer um pedido",
+      "bioField": "phone"
+    },
+    "instagram": {
+      "type": "link",
+      "label": "Instagram"
+    },
+    "address": {
+      "type": "text",
+      "label": "Endereço",
+      "maxLength": 200
+    },
+    "hours": {
+      "type": "text",
+      "label": "Horários",
+      "maxLength": 200
+    },
+    "closing": {
+      "type": "text",
+      "label": "Chamada final",
+      "maxLength": 200
+    }
+  },
+  "collections": {
+    "menu": {
+      "label": "Cardápio",
+      "maxItems": 24,
+      "fields": {
+        "image": {
+          "type": "image",
+          "label": "Foto"
+        },
+        "title": {
+          "type": "text",
+          "label": "Prato",
+          "maxLength": 60
+        },
+        "description": {
+          "type": "text",
+          "label": "Descrição",
+          "maxLength": 160
+        },
+        "price": {
+          "type": "price",
+          "label": "Preço",
+          "maxLength": 30
+        },
+        "order": {
+          "type": "whatsapp",
+          "label": "WhatsApp",
+          "message": "Olá, tenho interesse em {{title}}",
+          "globalField": "phone"
+        }
+      }
+    }
+  },
+  "content": {
+    "fields": {
+      "brand": "PATY GALETOS",
+      "hero": "Galeto dourado.\nAlmoço de verdade.",
+      "intro": "Comida caseira, feita com cuidado para o seu dia.",
+      "cover": "assets/hero.webp",
+      "logo": "assets/logo.webp",
+      "phone": "5527992044561",
+      "instagram": "https://instagram.com/patygaletos/",
+      "address": "Nova Almeida · ES — endereço a confirmar",
+      "hours": "Segunda a sábado · horários a confirmar",
+      "closing": "Seu almoço começa aqui."
+    },
+    "collections": {
+      "menu": [
+        {
+          "id": "galeto",
+          "values": {
+            "image": "assets/galeto.webp",
+            "title": "Galeto Assado",
+            "description": "Temperado com carinho.",
+            "price": "R$ 24,00"
+          }
+        },
+        {
+          "id": "costela",
+          "values": {
+            "image": "assets/costela.webp",
+            "title": "Costela Suína",
+            "description": "Suculenta e no ponto.",
+            "price": "R$ 28,00"
+          }
+        },
+        {
+          "id": "marmita",
+          "values": {
+            "image": "assets/marmita.webp",
+            "title": "Marmita Caprichada",
+            "description": "Uma refeição completa.",
+            "price": "R$ 25,00"
+          }
+        }
+      ]
+    }
+  }
+}

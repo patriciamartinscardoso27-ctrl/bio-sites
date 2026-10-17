@@ -1,3 +1,5 @@
+import {importTemplateZip} from './template-import.mjs'
+import {createTemplateStorage} from './template-storage.mjs'
 import {decodeSavePayload,encodeResponsePayload} from './body-transport.mjs'
 import { ApiError } from './validation.mjs'
 import { connectRepository } from './repository.mjs'
@@ -49,7 +51,7 @@ async function body(req,limit=maxBody) {
   }
   return decodeSavePayload(Buffer.concat(chunks),{gzip,limit})
 }
-export function createApi({ repository, getRepository = connectRepository, getAuth = configuredAuth, vision = createVisionService(),requestAllowed=localRequest,users=getUsers,signupGuard=getSignupGuard,getMailer=async()=>{const config=await serverConfig();return createInviteMailer({key:config.RESEND_API_KEY,from:config.BIOSITE_INVITE_FROM})} } = {}) {
+export function createApi({ repository, getRepository = connectRepository, getAuth = configuredAuth, vision = createVisionService(),templateStorage=createTemplateStorage(),requestAllowed=localRequest,users=getUsers,signupGuard=getSignupGuard,getMailer=async()=>{const config=await serverConfig();return createInviteMailer({key:config.RESEND_API_KEY,from:config.BIOSITE_INVITE_FROM})} } = {}) {
   let pending
   const repo = async () => {
     if (repository) return repository
@@ -133,6 +135,16 @@ export function createApi({ repository, getRepository = connectRepository, getAu
       }
       if(pathname==='/api/reference/status'&&req.method==='GET')return reply(200,await vision.status())
       // Validation/preview only: no repository access, generation or publication.
+      if(pathname.startsWith('/api/template-upload/')){
+        principalOnly(session)
+        if(req.method!=='POST')throw new ApiError(405,'Método não permitido.')
+        const value=await body(req,16384)
+        if(pathname==='/api/template-upload/start')return reply(200,await templateStorage.start(value,session))
+        if(pathname==='/api/template-upload/token')return reply(200,await templateStorage.token(value,session,req))
+        if(pathname==='/api/template-upload/finish')return reply(200,await templateStorage.finish(value,session))
+        throw new ApiError(404,'Rota não encontrada.')
+      }
+      if(pathname==='/api/template-package'&&req.method==='POST')return reply(200,await importTemplateZip(await body(req,3_800_000)))
       if(pathname==='/api/design-package'&&req.method==='POST')return reply(200,processPremiumDesign(await body(req,4_100_000)))
       if(pathname==='/api/reference/analyze'&&req.method==='POST'){
         stage='upload';requestBytes=Number(req.headers['content-length'])||0

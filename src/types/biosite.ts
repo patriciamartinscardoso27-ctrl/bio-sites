@@ -81,3 +81,5 @@ export interface VisualSettings { cardPaddingX?:number;cardPaddingY?:number;card
 
 export interface VisualSettings {surfaceText?:string}
 export interface Bio { premiumV2?:import('../lib/premiumVisualV2').PremiumVisualV2 }
+
+export interface Bio { isolatedTemplate?:import('../lib/template-package/types').IsolatedTemplate;templateContent?:import('../lib/template-package/types').TemplateContent }

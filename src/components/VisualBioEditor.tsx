@@ -1,3 +1,5 @@
+import {TemplateContentEditor} from './TemplateContentEditor'
+import '../styles/isolatedTemplate.css'
 import '../styles/visualBuilder.css'
 import {PreviewInsertionPoints} from './PreviewInsertionPoints'
 import {insertSectionAt} from '../lib/sectionPresets'
@@ -20,7 +22,7 @@ import {heroVariants} from '../lib/designSystem'
 export {AdvancedBioEditor} from './AdvancedBioEditor'
 const Preview=memo(BioSite)
 type Props={bio:Bio;onChange:(p:Partial<Bio>)=>void;onAdvanced:()=>void;onBack?:()=>void;onPreview?:()=>void;onSave?:()=>void;onUndo?:()=>void;onRedo?:()=>void;canUndo?:boolean;canRedo?:boolean;saveState?:string;onPublish?:()=>void;publicationDisabled?:boolean;published?:boolean}
-export function VisualBioEditor(props:Props){return <PaletteContext.Provider value={{bio:props.bio,onChange:props.onChange}}><VisualBioEditorContent {...props}/></PaletteContext.Provider>}
+export function VisualBioEditor(props:Props){if(props.bio.isolatedTemplate)return <TemplateContentEditor {...props}/>;return <PaletteContext.Provider value={{bio:props.bio,onChange:props.onChange}}><VisualBioEditorContent {...props}/></PaletteContext.Provider>}
 function VisualBioEditorContent({bio,onChange,onAdvanced,onBack,onPreview,onSave,onUndo,onRedo,canUndo,canRedo,saveState,onPublish,publicationDisabled,published}:Props){
  const [target,setTarget]=useState<EditorTarget|null>(null),[device,setDevice]=useState('mobile'),[height,setHeight]=useState(42),root=useRef<HTMLDivElement>(null),panel=useRef<HTMLElement>(null),drag=useRef<{y:number;height:number}|null>(null)
  const previewDrag=usePreviewDrag(root,bio,onChange)
